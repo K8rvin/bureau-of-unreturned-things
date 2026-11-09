@@ -55,7 +55,8 @@ export const LAYOUTS = [
 ];
 
 export function getRoomLayout(room) {
-  if (room.type === "boss") return LAYOUTS[0];
+  if (room.event === "movingShelves") return LAYOUTS[1];
+  if (room.type === "boss" || room.type === "rift") return LAYOUTS[0];
   if (["start", "shop", "treasure", "secret"].includes(room.type)) return LAYOUTS[1];
   return LAYOUTS[room.encounterSeed % LAYOUTS.length];
 }

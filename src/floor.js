@@ -167,6 +167,12 @@ export function generateFloor(seed, floorIndex) {
     };
   });
 
+  const combatRooms = rooms.filter((room) => room.type === "combat");
+  if (index === 0) combatRooms[1].event = "sigil";
+  if (index === 1) combatRooms[0].event = "contract";
+  if (index === 2) combatRooms[2].event = "riftTerminal";
+  if (index >= 2) combatRooms[0].event = "movingShelves";
+
   for (let i = 0; i < 4; i++) {
     connect(rooms, i, i + 1);
     connect(rooms, i, i + 5);
@@ -201,8 +207,12 @@ export function generateFloor(seed, floorIndex) {
 export function validateFloor(floor) {
   const errors = [];
   if (!floor || !Array.isArray(floor.rooms)) return ["rooms: expected an array"];
-  const rooms = floor.rooms;
+  const rooms = floor.rooms.filter((room) => room?.type !== "rift");
   if (rooms.length !== 9) errors.push(`rooms: expected 9, got ${rooms.length}`);
+  if (floor.riftId) {
+    const portal = floor.rooms.find((room) => room.id === floor.riftId);
+    if (!portal || portal.type !== "rift" || !rooms.some((room) => room.id === portal.returnTo)) errors.push("rift: invalid portal or returnTo");
+  }
 
   const byId = new Map();
   const counts = {};

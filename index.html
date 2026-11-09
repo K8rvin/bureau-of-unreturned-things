@@ -49,16 +49,20 @@
             <button id="continueButton" type="button" hidden>Продолжить забег</button>
             <button id="catalogButton" type="button">Каталог находок</button>
           </div>
-          <div id="bossTraining" class="training-links" aria-label="Тренировка боссов"></div>
-          <div class="controls">
-            <span><kbd>WASD</kbd> движение</span>
-            <span><kbd>Мышь + ЛКМ</kbd> прицел и огонь</span>
-            <span><kbd>R</kbd> петарда</span>
-            <span><kbd>E</kbd> разговор</span>
-            <span><kbd>Tab</kbd> удерживать карту</span>
-            <span><kbd>M</kbd> мини-карта вкл/выкл</span>
-            <span><kbd>Esc</kbd> пауза</span>
-          </div>
+          <details id="fieldManual" class="field-manual" open>
+            <summary>Управление и тренировка боссов</summary>
+            <div id="bossTraining" class="training-links" aria-label="Тренировка боссов"></div>
+            <div class="controls">
+              <span><kbd>WASD</kbd> движение</span>
+              <span><kbd>Мышь + ЛКМ</kbd> прицел и огонь</span>
+              <span><kbd>R</kbd> петарда</span>
+              <span><kbd>E</kbd> взаимодействие</span>
+              <span><kbd>F</kbd> сервисный пропуск</span>
+              <span><kbd>Tab</kbd> удерживать карту</span>
+              <span><kbd>M</kbd> мини-карта вкл/выкл</span>
+              <span><kbd>Esc</kbd> пауза</span>
+            </div>
+          </details>
           <p class="hint">Исследуйте комнаты, находите тайники и спускайтесь ниже. После боя награда открывается через 3 секунды.</p>
         </section>
 
@@ -73,8 +77,25 @@
           <div class="eyebrow">ОЦЕНЩИК · МАГАЗИН</div>
           <h2>Что принесли на этот раз?</h2>
           <div id="shopStock" class="shop-stock"></div>
+          <p id="shopHint" class="hint"></p>
           <button id="repairButton" class="repair-button" type="button" hidden>Отдать игрушку на ремонт</button>
           <button id="closeShopButton" class="quiet" type="button">Вернуться в комнату</button>
+        </section>
+
+        <section id="contractPanel" class="panel event-panel" hidden>
+          <div class="eyebrow">НЕУЧТЁННАЯ КАЛИБРОВКА</div>
+          <h2>Чем заплатите за находку?</h2>
+          <p class="lead">Контракт необязателен. Можно уйти и вернуться позже.</p>
+          <div id="contractChoices" class="event-choices"></div>
+          <button id="closeContractButton" class="quiet" type="button">Отказаться</button>
+        </section>
+
+        <section id="riftPanel" class="panel event-panel" hidden>
+          <div class="eyebrow">СЕРВИСНЫЙ ПРОПУСК</div>
+          <h2>Служебный проход</h2>
+          <p class="lead">Один переход в этот отдел. Только посещённые и зачищенные комнаты.</p>
+          <div id="riftChoices" class="event-choices"></div>
+          <button id="closeRiftButton" class="quiet" type="button">Остаться</button>
         </section>
 
         <section id="floorPanel" class="panel" hidden>
@@ -121,8 +142,10 @@
           <div class="end-actions">
             <button id="retryButton" class="primary" type="button">Повторить seed</button>
             <button id="nextRunButton" type="button">Новый seed</button>
+            <button id="copySeedButton" type="button">Скопировать ссылку на seed</button>
             <button id="endMenuButton" class="quiet" type="button">В главное меню</button>
           </div>
+          <p class="hint">В ссылке только seed и герой. Вещи и прогресс забега не переносятся.</p>
         </section>
       </div>
     </main>

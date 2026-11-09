@@ -1,10 +1,11 @@
 import { AudioBus } from "./audio.js";
 import { Catalog } from "./catalog.js";
-import { ENEMY_TYPES, FLOOR_DEFINITIONS, HEIGHT, ITEM_BY_ID, ITEMS, WIDTH } from "./content.js";
+import { ENEMY_TYPES, FLOOR_DEFINITIONS, HEIGHT, ITEM_BY_ID, ITEMS, SYNERGIES, WIDTH } from "./content.js";
 import { FxManager } from "./fx.js";
 import { Game } from "./game.js";
 import { DEFAULT_HERO, getHero, HEROES } from "./heroes.js";
 import { Renderer } from "./render.js";
+import { getChainHint } from "./secrets.js";
 import { SpriteLibrary } from "./sprites.js";
 import { clearCheckpoint, loadCheckpoint, saveCheckpoint } from "./storage.js";
 
@@ -22,6 +23,8 @@ const panels = {
   title: $("titlePanel"),
   choice: $("choicePanel"),
   shop: $("shopPanel"),
+  contract: $("contractPanel"),
+  rift: $("riftPanel"),
   floor: $("floorPanel"),
   catalog: $("catalogPanel"),
   pause: $("pausePanel"),
@@ -71,11 +74,14 @@ function showPanel(name) {
   if (name === "pause") buildPauseDetails();
   for (const [key, panel] of Object.entries(panels)) panel.hidden = key !== name;
   $("overlay").hidden = !name;
+  $("gameShell").classList.toggle("has-panel", Boolean(name));
 }
 
 function syncPanel() {
   if (game.state === "choice") showPanel("choice");
   else if (game.state === "shop") showPanel("shop");
+  else if (game.state === "contract") showPanel("contract");
+  else if (game.state === "riftMenu") showPanel("rift");
   else if (game.state === "floorComplete") showPanel("floor");
   else if (game.state === "victory") showEnd(true, game.stats());
   else if (game.state === "dead") showEnd(false, game.stats());
@@ -110,14 +116,15 @@ function prepareRun() {
 function updateUrl() {
   const url = new URL(location.href);
   url.searchParams.set("seed", String(currentSeed));
+  url.searchParams.set("hero", selectedHeroId);
   history.replaceState(null, "", url);
 }
 
 let selectedHeroId = (() => {
   try {
-    return getHero(localStorage.getItem("bureau.hero") || DEFAULT_HERO).id;
+    return getHero(params.get("hero") || localStorage.getItem("bureau.hero") || DEFAULT_HERO).id;
   } catch {
-    return DEFAULT_HERO;
+    return getHero(params.get("hero")).id;
   }
 })();
 
@@ -146,8 +153,9 @@ function buildHeroChoices() {
     button.className = "hero-card";
     button.dataset.hero = hero.id;
     button.setAttribute("role", "radio");
-    button.setAttribute("aria-label", `${hero.name}: ${hero.hp} здоровья, ${item ? item.name : "без стартовой вещи"}`);
-    button.title = item ? `${item.name}. ${item.description}` : "Без стартовой находки. Чистая сборка с самого начала.";
+    const trait = hero.trait ? ` Особенность: ${hero.trait}.` : "";
+    button.setAttribute("aria-label", `${hero.name}: ${hero.hp} здоровья, ${item ? item.name : "без стартовой вещи"}.${trait}`);
+    button.title = `${item ? `${item.name}. ${item.description}` : "Без стартовой находки. Чистая сборка с самого начала."}${trait}`;
     const portrait = sprites.createPortrait(hero.sprite);
     portrait.setAttribute("role", "img");
     portrait.setAttribute("aria-label", hero.name);
@@ -274,7 +282,8 @@ function updateChoiceTimer() {
   for (const button of $("choiceCards").querySelectorAll("button")) button.disabled = locked;
   const hint = $("choiceHint");
   hint.classList.toggle("countdown", locked);
-  const text = locked ? `Переведите дух: ${Math.ceil(remaining / 1000)}…` : "Теперь можно выбрать · клавиши 1, 2 или 3";
+  const availableKeys = game.choices.map((_, index) => index + 1).join(", ");
+  const text = locked ? `Переведите дух: ${Math.ceil(remaining / 1000)}…` : `Теперь можно выбрать · ${game.choices.length === 1 ? "клавиша" : "клавиши"} ${availableKeys}`;
   if (hint.textContent !== text) hint.textContent = text;
 }
 
@@ -305,16 +314,125 @@ function buildShop() {
     root.append(card);
   }
   $("repairButton").hidden = !game.canRepairToy();
+  $("shopHint").textContent = getChainHint(game.chain);
 }
+
+function buildContract() {
+  const root = $("contractChoices");
+  root.replaceChildren();
+  const eliteTarget = game.contractTarget();
+  const choices = [
+    { kind: "hp", name: "Оставить печать", description: "Потерять 1 максимум здоровья. Сразу получить выбор одной из трёх вещей.", note: game.player.maxHp > 3 ? `Останется ${game.player.maxHp - 1} здоровья` : "Нужно больше 3 максимума здоровья" },
+    { kind: "elite", name: "Сверхурочная калибровка", description: "В следующей незачищенной боевой комнате появятся два элитных противника. За зачистку — выбор вещи.", note: eliteTarget ? "Элиты: +35% здоровья, +10% скорости" : "Все боевые комнаты уже зачищены" },
+  ];
+  for (const choice of choices) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "event-choice";
+    button.dataset.contract = choice.kind;
+    button.disabled = (choice.kind === "hp" && game.player.maxHp <= 3) || (choice.kind === "elite" && !eliteTarget);
+    const title = document.createElement("strong");
+    title.textContent = choice.name;
+    const description = document.createElement("p");
+    description.textContent = choice.description;
+    const note = document.createElement("small");
+    note.textContent = choice.note;
+    button.append(title, description, note);
+    button.addEventListener("click", () => {
+      if (game.chooseContract(choice.kind)) {
+        syncPanel();
+        canvas.focus();
+      }
+    });
+    root.append(button);
+  }
+}
+
+function buildRiftMenu(rooms) {
+  const names = { start: "Лифт", combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", secret: "Скрытая комната", boss: "Зала босса", rift: "Сервисный разрез" };
+  const root = $("riftChoices");
+  root.replaceChildren();
+  for (const room of rooms) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "event-choice";
+    button.dataset.room = room.id;
+    const title = document.createElement("strong");
+    title.textContent = room.event === "movingShelves" ? "Движущиеся полки" : names[room.type] || "Комната";
+    const description = document.createElement("p");
+    description.textContent = room.type === "rift" ? "Вернуться к уже стабилизированному разрезу." : "Бой не начнётся заново. Вы окажетесь у входа в комнату.";
+    button.append(title, description);
+    button.addEventListener("click", () => {
+      if (game.useRift(room.id)) {
+        syncPanel();
+        canvas.focus();
+      }
+    });
+    root.append(button);
+  }
+}
+
+async function copySeedLink() {
+  const url = new URL(location.href);
+  url.search = "";
+  url.hash = "";
+  url.searchParams.set("seed", String(currentSeed));
+  url.searchParams.set("hero", game.heroId);
+  let copied = false;
+  if (window.isSecureContext && navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(url.href);
+      copied = true;
+    } catch {
+    }
+  }
+  if (!copied) {
+    const field = document.createElement("textarea");
+    field.value = url.href;
+    field.readOnly = true;
+    field.style.cssText = "position:fixed;left:-9999px;top:0;opacity:0";
+    document.body.append(field);
+    field.select();
+    field.setSelectionRange(0, field.value.length);
+    try {
+      copied = document.execCommand("copy");
+    } catch {
+    } finally {
+      field.remove();
+    }
+  }
+  const button = $("copySeedButton");
+  button.textContent = copied ? "Ссылка скопирована" : "Скопируйте из адресной строки";
+  toast(copied ? "Скопированы только seed и герой" : "Ссылка с seed и героем уже находится в адресной строке", 3000);
+  setTimeout(() => { button.textContent = "Скопировать ссылку на seed"; }, 3000);
+}
+
+const SYNERGY_DETAILS = {
+  "Связанная опись": "Скрепка + нить: до трёх дуг между снарядами. Дуга наносит 0,4 урона каждые 0,2 с.",
+  "Длинная разметка": "Мел + ртуть: рикошет сохраняет пройденный путь. Ртуть наращивает урон и размер до ×2,5.",
+  "Призматическая разметка": "Лазер + мел: луч, дошедший до стены арены, один раз отражается к ближайшему видимому врагу с ×0,65 урона. Полки не отражают луч.",
+  "Реагентная рана": "Яд + кровотечение: гибель врага с обоими эффектами передаёт их на 2 секунды максимум двум соседям в радиусе 60 px. Дальше эффект не распространяется.",
+  "Тяжёлая четверть": "Тяжёлый калибр + четыре снаряда: каждый четвёртый залп добавляет центральный снаряд или луч с ×2 обычного урона.",
+  "Рабочий режим": "Регулятор + резистор: после секунды неподвижности урон ×1,5. Размер снаряда или луча тоже увеличивается.",
+};
 
 function buildCatalog() {
   const root = $("catalogContent");
   root.replaceChildren();
+  const bossIds = [...FLOOR_DEFINITIONS.map((floor) => floor.bossType), "riftWarden"];
+  const secrets = [
+    { id: "dustWall", name: "Пыль идёт не туда", description: "Петарда у подозрительной стены открывает проход." },
+    { id: "tag0", name: "Номерок 0", description: "Запись прежнего владельца из скрытой комнаты." },
+    { id: "toyRepair", name: "Не продавать", description: "Сохранённая игрушка получает вторую жизнь в Стеллажах." },
+    { id: "sigil", name: "Живая трещина", description: "Отпечаток из Приёмного отдела можно показать Оценщику. Следующая подсказка появится в его магазине." },
+    { id: "surveyorReveal", name: "Безошибочная съёмка", description: "Картограф открывает тайник после комнаты, в которой не получил ни одного удара, даже поглощённого пальто." },
+    { id: "rift", name: "Сервисный разрез", description: "Тайный путь через Сортировочный узел. Смотритель охраняет пропуск к зачищенным комнатам [F]." },
+  ];
   const sections = [
     { kind: "items", title: `Предметы · ${catalog.count("items")}/${ITEMS.length}`, entries: ITEMS.map((item) => ({ id: item.id, name: item.name, description: item.description, icon: item.icon })) },
-    { kind: "bosses", title: `Боссы · ${catalog.count("bosses")}/${FLOOR_DEFINITIONS.length}`, entries: FLOOR_DEFINITIONS.map((floor) => floor.bossType).map((id) => ({ id, name: ENEMY_TYPES[id].name, description: "Атаки записываются после первой встречи.", icon: ENEMY_TYPES[id].icon })) },
-    { kind: "synergies", title: `Синергии · ${catalog.count("synergies")}/2`, entries: [{ id: "Связанная опись", name: "Связанная опись", description: "До трёх дуг, 0,4 урона каждые 0,2 с." }, { id: "Длинная разметка", name: "Длинная разметка", description: "Рикошет сохраняет путь и усиливает ртуть до ×2,5." }] },
-    { kind: "secrets", title: `Секреты · ${catalog.count("secrets")}/3`, entries: [{ id: "dustWall", name: "Пыль идёт не туда", description: "Петарда у подозрительной стены открывает проход." }, { id: "tag0", name: "Номерок 0", description: "Запись прежнего владельца из скрытой комнаты." }, { id: "toyRepair", name: "Не продавать", description: "Сохранённая игрушка получает вторую жизнь в Стеллажах." }] },
+    { kind: "bosses", title: `Боссы · ${catalog.count("bosses")}/${bossIds.length}`, entries: bossIds.map((id) => ({ id, name: ENEMY_TYPES[id].name, description: "Атаки записываются после первой встречи.", icon: ENEMY_TYPES[id].icon })) },
+    { kind: "synergies", title: `Синергии · ${catalog.count("synergies")}/${SYNERGIES.length}`, entries: SYNERGIES.map((synergy) => ({ id: synergy.name, name: synergy.name, description: SYNERGY_DETAILS[synergy.name] })) },
+    { kind: "secrets", title: `Секреты · ${catalog.count("secrets")}/${secrets.length}`, entries: secrets },
   ];
   for (const section of sections) {
     const heading = document.createElement("h3");
@@ -431,12 +549,18 @@ function buildPauseDetails() {
     card.append(image, body);
     itemsRoot.append(card);
   }
-  const synergyDetails = {
-    "Связанная опись": "До трёх дуг между снарядами. Дуга наносит 0,4 урона каждые 0,2 с.",
-    "Длинная разметка": "Рикошет сохраняет пройденный путь. Ртуть наращивает урон и размер до ×2,5.",
-  };
   const synergyRoot = $("pauseSynergies");
   synergyRoot.replaceChildren();
+  if (game.hero.trait) {
+    const trait = document.createElement("div");
+    trait.className = "pause-synergy hero-trait";
+    const title = document.createElement("strong");
+    title.textContent = `Особенность: ${game.hero.name}`;
+    const description = document.createElement("span");
+    description.textContent = `${game.hero.trait}. Поглощённый пальто удар тоже отменяет безошибочную комнату.`;
+    trait.append(title, description);
+    synergyRoot.append(trait);
+  }
   const active = game.activeSynergies();
   if (!active.length) {
     const empty = document.createElement("span");
@@ -450,7 +574,7 @@ function buildPauseDetails() {
     const title = document.createElement("strong");
     title.textContent = synergy.name;
     const description = document.createElement("span");
-    description.textContent = synergyDetails[synergy.name];
+    description.textContent = SYNERGY_DETAILS[synergy.name];
     block.append(title, description);
     synergyRoot.append(block);
   }
@@ -468,15 +592,16 @@ function handleEvent(event) {
       break;
     case "room":
       showPanel(null);
-      if (event.room.type === "boss" && !event.room.cleared) {
-        const bossType = game.floor.bossType;
+      if (["boss", "rift"].includes(event.room.type) && !event.room.cleared) {
+        const bossType = event.room.type === "rift" ? "riftWarden" : game.floor.bossType;
         catalog.record("bosses", bossType);
         $("bossHud").hidden = false;
         $("bossName").textContent = ENEMY_TYPES[bossType].name;
         toast(ENEMY_TYPES[bossType].name, 2100);
       } else if (event.room.type !== "start") {
-        const names = { combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", secret: "Скрытая комната" };
-        toast(event.room.layoutName || names[event.room.type] || "Новая комната", 900);
+        const names = { combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", secret: "Скрытая комната", rift: "Сервисный разрез" };
+        const events = { sigil: "Неучтённая трещина", contract: "Терминал калибровки", riftTerminal: "Сервисный терминал" };
+        toast(events[event.room.event] || event.room.layoutName || names[event.room.type] || "Новая комната", 900);
       }
       break;
     case "roomResumed":
@@ -501,6 +626,32 @@ function handleEvent(event) {
     case "shopUpdate":
       buildShop();
       showPanel("shop");
+      break;
+    case "contract":
+      buildContract();
+      showPanel("contract");
+      break;
+    case "contractAccepted":
+      toast("Контракт принят: следующий бой усилен", 2100);
+      break;
+    case "chain": {
+      const messages = { sigil: "Отпечаток получен. Покажите его Оценщику.", npc: "Оценщик узнал трещину. Ищите терминал в Сортировочном узле.", terminal: "Сервисный разрез открыт" };
+      if (event.step === "sigil") catalog.record("secrets", "sigil");
+      toast(messages[event.step] || "Запись цепочки обновлена", 2300);
+      break;
+    }
+    case "riftMenu":
+      buildRiftMenu(event.rooms);
+      showPanel("rift");
+      break;
+    case "riftTravel":
+      toast("Пропуск использован. Следующий проход — в новом отделе.", 1900);
+      break;
+    case "riftReturn":
+      toast("Вы вернулись в Сортировочный узел", 1600);
+      break;
+    case "synergySpread":
+      toast("Реагентная рана: яд и кровотечение переданы соседям", 1500);
       break;
     case "floorComplete": {
       const nextFloor = FLOOR_DEFINITIONS[game.floorIndex + 1];
@@ -568,8 +719,8 @@ function updateHud(force = false) {
     $("bombs").textContent = game.player.bombs;
     $("coins").textContent = game.player.coins;
     $("keys").textContent = game.player.keys;
-    const roomNames = { start: "Лифт", combat: "бой", treasure: "находка", shop: "магазин", challenge: "испытание", secret: "тайник", boss: "босс" };
-    $("wave").textContent = game.state === "title" ? "Смена не начата" : `${game.floor?.name || "Архив"} · ${room ? roomNames[room.type] : "исследование"}`;
+    const roomNames = { start: "Лифт", combat: "бой", treasure: "находка", shop: "магазин", challenge: "испытание", secret: "тайник", boss: "босс", rift: "разрез" };
+    $("wave").textContent = game.state === "title" ? "Смена не начата" : `${game.floor?.name || "Архив"} · ${room ? roomNames[room.type] || "событие" : "исследование"}`;
     $("seed").textContent = `seed ${game.seed}`;
     const inventory = $("inventory");
     inventory.replaceChildren();
@@ -603,7 +754,15 @@ function updateHud(force = false) {
   const boss = game.enemies.find((enemy) => ENEMY_TYPES[enemy.type]?.boss && !enemy.dead);
   $("bossHud").hidden = game.state !== "boss" || !boss;
   if (boss) $("bossFill").style.width = `${Math.max(0, boss.hp / boss.maxHp) * 100}%`;
-  $("interactHint").hidden = game.state !== "room" || room?.type !== "shop" || Math.hypot(game.player.x - 240, game.player.y - 132) > 52;
+  const interaction = game.interactionHint();
+  const hint = $("interactHint");
+  hint.hidden = !interaction || paused;
+  if (interaction && hint.dataset.action !== interaction) {
+    const key = document.createElement("kbd");
+    key.textContent = "E";
+    hint.replaceChildren(key, document.createTextNode(` ${interaction}`));
+    hint.dataset.action = interaction;
+  }
   $("mapHint").hidden = game.state === "title";
 }
 
@@ -680,6 +839,17 @@ $("retryButton").addEventListener("click", () => startRun(currentSeed, { bossOnl
 $("nextRunButton").addEventListener("click", () => startRun(newSeed(), { bossOnly: game.mode === "boss", floorIndex: game.mode === "boss" ? game.floorIndex : 0 }));
 $("menuButton").addEventListener("click", showTitle);
 $("endMenuButton").addEventListener("click", showTitle);
+$("copySeedButton").addEventListener("click", copySeedLink);
+$("closeContractButton").addEventListener("click", () => {
+  game.closeContract();
+  syncPanel();
+  canvas.focus();
+});
+$("closeRiftButton").addEventListener("click", () => {
+  game.closeRiftMenu();
+  syncPanel();
+  canvas.focus();
+});
 $("closeShopButton").addEventListener("click", () => {
   game.closeShop();
   syncPanel();
@@ -714,8 +884,13 @@ window.addEventListener("keydown", (event) => {
   }
   if (event.code === "Escape") {
     event.preventDefault();
-    if (game.state === "shop") game.closeShop();
-    else if (game.state === "catalog") showPanel("title");
+    if (["shop", "contract", "riftMenu"].includes(game.state)) {
+      game.closeShop();
+      game.closeContract();
+      game.closeRiftMenu();
+      syncPanel();
+      canvas.focus();
+    } else if (game.state === "catalog") showPanel("title");
     else togglePause();
     return;
   }
@@ -727,6 +902,13 @@ window.addEventListener("keydown", (event) => {
   }
   if (game.state === "title" && event.code === "Enter") {
     startRun(currentSeed);
+    return;
+  }
+  if (event.code === "KeyF" && !event.repeat && !paused) {
+    if (game.state === "riftMenu") game.closeRiftMenu();
+    else game.openRiftMenu();
+    syncPanel();
+    if (game.state === "room") canvas.focus();
     return;
   }
   if (event.code === "KeyM" && !event.repeat) {
@@ -769,6 +951,10 @@ canvas.addEventListener("contextmenu", (event) => event.preventDefault());
 updateSettingLabels();
 buildHeroChoices();
 buildBossTraining();
+const compactScreen = window.matchMedia("(max-width: 800px)");
+const updateFieldManual = () => { $("fieldManual").open = !compactScreen.matches; };
+compactScreen.addEventListener("change", updateFieldManual);
+updateFieldManual();
 resizeCanvas();
 showTitle();
 requestAnimationFrame(frame);

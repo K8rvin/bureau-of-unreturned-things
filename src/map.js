@@ -15,6 +15,7 @@ const ROOM_STYLES = {
   challenge: { color: "#d48bc7", label: "!" },
   boss: { color: "#e47272", label: "B" },
   secret: { color: "#aa9adb", label: "?" },
+  rift: { color: "#d6b0ef", label: "R" },
 };
 
 function secretEdgeFound(a, b) {

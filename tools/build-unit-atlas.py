@@ -93,15 +93,15 @@ def luiz(key, monster, target_height, *, offset_y=0):
     add_sprite(key, strips, reference_height=reference_height, target_height=target_height, rates={"idle": 6, "run": 10, "attack": 12, "hit": 14, "shield": 8, "death": 8}, offset_y=offset_y)
 
 
-def intern():
-    source = PACKS / "snoblin" / "assets" / "sprites" / "prototype_character.png"
+def intern(key="intern", filename="prototype_character.png"):
+    source = PACKS / "snoblin" / "assets" / "sprites" / filename
     strips = []
     for name, row, count in [("idleDown", 0, 2), ("idleSide", 1, 2), ("idleUp", 2, 2), ("runDown", 3, 4), ("runSide", 4, 4), ("runUp", 5, 4), ("hitDown", 6, 2), ("hitSide", 7, 2), ("hitUp", 8, 2), ("deathDown", 9, 3), ("deathSide", 10, 3), ("deathUp", 11, 3)]:
         entries = [(source, (column * 32, row * 32, column * 32 + 32, row * 32 + 26), (16, 26)) for column in range(count)]
         strips.append((name, entries))
     for name, source_name in [("idle", "idleDown"), ("run", "runDown"), ("hit", "hitDown"), ("death", "deathDown")]:
         strips.append((name, next(entries for state, entries in strips if state == source_name)))
-    add_sprite("intern", strips, reference_height=26, target_height=36, directional=True, rates={"idle": 3, "idleDown": 3, "idleSide": 3, "idleUp": 3, "run": 8, "runDown": 8, "runSide": 8, "runUp": 8, "hit": 8, "death": 6})
+    add_sprite(key, strips, reference_height=26, target_height=36, directional=True, rates={"idle": 3, "idleDown": 3, "idleSide": 3, "idleUp": 3, "run": 8, "runDown": 8, "runSide": 8, "runUp": 8, "hit": 8, "death": 6})
 
 
 def courier():
@@ -131,6 +131,7 @@ def small_animals():
 separate_files("priestess", "chierit-water", "Water Priestess", [("idle", "Idle", 8), ("run", "Walk", 10), ("attack", "Attack1", 7), ("hit", "Take Hit", 7), ("death", "Death", 16)])
 separate_files("fireKnight", "chierit-fire", "Fire Knight", [("idle", "Idle", 8), ("run", "Run", 8), ("attack", "Attack1", 11), ("hit", "Take Hit", 6), ("death", "Death", 13)])
 intern()
+intern("surveyor", "prototype_character_blue.png")
 courier()
 luiz("skeleton", "skeleton", 32)
 luiz("mushroom", "mushroom", 26)

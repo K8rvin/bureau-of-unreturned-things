@@ -2,7 +2,7 @@ import { ARENA, BOSS_ATTACKS, ENEMY_TYPES, HEIGHT, WIDTH } from "./content.js";
 import { drawMap } from "./map.js";
 
 const TAU = Math.PI * 2;
-const BIG = new Set(["boss", "umbrellaBoss", "sorterBoss", "finalBoss", "chemistBoss", "calibratorBoss", "guardian"]);
+const BIG = new Set(["boss", "umbrellaBoss", "sorterBoss", "finalBoss", "chemistBoss", "calibratorBoss", "riftWarden", "guardian"]);
 const FLOOR_THEMES = [
   { floor: "#24202a", grid: "#2f2833", center: "#2b2330", accent: "#4b3542", wall: "#60464c", obstacle: "#65473f", top: "#93644c" },
   { floor: "#1e2529", grid: "#2a383b", center: "#253237", accent: "#47605f", wall: "#466164", obstacle: "#4b5048", top: "#7b8068" },
@@ -63,6 +63,7 @@ export class Renderer {
     this.drawPickups(game);
     this.drawBombs(game);
     this.drawNpc(game);
+    this.drawEvent(game);
     this.drawPackLinks(game);
     this.drawEnemies(game);
     this.drawPlayer(game);
@@ -276,7 +277,6 @@ export class Renderer {
   }
 
   drawTelegraphs(game) {
-    if (!this.showTelegraphs) return;
     const ctx = this.context;
     for (const enemy of game.enemies) {
       if (enemy.dead || enemy.telegraph <= 0) continue;
@@ -288,10 +288,29 @@ export class Renderer {
       ctx.fillStyle = "#d94c5933";
       ctx.lineWidth = 1 + progress * 2;
       ctx.setLineDash([4, 3]);
+      if (enemy.attackType === "riftStep" && enemy.riftTarget) {
+        ctx.strokeStyle = "#c8a1ed";
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(enemy.riftTarget.x, enemy.riftTarget.y, enemy.r + 10 - progress * 6, 0, TAU); ctx.fill(); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(enemy.riftTarget.x - 9, enemy.riftTarget.y); ctx.lineTo(enemy.riftTarget.x + 9, enemy.riftTarget.y); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(enemy.riftTarget.x, enemy.riftTarget.y - 9); ctx.lineTo(enemy.riftTarget.x, enemy.riftTarget.y + 9); ctx.stroke();
+      }
+      if (!this.showTelegraphs) {
+        ctx.restore();
+        continue;
+      }
       if (["fan", "rain", "memoryUmbrella", "memoryFire"].includes(enemy.attackType)) {
         ctx.beginPath(); ctx.moveTo(enemy.x, enemy.y);
         ctx.arc(enemy.x, enemy.y, 185, enemy.aimAngle - 0.68, enemy.aimAngle + 0.68);
         ctx.closePath(); ctx.fill(); ctx.stroke();
+      } else if (enemy.attackType === "riftBeam") {
+        const offsets = enemy.phase === 2 ? [-0.18, 0, 0.18] : [-0.1, 0.1];
+        for (const offset of offsets) {
+          const angle = enemy.aimAngle + offset;
+          ctx.beginPath(); ctx.moveTo(enemy.x, enemy.y);
+          ctx.lineTo(enemy.x + Math.cos(angle) * 280, enemy.y + Math.sin(angle) * 280);
+          ctx.stroke();
+        }
       } else if (["shooter", "inker", "charge", "laser", "goblin", "flyingEye", "bat", "skeletonAttack", "memoryChalk", "sort"].includes(enemy.attackType)) {
         ctx.lineWidth = ["charge", "skeletonAttack"].includes(enemy.attackType) ? 5 : enemy.attackType === "laser" ? 2 : 1;
         ctx.beginPath(); ctx.moveTo(enemy.x, enemy.y);
@@ -386,6 +405,29 @@ export class Renderer {
     }
   }
 
+  drawEvent(game) {
+    const room = game.room();
+    if (!room) return;
+    const ctx = this.context;
+    if (room.event === "sigil" && !game.chain.sigil) {
+      ctx.strokeStyle = "#b691cf";
+      ctx.setLineDash([3, 3]);
+      ctx.beginPath(); ctx.arc(240, 120, 14 + Math.sin(game.time * 3) * 2, 0, TAU); ctx.stroke();
+      ctx.setLineDash([]);
+      this.drawIcon("echo-ripples", 231, 111, 18, "#d1a6e8");
+    }
+    if (room.event === "contract" && !room.contractHandled) {
+      ctx.strokeStyle = "#d1b66a";
+      ctx.beginPath(); ctx.arc(240, 140, 13, 0, TAU); ctx.stroke();
+      this.drawIcon("big-gear", 231, 127, 18, "#edc37b");
+    }
+    if (room.event === "riftTerminal" || (room.type === "rift" && room.cleared)) {
+      ctx.strokeStyle = "#b99ddd";
+      ctx.beginPath(); ctx.arc(240, 140, 13, 0, TAU); ctx.stroke();
+      this.drawIcon("keyring", 231, 129, 18, "#c6a2e2");
+    }
+  }
+
   drawEnemies(game) {
     const ctx = this.context;
     for (const corpse of this.corpses) {
@@ -401,6 +443,13 @@ export class Renderer {
       const spriteKey = enemy.type === "dust" && enemy.small ? "dustSmall" : ENEMY_TYPES[enemy.type].sprite || enemy.type;
       const scale = ENEMY_TYPES[enemy.type].bossScale || (BIG.has(enemy.type) ? 1.25 : enemy.small ? 0.75 : enemy.type === "moth" ? 1 + enemy.growth * 0.08 : 1);
       const bottom = enemy.y + enemy.r + 4;
+      if (enemy.elite) {
+        ctx.strokeStyle = "#edc37b";
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([4, 3]);
+        ctx.beginPath(); ctx.ellipse(enemy.x, enemy.y + enemy.r + 2, enemy.r + 6, 6, 0, 0, TAU); ctx.stroke();
+        ctx.setLineDash([]);
+      }
       ctx.fillStyle = "#08090db0";
       ctx.beginPath(); ctx.ellipse(enemy.x, enemy.y + enemy.r + 2, enemy.r * scale, 3, 0, 0, TAU); ctx.fill();
       if (BIG.has(enemy.type) && enemy.phase === 2) {
@@ -604,7 +653,7 @@ export class Renderer {
     ctx.strokeRect(115, 111, 250, 45);
     ctx.fillStyle = "#f0d49b";
     ctx.textAlign = "center";
-    const bossName = ENEMY_TYPES[game.floor?.bossType]?.name.toUpperCase() || "БОСС";
+    const bossName = ENEMY_TYPES[game.room()?.type === "rift" ? "riftWarden" : game.floor?.bossType]?.name.toUpperCase() || "БОСС";
     ctx.font = `${bossName.length > 14 ? 12 : 16}px "Archive Pixel", monospace`;
     ctx.fillText(game.state === "boss" ? bossName : "БОЙ", 240, 130);
     ctx.font = '8px "Archive Pixel", monospace';

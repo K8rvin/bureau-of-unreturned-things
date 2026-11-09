@@ -3,8 +3,9 @@ import { generateFloor } from "./floor.js";
 import { getRoomLayout } from "./layouts.js";
 import { getHero } from "./heroes.js";
 import { createEnvironment } from "./environment.js";
-import { getFinalMemoryAttacks, updateFinalBoss, updateSorterBoss, updateChemistBoss, updateCalibratorBoss } from "./bosses.js";
+import { getFinalMemoryAttacks, updateFinalBoss, updateSorterBoss, updateChemistBoss, updateCalibratorBoss, updateRiftWarden } from "./bosses.js";
 import { firePlayerLaser, getProjectileRadius, getVolleyAngles, getWeaponStats } from "./weapon.js";
+import { createRiftRoom, getChainHint, riftDestinations } from "./secrets.js";
 
 const TAU = Math.PI * 2;
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -89,6 +90,8 @@ export class Game {
     this.webCounter = 0;
     this.coatUsed = false;
     this.repeatReward = null;
+    this.chain = { sigil: false, npc: false, terminal: false, wardenDefeated: false };
+    this.riftUsedFloor = false;
     this.memory = { umbrellaAwakened: false, mothAwakened: false, thermosAwakened: false, mirrorAwakened: false };
     this.memoryProgress = { umbrella: 0, moth: 0, thermos: 0, mirror: 0 };
     this.familiar = { x: 240, y: 220, cooldown: 0, gearCooldown: 0, gearHitTimer: 0, angle: 0 };
@@ -98,7 +101,7 @@ export class Game {
       r: 6, hp: 6, maxHp: 6, speed: 80, coins: 0, keys: 0,
       fireTimer: 0, attackTimer: 0, invuln: 0, bombs: 2, bombCooldown: 0,
       umbrellaTimer: 0, slowTimer: 0, aimAngle: -Math.PI / 2,
-      springTime: 0, mirrorTimer: 0,
+      springTime: 0, mirrorTimer: 0, noDamageRoom: true,
     };
   }
 
@@ -135,6 +138,7 @@ export class Game {
     }
     this.floorIndex++;
     this.coatUsed = false;
+    this.riftUsedFloor = false;
     this.floor = generateFloor(this.seed, this.floorIndex);
     this.floorIndex = this.floor.index;
     this.rooms = clone(this.floor.rooms);
@@ -148,8 +152,9 @@ export class Game {
     this.currentRoomId = id;
     const room = this.room();
     room.visited = true;
+    this.floor.riftId = this.rooms.find((entry) => entry.type === "rift")?.id || null;
     const layout = getRoomLayout(room);
-    this.obstacles = layout.obstacles;
+    this.obstacles = layout.obstacles.map((obstacle) => room.event === "movingShelves" ? { ...obstacle } : obstacle);
     room.layoutName = layout.name;
     this.encounterRandom = mulberry32(room.encounterSeed);
     this.enemies = [];
@@ -163,7 +168,7 @@ export class Game {
     this.echoQueue = [];
     this.grazed = new Set();
     this.doorLock = 0.45;
-    this.waveIntro = room.cleared ? 0 : room.type === "boss" ? 1.1 : 0.75;
+    this.waveIntro = room.cleared ? 0 : ["boss", "rift"].includes(room.type) ? 1.1 : 0.75;
     this.memoryProgress = { ...this.memoryProgress, umbrella: 0, moth: 0, mirror: 0 };
     this.familiar.x = this.player.x;
     this.familiar.y = this.player.y;
@@ -172,6 +177,7 @@ export class Game {
     this.player.slideX = 0;
     this.player.slideY = 0;
     this.player.springTime = 0;
+    this.player.noDamageRoom = true;
     this.player.x = 240;
     this.player.y = 220;
     if (entry === "N") Object.assign(this.player, { x: 240, y: ARENA.bottom - this.player.r - 5 });
@@ -180,7 +186,7 @@ export class Game {
     if (entry === "W") Object.assign(this.player, { x: ARENA.right - this.player.r - 5, y: 140 });
 
     if (!room.cleared) this.spawnEncounter(room);
-    this.state = room.type === "boss" && !room.cleared ? "boss" : room.cleared ? "room" : "wave";
+    this.state = ["boss", "rift"].includes(room.type) && !room.cleared ? "boss" : room.cleared ? "room" : "wave";
     if (room.type === "secret" && !room.loreFound) this.spawnPickup("lore", 240, 132);
     this.emit("room", { room, floor: this.floor, entry });
 
@@ -195,6 +201,10 @@ export class Game {
       this.openItemChoice("room");
     } else if (restoredState === "shop") {
       this.openShop();
+    } else if (restoredState === "contract") {
+      this.openContract();
+    } else if (restoredState === "riftMenu") {
+      this.openRiftMenu();
     } else if (restoredState === "floorComplete") {
       this.state = "floorComplete";
       this.emit("floorComplete", this.stats());
@@ -233,7 +243,7 @@ export class Game {
 
   openItemChoice(afterChoice) {
     this.afterChoice = afterChoice;
-    this.choices = this.makeChoices();
+    this.choices = this.room().type === "rift" ? [ITEM_BY_ID.get("riftPass")] : this.makeChoices();
     this.choiceReadyAt = Date.now() + 3000;
     this.state = "choice";
     this.projectiles = this.projectiles.filter((projectile) => projectile.owner === "player");
@@ -322,11 +332,156 @@ export class Game {
   }
 
   interact() {
+    if (this.state !== "room") return false;
     const room = this.room();
-    if (this.state !== "room" || room.type !== "shop") return false;
-    if (Math.hypot(this.player.x - 240, this.player.y - 132) > 52) return false;
+    const near = (x, y, radius) => Math.hypot(this.player.x - x, this.player.y - y) <= radius;
+    if (room.type === "rift" && room.cleared && near(240, 140, 44)) {
+      this.startRoom(room.returnTo);
+      this.emit("riftReturn", { room: this.room() });
+      return true;
+    }
+    if (room.event === "sigil" && !this.chain.sigil && near(240, 120, 42)) {
+      this.chain.sigil = true;
+      this.emit("chain", { step: "sigil" });
+      this.checkpoint();
+      return true;
+    }
+    if (room.event === "riftTerminal" && near(240, 140, 42)) {
+      if (this.chain.wardenDefeated) {
+        this.emit("locked", { message: "Разрез уже стабилен" });
+        return false;
+      }
+      if (this.chain.terminal) {
+        this.emit("locked", { message: "Проход уже открыт" });
+        return false;
+      }
+      if (!this.chain.sigil || !this.chain.npc) {
+        this.emit("locked", { message: getChainHint(this.chain) });
+        return false;
+      }
+      return this.openRift();
+    }
+    if (room.event === "contract" && !room.contractHandled && near(240, 140, 42)) {
+      this.openContract();
+      return true;
+    }
+    if (room.type !== "shop" || !near(240, 132, 52)) return false;
+    if (this.chain.sigil && !this.chain.npc) {
+      this.chain.npc = true;
+      this.emit("chain", { step: "npc" });
+    }
     this.openShop();
     return true;
+  }
+
+  openContract() {
+    const room = this.room();
+    if (this.state !== "room" || room.event !== "contract" || room.contractHandled || !room.cleared) return false;
+    this.state = "contract";
+    this.emit("contract", { room });
+    this.checkpoint();
+    return true;
+  }
+
+  chooseContract(kind) {
+    if (this.state !== "contract") return false;
+    const room = this.room();
+    if (room.contractHandled) return false;
+    if (kind === "hp") {
+      if (this.player.maxHp <= 3) return false;
+      this.player.maxHp--;
+      this.player.hp = Math.min(this.player.hp, this.player.maxHp);
+      room.contractHandled = true;
+      this.openItemChoice("room");
+      return true;
+    }
+    if (kind !== "elite") return false;
+    const target = this.contractTarget();
+    if (!target) {
+      this.emit("locked", { message: "Не осталось незачищенных боевых комнат" });
+      return false;
+    }
+    target.eliteContract = true;
+    room.contractHandled = true;
+    this.state = "room";
+    this.emit("contractAccepted", { kind: "elite", room: target });
+    this.checkpoint();
+    return true;
+  }
+
+  contractTarget() {
+    const combatRooms = this.rooms.filter((entry) => entry.type === "combat");
+    const index = combatRooms.findIndex((entry) => entry.id === this.currentRoomId);
+    if (index < 0) return null;
+    return [...combatRooms.slice(index + 1), ...combatRooms.slice(0, index)].find((entry) => !entry.cleared) || null;
+  }
+
+  closeContract() {
+    if (this.state !== "contract") return;
+    this.state = "room";
+    this.emit("roomResumed", { room: this.room() });
+    this.checkpoint();
+  }
+
+  openRift() {
+    const source = this.room();
+    if (this.state !== "room" || source?.event !== "riftTerminal" || !source.cleared || !this.chain.sigil || !this.chain.npc || this.chain.terminal || this.chain.wardenDefeated) return false;
+    const room = createRiftRoom(this, source);
+    if (!room) return false;
+    this.chain.terminal = true;
+    this.emit("chain", { step: "terminal" });
+    this.startRoom(room.id);
+    return true;
+  }
+
+  openRiftMenu() {
+    if (!this.hasItem("riftPass")) {
+      this.emit("locked", { message: "Сначала найдите Сервисный пропуск" });
+      return false;
+    }
+    if (this.riftUsedFloor) {
+      this.emit("locked", { message: "Пропуск уже использован в этом отделе" });
+      return false;
+    }
+    if (this.state !== "room") return false;
+    const rooms = riftDestinations(this);
+    if (!rooms.length) {
+      this.emit("locked", { message: "Нужна ещё одна зачищенная комната" });
+      return false;
+    }
+    this.state = "riftMenu";
+    this.emit("riftMenu", { rooms });
+    this.checkpoint();
+    return true;
+  }
+
+  useRift(id) {
+    if (this.state !== "riftMenu" || this.riftUsedFloor || !this.hasItem("riftPass")) return false;
+    const target = this.rooms.find((room) => room.id === id && room.visited && room.cleared && room.id !== this.currentRoomId);
+    if (!target) return false;
+    this.riftUsedFloor = true;
+    this.startRoom(id, { entry: "service" });
+    this.emit("riftTravel", { room: target });
+    return true;
+  }
+
+  closeRiftMenu() {
+    if (this.state !== "riftMenu") return;
+    this.state = "room";
+    this.emit("roomResumed", { room: this.room() });
+    this.checkpoint();
+  }
+
+  interactionHint() {
+    if (this.state !== "room") return null;
+    const room = this.room();
+    const near = (x, y, radius) => Math.hypot(this.player.x - x, this.player.y - y) <= radius;
+    if (room.type === "rift" && room.cleared && near(240, 140, 44)) return "вернуться";
+    if (room.event === "sigil" && !this.chain.sigil && near(240, 120, 42)) return "взять отпечаток трещины";
+    if (room.event === "contract" && !room.contractHandled && near(240, 140, 42)) return "калибровка";
+    if (room.event === "riftTerminal" && near(240, 140, 42)) return "сервисный терминал";
+    if (room.type === "shop" && near(240, 132, 52)) return "поговорить с Оценщиком";
+    return null;
   }
 
   tryDoor(direction) {
@@ -375,6 +530,8 @@ export class Game {
       rooms: this.rooms,
       player: this.player,
       items: this.items,
+      chain: this.chain,
+      riftUsedFloor: this.riftUsedFloor,
       questItems: this.questItems,
       memory: this.memory,
       memoryProgress: this.memoryProgress,
@@ -398,6 +555,8 @@ export class Game {
     this.heroId = getHero(data.heroId).id;
     this.hero = getHero(this.heroId);
     this.mode = data.mode || "run";
+    this.chain = { sigil: false, npc: false, terminal: false, wardenDefeated: false, ...(data.chain || {}) };
+    this.riftUsedFloor = Boolean(data.riftUsedFloor);
     this.floorIndex = data.floorIndex;
     this.floor = generateFloor(this.seed, this.floorIndex);
     this.floorIndex = this.floor.index;
@@ -425,6 +584,10 @@ export class Game {
   }
 
   spawnEncounter(room) {
+    if (room.type === "rift") {
+      this.spawnEnemy("riftWarden", 0.5, 0.16);
+      return;
+    }
     if (room.type === "boss") {
       this.spawnEnemy(this.floor.bossType, 0.5, 0.16);
       return;
@@ -446,6 +609,10 @@ export class Game {
       const [x, y] = points[index % points.length];
       this.spawnEnemy(type, x, y);
     });
+    if (room.eliteContract) {
+      this.spawnEnemy(required[0], 0.35, 0.32, { elite: true });
+      this.spawnEnemy(required[0], 0.65, 0.32, { elite: true });
+    }
   }
 
   spawnEnemy(type, nx, ny, extra = {}) {
@@ -529,6 +696,11 @@ export class Game {
       enemy.speed = 38;
       enemy.spawnTime = 0.25;
     }
+    if (enemy.elite) {
+      enemy.hp = Math.round(enemy.hp * 1.35);
+      enemy.maxHp = enemy.hp;
+      enemy.speed *= 1.1;
+    }
     this.enemies.push(enemy);
     this.emit("spawn", { enemy });
     return enemy;
@@ -564,10 +736,27 @@ export class Game {
 
   completeRoom() {
     const room = this.room();
+    if (room.clearHandled) return;
     room.cleared = true;
     room.clearHandled = true;
+    if (this.hero.passive === "noHitSecret" && this.player.noDamageRoom) {
+      for (const direction of room.hidden) {
+        const target = this.rooms.find((entry) => entry.id === room.doors[direction]);
+        if (target?.type === "secret" && !target.secretFound) {
+          room.secretFound = true;
+          target.secretFound = true;
+          this.emit("secret", { id: "surveyorReveal", name: "Картограф: чистый бой" });
+        }
+      }
+    }
     this.environment?.clear();
     this.projectiles = this.projectiles.filter((projectile) => projectile.owner === "player");
+    if (room.type === "rift") {
+      this.chain.wardenDefeated = true;
+      this.emit("secret", { id: "rift", name: "Сервисный разрез" });
+      this.openItemChoice("room");
+      return;
+    }
     if (room.type === "boss") {
       if (this.mode === "boss") {
         this.state = "victory";
@@ -578,6 +767,10 @@ export class Game {
       return;
     }
     if (room.type === "challenge") {
+      this.openItemChoice("room");
+      return;
+    }
+    if (room.eliteContract) {
       this.openItemChoice("room");
       return;
     }
@@ -685,6 +878,11 @@ export class Game {
       if (laser) firePlayerLaser(this, p.aimAngle + offset);
       else this.spawnPlayerShot(p.aimAngle + offset, "shot");
     }
+    if (this.hasItem("heavy") && this.hasItem("quad") && this.shotCounter % 4 === 0) {
+      const angle = angles[Math.floor(angles.length / 2)];
+      if (laser) firePlayerLaser(this, p.aimAngle + angle, 2);
+      else this.spawnPlayerShot(p.aimAngle + angle, "shot", 2);
+    }
     if (this.hasItem("echo") && this.shotCounter % 5 === 0) {
       for (const offset of angles) this.echoQueue.push({ time: 0.4, angle: p.aimAngle + offset, x: p.x, y: p.y, weapon: laser ? "laser" : "shot" });
     }
@@ -791,6 +989,7 @@ export class Game {
       else if (enemy.type === "finalBoss") updateFinalBoss(this, enemy, dt);
       else if (enemy.type === "chemistBoss") updateChemistBoss(this, enemy, dt);
       else if (enemy.type === "calibratorBoss") updateCalibratorBoss(this, enemy, dt);
+      else if (enemy.type === "riftWarden") updateRiftWarden(this, enemy, dt);
       else this.updateEnemy(enemy, dt);
       if (!enemy.dead && !enemy.disguise && distance(enemy, this.player) < enemy.r + this.player.r && enemy.contactTimer <= 0) {
         this.hurtPlayer(1, enemy.name);
@@ -1497,6 +1696,17 @@ export class Game {
     enemy.dead = true;
     this.kills++;
     this.emit("kill", { enemy });
+    if (this.hasItem("poison") && this.hasItem("bleed") && enemy.poisonTimer > 0 && enemy.bleedTimer > 0 && !enemy.synergySpread) {
+      const targets = this.enemies.filter((other) => !other.dead && !other.synergySpread && other.id !== enemy.id && distance(enemy, other) < 60).sort((a, b) => distance(enemy, a) - distance(enemy, b)).slice(0, 2);
+      for (const target of targets) {
+        target.poisonTimer = Math.max(target.poisonTimer, 2);
+        target.bleedTimer = Math.max(target.bleedTimer, 2);
+        target.poisonTick = Math.min(target.poisonTick, 0.5);
+        target.bleedTick = Math.min(target.bleedTick, 0.5);
+        target.synergySpread = true;
+      }
+      this.emit("synergySpread", { enemy, targets });
+    }
     if (enemy.type === "dust" && !enemy.small) {
       this.createEnemy("dust", enemy.x - 7, enemy.y, { small: true, allowClose: true });
       this.createEnemy("dust", enemy.x + 7, enemy.y, { small: true, allowClose: true });
@@ -1511,6 +1721,7 @@ export class Game {
   hurtPlayer(amount, source) {
     const p = this.player;
     if (p.invuln > 0 || this.state === "dead" || this.state === "victory") return false;
+    p.noDamageRoom = false;
     if (this.hasItem("coat") && !this.coatUsed) {
       this.coatUsed = true;
       p.invuln = 0.75;

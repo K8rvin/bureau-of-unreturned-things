@@ -6,7 +6,7 @@
   "description": "Playable stage B of Bureau of Unreturned Things",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "check": "node --check src/main.js && node --check src/heroes.js && node --check src/game.js && node --check src/content.js && node --check src/render.js && node --check src/sprites.js && node --check src/sprite-manifest.js && node --check src/layouts.js && node --check src/floor.js && node --check src/environment.js && node --check src/bosses.js && node --check src/weapon.js && node --check src/map.js && node --check src/storage.js && node --check src/catalog.js && node --check src/fx.js && node --check src/audio.js && node --check tools/serve.mjs"
+    "check": "node --check src/main.js && node --check src/heroes.js && node --check src/secrets.js && node --check src/game.js && node --check src/content.js && node --check src/render.js && node --check src/sprites.js && node --check src/sprite-manifest.js && node --check src/layouts.js && node --check src/floor.js && node --check src/environment.js && node --check src/bosses.js && node --check src/weapon.js && node --check src/map.js && node --check src/storage.js && node --check src/catalog.js && node --check src/fx.js && node --check src/audio.js && node --check tools/serve.mjs"
   },
   "engines": {
     "node": ">=18"

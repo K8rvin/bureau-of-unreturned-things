@@ -20,7 +20,7 @@ export function getWeaponStats(game, source = "shot", scale = 1) {
   const primary = PRIMARY_SOURCES.has(source);
   const count = primary ? 1 + (game.hasItem("clip") ? 1 : 0) + (game.hasItem("triple") ? 2 : 0) + (game.hasItem("quad") ? 3 : 0) : 1;
   const spreadFactor = count > 1 ? count === 2 && game.hasItem("clip") && !game.hasItem("triple") && !game.hasItem("quad") ? 0.65 : 1 / Math.sqrt(count) : 1;
-  const damage = (laser ? 5 : 2) * scale * spreadFactor * (primary && game.hasItem("power") ? 1.5 : 1) * (primary && game.hasItem("heavy") ? 3 : 1);
+  const damage = (laser ? 5 : 2) * scale * spreadFactor * (primary && game.hasItem("power") ? 1.5 : 1) * (primary && game.hasItem("heavy") ? 3 : 1) * (game.hasItem("rapid") && game.hasItem("power") && game.player.springTime >= 1 ? 1.5 : 1);
   const fireInterval = (laser ? 0.65 : 0.18) * (game.hasItem("rapid") ? 0.75 : 1) * (game.hasItem("heavy") ? 1.75 : 1);
   const maxDamage = !laser && source === "shot" && game.hasItem("mercury") ? damage * 2.5 : damage;
   const needle = !laser && source === "shot" && game.hasItem("needle");
@@ -83,7 +83,7 @@ export function castRay(game, x, y, angle, maxDistance = 480) {
   return { x1: x, y1: y, x2: x + dx * length, y2: y + dy * length };
 }
 
-export function firePlayerLaser(game, angle, scale = 1, origin = game.player) {
+export function firePlayerLaser(game, angle, scale = 1, origin = game.player, allowBounce = true) {
   const stats = getWeaponStats(game, "laser", scale);
   const beam = castRay(game, origin.x + Math.cos(angle) * 9, origin.y + Math.sin(angle) * 9, angle);
   const width = stats.projectileRadius;
@@ -105,6 +105,13 @@ export function firePlayerLaser(game, angle, scale = 1, origin = game.player) {
   if (game.lasers.length >= 40) game.lasers.shift();
   game.lasers.push({ ...beam, owner: "player", width, life: 0.18, damage: stats.damage });
   game.emit("laser", { ...beam, owner: "player" });
+  if (allowBounce && game.hasItem("laser") && game.hasItem("chalk")) {
+    const atWall = Math.abs(beam.x2 - 30) < 0.001 || Math.abs(beam.x2 - 450) < 0.001 || Math.abs(beam.y2 - 32) < 0.001 || Math.abs(beam.y2 - 248) < 0.001;
+    if (atWall) {
+      const target = game.enemies.filter((enemy) => !enemy.dead && !enemy.disguise && enemy.spawnTime <= 0).sort((a, b) => Math.hypot(a.x - beam.x2, a.y - beam.y2) - Math.hypot(b.x - beam.x2, b.y - beam.y2))[0];
+      if (target) firePlayerLaser(game, Math.atan2(target.y - beam.y2, target.x - beam.x2), scale * 0.65, { x: beam.x2, y: beam.y2 }, false);
+    }
+  }
   return beam;
 }
 

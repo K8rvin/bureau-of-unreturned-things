@@ -1,7 +1,12 @@
 import { ARENA } from "./content.js";
 
-const ACTIVE_ROOMS = new Set(["combat", "challenge", "boss"]);
+const ACTIVE_ROOMS = new Set(["combat", "challenge", "boss", "rift"]);
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+const circleRect = (x, y, radius, rect) => {
+  const nx = clamp(x, rect.x, rect.x + rect.w);
+  const ny = clamp(y, rect.y, rect.y + rect.h);
+  return (x - nx) ** 2 + (y - ny) ** 2 < radius ** 2;
+};
 
 export class RoomEnvironment {
   constructor(game, room) {
@@ -17,7 +22,8 @@ export class RoomEnvironment {
     this.boostTimer = 0;
     this.nextDrop = 1.6;
     this.nextLeak = 1.4;
-    this.nextBeam = 1.8;
+    this.nextBeam = room.type === "rift" ? 2.4 : 1.8;
+    this.moving = room.event === "movingShelves" ? game.obstacles.slice(0, 2).map((obstacle, index) => ({ obstacle, baseX: obstacle.x, baseY: obstacle.y, phase: index * Math.PI })) : [];
     if (this.floorIndex === 2 && this.enabled) {
       const flip = this.random() < 0.5 ? -1 : 1;
       this.belts = [88, 184].map((y, index) => ({ x: 72, y, w: 336, h: 26, direction: flip * (index % 2 === 0 ? 1 : -1) }));
@@ -33,6 +39,7 @@ export class RoomEnvironment {
     this.drops = [];
     this.leaks = [];
     this.beams = [];
+    this.moving = [];
     this.boostTimer = 0;
   }
 
@@ -59,10 +66,39 @@ export class RoomEnvironment {
   update(dt) {
     if (!this.enabled || this.room.cleared || this.game.waveIntro > 0 || !["wave", "boss"].includes(this.game.state)) return;
     this.boostTimer = Math.max(0, this.boostTimer - dt);
+    if (this.moving.length) this.updateMovingShelves(dt);
     if (this.floorIndex === 2) this.updateBelts(dt);
     if (this.floorIndex === 3) this.updateDrops(dt);
     if (this.floorIndex === 4) this.updateLeaks(dt);
-    if (this.floorIndex === 5) this.updateBeams(dt);
+    if (this.floorIndex === 5 || this.room.type === "rift") this.updateBeams(dt);
+  }
+
+  updateMovingShelves(dt) {
+    for (const entry of this.moving) {
+      const obstacle = entry.obstacle;
+      obstacle.x = entry.baseX + Math.sin(this.game.time * 0.85 + entry.phase) * 16;
+      obstacle.y = entry.baseY + Math.cos(this.game.time * 0.65 + entry.phase) * 4;
+      for (const body of [this.game.player, ...this.game.enemies]) {
+        if (body.dead || body.flying || body.spawnTime > 0) continue;
+        if (!circleRect(body.x, body.y, body.r, obstacle)) continue;
+        const sides = [
+          { x: obstacle.x - body.r - body.x, y: 0, distance: Math.abs(body.x - obstacle.x + body.r) },
+          { x: obstacle.x + obstacle.w + body.r - body.x, y: 0, distance: Math.abs(obstacle.x + obstacle.w + body.r - body.x) },
+          { x: 0, y: obstacle.y - body.r - body.y, distance: Math.abs(body.y - obstacle.y + body.r) },
+          { x: 0, y: obstacle.y + obstacle.h + body.r - body.y, distance: Math.abs(obstacle.y + obstacle.h + body.r - body.y) },
+        ].sort((a, b) => a.distance - b.distance);
+        for (const side of sides) {
+          const previous = { x: body.x, y: body.y };
+          this.game.moveBody(body, side.x, side.y);
+          if (!circleRect(body.x, body.y, body.r, obstacle)) break;
+          Object.assign(body, previous);
+        }
+        if (circleRect(body.x, body.y, body.r, obstacle)) {
+          const position = this.game.safeSpawnPosition(body.x, body.y, body.r, true);
+          if (position) Object.assign(body, position);
+        }
+      }
+    }
   }
 
   updateBelts(dt) {
@@ -148,7 +184,7 @@ export class RoomEnvironment {
   }
 
   queueBeam(axis, position, { delay = 1, duration = 0.25 } = {}) {
-    if (!this.enabled || this.floorIndex !== 5) return null;
+    if (!this.enabled || (this.floorIndex !== 5 && this.room.type !== "rift")) return null;
     if (this.beams.length >= 8) this.beams.shift();
     const beam = { axis, time: delay, duration: delay, life: duration, hit: false };
     if (axis === "vertical") {

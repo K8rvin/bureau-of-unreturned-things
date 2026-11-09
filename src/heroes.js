@@ -4,6 +4,7 @@ export const HEROES = [
   { id: "priestess", name: "Хранительница дождя", sprite: "priestess", hp: 6, itemId: "umbrella" },
   { id: "fireKnight", name: "Огненный рыцарь", sprite: "fireKnight", hp: 5, itemId: "fire" },
   { id: "courier", name: "Курьер", sprite: "courier", hp: 5, itemId: "magnet" },
+  { id: "surveyor", name: "Картограф", sprite: "surveyor", hp: 5, itemId: "lens", passive: "noHitSecret", trait: "Безошибочный бой: открывает тайник" },
 ];
 
 export const HERO_BY_ID = new Map(HEROES.map((hero) => [hero.id, hero]));

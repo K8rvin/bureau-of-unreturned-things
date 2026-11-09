@@ -189,3 +189,45 @@ export function performCalibratorAttack(game, enemy) {
   enemy.attackTimer = BOSS_ATTACKS[attack].cooldown * (enemy.phase === 2 ? 0.82 : 1);
   game.emit("enemyShot", { enemy });
 }
+
+export function updateRiftWarden(game, enemy, dt) {
+  if (enemy.telegraph > 0) {
+    enemy.telegraph -= dt;
+    if (enemy.telegraph <= 0) performRiftAttack(game, enemy);
+    return;
+  }
+  enemy.attackTimer -= dt;
+  moveBoss(game, enemy, dt);
+  if (enemy.attackTimer <= 0) {
+    const attacks = enemy.phase === 1 ? ["riftBeam", "riftStep"] : ["riftGrid", "riftBeam", "riftStep"];
+    const attack = attacks[enemy.attackIndex++ % attacks.length];
+    if (attack === "riftStep") {
+      const x = 90 + enemy.attackIndex * 97 % 300;
+      const y = 82 + enemy.attackIndex * 53 % 116;
+      enemy.riftTarget = game.safeSpawnPosition(x, y, enemy.r, true);
+    }
+    game.beginTelegraph(enemy, attack, BOSS_ATTACKS[attack].telegraph);
+  }
+}
+
+export function performRiftAttack(game, enemy) {
+  if (enemy.dead) return;
+  const attack = enemy.attackType;
+  if (attack === "riftBeam") {
+    const offsets = enemy.phase === 2 ? [-0.18, 0, 0.18] : [-0.1, 0.1];
+    for (const offset of offsets) fireEnemyLaser(game, enemy, enemy.aimAngle + offset, { width: 3, damage: 1, source: "Луч Смотрителя Разреза" });
+  } else if (attack === "riftStep") {
+    if (enemy.riftTarget) {
+      Object.assign(enemy, enemy.riftTarget);
+      game.emit("spawn", { enemy });
+    }
+    const count = enemy.phase === 2 ? 12 : 8;
+    for (let i = 0; i < count; i++) game.fireEnemy(enemy, i / count * TAU + enemy.attackIndex * 0.1, 90);
+    game.emit("summon", { enemy });
+  } else if (attack === "riftGrid") {
+    game.environment?.queueBeam("vertical", game.player.x, { delay: 0.85 });
+    game.environment?.queueBeam("horizontal", game.player.y, { delay: 0.85 });
+  }
+  enemy.attackTimer = BOSS_ATTACKS[attack].cooldown * (enemy.phase === 2 ? 0.85 : 1);
+  game.emit("enemyShot", { enemy });
+}

@@ -240,6 +240,13 @@ export const ITEMS = [
     pool: true,
   },
   {
+    id: "riftPass",
+    name: "Сервисный пропуск",
+    icon: "keyring.svg",
+    description: "F — один проход к уже зачищенной комнате на каждом отделе. Не пропускает активный бой.",
+    pool: false,
+  },
+  {
     id: "archivMoth",
     name: "Моль из архива",
     icon: "butterfly.svg",
@@ -252,6 +259,10 @@ export const ITEM_BY_ID = new Map(ITEMS.map((item) => [item.id, item]));
 export const SYNERGIES = [
   { ids: ["clip", "thread"], name: "Связанная опись" },
   { ids: ["chalk", "mercury"], name: "Длинная разметка" },
+  { ids: ["laser", "chalk"], name: "Призматическая разметка" },
+  { ids: ["poison", "bleed"], name: "Реагентная рана" },
+  { ids: ["heavy", "quad"], name: "Тяжёлая четверть" },
+  { ids: ["rapid", "power"], name: "Рабочий режим" },
 ];
 
 export const ENEMY_TYPES = {
@@ -279,6 +290,7 @@ export const ENEMY_TYPES = {
   finalBoss: { name: "Первый невозврат", hp: 440, speed: 13, radius: 16, color: "#a087c6", boss: true, sprite: "umbrellaBoss", icon: "mirror-mirror.svg", filter: "saturate(0.65) hue-rotate(55deg) brightness(0.85)" },
   chemistBoss: { name: "Архивный химик", hp: 480, speed: 15, radius: 16, color: "#82b66a", boss: true, sprite: "moth", bossScale: 2.4, icon: "ink-swirl.svg", filter: "saturate(1.4) hue-rotate(55deg)" },
   calibratorBoss: { name: "Калибратор", hp: 540, speed: 14, radius: 16, color: "#75b9c5", boss: true, sprite: "boss", icon: "sewing-needle.svg", filter: "saturate(0.8) hue-rotate(125deg) brightness(1.15)" },
+  riftWarden: { name: "Смотритель Разреза", hp: 240, speed: 16, radius: 14, color: "#a985c8", boss: true, sprite: "boss", bossScale: 1.1, icon: "laser-blast.svg", filter: "saturate(0.8) hue-rotate(200deg) brightness(1.1)" },
 };
 
 export const FLOOR_ENCOUNTERS = [
@@ -327,4 +339,7 @@ export const BOSS_ATTACKS = {
   beamSweep: { telegraph: 0.9, cooldown: 1.35 },
   beamGrid: { telegraph: 0.85, cooldown: 1.4 },
   overcharge: { telegraph: 0.8, cooldown: 1.2 },
+  riftBeam: { telegraph: 0.8, cooldown: 1.2 },
+  riftStep: { telegraph: 0.85, cooldown: 1.5 },
+  riftGrid: { telegraph: 0.9, cooldown: 1.4 },
 };
