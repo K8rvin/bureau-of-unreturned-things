@@ -1,0 +1,18 @@
+Animated Rat and Bat
+Author: Calciumtrice
+Confirmed source: https://opengameart.org/content/animated-rat-and-bat
+Original file: https://opengameart.org/sites/default/files/rat%20and%20bat%20spritesheet%20calciumtrice.png
+
+License: Creative Commons Attribution 3.0 (CC BY 3.0)
+License: http://creativecommons.org/licenses/by/3.0/
+
+The OpenGameArt page explicitly states:
+"Animated Rat and Bat by Calciumtrice, usable under Creative Commons Attribution 3.0 license."
+Credit should be given to Calciumtrice.
+
+Suggested attribution:
+Animated Rat and Bat by Calciumtrice — CC BY 3.0
+https://opengameart.org/content/animated-rat-and-bat
+http://creativecommons.org/licenses/by/3.0/
+
+The local rat-and-bat.png was already present before this verification and was not modified. The originally supplied URL https://opengameart.org/content/rat-and-bat-spritesheet-calciumtrice currently returns 404; the confirmed canonical page above returns HTTP 200.

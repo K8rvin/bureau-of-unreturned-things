@@ -1,0 +1,5077 @@
+{
+  "storage": "one PNG per frame; no atlas grid",
+  "bboxConvention": "[left, top, right, bottom); right and bottom are exclusive; alpha > 0",
+  "sourceMetadata": "gdevelop-asset.json",
+  "animations": [
+    {
+      "name": "Idle",
+      "looping": true,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 8,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Idle_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Idle_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            128,
+            89,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Idle_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            128,
+            89,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Idle_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            128,
+            89,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Idle_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            89,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Idle_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            90,
+            163,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Idle_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            90,
+            161,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Idle_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            131,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Walk",
+      "looping": true,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 10,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Walk_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Walk_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Walk_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            91,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Walk_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            128,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Walk_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            89,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Walk_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Walk_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Walk_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            91,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Water Priestess_Walk_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Water Priestess_Walk_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            89,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Death",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 16,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Death_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            99,
+            172,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Death_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            119,
+            99,
+            173,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Death_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            120,
+            99,
+            173,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Death_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            100,
+            173,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Death_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            172,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Death_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            172,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Death_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            172,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Death_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            173,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Water Priestess_Death_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Water Priestess_Death_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Water Priestess_Death_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Water Priestess_Death_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Water Priestess_Death_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 13,
+          "file": "Water Priestess_Death_14.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 14,
+          "file": "Water Priestess_Death_15.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 15,
+          "file": "Water Priestess_Death_16.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            101,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Air Attack",
+      "looping": false,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 8,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Air Attack_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            85,
+            166,
+            124
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Air Attack_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            84,
+            168,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Air Attack_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            116,
+            83,
+            168,
+            122
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Air Attack_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            83,
+            228,
+            120
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Air Attack_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            83,
+            227,
+            120
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Air Attack_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            78,
+            228,
+            120
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Air Attack_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            72,
+            231,
+            122
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Air Attack_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            136,
+            70,
+            223,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Attack1",
+      "looping": false,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 7,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Attack1_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            136,
+            90,
+            173,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Attack1_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            91,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Attack1_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            140,
+            91,
+            201,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Attack1_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            143,
+            91,
+            202,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Attack1_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            149,
+            89,
+            181,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Attack1_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            139,
+            83,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Attack1_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Attack2",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 21,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Attack2_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            136,
+            90,
+            173,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Attack2_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            91,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Attack2_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            140,
+            91,
+            201,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Attack2_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            143,
+            91,
+            202,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Attack2_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            144,
+            91,
+            196,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Attack2_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            145,
+            91,
+            187,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Attack2_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            135,
+            80,
+            171,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Attack2_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            144,
+            83,
+            174,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Water Priestess_Attack2_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            128,
+            89,
+            174,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Water Priestess_Attack2_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            114,
+            79,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Water Priestess_Attack2_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            77,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Water Priestess_Attack2_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            126,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Water Priestess_Attack2_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            124,
+            91,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 13,
+          "file": "Water Priestess_Attack2_14.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            122,
+            91,
+            157,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 14,
+          "file": "Water Priestess_Attack2_15.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            91,
+            226,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 15,
+          "file": "Water Priestess_Attack2_16.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            144,
+            90,
+            224,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 16,
+          "file": "Water Priestess_Attack2_17.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            145,
+            87,
+            230,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 17,
+          "file": "Water Priestess_Attack2_18.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            146,
+            83,
+            234,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 18,
+          "file": "Water Priestess_Attack2_19.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            149,
+            89,
+            181,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 19,
+          "file": "Water Priestess_Attack2_20.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            139,
+            83,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 20,
+          "file": "Water Priestess_Attack2_21.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Attack3",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 27,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Attack3_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            136,
+            90,
+            173,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Attack3_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            91,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Attack3_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            140,
+            91,
+            201,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Attack3_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            143,
+            91,
+            202,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Attack3_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            144,
+            91,
+            196,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Attack3_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            145,
+            91,
+            187,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Attack3_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            135,
+            80,
+            171,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Attack3_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            144,
+            83,
+            174,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Water Priestess_Attack3_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            128,
+            89,
+            174,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Water Priestess_Attack3_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            114,
+            79,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Water Priestess_Attack3_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            77,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Water Priestess_Attack3_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            126,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Water Priestess_Attack3_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            124,
+            91,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 13,
+          "file": "Water Priestess_Attack3_14.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            122,
+            91,
+            157,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 14,
+          "file": "Water Priestess_Attack3_15.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            91,
+            226,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 15,
+          "file": "Water Priestess_Attack3_16.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            144,
+            90,
+            224,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 16,
+          "file": "Water Priestess_Attack3_17.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            152,
+            71,
+            230,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 17,
+          "file": "Water Priestess_Attack3_18.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            135,
+            67,
+            234,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 18,
+          "file": "Water Priestess_Attack3_19.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            137,
+            74,
+            185,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 19,
+          "file": "Water Priestess_Attack3_20.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            148,
+            84,
+            198,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 20,
+          "file": "Water Priestess_Attack3_21.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            171,
+            87,
+            218,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 21,
+          "file": "Water Priestess_Attack3_22.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            173,
+            78,
+            246,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 22,
+          "file": "Water Priestess_Attack3_23.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            173,
+            77,
+            247,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 23,
+          "file": "Water Priestess_Attack3_24.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            160,
+            75,
+            241,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 24,
+          "file": "Water Priestess_Attack3_25.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            149,
+            75,
+            244,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 25,
+          "file": "Water Priestess_Attack3_26.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            139,
+            74,
+            247,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 26,
+          "file": "Water Priestess_Attack3_27.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            90,
+            252,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Defend",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 12,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Defend_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            90,
+            184,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Defend_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            77,
+            189,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Defend_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            73,
+            188,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Defend_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            73,
+            188,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Defend_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            73,
+            188,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Defend_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            73,
+            188,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Defend_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            76,
+            184,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Defend_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            90,
+            186,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Water Priestess_Defend_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            90,
+            181,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Water Priestess_Defend_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            90,
+            183,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Water Priestess_Defend_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            90,
+            187,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Water Priestess_Defend_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            90,
+            181,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Heal",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 12,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Heal_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            135,
+            90,
+            155,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Heal_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            135,
+            90,
+            155,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Heal_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            136,
+            90,
+            154,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Heal_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Heal_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Heal_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Heal_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Heal_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Water Priestess_Heal_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Water Priestess_Heal_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            160,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Water Priestess_Heal_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            136,
+            90,
+            154,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Water Priestess_Heal_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            90,
+            154,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Jump Down",
+      "looping": true,
+      "timeBetweenFrames": 0.1667,
+      "frameCount": 3,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Jump Down_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            71,
+            163,
+            124
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Jump Down_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            72,
+            163,
+            124
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Jump Down_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            72,
+            164,
+            124
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Jump Up",
+      "looping": true,
+      "timeBetweenFrames": 0.1667,
+      "frameCount": 3,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Jump Up_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            86,
+            163,
+            125
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Jump Up_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            86,
+            163,
+            125
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Jump Up_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            86,
+            164,
+            125
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Special Attack",
+      "looping": false,
+      "timeBetweenFrames": 0.0714,
+      "frameCount": 32,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Special Attack_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            90,
+            209,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Special Attack_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            93,
+            210,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Special Attack_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            119,
+            80,
+            212,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Special Attack_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            66,
+            216,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Special Attack_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            124,
+            53,
+            219,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Special Attack_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            117,
+            48,
+            221,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Special Attack_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            114,
+            45,
+            222,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Special Attack_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            114,
+            41,
+            221,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Water Priestess_Special Attack_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            122,
+            39,
+            221,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Water Priestess_Special Attack_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            123,
+            38,
+            221,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Water Priestess_Special Attack_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            123,
+            38,
+            221,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Water Priestess_Special Attack_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            45,
+            214,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Water Priestess_Special Attack_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            120,
+            90,
+            242,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 13,
+          "file": "Water Priestess_Special Attack_14.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            120,
+            74,
+            243,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 14,
+          "file": "Water Priestess_Special Attack_15.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            120,
+            72,
+            243,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 15,
+          "file": "Water Priestess_Special Attack_16.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            120,
+            73,
+            243,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 16,
+          "file": "Water Priestess_Special Attack_17.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            120,
+            73,
+            246,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 17,
+          "file": "Water Priestess_Special Attack_18.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            72,
+            243,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 18,
+          "file": "Water Priestess_Special Attack_19.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            71,
+            243,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 19,
+          "file": "Water Priestess_Special Attack_20.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            70,
+            243,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 20,
+          "file": "Water Priestess_Special Attack_21.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            69,
+            243,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 21,
+          "file": "Water Priestess_Special Attack_22.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            117,
+            75,
+            243,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 22,
+          "file": "Water Priestess_Special Attack_23.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            85,
+            244,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 23,
+          "file": "Water Priestess_Special Attack_24.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            85,
+            244,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 24,
+          "file": "Water Priestess_Special Attack_25.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            85,
+            244,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 25,
+          "file": "Water Priestess_Special Attack_26.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            85,
+            244,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 26,
+          "file": "Water Priestess_Special Attack_27.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            85,
+            244,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 27,
+          "file": "Water Priestess_Special Attack_28.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            85,
+            244,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 28,
+          "file": "Water Priestess_Special Attack_29.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            85,
+            245,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 29,
+          "file": "Water Priestess_Special Attack_30.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            85,
+            244,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 30,
+          "file": "Water Priestess_Special Attack_31.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            128,
+            87,
+            250,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 31,
+          "file": "Water Priestess_Special Attack_32.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            88,
+            247,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Surf",
+      "looping": false,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 8,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Surf_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            103,
+            88,
+            161,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Surf_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            106,
+            88,
+            169,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Surf_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            88,
+            172,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Surf_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            110,
+            88,
+            175,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Surf_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            112,
+            88,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Surf_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            113,
+            88,
+            166,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Surf_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            114,
+            88,
+            171,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Water Priestess_Surf_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            99,
+            88,
+            174,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Take Hit",
+      "looping": false,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 7,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Take Hit_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            91,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Take Hit_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            87,
+            159,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Take Hit_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            117,
+            86,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Take Hit_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            117,
+            83,
+            164,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Take Hit_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            117,
+            81,
+            165,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Take Hit_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            80,
+            166,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Water Priestess_Take Hit_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            90,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Tumble",
+      "looping": false,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 6,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Water Priestess_Tumble_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            126,
+            88,
+            165,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Water Priestess_Tumble_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            85,
+            165,
+            124
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Water Priestess_Tumble_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            89,
+            165,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Water Priestess_Tumble_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            84,
+            169,
+            119
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Water Priestess_Tumble_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            126,
+            96,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Water Priestess_Tumble_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            91,
+            163,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2297 @@
+{
+  "file": "rat-and-bat.png",
+  "canvas": [
+    320,
+    320
+  ],
+  "grid": {
+    "columns": 10,
+    "rows": 10,
+    "cellWidth": 32,
+    "cellHeight": 32
+  },
+  "background": "transparent; transparent pixels have RGB (255,255,255), not opaque black",
+  "bboxConvention": "[left, top, right, bottom); right and bottom are exclusive; alpha > 0",
+  "animationRows": [
+    {
+      "row": 0,
+      "animal": "rat",
+      "animation": "idle",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            9,
+            23,
+            23,
+            32
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            41,
+            23,
+            56,
+            32
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            73,
+            23,
+            88,
+            32
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            105,
+            23,
+            121,
+            32
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            137,
+            24,
+            153,
+            32
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            169,
+            24,
+            184,
+            32
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            201,
+            24,
+            215,
+            32
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            233,
+            24,
+            247,
+            32
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            265,
+            24,
+            279,
+            32
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            0,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            297,
+            24,
+            311,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "row": 1,
+      "animal": "rat",
+      "animation": "gesture",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            9,
+            55,
+            23,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            41,
+            55,
+            55,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            10,
+            22,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            74,
+            54,
+            89,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            12,
+            22,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            108,
+            54,
+            120,
+            64
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            13,
+            21,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            141,
+            53,
+            152,
+            64
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            13,
+            21,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            173,
+            53,
+            185,
+            64
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            13,
+            21,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            205,
+            53,
+            216,
+            64
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            13,
+            21,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            237,
+            53,
+            249,
+            64
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            12,
+            22,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            268,
+            54,
+            281,
+            64
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            32,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            10,
+            22,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            298,
+            54,
+            312,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "animal": "rat",
+      "animation": "walk",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            9,
+            87,
+            23,
+            96
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            22,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            41,
+            86,
+            56,
+            96
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            73,
+            87,
+            89,
+            96
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            105,
+            88,
+            120,
+            96
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            137,
+            88,
+            153,
+            96
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            169,
+            87,
+            185,
+            96
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            22,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            201,
+            86,
+            217,
+            96
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            233,
+            87,
+            249,
+            96
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            265,
+            88,
+            281,
+            96
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            64,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            24,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            297,
+            88,
+            312,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "animal": "rat",
+      "animation": "attack",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            9,
+            119,
+            23,
+            128
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            10,
+            24,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            42,
+            120,
+            57,
+            128
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            11,
+            25,
+            28,
+            32
+          ],
+          "bboxGlobal": [
+            75,
+            121,
+            92,
+            128
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            11,
+            25,
+            28,
+            32
+          ],
+          "bboxGlobal": [
+            107,
+            121,
+            124,
+            128
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            11,
+            24,
+            26,
+            32
+          ],
+          "bboxGlobal": [
+            139,
+            120,
+            154,
+            128
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            27,
+            32
+          ],
+          "bboxGlobal": [
+            169,
+            119,
+            187,
+            128
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            22,
+            25,
+            31
+          ],
+          "bboxGlobal": [
+            198,
+            118,
+            217,
+            127
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            4,
+            24,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            228,
+            120,
+            247,
+            128
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            23,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            262,
+            119,
+            281,
+            128
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            96,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            23,
+            24,
+            32
+          ],
+          "bboxGlobal": [
+            296,
+            119,
+            312,
+            128
+          ]
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "animal": "rat",
+      "animation": "death",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            9,
+            151,
+            23,
+            160
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            23,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            41,
+            151,
+            57,
+            160
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            22,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            73,
+            150,
+            89,
+            160
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            21,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            105,
+            149,
+            121,
+            160
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            12,
+            20,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            140,
+            148,
+            153,
+            160
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            13,
+            21,
+            22,
+            32
+          ],
+          "bboxGlobal": [
+            173,
+            149,
+            182,
+            160
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            10,
+            24,
+            23,
+            32
+          ],
+          "bboxGlobal": [
+            202,
+            152,
+            215,
+            160
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            26,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            232,
+            154,
+            249,
+            160
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            26,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            265,
+            154,
+            281,
+            160
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            128,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            27,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            294,
+            155,
+            313,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "animal": "bat",
+      "animation": "idle",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            13,
+            25,
+            21
+          ],
+          "bboxGlobal": [
+            7,
+            173,
+            25,
+            181
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            12,
+            24,
+            22
+          ],
+          "bboxGlobal": [
+            40,
+            172,
+            56,
+            182
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            10,
+            12,
+            22,
+            23
+          ],
+          "bboxGlobal": [
+            74,
+            172,
+            86,
+            183
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            13,
+            23,
+            24
+          ],
+          "bboxGlobal": [
+            105,
+            173,
+            119,
+            184
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            15,
+            25,
+            24
+          ],
+          "bboxGlobal": [
+            135,
+            175,
+            153,
+            184
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            15,
+            26,
+            23
+          ],
+          "bboxGlobal": [
+            166,
+            175,
+            186,
+            183
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            15,
+            27,
+            22
+          ],
+          "bboxGlobal": [
+            198,
+            175,
+            219,
+            182
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            14,
+            25,
+            21
+          ],
+          "bboxGlobal": [
+            232,
+            174,
+            249,
+            181
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            13,
+            25,
+            20
+          ],
+          "bboxGlobal": [
+            264,
+            173,
+            281,
+            180
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            160,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            13,
+            26,
+            21
+          ],
+          "bboxGlobal": [
+            295,
+            173,
+            314,
+            181
+          ]
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "animal": "bat",
+      "animation": "gesture",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            13,
+            25,
+            21
+          ],
+          "bboxGlobal": [
+            7,
+            205,
+            25,
+            213
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            15,
+            26,
+            22
+          ],
+          "bboxGlobal": [
+            39,
+            207,
+            58,
+            214
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            14,
+            26,
+            22
+          ],
+          "bboxGlobal": [
+            71,
+            206,
+            90,
+            214
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            13,
+            22,
+            24
+          ],
+          "bboxGlobal": [
+            105,
+            205,
+            118,
+            216
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            16,
+            25,
+            25
+          ],
+          "bboxGlobal": [
+            134,
+            208,
+            153,
+            217
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            5,
+            16,
+            26,
+            24
+          ],
+          "bboxGlobal": [
+            165,
+            208,
+            186,
+            216
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            5,
+            18,
+            25,
+            24
+          ],
+          "bboxGlobal": [
+            197,
+            210,
+            217,
+            216
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            17,
+            26,
+            23
+          ],
+          "bboxGlobal": [
+            230,
+            209,
+            250,
+            215
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            15,
+            26,
+            23
+          ],
+          "bboxGlobal": [
+            262,
+            207,
+            282,
+            215
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            192,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            13,
+            26,
+            21
+          ],
+          "bboxGlobal": [
+            294,
+            205,
+            314,
+            213
+          ]
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "animal": "bat",
+      "animation": "walk",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            13,
+            25,
+            20
+          ],
+          "bboxGlobal": [
+            7,
+            237,
+            25,
+            244
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            12,
+            25,
+            21
+          ],
+          "bboxGlobal": [
+            41,
+            236,
+            57,
+            245
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            11,
+            12,
+            23,
+            22
+          ],
+          "bboxGlobal": [
+            75,
+            236,
+            87,
+            246
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            13,
+            23,
+            23
+          ],
+          "bboxGlobal": [
+            105,
+            237,
+            119,
+            247
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            15,
+            25,
+            23
+          ],
+          "bboxGlobal": [
+            135,
+            239,
+            153,
+            247
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            5,
+            15,
+            25,
+            22
+          ],
+          "bboxGlobal": [
+            165,
+            239,
+            185,
+            246
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            5,
+            16,
+            26,
+            21
+          ],
+          "bboxGlobal": [
+            197,
+            240,
+            218,
+            245
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            15,
+            25,
+            20
+          ],
+          "bboxGlobal": [
+            232,
+            239,
+            249,
+            244
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            14,
+            25,
+            19
+          ],
+          "bboxGlobal": [
+            264,
+            238,
+            281,
+            243
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            224,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            14,
+            26,
+            20
+          ],
+          "bboxGlobal": [
+            295,
+            238,
+            314,
+            244
+          ]
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "animal": "bat",
+      "animation": "attack",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            13,
+            25,
+            21
+          ],
+          "bboxGlobal": [
+            7,
+            269,
+            25,
+            277
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            12,
+            25,
+            21
+          ],
+          "bboxGlobal": [
+            39,
+            268,
+            57,
+            277
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            11,
+            23,
+            23
+          ],
+          "bboxGlobal": [
+            72,
+            267,
+            87,
+            279
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            12,
+            20,
+            25
+          ],
+          "bboxGlobal": [
+            103,
+            268,
+            116,
+            281
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            13,
+            18,
+            27
+          ],
+          "bboxGlobal": [
+            135,
+            269,
+            146,
+            283
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            13,
+            19,
+            28
+          ],
+          "bboxGlobal": [
+            167,
+            269,
+            179,
+            284
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            16,
+            23,
+            28
+          ],
+          "bboxGlobal": [
+            198,
+            272,
+            215,
+            284
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            16,
+            25,
+            26
+          ],
+          "bboxGlobal": [
+            231,
+            272,
+            249,
+            282
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            8,
+            15,
+            24,
+            24
+          ],
+          "bboxGlobal": [
+            264,
+            271,
+            280,
+            280
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            256,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            14,
+            26,
+            22
+          ],
+          "bboxGlobal": [
+            294,
+            270,
+            314,
+            278
+          ]
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "animal": "bat",
+      "animation": "death",
+      "frameCount": 10,
+      "frames": [
+        {
+          "frame": 0,
+          "column": 0,
+          "cell": [
+            0,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            7,
+            13,
+            25,
+            21
+          ],
+          "bboxGlobal": [
+            7,
+            301,
+            25,
+            309
+          ]
+        },
+        {
+          "frame": 1,
+          "column": 1,
+          "cell": [
+            32,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            5,
+            13,
+            23,
+            22
+          ],
+          "bboxGlobal": [
+            37,
+            301,
+            55,
+            310
+          ]
+        },
+        {
+          "frame": 2,
+          "column": 2,
+          "cell": [
+            64,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            6,
+            12,
+            20,
+            23
+          ],
+          "bboxGlobal": [
+            70,
+            300,
+            84,
+            311
+          ]
+        },
+        {
+          "frame": 3,
+          "column": 3,
+          "cell": [
+            96,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            15,
+            20,
+            25
+          ],
+          "bboxGlobal": [
+            105,
+            303,
+            116,
+            313
+          ]
+        },
+        {
+          "frame": 4,
+          "column": 4,
+          "cell": [
+            128,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            11,
+            18,
+            21,
+            30
+          ],
+          "bboxGlobal": [
+            139,
+            306,
+            149,
+            318
+          ]
+        },
+        {
+          "frame": 5,
+          "column": 5,
+          "cell": [
+            160,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            11,
+            22,
+            21,
+            32
+          ],
+          "bboxGlobal": [
+            171,
+            310,
+            181,
+            320
+          ]
+        },
+        {
+          "frame": 6,
+          "column": 6,
+          "cell": [
+            192,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            11,
+            25,
+            22,
+            32
+          ],
+          "bboxGlobal": [
+            203,
+            313,
+            214,
+            320
+          ]
+        },
+        {
+          "frame": 7,
+          "column": 7,
+          "cell": [
+            224,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            10,
+            25,
+            25,
+            32
+          ],
+          "bboxGlobal": [
+            234,
+            313,
+            249,
+            320
+          ]
+        },
+        {
+          "frame": 8,
+          "column": 8,
+          "cell": [
+            256,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            26,
+            26,
+            32
+          ],
+          "bboxGlobal": [
+            265,
+            314,
+            282,
+            320
+          ]
+        },
+        {
+          "frame": 9,
+          "column": 9,
+          "cell": [
+            288,
+            288,
+            32,
+            32
+          ],
+          "bboxLocal": [
+            9,
+            28,
+            26,
+            32
+          ],
+          "bboxGlobal": [
+            297,
+            316,
+            314,
+            320
+          ]
+        }
+      ]
+    }
+  ]
+}

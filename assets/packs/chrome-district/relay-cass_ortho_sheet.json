@@ -1,0 +1,52 @@
+{
+  "seed": "relay-cass",
+  "generator": "import",
+  "archetype": "import",
+  "outfit": "jacket",
+  "gender": "andro",
+  "cellW": 56,
+  "cellH": 84,
+  "directions": 8,
+  "frames": 6,
+  "runFrames": 6,
+  "animations": [
+    {
+      "name": "walk",
+      "frames": 6,
+      "fps": 10
+    },
+    {
+      "name": "run",
+      "frames": 6,
+      "fps": 14
+    },
+    {
+      "name": "jump",
+      "frames": 6,
+      "fps": 12,
+      "oneShot": true,
+      "events": {
+        "takeoff": 1,
+        "apex": 2,
+        "land": 4
+      }
+    }
+  ],
+  "layout": "rows=directions (front, clockwise); cols=walk,run,jump strips left→right",
+  "note": "pixel art bake (56×84 cells, ÷4 from render res, 24-color derived palette); strips: walk×6 + run×6 + jump×6; Shift = run, Space = jump in playground; ortho RPG camera (elevated pitch) (22° pitch)",
+  "cameraView": "ortho",
+  "cameraPitch": 22,
+  "importCharacter": "relay-cass",
+  "maps": {
+    "normal": true,
+    "depth": true
+  },
+  "mapCellW": 224,
+  "mapCellH": 336,
+  "sku": "CD2-0001",
+  "name": "Relay Cass",
+  "hook": "Street courier on stolen mesh nodes",
+  "role": "founder",
+  "packVersion": "2.0.0",
+  "product": "CHROME DISTRICT Vol. 2 — Alley Cast"
+}

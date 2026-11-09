@@ -1,0 +1,22 @@
+Elementals: Water Priestess
+Author: chierit (pixel artist/animator)
+Author page: https://chierit.itch.io/
+Original asset page: https://chierit.itch.io/elementals-water-priestess
+Official GDevelop pack: https://gdevelop.io/asset-store/free/elementals-chierit
+Official GDevelop metadata: https://resources.gdevelop-app.com/assets-database/assets/a9ab316a762aa6055f93f92a766c3adc943133c0b55697d9351f418660af0c12.json
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License page: https://creativecommons.org/licenses/by/4.0/
+Full legal code: CC-BY-4.0-legalcode.txt (downloaded from https://creativecommons.org/licenses/by/4.0/legalcode.txt)
+
+The author's page permits editing and commercial use. Required credit: "chierit" in the game credits, or a link to the author's itch.io page. The author also writes: "Please don't resell."
+
+Suggested attribution for these unmodified files:
+Elementals: Water Priestess by chierit — CC BY 4.0
+https://chierit.itch.io/elementals-water-priestess
+https://creativecommons.org/licenses/by/4.0/
+
+Redistribution of individual PNG files:
+CC BY 4.0 section 2(a)(1)(A) grants the right to share (copy and redistribute) the licensed material in any medium or format. This includes the individual PNG files, not only complete games. Attribution, the license link, and an indication of any changes are required; do not imply endorsement and do not add legal or technological restrictions on downstream recipients. Respect the author's stated request not to resell the assets. Commercial use in a game is expressly allowed by the author.
+
+The PNG files and gdevelop-asset.json in this folder are unmodified originals from the official GDevelop resource URLs recorded in that metadata. No Mana Seed assets are included.

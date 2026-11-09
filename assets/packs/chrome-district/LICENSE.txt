@@ -1,0 +1,18 @@
+CHROME DISTRICT Vol. 2 — Alley Cast
+Character: Relay Cass (SKU CD2-0001, District Founder)
+Official site: https://chromedistrict.xyz/
+Official product page linked by the site: https://booliebuilds.itch.io/chrome-district-vol-2
+
+License: CC0 1.0 Universal (public domain dedication)
+License page: https://creativecommons.org/publicdomain/zero/1.0/
+The official site explicitly states: commercial use, modification and redistribution are allowed; no attribution or royalties are required.
+
+Official original files downloaded from the public playground:
+https://chromedistrict.xyz/v2-sprites/relay-cass_ortho_sheet.png
+https://chromedistrict.xyz/v2-sprites/relay-cass_ortho_sheet.json
+https://chromedistrict.xyz/v2-sprites/relay-cass_ortho_low_sheet.png
+https://chromedistrict.xyz/v2-sprites/relay-cass_ortho_low_sheet.json
+
+These are the site's original, unmodified Relay Cass atlases and metadata, not screenshots, redraws or reconstructed sprites. The complete paid Vol. 2 archive was not purchased or downloaded. The official Vol. 2 itch.io URL returned 404 when checked; the official site's public atlas URLs returned HTTP 200.
+
+No attack, hit or death strips are advertised or present in these atlases. The playground uses frame 0 of walk for idle. Included strips are walk, run and one-shot jump, each with 6 frames and 8 direction rows.

@@ -1,0 +1,4604 @@
+{
+  "storage": "one PNG per frame; no atlas grid",
+  "bboxConvention": "[left, top, right, bottom); right and bottom are exclusive; alpha > 0",
+  "sourceMetadata": "gdevelop-asset.json",
+  "animations": [
+    {
+      "name": "Idle",
+      "looping": true,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 8,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Idle_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Idle_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Idle_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Idle_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Idle_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Idle_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            84,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Idle_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            84,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Idle_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            84,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Run",
+      "looping": true,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 8,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Run_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            101,
+            83,
+            159,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Run_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            102,
+            82,
+            164,
+            125
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Run_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            103,
+            83,
+            163,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Run_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            102,
+            84,
+            159,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Run_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            101,
+            83,
+            159,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Run_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            101,
+            82,
+            159,
+            125
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Run_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            101,
+            83,
+            159,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Run_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            101,
+            84,
+            159,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Jump",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 20,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Jump_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            99,
+            87,
+            163,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Jump_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Jump_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Jump_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Jump_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Jump_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Jump_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Jump_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            76,
+            158,
+            120
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Fire Knight_Jump_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            99,
+            76,
+            159,
+            122
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Fire Knight_Jump_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            71,
+            159,
+            122
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Fire Knight_Jump_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            159,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Fire Knight_Jump_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            158,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Fire Knight_Jump_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            158,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 13,
+          "file": "Fire Knight_Jump_14.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            159,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 14,
+          "file": "Fire Knight_Jump_15.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            158,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 15,
+          "file": "Fire Knight_Jump_16.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            158,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 16,
+          "file": "Fire Knight_Jump_17.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            65,
+            158,
+            126
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 17,
+          "file": "Fire Knight_Jump_18.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            99,
+            87,
+            163,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 18,
+          "file": "Fire Knight_Jump_19.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            85,
+            161,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 19,
+          "file": "Fire Knight_Jump_20.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Death",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 13,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Death_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Death_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            116,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Death_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            83,
+            157,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Death_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            168,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Death_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            167,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Death_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            167,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Death_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            167,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Death_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            177,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Fire Knight_Death_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            187,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Fire Knight_Death_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            196,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Fire Knight_Death_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            196,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Fire Knight_Death_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            196,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Fire Knight_Death_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            87,
+            196,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Air Attack",
+      "looping": false,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 8,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Air Attack_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            97,
+            75,
+            158,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Air Attack_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            91,
+            66,
+            159,
+            122
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Air Attack_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            90,
+            65,
+            160,
+            121
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Air Attack_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            73,
+            236,
+            118
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Air Attack_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            73,
+            239,
+            118
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Air Attack_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            121,
+            73,
+            243,
+            118
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Air Attack_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            134,
+            74,
+            245,
+            118
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Air Attack_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            74,
+            159,
+            121
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Attack1",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 11,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Attack1_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            109,
+            86,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Attack1_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            111,
+            84,
+            156,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Attack1_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            119,
+            79,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Attack1_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            67,
+            166,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Attack1_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            44,
+            212,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Attack1_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            46,
+            211,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Attack1_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            54,
+            210,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Attack1_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            89,
+            208,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Fire Knight_Attack1_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            84,
+            187,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Fire Knight_Attack1_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Fire Knight_Attack1_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Attack2",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 19,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Attack2_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            109,
+            86,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Attack2_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            111,
+            84,
+            156,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Attack2_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            119,
+            79,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Attack2_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            67,
+            166,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Attack2_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            44,
+            212,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Attack2_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            46,
+            211,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Attack2_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            54,
+            210,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Attack2_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            85,
+            201,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Fire Knight_Attack2_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            85,
+            174,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Fire Knight_Attack2_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            135,
+            85,
+            184,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Fire Knight_Attack2_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            92,
+            85,
+            166,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Fire Knight_Attack2_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            105,
+            84,
+            190,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Fire Knight_Attack2_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            113,
+            74,
+            215,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 13,
+          "file": "Fire Knight_Attack2_14.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            83,
+            77,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 14,
+          "file": "Fire Knight_Attack2_15.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            75,
+            217,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 15,
+          "file": "Fire Knight_Attack2_16.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            74,
+            216,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 16,
+          "file": "Fire Knight_Attack2_17.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            112,
+            76,
+            172,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 17,
+          "file": "Fire Knight_Attack2_18.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            96,
+            85,
+            157,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 18,
+          "file": "Fire Knight_Attack2_19.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Attack3",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 28,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Attack3_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            109,
+            86,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Attack3_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            111,
+            84,
+            156,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Attack3_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            119,
+            79,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Attack3_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            67,
+            166,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Attack3_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            44,
+            212,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Attack3_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            46,
+            211,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Attack3_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            54,
+            210,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Attack3_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            138,
+            85,
+            201,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Fire Knight_Attack3_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            85,
+            174,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Fire Knight_Attack3_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            135,
+            85,
+            184,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Fire Knight_Attack3_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            92,
+            85,
+            166,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Fire Knight_Attack3_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            105,
+            84,
+            190,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Fire Knight_Attack3_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            113,
+            74,
+            215,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 13,
+          "file": "Fire Knight_Attack3_14.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            83,
+            77,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 14,
+          "file": "Fire Knight_Attack3_15.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            75,
+            217,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 15,
+          "file": "Fire Knight_Attack3_16.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            74,
+            216,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 16,
+          "file": "Fire Knight_Attack3_17.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            112,
+            76,
+            172,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 17,
+          "file": "Fire Knight_Attack3_18.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            96,
+            85,
+            157,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 18,
+          "file": "Fire Knight_Attack3_19.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            98,
+            86,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 19,
+          "file": "Fire Knight_Attack3_20.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            98,
+            86,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 20,
+          "file": "Fire Knight_Attack3_21.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            94,
+            86,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 21,
+          "file": "Fire Knight_Attack3_22.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            112,
+            84,
+            163,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 22,
+          "file": "Fire Knight_Attack3_23.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            48,
+            220,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 23,
+          "file": "Fire Knight_Attack3_24.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            55,
+            241,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 24,
+          "file": "Fire Knight_Attack3_25.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            116,
+            48,
+            248,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 25,
+          "file": "Fire Knight_Attack3_26.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            102,
+            54,
+            241,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 26,
+          "file": "Fire Knight_Attack3_27.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            97,
+            56,
+            240,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 27,
+          "file": "Fire Knight_Attack3_28.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            58,
+            240,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Defend",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 10,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Defend_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Defend_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            125,
+            84,
+            163,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Defend_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            82,
+            168,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Defend_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            82,
+            168,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Defend_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            82,
+            168,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Defend_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            82,
+            168,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Defend_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            82,
+            168,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Defend_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            82,
+            168,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Fire Knight_Defend_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            127,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Fire Knight_Defend_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Jump Down",
+      "looping": true,
+      "timeBetweenFrames": 0.1667,
+      "frameCount": 3,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Jump Down_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            159,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Jump Down_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            158,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Jump Down_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            104,
+            62,
+            158,
+            123
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Jump Up",
+      "looping": true,
+      "timeBetweenFrames": 0.1667,
+      "frameCount": 3,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Jump Up_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Jump Up_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Jump Up_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            107,
+            76,
+            158,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Roll",
+      "looping": false,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 8,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Roll_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            86,
+            166,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Roll_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            106,
+            91,
+            173,
+            125
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Roll_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            110,
+            94,
+            176,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Roll_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            110,
+            88,
+            168,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Roll_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            126,
+            78,
+            171,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Roll_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            79,
+            185,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Roll_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            85,
+            175,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Roll_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Special Attack",
+      "looping": false,
+      "timeBetweenFrames": 0.0833,
+      "frameCount": 18,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Special Attack_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            102,
+            82,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Special Attack_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            59,
+            184,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Special Attack_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            45,
+            204,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Special Attack_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            38,
+            212,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Special Attack_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            29,
+            217,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Special Attack_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            25,
+            228,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 6,
+          "file": "Fire Knight_Special Attack_7.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            35,
+            215,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 7,
+          "file": "Fire Knight_Special Attack_8.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            39,
+            220,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 8,
+          "file": "Fire Knight_Special Attack_9.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            129,
+            36,
+            224,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 9,
+          "file": "Fire Knight_Special Attack_10.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            115,
+            40,
+            198,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 10,
+          "file": "Fire Knight_Special Attack_11.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            118,
+            34,
+            199,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 11,
+          "file": "Fire Knight_Special Attack_12.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            106,
+            28,
+            199,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 12,
+          "file": "Fire Knight_Special Attack_13.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            130,
+            37,
+            250,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 13,
+          "file": "Fire Knight_Special Attack_14.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            131,
+            32,
+            250,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 14,
+          "file": "Fire Knight_Special Attack_15.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            132,
+            22,
+            250,
+            128
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 15,
+          "file": "Fire Knight_Special Attack_16.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            142,
+            22,
+            250,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 16,
+          "file": "Fire Knight_Special Attack_17.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            133,
+            25,
+            248,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 17,
+          "file": "Fire Knight_Special Attack_18.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    },
+    {
+      "name": "Take Hit",
+      "looping": false,
+      "timeBetweenFrames": 0.125,
+      "frameCount": 6,
+      "canvasSizes": [
+        [
+          288,
+          128
+        ]
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "file": "Fire Knight_Take Hit_1.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            98,
+            85,
+            162,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 1,
+          "file": "Fire Knight_Take Hit_2.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            96,
+            84,
+            161,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 2,
+          "file": "Fire Knight_Take Hit_3.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            95,
+            81,
+            164,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 3,
+          "file": "Fire Knight_Take Hit_4.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            95,
+            75,
+            167,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 4,
+          "file": "Fire Knight_Take Hit_5.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            96,
+            73,
+            170,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        },
+        {
+          "frame": 5,
+          "file": "Fire Knight_Take Hit_6.png",
+          "canvas": [
+            288,
+            128
+          ],
+          "bbox": [
+            100,
+            83,
+            160,
+            127
+          ],
+          "originPoint": {
+            "name": "origine",
+            "x": 0,
+            "y": 0
+          },
+          "centerPoint": {
+            "automatic": true,
+            "name": "centre",
+            "x": 0,
+            "y": 0
+          },
+          "points": [],
+          "hasCustomCollisionMask": true
+        }
+      ]
+    }
+  ]
+}

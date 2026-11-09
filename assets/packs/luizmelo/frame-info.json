@@ -1,0 +1,3306 @@
+{
+  "bboxConvention": "[left, top, right, bottom); right and bottom are exclusive; alpha > 0",
+  "characters": {
+    "skeleton": {
+      "storage": "one PNG per frame; no atlas grid",
+      "animations": {
+        "attack": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              95,
+              57
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "skeleton attack 01.png",
+              "canvas": [
+                95,
+                57
+              ],
+              "bbox": [
+                7,
+                6,
+                52,
+                57
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "skeleton attack 02.png",
+              "canvas": [
+                95,
+                57
+              ],
+              "bbox": [
+                7,
+                5,
+                49,
+                57
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "skeleton attack 03.png",
+              "canvas": [
+                95,
+                57
+              ],
+              "bbox": [
+                0,
+                0,
+                36,
+                57
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "skeleton attack 04.png",
+              "canvas": [
+                95,
+                57
+              ],
+              "bbox": [
+                0,
+                0,
+                36,
+                57
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "skeleton attack 05.png",
+              "canvas": [
+                95,
+                57
+              ],
+              "bbox": [
+                0,
+                0,
+                36,
+                57
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "skeleton attack 06.png",
+              "canvas": [
+                95,
+                57
+              ],
+              "bbox": [
+                5,
+                0,
+                36,
+                57
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "skeleton attack 07.png",
+              "canvas": [
+                95,
+                57
+              ],
+              "bbox": [
+                15,
+                4,
+                95,
+                57
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "skeleton attack 08.png",
+              "canvas": [
+                95,
+                57
+              ],
+              "bbox": [
+                15,
+                5,
+                95,
+                57
+              ]
+            }
+          ]
+        },
+        "attack2": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              89,
+              87
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "skeleton attack2 01.png",
+              "canvas": [
+                89,
+                87
+              ],
+              "bbox": [
+                9,
+                38,
+                42,
+                87
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "skeleton attack2 02.png",
+              "canvas": [
+                89,
+                87
+              ],
+              "bbox": [
+                10,
+                38,
+                43,
+                87
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "skeleton attack2 03.png",
+              "canvas": [
+                89,
+                87
+              ],
+              "bbox": [
+                10,
+                36,
+                44,
+                87
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "skeleton attack2 04.png",
+              "canvas": [
+                89,
+                87
+              ],
+              "bbox": [
+                10,
+                36,
+                44,
+                87
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "skeleton attack2 05.png",
+              "canvas": [
+                89,
+                87
+              ],
+              "bbox": [
+                10,
+                36,
+                44,
+                87
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "skeleton attack2 06.png",
+              "canvas": [
+                89,
+                87
+              ],
+              "bbox": [
+                3,
+                35,
+                38,
+                87
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "skeleton attack2 07.png",
+              "canvas": [
+                89,
+                87
+              ],
+              "bbox": [
+                0,
+                0,
+                89,
+                87
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "skeleton attack2 08.png",
+              "canvas": [
+                89,
+                87
+              ],
+              "bbox": [
+                0,
+                0,
+                89,
+                87
+              ]
+            }
+          ]
+        },
+        "attack3": {
+          "frameCount": 6,
+          "canvasSizes": [
+            [
+              62,
+              54
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "skeleton attack3 01.png",
+              "canvas": [
+                62,
+                54
+              ],
+              "bbox": [
+                0,
+                0,
+                54,
+                54
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "skeleton attack3 02.png",
+              "canvas": [
+                62,
+                54
+              ],
+              "bbox": [
+                5,
+                2,
+                53,
+                54
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "skeleton attack3 03.png",
+              "canvas": [
+                62,
+                54
+              ],
+              "bbox": [
+                22,
+                4,
+                47,
+                54
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "skeleton attack3 04.png",
+              "canvas": [
+                62,
+                54
+              ],
+              "bbox": [
+                22,
+                9,
+                62,
+                54
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "skeleton attack3 05.png",
+              "canvas": [
+                62,
+                54
+              ],
+              "bbox": [
+                22,
+                9,
+                57,
+                54
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "skeleton attack3 06.png",
+              "canvas": [
+                62,
+                54
+              ],
+              "bbox": [
+                22,
+                9,
+                57,
+                54
+              ]
+            }
+          ]
+        },
+        "death": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              56,
+              53
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "skeleton death 01.png",
+              "canvas": [
+                56,
+                53
+              ],
+              "bbox": [
+                8,
+                0,
+                53,
+                53
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "skeleton death 02.png",
+              "canvas": [
+                56,
+                53
+              ],
+              "bbox": [
+                4,
+                8,
+                55,
+                51
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "skeleton death 03.png",
+              "canvas": [
+                56,
+                53
+              ],
+              "bbox": [
+                2,
+                28,
+                56,
+                51
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "skeleton death 04.png",
+              "canvas": [
+                56,
+                53
+              ],
+              "bbox": [
+                0,
+                38,
+                56,
+                51
+              ]
+            }
+          ]
+        },
+        "idle": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              45,
+              51
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "skeleton idle 01.png",
+              "canvas": [
+                45,
+                51
+              ],
+              "bbox": [
+                0,
+                0,
+                45,
+                51
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "skeleton idle 02.png",
+              "canvas": [
+                45,
+                51
+              ],
+              "bbox": [
+                0,
+                1,
+                45,
+                51
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "skeleton idle 03.png",
+              "canvas": [
+                45,
+                51
+              ],
+              "bbox": [
+                0,
+                2,
+                45,
+                51
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "skeleton idle 04.png",
+              "canvas": [
+                45,
+                51
+              ],
+              "bbox": [
+                0,
+                1,
+                45,
+                51
+              ]
+            }
+          ]
+        },
+        "shield": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              40,
+              46
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "skeleton shield 01.png",
+              "canvas": [
+                40,
+                46
+              ],
+              "bbox": [
+                0,
+                0,
+                40,
+                46
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "skeleton shield 02.png",
+              "canvas": [
+                40,
+                46
+              ],
+              "bbox": [
+                0,
+                0,
+                33,
+                46
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "skeleton shield 03.png",
+              "canvas": [
+                40,
+                46
+              ],
+              "bbox": [
+                0,
+                0,
+                38,
+                46
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "skeleton shield 04.png",
+              "canvas": [
+                40,
+                46
+              ],
+              "bbox": [
+                0,
+                0,
+                40,
+                46
+              ]
+            }
+          ]
+        },
+        "take hit": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              55,
+              53
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "skeleton take hit 01.png",
+              "canvas": [
+                55,
+                53
+              ],
+              "bbox": [
+                10,
+                2,
+                55,
+                53
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "skeleton take hit 02.png",
+              "canvas": [
+                55,
+                53
+              ],
+              "bbox": [
+                10,
+                2,
+                55,
+                53
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "skeleton take hit 03.png",
+              "canvas": [
+                55,
+                53
+              ],
+              "bbox": [
+                0,
+                2,
+                50,
+                53
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "skeleton take hit 04.png",
+              "canvas": [
+                55,
+                53
+              ],
+              "bbox": [
+                2,
+                0,
+                52,
+                53
+              ]
+            }
+          ]
+        },
+        "walk": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              45,
+              51
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "skeleton walk 01.png",
+              "canvas": [
+                45,
+                51
+              ],
+              "bbox": [
+                0,
+                0,
+                45,
+                51
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "skeleton walk 02.png",
+              "canvas": [
+                45,
+                51
+              ],
+              "bbox": [
+                0,
+                1,
+                45,
+                51
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "skeleton walk 03.png",
+              "canvas": [
+                45,
+                51
+              ],
+              "bbox": [
+                0,
+                1,
+                45,
+                51
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "skeleton walk 04.png",
+              "canvas": [
+                45,
+                51
+              ],
+              "bbox": [
+                0,
+                0,
+                45,
+                51
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "mushroom": {
+      "storage": "one PNG per frame; no atlas grid",
+      "animations": {
+        "attack": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              64,
+              45
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "mushroom attack 01.png",
+              "canvas": [
+                64,
+                45
+              ],
+              "bbox": [
+                13,
+                8,
+                36,
+                45
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "mushroom attack 02.png",
+              "canvas": [
+                64,
+                45
+              ],
+              "bbox": [
+                10,
+                5,
+                33,
+                45
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "mushroom attack 03.png",
+              "canvas": [
+                64,
+                45
+              ],
+              "bbox": [
+                0,
+                2,
+                29,
+                45
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "mushroom attack 04.png",
+              "canvas": [
+                64,
+                45
+              ],
+              "bbox": [
+                0,
+                2,
+                29,
+                45
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "mushroom attack 05.png",
+              "canvas": [
+                64,
+                45
+              ],
+              "bbox": [
+                0,
+                2,
+                29,
+                45
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "mushroom attack 06.png",
+              "canvas": [
+                64,
+                45
+              ],
+              "bbox": [
+                4,
+                0,
+                29,
+                45
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "mushroom attack 07.png",
+              "canvas": [
+                64,
+                45
+              ],
+              "bbox": [
+                5,
+                3,
+                55,
+                45
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "mushroom attack 08.png",
+              "canvas": [
+                64,
+                45
+              ],
+              "bbox": [
+                13,
+                3,
+                64,
+                45
+              ]
+            }
+          ]
+        },
+        "attack2": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              64,
+              46
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "mushroom attack2 01.png",
+              "canvas": [
+                64,
+                46
+              ],
+              "bbox": [
+                6,
+                9,
+                29,
+                46
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "mushroom attack2 02.png",
+              "canvas": [
+                64,
+                46
+              ],
+              "bbox": [
+                3,
+                6,
+                26,
+                46
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "mushroom attack2 03.png",
+              "canvas": [
+                64,
+                46
+              ],
+              "bbox": [
+                0,
+                4,
+                24,
+                46
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "mushroom attack2 04.png",
+              "canvas": [
+                64,
+                46
+              ],
+              "bbox": [
+                0,
+                4,
+                24,
+                46
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "mushroom attack2 05.png",
+              "canvas": [
+                64,
+                46
+              ],
+              "bbox": [
+                0,
+                4,
+                24,
+                46
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "mushroom attack2 06.png",
+              "canvas": [
+                64,
+                46
+              ],
+              "bbox": [
+                3,
+                0,
+                25,
+                46
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "mushroom attack2 07.png",
+              "canvas": [
+                64,
+                46
+              ],
+              "bbox": [
+                9,
+                8,
+                51,
+                46
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "mushroom attack2 08.png",
+              "canvas": [
+                64,
+                46
+              ],
+              "bbox": [
+                9,
+                8,
+                64,
+                46
+              ]
+            }
+          ]
+        },
+        "attack3": {
+          "frameCount": 11,
+          "canvasSizes": [
+            [
+              51,
+              52
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "mushroom attack3 01.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                7,
+                15,
+                32,
+                52
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "mushroom attack3 02.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                7,
+                14,
+                30,
+                52
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "mushroom attack3 03.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                7,
+                15,
+                32,
+                52
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "mushroom attack3 04.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                11,
+                21,
+                38,
+                52
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "mushroom attack3 05.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                11,
+                20,
+                38,
+                52
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "mushroom attack3 06.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                11,
+                21,
+                38,
+                52
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "mushroom attack3 07.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                11,
+                20,
+                38,
+                52
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "mushroom attack3 08.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                4,
+                8,
+                51,
+                52
+              ]
+            },
+            {
+              "frame": 9,
+              "file": "mushroom attack3 09.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                3,
+                7,
+                50,
+                52
+              ]
+            },
+            {
+              "frame": 10,
+              "file": "mushroom attack3 10.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                0,
+                4,
+                51,
+                52
+              ]
+            },
+            {
+              "frame": 11,
+              "file": "mushroom attack3 11.png",
+              "canvas": [
+                51,
+                52
+              ],
+              "bbox": [
+                2,
+                0,
+                50,
+                52
+              ]
+            }
+          ]
+        },
+        "death": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              28,
+              37
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "mushroom death 01.png",
+              "canvas": [
+                28,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                23,
+                37
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "mushroom death 02.png",
+              "canvas": [
+                28,
+                37
+              ],
+              "bbox": [
+                1,
+                0,
+                27,
+                37
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "mushroom death 03.png",
+              "canvas": [
+                28,
+                37
+              ],
+              "bbox": [
+                5,
+                11,
+                28,
+                37
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "mushroom death 04.png",
+              "canvas": [
+                28,
+                37
+              ],
+              "bbox": [
+                5,
+                10,
+                28,
+                37
+              ]
+            }
+          ]
+        },
+        "idle": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              23,
+              37
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "mushroom idle 01.png",
+              "canvas": [
+                23,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                23,
+                37
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "mushroom idle 02.png",
+              "canvas": [
+                23,
+                37
+              ],
+              "bbox": [
+                0,
+                1,
+                23,
+                37
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "mushroom idle 03.png",
+              "canvas": [
+                23,
+                37
+              ],
+              "bbox": [
+                0,
+                2,
+                23,
+                37
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "mushroom idle 04.png",
+              "canvas": [
+                23,
+                37
+              ],
+              "bbox": [
+                0,
+                1,
+                23,
+                37
+              ]
+            }
+          ]
+        },
+        "projectile": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              20,
+              18
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "mushroom projectile 01.png",
+              "canvas": [
+                20,
+                18
+              ],
+              "bbox": [
+                7,
+                5,
+                15,
+                13
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "mushroom projectile 02.png",
+              "canvas": [
+                20,
+                18
+              ],
+              "bbox": [
+                6,
+                4,
+                16,
+                14
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "mushroom projectile 03.png",
+              "canvas": [
+                20,
+                18
+              ],
+              "bbox": [
+                6,
+                4,
+                16,
+                14
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "mushroom projectile 04.png",
+              "canvas": [
+                20,
+                18
+              ],
+              "bbox": [
+                7,
+                5,
+                15,
+                13
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "mushroom projectile 05.png",
+              "canvas": [
+                20,
+                18
+              ],
+              "bbox": [
+                6,
+                4,
+                16,
+                14
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "mushroom projectile 06.png",
+              "canvas": [
+                20,
+                18
+              ],
+              "bbox": [
+                4,
+                2,
+                17,
+                16
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "mushroom projectile 07.png",
+              "canvas": [
+                20,
+                18
+              ],
+              "bbox": [
+                3,
+                2,
+                18,
+                18
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "mushroom projectile 08.png",
+              "canvas": [
+                20,
+                18
+              ],
+              "bbox": [
+                0,
+                0,
+                20,
+                18
+              ]
+            }
+          ]
+        },
+        "run": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              26,
+              39
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "mushroom run 01.png",
+              "canvas": [
+                26,
+                39
+              ],
+              "bbox": [
+                0,
+                0,
+                25,
+                36
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "mushroom run 02.png",
+              "canvas": [
+                26,
+                39
+              ],
+              "bbox": [
+                1,
+                2,
+                25,
+                39
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "mushroom run 03.png",
+              "canvas": [
+                26,
+                39
+              ],
+              "bbox": [
+                2,
+                1,
+                25,
+                38
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "mushroom run 04.png",
+              "canvas": [
+                26,
+                39
+              ],
+              "bbox": [
+                2,
+                0,
+                25,
+                36
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "mushroom run 05.png",
+              "canvas": [
+                26,
+                39
+              ],
+              "bbox": [
+                2,
+                2,
+                26,
+                39
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "mushroom run 06.png",
+              "canvas": [
+                26,
+                39
+              ],
+              "bbox": [
+                2,
+                2,
+                25,
+                39
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "mushroom run 07.png",
+              "canvas": [
+                26,
+                39
+              ],
+              "bbox": [
+                2,
+                1,
+                25,
+                38
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "mushroom run 08.png",
+              "canvas": [
+                26,
+                39
+              ],
+              "bbox": [
+                2,
+                0,
+                26,
+                36
+              ]
+            }
+          ]
+        },
+        "take hit": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              43,
+              43
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "mushroom take hit 01.png",
+              "canvas": [
+                43,
+                43
+              ],
+              "bbox": [
+                20,
+                6,
+                43,
+                43
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "mushroom take hit 02.png",
+              "canvas": [
+                43,
+                43
+              ],
+              "bbox": [
+                20,
+                6,
+                43,
+                43
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "mushroom take hit 03.png",
+              "canvas": [
+                43,
+                43
+              ],
+              "bbox": [
+                0,
+                1,
+                37,
+                43
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "mushroom take hit 04.png",
+              "canvas": [
+                43,
+                43
+              ],
+              "bbox": [
+                5,
+                0,
+                39,
+                43
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "goblin": {
+      "storage": "one PNG per frame; no atlas grid",
+      "animations": {
+        "attack": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              88,
+              46
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "goblin attack 01.png",
+              "canvas": [
+                88,
+                46
+              ],
+              "bbox": [
+                27,
+                10,
+                60,
+                46
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "goblin attack 02.png",
+              "canvas": [
+                88,
+                46
+              ],
+              "bbox": [
+                29,
+                10,
+                57,
+                46
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "goblin attack 03.png",
+              "canvas": [
+                88,
+                46
+              ],
+              "bbox": [
+                29,
+                12,
+                58,
+                46
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "goblin attack 04.png",
+              "canvas": [
+                88,
+                46
+              ],
+              "bbox": [
+                29,
+                12,
+                58,
+                46
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "goblin attack 05.png",
+              "canvas": [
+                88,
+                46
+              ],
+              "bbox": [
+                29,
+                12,
+                58,
+                46
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "goblin attack 06.png",
+              "canvas": [
+                88,
+                46
+              ],
+              "bbox": [
+                29,
+                11,
+                60,
+                46
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "goblin attack 07.png",
+              "canvas": [
+                88,
+                46
+              ],
+              "bbox": [
+                0,
+                0,
+                88,
+                46
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "goblin attack 08.png",
+              "canvas": [
+                88,
+                46
+              ],
+              "bbox": [
+                0,
+                0,
+                87,
+                46
+              ]
+            }
+          ]
+        },
+        "attack2": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              108,
+              40
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "goblin attack2 01.png",
+              "canvas": [
+                108,
+                40
+              ],
+              "bbox": [
+                7,
+                10,
+                52,
+                40
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "goblin attack2 02.png",
+              "canvas": [
+                108,
+                40
+              ],
+              "bbox": [
+                13,
+                0,
+                36,
+                40
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "goblin attack2 03.png",
+              "canvas": [
+                108,
+                40
+              ],
+              "bbox": [
+                0,
+                15,
+                34,
+                40
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "goblin attack2 04.png",
+              "canvas": [
+                108,
+                40
+              ],
+              "bbox": [
+                0,
+                15,
+                34,
+                40
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "goblin attack2 05.png",
+              "canvas": [
+                108,
+                40
+              ],
+              "bbox": [
+                0,
+                15,
+                34,
+                40
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "goblin attack2 06.png",
+              "canvas": [
+                108,
+                40
+              ],
+              "bbox": [
+                23,
+                13,
+                61,
+                40
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "goblin attack2 07.png",
+              "canvas": [
+                108,
+                40
+              ],
+              "bbox": [
+                29,
+                11,
+                106,
+                40
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "goblin attack2 08.png",
+              "canvas": [
+                108,
+                40
+              ],
+              "bbox": [
+                29,
+                15,
+                108,
+                40
+              ]
+            }
+          ]
+        },
+        "attack3": {
+          "frameCount": 12,
+          "canvasSizes": [
+            [
+              50,
+              37
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "goblin attack3 01.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                4,
+                1,
+                37,
+                37
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "goblin attack3 02.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                1,
+                1,
+                31,
+                37
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "goblin attack3 03.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                30,
+                37
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "goblin attack3 04.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                30,
+                37
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "goblin attack3 05.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                30,
+                37
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "goblin attack3 06.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                30,
+                37
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "goblin attack3 07.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                36,
+                37
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "goblin attack3 08.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                40,
+                37
+              ]
+            },
+            {
+              "frame": 9,
+              "file": "goblin attack3 09.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                40,
+                37
+              ]
+            },
+            {
+              "frame": 10,
+              "file": "goblin attack3 10.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                2,
+                1,
+                40,
+                37
+              ]
+            },
+            {
+              "frame": 11,
+              "file": "goblin attack3 11.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                50,
+                37
+              ]
+            },
+            {
+              "frame": 12,
+              "file": "goblin attack3 12.png",
+              "canvas": [
+                50,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                31,
+                37
+              ]
+            }
+          ]
+        },
+        "bomb": {
+          "frameCount": 19,
+          "canvasSizes": [
+            [
+              54,
+              62
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "goblin bomb 01.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                28,
+                31,
+                42
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "goblin bomb 02.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                28,
+                31,
+                42
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "goblin bomb 03.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                27,
+                31,
+                42
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "goblin bomb 04.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                33,
+                31,
+                42
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "goblin bomb 05.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                32,
+                32,
+                42
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "goblin bomb 06.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                33,
+                31,
+                42
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "goblin bomb 07.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                32,
+                32,
+                42
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "goblin bomb 08.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                33,
+                31,
+                42
+              ]
+            },
+            {
+              "frame": 9,
+              "file": "goblin bomb 09.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                22,
+                32,
+                32,
+                42
+              ]
+            },
+            {
+              "frame": 10,
+              "file": "goblin bomb 10.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                21,
+                32,
+                32,
+                42
+              ]
+            },
+            {
+              "frame": 11,
+              "file": "goblin bomb 11.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                19,
+                30,
+                33,
+                44
+              ]
+            },
+            {
+              "frame": 12,
+              "file": "goblin bomb 12.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                19,
+                30,
+                33,
+                44
+              ]
+            },
+            {
+              "frame": 13,
+              "file": "goblin bomb 13.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                10,
+                20,
+                43,
+                49
+              ]
+            },
+            {
+              "frame": 14,
+              "file": "goblin bomb 14.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                6,
+                13,
+                43,
+                49
+              ]
+            },
+            {
+              "frame": 15,
+              "file": "goblin bomb 15.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                9,
+                22,
+                43,
+                52
+              ]
+            },
+            {
+              "frame": 16,
+              "file": "goblin bomb 16.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                3,
+                12,
+                52,
+                58
+              ]
+            },
+            {
+              "frame": 17,
+              "file": "goblin bomb 17.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                0,
+                12,
+                54,
+                62
+              ]
+            },
+            {
+              "frame": 18,
+              "file": "goblin bomb 18.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                0,
+                6,
+                54,
+                54
+              ]
+            },
+            {
+              "frame": 19,
+              "file": "goblin bomb 19.png",
+              "canvas": [
+                54,
+                62
+              ],
+              "bbox": [
+                0,
+                0,
+                54,
+                48
+              ]
+            }
+          ]
+        },
+        "death": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              52,
+              39
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "goblin death 01.png",
+              "canvas": [
+                52,
+                39
+              ],
+              "bbox": [
+                0,
+                2,
+                43,
+                23
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "goblin death 02.png",
+              "canvas": [
+                52,
+                39
+              ],
+              "bbox": [
+                3,
+                0,
+                38,
+                38
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "goblin death 03.png",
+              "canvas": [
+                52,
+                39
+              ],
+              "bbox": [
+                1,
+                16,
+                38,
+                39
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "goblin death 04.png",
+              "canvas": [
+                52,
+                39
+              ],
+              "bbox": [
+                1,
+                24,
+                52,
+                39
+              ]
+            }
+          ]
+        },
+        "idle": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              33,
+              36
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "goblin idle 01.png",
+              "canvas": [
+                33,
+                36
+              ],
+              "bbox": [
+                0,
+                0,
+                33,
+                36
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "goblin idle 02.png",
+              "canvas": [
+                33,
+                36
+              ],
+              "bbox": [
+                0,
+                1,
+                33,
+                36
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "goblin idle 03.png",
+              "canvas": [
+                33,
+                36
+              ],
+              "bbox": [
+                0,
+                2,
+                33,
+                36
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "goblin idle 04.png",
+              "canvas": [
+                33,
+                36
+              ],
+              "bbox": [
+                0,
+                4,
+                33,
+                36
+              ]
+            }
+          ]
+        },
+        "run": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              38,
+              38
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "goblin run 01.png",
+              "canvas": [
+                38,
+                38
+              ],
+              "bbox": [
+                0,
+                0,
+                35,
+                36
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "goblin run 02.png",
+              "canvas": [
+                38,
+                38
+              ],
+              "bbox": [
+                3,
+                1,
+                30,
+                38
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "goblin run 03.png",
+              "canvas": [
+                38,
+                38
+              ],
+              "bbox": [
+                10,
+                1,
+                30,
+                38
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "goblin run 04.png",
+              "canvas": [
+                38,
+                38
+              ],
+              "bbox": [
+                8,
+                2,
+                34,
+                38
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "goblin run 05.png",
+              "canvas": [
+                38,
+                38
+              ],
+              "bbox": [
+                5,
+                0,
+                38,
+                35
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "goblin run 06.png",
+              "canvas": [
+                38,
+                38
+              ],
+              "bbox": [
+                11,
+                1,
+                36,
+                38
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "goblin run 07.png",
+              "canvas": [
+                38,
+                38
+              ],
+              "bbox": [
+                13,
+                1,
+                36,
+                38
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "goblin run 08.png",
+              "canvas": [
+                38,
+                38
+              ],
+              "bbox": [
+                6,
+                2,
+                32,
+                38
+              ]
+            }
+          ]
+        },
+        "take hit": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              42,
+              37
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "goblin take hit 01.png",
+              "canvas": [
+                42,
+                37
+              ],
+              "bbox": [
+                4,
+                1,
+                37,
+                37
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "goblin take hit 02.png",
+              "canvas": [
+                42,
+                37
+              ],
+              "bbox": [
+                4,
+                1,
+                37,
+                37
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "goblin take hit 03.png",
+              "canvas": [
+                42,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                42,
+                37
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "goblin take hit 04.png",
+              "canvas": [
+                42,
+                37
+              ],
+              "bbox": [
+                0,
+                0,
+                39,
+                37
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "flying eye": {
+      "storage": "one PNG per frame; no atlas grid",
+      "animations": {
+        "attack": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              45,
+              31
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "flying eye attack 01.png",
+              "canvas": [
+                45,
+                31
+              ],
+              "bbox": [
+                4,
+                0,
+                45,
+                31
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "flying eye attack 02.png",
+              "canvas": [
+                45,
+                31
+              ],
+              "bbox": [
+                4,
+                2,
+                45,
+                31
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "flying eye attack 03.png",
+              "canvas": [
+                45,
+                31
+              ],
+              "bbox": [
+                0,
+                2,
+                41,
+                27
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "flying eye attack 04.png",
+              "canvas": [
+                45,
+                31
+              ],
+              "bbox": [
+                0,
+                2,
+                41,
+                27
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "flying eye attack 05.png",
+              "canvas": [
+                45,
+                31
+              ],
+              "bbox": [
+                0,
+                2,
+                41,
+                26
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "flying eye attack 06.png",
+              "canvas": [
+                45,
+                31
+              ],
+              "bbox": [
+                2,
+                1,
+                39,
+                27
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "flying eye attack 07.png",
+              "canvas": [
+                45,
+                31
+              ],
+              "bbox": [
+                8,
+                6,
+                43,
+                30
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "flying eye attack 08.png",
+              "canvas": [
+                45,
+                31
+              ],
+              "bbox": [
+                9,
+                6,
+                42,
+                30
+              ]
+            }
+          ]
+        },
+        "attack2": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              47,
+              45
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "flying eye attack2 01.png",
+              "canvas": [
+                47,
+                45
+              ],
+              "bbox": [
+                0,
+                12,
+                41,
+                43
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "flying eye attack2 02.png",
+              "canvas": [
+                47,
+                45
+              ],
+              "bbox": [
+                10,
+                14,
+                34,
+                34
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "flying eye attack2 03.png",
+              "canvas": [
+                47,
+                45
+              ],
+              "bbox": [
+                14,
+                14,
+                37,
+                31
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "flying eye attack2 04.png",
+              "canvas": [
+                47,
+                45
+              ],
+              "bbox": [
+                17,
+                14,
+                39,
+                30
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "flying eye attack2 05.png",
+              "canvas": [
+                47,
+                45
+              ],
+              "bbox": [
+                16,
+                14,
+                35,
+                32
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "flying eye attack2 06.png",
+              "canvas": [
+                47,
+                45
+              ],
+              "bbox": [
+                5,
+                0,
+                46,
+                45
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "flying eye attack2 07.png",
+              "canvas": [
+                47,
+                45
+              ],
+              "bbox": [
+                11,
+                4,
+                42,
+                42
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "flying eye attack2 08.png",
+              "canvas": [
+                47,
+                45
+              ],
+              "bbox": [
+                14,
+                0,
+                47,
+                45
+              ]
+            }
+          ]
+        },
+        "attack3": {
+          "frameCount": 6,
+          "canvasSizes": [
+            [
+              35,
+              32
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "flying eye attack3 01.png",
+              "canvas": [
+                35,
+                32
+              ],
+              "bbox": [
+                6,
+                8,
+                31,
+                31
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "flying eye attack3 02.png",
+              "canvas": [
+                35,
+                32
+              ],
+              "bbox": [
+                11,
+                12,
+                29,
+                26
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "flying eye attack3 03.png",
+              "canvas": [
+                35,
+                32
+              ],
+              "bbox": [
+                11,
+                12,
+                29,
+                26
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "flying eye attack3 04.png",
+              "canvas": [
+                35,
+                32
+              ],
+              "bbox": [
+                0,
+                8,
+                33,
+                32
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "flying eye attack3 05.png",
+              "canvas": [
+                35,
+                32
+              ],
+              "bbox": [
+                0,
+                0,
+                35,
+                32
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "flying eye attack3 06.png",
+              "canvas": [
+                35,
+                32
+              ],
+              "bbox": [
+                0,
+                1,
+                35,
+                31
+              ]
+            }
+          ]
+        },
+        "death": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              56,
+              40
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "flying eye death 01.png",
+              "canvas": [
+                56,
+                40
+              ],
+              "bbox": [
+                7,
+                0,
+                48,
+                31
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "flying eye death 02.png",
+              "canvas": [
+                56,
+                40
+              ],
+              "bbox": [
+                19,
+                9,
+                38,
+                38
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "flying eye death 03.png",
+              "canvas": [
+                56,
+                40
+              ],
+              "bbox": [
+                0,
+                27,
+                56,
+                40
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "flying eye death 04.png",
+              "canvas": [
+                56,
+                40
+              ],
+              "bbox": [
+                3,
+                25,
+                52,
+                40
+              ]
+            }
+          ]
+        },
+        "flight": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              42,
+              33
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "flying eye flight 01.png",
+              "canvas": [
+                42,
+                33
+              ],
+              "bbox": [
+                1,
+                1,
+                42,
+                32
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "flying eye flight 02.png",
+              "canvas": [
+                42,
+                33
+              ],
+              "bbox": [
+                1,
+                0,
+                42,
+                32
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "flying eye flight 03.png",
+              "canvas": [
+                42,
+                33
+              ],
+              "bbox": [
+                1,
+                0,
+                41,
+                29
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "flying eye flight 04.png",
+              "canvas": [
+                42,
+                33
+              ],
+              "bbox": [
+                2,
+                5,
+                41,
+                30
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "flying eye flight 05.png",
+              "canvas": [
+                42,
+                33
+              ],
+              "bbox": [
+                1,
+                6,
+                41,
+                30
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "flying eye flight 06.png",
+              "canvas": [
+                42,
+                33
+              ],
+              "bbox": [
+                0,
+                7,
+                42,
+                31
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "flying eye flight 07.png",
+              "canvas": [
+                42,
+                33
+              ],
+              "bbox": [
+                2,
+                8,
+                42,
+                32
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "flying eye flight 08.png",
+              "canvas": [
+                42,
+                33
+              ],
+              "bbox": [
+                2,
+                8,
+                42,
+                33
+              ]
+            }
+          ]
+        },
+        "projectile": {
+          "frameCount": 8,
+          "canvasSizes": [
+            [
+              44,
+              44
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "flying eye projectile 01.png",
+              "canvas": [
+                44,
+                44
+              ],
+              "bbox": [
+                15,
+                15,
+                31,
+                31
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "flying eye projectile 02.png",
+              "canvas": [
+                44,
+                44
+              ],
+              "bbox": [
+                15,
+                15,
+                31,
+                31
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "flying eye projectile 03.png",
+              "canvas": [
+                44,
+                44
+              ],
+              "bbox": [
+                15,
+                15,
+                31,
+                31
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "flying eye projectile 04.png",
+              "canvas": [
+                44,
+                44
+              ],
+              "bbox": [
+                12,
+                12,
+                33,
+                31
+              ]
+            },
+            {
+              "frame": 5,
+              "file": "flying eye projectile 05.png",
+              "canvas": [
+                44,
+                44
+              ],
+              "bbox": [
+                7,
+                8,
+                37,
+                36
+              ]
+            },
+            {
+              "frame": 6,
+              "file": "flying eye projectile 06.png",
+              "canvas": [
+                44,
+                44
+              ],
+              "bbox": [
+                3,
+                4,
+                40,
+                40
+              ]
+            },
+            {
+              "frame": 7,
+              "file": "flying eye projectile 07.png",
+              "canvas": [
+                44,
+                44
+              ],
+              "bbox": [
+                0,
+                0,
+                43,
+                43
+              ]
+            },
+            {
+              "frame": 8,
+              "file": "flying eye projectile 08.png",
+              "canvas": [
+                44,
+                44
+              ],
+              "bbox": [
+                0,
+                0,
+                44,
+                44
+              ]
+            }
+          ]
+        },
+        "take hit": {
+          "frameCount": 4,
+          "canvasSizes": [
+            [
+              41,
+              33
+            ]
+          ],
+          "frames": [
+            {
+              "frame": 1,
+              "file": "flying eye take hit 01.png",
+              "canvas": [
+                41,
+                33
+              ],
+              "bbox": [
+                0,
+                0,
+                41,
+                31
+              ]
+            },
+            {
+              "frame": 2,
+              "file": "flying eye take hit 02.png",
+              "canvas": [
+                41,
+                33
+              ],
+              "bbox": [
+                0,
+                0,
+                41,
+                33
+              ]
+            },
+            {
+              "frame": 3,
+              "file": "flying eye take hit 03.png",
+              "canvas": [
+                41,
+                33
+              ],
+              "bbox": [
+                10,
+                3,
+                36,
+                27
+              ]
+            },
+            {
+              "frame": 4,
+              "file": "flying eye take hit 04.png",
+              "canvas": [
+                41,
+                33
+              ],
+              "bbox": [
+                11,
+                5,
+                31,
+                26
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
