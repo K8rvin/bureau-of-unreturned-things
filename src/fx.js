@@ -162,6 +162,9 @@ export class FxManager {
         this.spawn("runeCircle", enemy.x, enemy.y + 12, { ttl: 1.6, essential: true });
         this.shake = Math.max(this.shake, 2);
         break;
+      case "coilPulse":
+        this.spawn("runeCircle", event.x, event.y, { ttl: 0.25, essential: true });
+        break;
       case "synergy":
         this.spawn("runeCircle", event.x ?? 240, event.y ?? 220, { ttl: 2, essential: true });
         this.spawn("lootBeam", event.x ?? 240, (event.y ?? 220) + 5, { ttl: 1.5, essential: true });

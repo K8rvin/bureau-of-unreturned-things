@@ -1,6 +1,7 @@
 export const WIDTH = 480;
 export const HEIGHT = 270;
 export const ARENA = { left: 30, right: 450, top: 32, bottom: 248 };
+export const BOMB_FUSE = 1.5;
 
 export const FLOOR_DEFINITIONS = [
   { index: 0, name: "Приёмный отдел", bossType: "boss", description: "Первые находки, открытые комнаты и знакомство с работой архива." },
@@ -240,6 +241,53 @@ export const ITEMS = [
     pool: true,
   },
   {
+    id: "returning",
+    name: "Возвратный лоток",
+    icon: "return-arrow.svg",
+    description: "Каждая третья очередь возвращается после 90 px или стены. Обратный урон ×0,6; цель получает не более одного попадания на каждом пути. Лазер и эхо не создают возвратные копии.",
+    pool: true,
+    partner: "chalk",
+  },
+  {
+    id: "stamp",
+    name: "Каталожный штамп",
+    icon: "echo-ripples.svg",
+    description: "Каждое пятое попадание помечает цель на 4 секунды. Петарда по метке добавляет 6 урона и снимает её. Повторного срабатывания на той же метке нет.",
+    pool: true,
+    partner: "fire",
+  },
+  {
+    id: "detonator",
+    name: "Ключ-секундомер",
+    icon: "stopwatch.svg",
+    description: "R по уже установленной петарде сокращает фитиль до 0,15 секунды, не расходуя новую. Без установленной петарды R работает как обычно.",
+    pool: true,
+  },
+  {
+    id: "coil",
+    name: "Статическая катушка",
+    icon: "electric.svg",
+    description: "Каждый четвёртый залп гасит вражеские снаряды в радиусе 34 px и наносит 1,5 урона ближайшим целям. Не вызывает цепочку on-hit эффектов.",
+    pool: true,
+    partner: "thread",
+  },
+  {
+    id: "clock",
+    name: "Часовой механизм",
+    icon: "clockwork.svg",
+    description: "Вражеские снаряды в радиусе 80 px от петарды движутся со скоростью ×0,45. Не замедляет весь бой и не складывается многократно.",
+    pool: true,
+    partner: "compass",
+  },
+  {
+    id: "compass",
+    name: "Шестерёнчатый компас",
+    icon: "compass.svg",
+    description: "Петарда катится к ближайшему видимому противнику со скоростью до 45 px/s, останавливается рядом и соблюдает столкновения.",
+    pool: true,
+    partner: "clock",
+  },
+  {
     id: "riftPass",
     name: "Сервисный пропуск",
     icon: "keyring.svg",
@@ -263,6 +311,10 @@ export const SYNERGIES = [
   { ids: ["poison", "bleed"], name: "Реагентная рана" },
   { ids: ["heavy", "quad"], name: "Тяжёлая четверть" },
   { ids: ["rapid", "power"], name: "Рабочий режим" },
+  { ids: ["returning", "chalk"], name: "Возвратная разметка" },
+  { ids: ["stamp", "fire"], name: "Огненная опись" },
+  { ids: ["coil", "thread"], name: "Контурная нить" },
+  { ids: ["compass", "clock"], name: "Минута на разборку" },
 ];
 
 export const ENEMY_TYPES = {
@@ -284,6 +336,8 @@ export const ENEMY_TYPES = {
   flyingEye: { name: "Летучий надзиратель", hp: 15, speed: 24, radius: 7, color: "#bb819e", flying: true },
   rat: { name: "Архивная крыса", hp: 5, speed: 45, radius: 5, color: "#b49b81" },
   bat: { name: "Пыльная летучая мышь", hp: 8, speed: 29, radius: 6, color: "#a792b3", flying: true },
+  wraith: { name: "Бестелесный архивариус", hp: 18, speed: 27, radius: 8, color: "#a2b3d1", sprite: "wraith", flying: true },
+  curseCaster: { name: "Куратор проклятий", hp: 34, speed: 18, radius: 10, color: "#ad71cb", sprite: "curseCaster" },
   boss: { name: "Швейцар с ключом от всех дверей", hp: 250, speed: 12, radius: 16, color: "#c05b62", boss: true, sprite: "boss", icon: "keyring.svg" },
   umbrellaBoss: { name: "Зонтичная дама", hp: 300, speed: 13, radius: 16, color: "#8875b3", boss: true, sprite: "umbrellaBoss", icon: "umbrella.svg" },
   sorterBoss: { name: "Архивный компактор", hp: 360, speed: 14, radius: 16, color: "#bd9a68", boss: true, sprite: "guardian", icon: "big-gear.svg", filter: "saturate(0.7) hue-rotate(22deg)" },
@@ -295,11 +349,11 @@ export const ENEMY_TYPES = {
 
 export const FLOOR_ENCOUNTERS = [
   { normal: [["lost"], ["shooter"], ["inker", "hanger"]], challenge: ["lost", "shooter"] },
-  { normal: [["guardian", "packer"], ["mushroom", "goblin"], ["flyingEye", "bat"]], challenge: ["dust", "moth", "mimic", "thief", "sniper", "spawner", "skeleton", "rat"] },
-  { normal: [["guardian", "goblin"], ["mushroom", "packer"], ["skeleton", "bat"]], challenge: ["skeleton", "rat", "bat", "mushroom", "goblin", "packer"] },
-  { normal: [["mimic", "thief"], ["sniper", "spawner"], ["skeleton", "flyingEye"]], challenge: ["dust", "moth", "mimic", "thief", "sniper", "spawner", "skeleton", "rat"] },
-  { normal: [["moth", "inker"], ["mushroom", "rat"], ["goblin", "packer"]], challenge: ["moth", "rat", "bat", "mushroom", "goblin", "packer"] },
-  { normal: [["sniper", "shooter"], ["skeleton", "bat"], ["guardian", "packer"]], challenge: ["sniper", "spawner", "skeleton", "bat", "flyingEye", "rat"] },
+  { normal: [["guardian", "packer"], ["wraith", "mushroom"], ["flyingEye", "bat"]], challenge: ["dust", "moth", "mimic", "thief", "sniper", "spawner", "skeleton", "rat", "wraith"] },
+  { normal: [["curseCaster", "guardian"], ["mushroom", "packer"], ["skeleton", "bat"]], challenge: ["skeleton", "rat", "bat", "mushroom", "goblin", "packer", "wraith", "curseCaster"] },
+  { normal: [["mimic", "thief"], ["sniper", "spawner"], ["wraith", "flyingEye"]], challenge: ["dust", "moth", "mimic", "thief", "sniper", "spawner", "skeleton", "rat", "wraith", "curseCaster"] },
+  { normal: [["moth", "inker"], ["curseCaster", "rat"], ["goblin", "packer"]], challenge: ["moth", "rat", "bat", "mushroom", "goblin", "packer", "wraith", "curseCaster"] },
+  { normal: [["sniper", "shooter"], ["wraith", "bat"], ["curseCaster", "guardian"]], challenge: ["sniper", "spawner", "skeleton", "bat", "flyingEye", "rat", "wraith", "curseCaster"] },
 ];
 
 export const WAVES = [

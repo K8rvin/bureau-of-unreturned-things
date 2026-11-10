@@ -47,6 +47,13 @@
 - `blood.svg` — https://api.iconify.design/game-icons/blood.svg
 - `laser-blast.svg` — https://api.iconify.design/game-icons/laser-blast.svg
 - `arrow-cluster.svg` — https://api.iconify.design/game-icons/arrow-cluster.svg
+- `return-arrow.svg` — https://api.iconify.design/game-icons/return-arrow.svg
+- `stopwatch.svg` — https://api.iconify.design/game-icons/stopwatch.svg
+- `electric.svg` — https://api.iconify.design/game-icons/electric.svg
+- `clockwork.svg` — https://api.iconify.design/game-icons/clockwork.svg
+- `compass.svg` — https://api.iconify.design/game-icons/compass.svg
+- `locked-chest.svg` — https://api.iconify.design/game-icons/locked-chest.svg
+- `open-chest.svg` — https://api.iconify.design/game-icons/open-chest.svg
 
 ## 0x72 DungeonTileset II
 
@@ -92,6 +99,26 @@
 - Условия сохранены в `assets/packs/luizmelo/LICENSE.txt`; измерения кадров — в `frame-info.json`.
 
 Использованы Skeleton, Mushroom, Goblin и Flying Eye. Для них собраны исходные idle/walk/flight/run, attack, take hit, death и отдельный shield скелета. Размеры кадров в исходном пакете различаются, поэтому в манифесте сохранены индивидуальные прямоугольники и якоря. У Flying Eye исходная flight используется и для покоя, и для движения.
+
+### LuizMelo — Evil Wizard 2
+
+- Автор: **LuizMelo**.
+- Официальная страница: https://luizmelo.itch.io/evil-wizard-2
+- Источник: пользовательский архив `EVil Wizard 2.zip`, каталог `EVil Wizard 2/Sprites`; оригинал архива не изменялся.
+- Лицензия: **CC0 1.0**, https://creativecommons.org/publicdomain/zero/1.0/
+- Точный текст из `EVil Wizard 2/License.txt` сохранён в `assets/packs/evil-wizard-2/License.txt`: «This pack - Evil Wizard 2 Asset Pack is Creative Commons Zero (CC-0). Can be used in commercial and non-commercial projects.»
+
+Для `curseCaster` использованы Idle (8 кадров), Run (8), Attack1 → attack (8), Attack2 → attack2 (8), Take hit (3) и Death (7). Каждая ячейка 250×250 обрезана по непрозрачным границам; в манифесте сохранены отдельные прямоугольники и якоря относительно общей исходной линии земли 167. Высота видимого idle-кадра 104 задаёт `referenceHeight`, игровой `targetHeight` равен 42; масштабирование выполняет только рендер. Пиксели не перерисованы и не перекрашены, изменения ограничены обрезкой и объединением в атлас.
+
+### Reaktori — Debts in the Depths Asset Pack
+
+- Автор: **Reaktori**.
+- Официальная страница и подтверждение лицензии: https://reaktori.itch.io/debts-in-the-depths-asset-pack
+- Источник: пользовательский архив `DebtsInTheDepthsAssets.zip`. Извлечены только `Characters/sprGhost1.png`, `Effects/sprGhostOrb.png` и `Characters/sprLizardMonk1.png` в `assets/packs/debts-depths`; оригинал архива не изменялся.
+- Лицензия на официальной странице: **Creative Commons Zero (CC0)**, https://creativecommons.org/publicdomain/zero/1.0/. Разрешение автора: «You can use, adapt, copy, modify and distribute the assets, even for commercial purposes, all without asking permission.» Автор также указывает, что атрибуция не обязательна.
+- В поставленном архиве лицензионного файла нет. Источник и точный текст условий с официальной страницы сохранены в `assets/packs/debts-depths/LICENSE.txt`; этот файл не выдаётся за извлечённую из архива лицензию.
+
+`sprGhost1` даёт `wraith` четыре исходных кадра для idle и те же четыре для run (`targetHeight` 32). `sprGhostOrb` даёт `ghostOrb` восемь idle-кадров (`targetHeight` 12, `offsetY` 4 для центрирования нижней привязки на координате снаряда). `sprLizardMonk1` даёт `workshopMonk` четыре исходных кадра для idle и те же четыре для run (`targetHeight` 28). Прозрачные поля обрезаны по альфа-каналу с сохранением вертикальных смещений и индивидуальных якорей; кадры объединены без перекраски или перерисовки. Масштабирование, смещение `offsetY` и отражение происходят только при рендере.
 
 ### chierit — Water Priestess и Fire Knight
 

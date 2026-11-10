@@ -6,6 +6,7 @@ import { Game } from "./game.js";
 import { DEFAULT_HERO, getHero, HEROES } from "./heroes.js";
 import { Renderer } from "./render.js";
 import { getChainHint } from "./secrets.js";
+import { CHALLENGES, getChallenge, ITEM_UNLOCKS, Progression } from "./progression.js";
 import { SpriteLibrary } from "./sprites.js";
 import { clearCheckpoint, loadCheckpoint, saveCheckpoint } from "./storage.js";
 
@@ -18,18 +19,24 @@ await sprites.load();
 await document.fonts.load('8px "Archive Pixel"');
 const renderer = new Renderer(canvas, fx, sprites);
 const catalog = new Catalog();
-const game = new Game(handleEvent);
+const progression = new Progression();
+const game = new Game(handleEvent, { itemUnlocked: (id) => progression.isUnlocked(id) });
 const panels = {
   title: $("titlePanel"),
   choice: $("choicePanel"),
   shop: $("shopPanel"),
   contract: $("contractPanel"),
   rift: $("riftPanel"),
+  training: $("trainingPanel"),
+  challenge: $("challengePanel"),
+  workshop: $("workshopPanel"),
+  vault: $("vaultPanel"),
   floor: $("floorPanel"),
   catalog: $("catalogPanel"),
   pause: $("pausePanel"),
   end: $("endPanel"),
 };
+let activePanel = null;
 const params = new URLSearchParams(location.search);
 let currentSeed = Number(params.get("seed")) >>> 0 || 1;
 let paused = false;
@@ -71,6 +78,7 @@ function updateSettingLabels() {
 }
 
 function showPanel(name) {
+  activePanel = name;
   if (name === "pause") buildPauseDetails();
   for (const [key, panel] of Object.entries(panels)) panel.hidden = key !== name;
   $("overlay").hidden = !name;
@@ -82,6 +90,8 @@ function syncPanel() {
   else if (game.state === "shop") showPanel("shop");
   else if (game.state === "contract") showPanel("contract");
   else if (game.state === "riftMenu") showPanel("rift");
+  else if (game.state === "workshop") showPanel("workshop");
+  else if (game.state === "vault") showPanel("vault");
   else if (game.state === "floorComplete") showPanel("floor");
   else if (game.state === "victory") showEnd(true, game.stats());
   else if (game.state === "dead") showEnd(false, game.stats());
@@ -103,6 +113,8 @@ function newSeed() {
   return (Date.now() ^ Math.floor(Math.random() * 0xffffffff)) >>> 0;
 }
 
+let runUnlocks = [];
+
 function prepareRun() {
   audio.ensure();
   paused = false;
@@ -110,6 +122,7 @@ function prepareRun() {
   bombPressed = false;
   interactPressed = false;
   pointer.down = false;
+  runUnlocks = [];
   fx.clearTransient();
 }
 
@@ -117,6 +130,8 @@ function updateUrl() {
   const url = new URL(location.href);
   url.searchParams.set("seed", String(currentSeed));
   url.searchParams.set("hero", selectedHeroId);
+  if (game.challengeId) url.searchParams.set("challenge", game.challengeId);
+  else url.searchParams.delete("challenge");
   history.replaceState(null, "", url);
 }
 
@@ -141,6 +156,36 @@ function buildBossTraining() {
     button.addEventListener("click", () => startRun(currentSeed, { bossOnly: true, floorIndex: floor.index }));
     root.append(button);
   }
+}
+
+function buildChallengeCards() {
+  const root = $("challengeCards");
+  root.replaceChildren();
+  for (const challenge of CHALLENGES) {
+    const reward = ITEM_BY_ID.get(challenge.reward);
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "event-choice challenge-card";
+    button.dataset.challenge = challenge.id;
+    const title = document.createElement("strong");
+    title.textContent = challenge.name;
+    const description = document.createElement("p");
+    description.textContent = challenge.description;
+    const note = document.createElement("small");
+    const status = progression.challengeWins(challenge.id) ? `Выполнено: ${progression.challengeWins(challenge.id)}` : progression.isUnlocked(reward.id) ? "Награда уже открыта" : `Награда: ${reward.name}`;
+    note.textContent = `${status}. Герой: ${getHero(selectedHeroId).name}`;
+    button.append(title, description, note);
+    button.addEventListener("click", () => startRun(currentSeed, { challengeId: challenge.id }));
+    root.append(button);
+  }
+}
+
+function notifyUnlocks(ids) {
+  const fresh = ids.filter((id) => !runUnlocks.includes(id));
+  if (!fresh.length) return;
+  runUnlocks.push(...fresh);
+  const names = fresh.map((id) => ITEM_BY_ID.get(id)?.name || id).join(", ");
+  toast(`Новая вещь открыта: ${names}`, 2800);
 }
 
 function buildHeroChoices() {
@@ -200,14 +245,20 @@ function selectHero(id) {
   updateHeroSelection();
 }
 
-function startRun(seed = currentSeed, { bossOnly = false, floorIndex = 0, heroId = selectedHeroId } = {}) {
+function startRun(seed = currentSeed, { bossOnly = false, floorIndex = 0, heroId = selectedHeroId, challengeId = null } = {}) {
   currentSeed = seed >>> 0 || 1;
   clearCheckpoint();
   prepareRun();
-  game.start(currentSeed, { bossOnly, floorIndex, heroId });
+  game.start(currentSeed, { bossOnly, floorIndex, heroId, challengeId });
   updateUrl();
   syncPanel();
   canvas.focus();
+}
+
+function currentRunOptions() {
+  return game.mode === "boss"
+    ? { bossOnly: true, floorIndex: game.floorIndex, heroId: game.heroId }
+    : { heroId: game.heroId, challengeId: game.challengeId };
 }
 
 function continueRun() {
@@ -348,8 +399,64 @@ function buildContract() {
   }
 }
 
+function fillEventChoice(button, title, description) {
+  button.replaceChildren();
+  const strong = document.createElement("strong");
+  strong.textContent = title;
+  const note = document.createElement("small");
+  note.textContent = description;
+  button.append(strong, note);
+}
+
+function buildWorkshop() {
+  const room = game.room();
+  const pending = room.workshopPending;
+  const root = $("workshopChoices");
+  root.replaceChildren();
+  $("workshopDescription").textContent = pending
+    ? `Отдать «${ITEM_BY_ID.get(pending.sacrificeId).name}». Выберите одну замену или оставьте всё как есть.`
+    : "Выберите одну обычную вещь для замены. Предложение сохранится даже после отмены.";
+  const ids = pending ? pending.choices : game.items.filter((id) => ITEM_BY_ID.get(id)?.pool !== false);
+  for (const id of ids) {
+    const item = ITEM_BY_ID.get(id);
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "event-choice";
+    button.dataset.item = id;
+    const image = document.createElement("img");
+    image.src = `assets/icons/${item.icon}`;
+    image.alt = "";
+    const title = document.createElement("strong");
+    title.textContent = item.name;
+    const description = document.createElement("p");
+    description.textContent = item.description;
+    button.append(image, title, description);
+    button.addEventListener("click", () => {
+      const changed = pending ? game.confirmWorkshop(id) : game.selectWorkshopItem(id);
+      if (changed) {
+        syncPanel();
+        canvas.focus();
+      }
+    });
+    root.append(button);
+  }
+  if (!ids.length) {
+    const text = document.createElement("p");
+    text.className = "hint";
+    text.textContent = "Пока нет обычных вещей, которые можно отдать на замену.";
+    root.append(text);
+  }
+}
+
+function buildVault() {
+  $("vaultDescription").textContent = `Ключей: ${game.player.keys}. Награда одна независимо от способа. Можно уйти без потерь.`;
+  fillEventChoice($("vaultKeyButton"), "Отдать 1 ключ", "Открыть награду без боя");
+  fillEventChoice($("vaultFightButton"), "Вызвать охрану", "Два элитных противника и сопровождение. Награда без ключа");
+  $("vaultKeyButton").disabled = game.player.keys <= 0;
+}
+
 function buildRiftMenu(rooms) {
-  const names = { start: "Лифт", combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", secret: "Скрытая комната", boss: "Зала босса", rift: "Сервисный разрез" };
+  const names = { start: "Лифт", combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", workshop: "Мастерская", vault: "Хранилище", secret: "Скрытая комната", boss: "Зала босса", rift: "Сервисный разрез" };
   const root = $("riftChoices");
   root.replaceChildren();
   for (const room of rooms) {
@@ -378,6 +485,7 @@ async function copySeedLink() {
   url.hash = "";
   url.searchParams.set("seed", String(currentSeed));
   url.searchParams.set("hero", game.heroId);
+  if (game.challengeId) url.searchParams.set("challenge", game.challengeId);
   let copied = false;
   if (window.isSecureContext && navigator.clipboard?.writeText) {
     try {
@@ -403,7 +511,8 @@ async function copySeedLink() {
   }
   const button = $("copySeedButton");
   button.textContent = copied ? "Ссылка скопирована" : "Скопируйте из адресной строки";
-  toast(copied ? "Скопированы только seed и герой" : "Ссылка с seed и героем уже находится в адресной строке", 3000);
+  const description = game.challengeId ? "seed, герой и испытание" : "только seed и герой";
+  toast(copied ? `Скопированы ${description}` : "Ссылка уже находится в адресной строке", 3000);
   setTimeout(() => { button.textContent = "Скопировать ссылку на seed"; }, 3000);
 }
 
@@ -414,6 +523,10 @@ const SYNERGY_DETAILS = {
   "Реагентная рана": "Яд + кровотечение: гибель врага с обоими эффектами передаёт их на 2 секунды максимум двум соседям в радиусе 60 px. Дальше эффект не распространяется.",
   "Тяжёлая четверть": "Тяжёлый калибр + четыре снаряда: каждый четвёртый залп добавляет центральный снаряд или луч с ×2 обычного урона.",
   "Рабочий режим": "Регулятор + резистор: после секунды неподвижности урон ×1,5. Размер снаряда или луча тоже увеличивается.",
+  "Возвратная разметка": "Лоток + мел: на обратном пути снаряд один раз отскакивает от стены к герою. Повторный отскок запрещён.",
+  "Огненная опись": "Штамп + огонь: снятие метки петардой поджигает максимум двух соседей на 2 секунды. Дальше эффект не распространяется.",
+  "Контурная нить": "Катушка + нить: импульс связывает героя максимум с двумя целями до 90 px и наносит каждой 0,4 урона без on-hit цепочек.",
+  "Минута на разборку": "Компас + часы: в радиусе 80 px от петарды вражеские снаряды ограниченно доворачивают к ней. Лазеры не затрагиваются.",
 };
 
 function buildCatalog() {
@@ -429,7 +542,8 @@ function buildCatalog() {
     { id: "rift", name: "Сервисный разрез", description: "Тайный путь через Сортировочный узел. Смотритель охраняет пропуск к зачищенным комнатам [F]." },
   ];
   const sections = [
-    { kind: "items", title: `Предметы · ${catalog.count("items")}/${ITEMS.length}`, entries: ITEMS.map((item) => ({ id: item.id, name: item.name, description: item.description, icon: item.icon })) },
+    { kind: "items", title: `Предметы · найдено ${catalog.count("items")}/${ITEMS.length} · открыто ${progression.unlockedCount(ITEMS)}/${ITEMS.length}`, entries: ITEMS.map((item) => ({ id: item.id, name: item.name, description: item.description, icon: item.icon })) },
+    { kind: "unlocks", title: `Открытия · ${Object.values(ITEM_UNLOCKS).filter((_, index) => progression.isUnlocked(Object.keys(ITEM_UNLOCKS)[index])).length}/${Object.keys(ITEM_UNLOCKS).length}`, entries: Object.entries(ITEM_UNLOCKS).map(([id, rule]) => ({ id, name: ITEM_BY_ID.get(id)?.name || id, description: rule.text, icon: ITEM_BY_ID.get(id)?.icon })) },
     { kind: "bosses", title: `Боссы · ${catalog.count("bosses")}/${bossIds.length}`, entries: bossIds.map((id) => ({ id, name: ENEMY_TYPES[id].name, description: "Атаки записываются после первой встречи.", icon: ENEMY_TYPES[id].icon })) },
     { kind: "synergies", title: `Синергии · ${catalog.count("synergies")}/${SYNERGIES.length}`, entries: SYNERGIES.map((synergy) => ({ id: synergy.name, name: synergy.name, description: SYNERGY_DETAILS[synergy.name] })) },
     { kind: "secrets", title: `Секреты · ${catalog.count("secrets")}/${secrets.length}`, entries: secrets },
@@ -441,9 +555,10 @@ function buildCatalog() {
     const grid = document.createElement("div");
     grid.className = "catalog-grid";
     for (const entry of section.entries) {
-      const known = catalog.has(section.kind, entry.id);
+      const known = section.kind === "unlocks" ? progression.isUnlocked(entry.id) : catalog.has(section.kind, entry.id);
+      const locked = (section.kind === "items" && !progression.isUnlocked(entry.id)) || (section.kind === "unlocks" && !known);
       const card = document.createElement("article");
-      card.className = `catalog-entry${known ? "" : " unknown"}`;
+      card.className = `catalog-entry${known ? "" : " unknown"}${locked ? " locked" : ""}`;
       if (entry.icon) {
         const image = document.createElement("img");
         image.src = `assets/icons/${entry.icon}`;
@@ -452,9 +567,9 @@ function buildCatalog() {
       }
       const body = document.createElement("div");
       const title = document.createElement("strong");
-      title.textContent = known ? entry.name : "???";
+      title.textContent = section.kind === "items" && !progression.isUnlocked(entry.id) ? `${entry.name} · закрыто` : known ? entry.name : "???";
       const description = document.createElement("p");
-      description.textContent = known ? entry.description : "Запись появится после находки.";
+      description.textContent = section.kind === "unlocks" ? `${known ? "Открыто" : "Закрыто"}: ${entry.description}` : locked ? progression.unlockGoal(entry.id) : known ? entry.description : "Запись появится после находки.";
       body.append(title, description);
       card.append(body);
       grid.append(card);
@@ -469,11 +584,16 @@ function formatTime(seconds) {
 }
 
 function showEnd(victory, stats) {
+  const challenge = getChallenge(stats.challengeId);
   $("endEyebrow").textContent = victory ? "СМЕНА ЗАВЕРШЕНА" : "ЗАПИСЬ О СМЕНЕ ЗАКРЫТА";
-  $("endTitle").textContent = victory ? stats.mode === "boss" ? "Тренировка завершена" : "Архив отпускает смену" : "Смена окончена";
+  $("endTitle").textContent = victory ? stats.mode === "boss" ? "Тренировка завершена" : stats.mode === "challenge" ? "Испытание выполнено" : "Архив отпускает смену" : "Смена окончена";
   $("endText").textContent = victory
-    ? stats.mode === "boss" ? "Босс повержен. Можно повторить встречу и отработать другую тактику." : `${FLOOR_DEFINITIONS.length} отдела остались позади. Каталог сохранил ваши находки и секреты.`
-    : `Последняя причина: ${stats.lastDamage}. Сохранение забега удалено, но записи каталога остались.`;
+    ? stats.mode === "boss" ? "Босс повержен. Можно повторить встречу и отработать другую тактику." : stats.mode === "challenge" ? `${challenge?.name || "Испытание"}: цель в ${challenge?.floors || 0} отдела выполнена. Награда сохранена в профиле открытий.` : `${FLOOR_DEFINITIONS.length} отделов остались позади. Каталог сохранил ваши находки и секреты.`
+    : `Последняя причина: ${stats.lastDamage}. Сохранение забега удалено, но записи каталога и открытия остались.`;
+  if (runUnlocks.length) {
+    const names = runUnlocks.map((id) => ITEM_BY_ID.get(id)?.name || id).join(", ");
+    $("endText").textContent += ` Новые открытия: ${names}.`;
+  }
   $("endStats").replaceChildren();
   for (const text of [`ВРЕМЯ ${formatTime(stats.time)}`, `ВРАГОВ ${stats.kills}`, `НАХОДОК ${stats.items.length}`]) {
     const span = document.createElement("span");
@@ -599,7 +719,7 @@ function handleEvent(event) {
         $("bossName").textContent = ENEMY_TYPES[bossType].name;
         toast(ENEMY_TYPES[bossType].name, 2100);
       } else if (event.room.type !== "start") {
-        const names = { combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", secret: "Скрытая комната", rift: "Сервисный разрез" };
+        const names = { combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", workshop: "Мастерская Разборщика", vault: "Запечатанное хранилище", secret: "Скрытая комната", rift: "Сервисный разрез" };
         const events = { sigil: "Неучтённая трещина", contract: "Терминал калибровки", riftTerminal: "Сервисный терминал" };
         toast(events[event.room.event] || event.room.layoutName || names[event.room.type] || "Новая комната", 900);
       }
@@ -650,15 +770,35 @@ function handleEvent(event) {
     case "riftReturn":
       toast("Вы вернулись в Сортировочный узел", 1600);
       break;
+    case "workshop":
+      buildWorkshop();
+      showPanel("workshop");
+      break;
+    case "workshopComplete":
+      toast(`Замена: ${event.sacrifice.name} → ${event.item.name}`, 2200);
+      break;
+    case "vault":
+      buildVault();
+      showPanel("vault");
+      break;
+    case "vaultFight":
+      showPanel(null);
+      toast("Охрана хранилища пробуждается", 1800);
+      break;
     case "synergySpread":
       toast("Реагентная рана: яд и кровотечение переданы соседям", 1500);
       break;
     case "floorComplete": {
+      notifyUnlocks(progression.recordFloor(event));
       const nextFloor = FLOOR_DEFINITIONS[game.floorIndex + 1];
       if (nextFloor) {
-        $("floorDescription").textContent = `${nextFloor.description} Пальто с подкладкой снова готово защитить от первого удара.`;
+        $("floorDescription").textContent = `Можно остаться и исследовать отдел. Когда будете готовы, вернитесь к лифту в комнате босса. ${nextFloor.description} Пальто с подкладкой снова защитит от первого удара.`;
         $("nextFloorButton").textContent = `Спуститься: ${nextFloor.name}`;
+      } else {
+        $("floorDescription").textContent = "Это последний отдел в текущей цели. Можно завершить оставшиеся комнаты или вернуться к лифту и закончить смену.";
+        $("nextFloorButton").textContent = game.mode === "challenge" ? "Завершить испытание" : "Завершить смену";
       }
+      $("exploreButton").textContent = `Остаться: ${game.floor.name}`;
       showPanel("floor");
       break;
     }
@@ -688,6 +828,7 @@ function handleEvent(event) {
       if (event.blocked) toast("Зонт раскрылся", 700);
       break;
     case "victory":
+      notifyUnlocks(progression.recordVictory(event));
       clearCheckpoint();
       showEnd(true, event);
       break;
@@ -719,7 +860,7 @@ function updateHud(force = false) {
     $("bombs").textContent = game.player.bombs;
     $("coins").textContent = game.player.coins;
     $("keys").textContent = game.player.keys;
-    const roomNames = { start: "Лифт", combat: "бой", treasure: "находка", shop: "магазин", challenge: "испытание", secret: "тайник", boss: "босс", rift: "разрез" };
+    const roomNames = { start: "Лифт", combat: "бой", treasure: "находка", shop: "магазин", challenge: "испытание", workshop: "мастерская", vault: "хранилище", secret: "тайник", boss: "босс", rift: "разрез" };
     $("wave").textContent = game.state === "title" ? "Смена не начата" : `${game.floor?.name || "Архив"} · ${room ? roomNames[room.type] || "событие" : "исследование"}`;
     $("seed").textContent = `seed ${game.seed}`;
     const inventory = $("inventory");
@@ -826,6 +967,16 @@ function frame(now) {
 
 $("startButton").addEventListener("click", () => startRun(currentSeed));
 $("continueButton").addEventListener("click", continueRun);
+$("trainingButton").addEventListener("click", () => {
+  buildBossTraining();
+  showPanel("training");
+});
+$("challengeButton").addEventListener("click", () => {
+  buildChallengeCards();
+  showPanel("challenge");
+});
+$("closeTrainingButton").addEventListener("click", () => showPanel("title"));
+$("closeChallengesButton").addEventListener("click", () => showPanel("title"));
 $("catalogButton").addEventListener("click", () => {
   buildCatalog();
   showPanel("catalog");
@@ -833,10 +984,10 @@ $("catalogButton").addEventListener("click", () => {
 $("closeCatalogButton").addEventListener("click", () => showPanel("title"));
 $("resumeButton").addEventListener("click", () => togglePause(false));
 $("pauseButton").addEventListener("click", () => togglePause());
-$("restartButton").addEventListener("click", () => startRun(currentSeed, { bossOnly: game.mode === "boss", floorIndex: game.mode === "boss" ? game.floorIndex : 0 }));
-$("newRunButton").addEventListener("click", () => startRun(newSeed(), { bossOnly: game.mode === "boss", floorIndex: game.mode === "boss" ? game.floorIndex : 0 }));
-$("retryButton").addEventListener("click", () => startRun(currentSeed, { bossOnly: game.mode === "boss", floorIndex: game.mode === "boss" ? game.floorIndex : 0 }));
-$("nextRunButton").addEventListener("click", () => startRun(newSeed(), { bossOnly: game.mode === "boss", floorIndex: game.mode === "boss" ? game.floorIndex : 0 }));
+$("restartButton").addEventListener("click", () => startRun(currentSeed, currentRunOptions()));
+$("newRunButton").addEventListener("click", () => startRun(newSeed(), currentRunOptions()));
+$("retryButton").addEventListener("click", () => startRun(currentSeed, currentRunOptions()));
+$("nextRunButton").addEventListener("click", () => startRun(newSeed(), currentRunOptions()));
 $("menuButton").addEventListener("click", showTitle);
 $("endMenuButton").addEventListener("click", showTitle);
 $("copySeedButton").addEventListener("click", copySeedLink);
@@ -850,6 +1001,28 @@ $("closeRiftButton").addEventListener("click", () => {
   syncPanel();
   canvas.focus();
 });
+$("closeWorkshopButton").addEventListener("click", () => {
+  game.closeWorkshop();
+  syncPanel();
+  canvas.focus();
+});
+$("vaultKeyButton").addEventListener("click", () => {
+  if (game.chooseVault("key")) {
+    syncPanel();
+    canvas.focus();
+  }
+});
+$("vaultFightButton").addEventListener("click", () => {
+  if (game.chooseVault("fight")) {
+    syncPanel();
+    canvas.focus();
+  }
+});
+$("closeVaultButton").addEventListener("click", () => {
+  game.closeVault();
+  syncPanel();
+  canvas.focus();
+});
 $("closeShopButton").addEventListener("click", () => {
   game.closeShop();
   syncPanel();
@@ -859,6 +1032,12 @@ $("repairButton").addEventListener("click", () => {
 });
 $("nextFloorButton").addEventListener("click", () => {
   if (game.nextFloor()) syncPanel();
+});
+$("exploreButton").addEventListener("click", () => {
+  if (game.continueExploring()) {
+    syncPanel();
+    canvas.focus();
+  }
 });
 $("audioButton").addEventListener("click", () => {
   audio.setEnabled(!audio.enabled);
@@ -884,13 +1063,15 @@ window.addEventListener("keydown", (event) => {
   }
   if (event.code === "Escape") {
     event.preventDefault();
-    if (["shop", "contract", "riftMenu"].includes(game.state)) {
+    if (["shop", "contract", "riftMenu", "workshop", "vault"].includes(game.state)) {
       game.closeShop();
       game.closeContract();
       game.closeRiftMenu();
+      game.closeWorkshop();
+      game.closeVault();
       syncPanel();
       canvas.focus();
-    } else if (game.state === "catalog") showPanel("title");
+    } else if (["catalog", "training", "challenge"].includes(activePanel)) showPanel("title");
     else togglePause();
     return;
   }

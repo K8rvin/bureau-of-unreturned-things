@@ -13,6 +13,8 @@ const ROOM_STYLES = {
   treasure: { color: "#e8bd67", label: "T" },
   shop: { color: "#81c9c3", label: "$" },
   challenge: { color: "#d48bc7", label: "!" },
+  workshop: { color: "#9dc49a", label: "W" },
+  vault: { color: "#e8bd67", label: "V" },
   boss: { color: "#e47272", label: "B" },
   secret: { color: "#aa9adb", label: "?" },
   rift: { color: "#d6b0ef", label: "R" },
@@ -210,7 +212,7 @@ export function drawMap(context, floor, currentRoomId, { expanded = false, hasLe
     context.textBaseline = "middle";
     context.fillStyle = "#c5bcab";
     context.fillText("S старт   T склад   $ лавка   ! испытание", WIDTH / 2, 209);
-    context.fillText("B босс   ? тайник", WIDTH / 2, 221);
+    context.fillText("W мастерская   V хранилище   B босс   ? тайник   R разрез", WIDTH / 2, 221);
     context.fillStyle = "#8f8580";
     context.fillText("светлая рамка — вы здесь", WIDTH / 2, 232);
     context.fillText("черта снизу — очищено", WIDTH / 2, 243);

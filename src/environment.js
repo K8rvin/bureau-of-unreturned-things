@@ -1,6 +1,6 @@
 import { ARENA } from "./content.js";
 
-const ACTIVE_ROOMS = new Set(["combat", "challenge", "boss", "rift"]);
+const ACTIVE_ROOMS = new Set(["combat", "challenge", "vault", "boss", "rift"]);
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 const circleRect = (x, y, radius, rect) => {
   const nx = clamp(x, rect.x, rect.x + rect.w);
@@ -47,8 +47,8 @@ export class RoomEnvironment {
     this.boostTimer = Math.max(this.boostTimer, duration);
   }
 
-  queueDrop(x, y, { delay = 0.9, radius = 20 } = {}) {
-    if (!this.enabled || this.floorIndex < 2) return null;
+  queueDrop(x, y, { delay = 0.9, radius = 20, kind = "fall", force = false, source = "Падение невозвращённой вещи" } = {}) {
+    if (!this.enabled || (!force && this.floorIndex < 2)) return null;
     if (this.drops.length >= 12) this.drops.shift();
     const drop = {
       x: clamp(x, ARENA.left + radius, ARENA.right - radius),
@@ -58,6 +58,8 @@ export class RoomEnvironment {
       duration: delay,
       impact: 0,
       hit: false,
+      kind,
+      source,
     };
     this.drops.push(drop);
     return drop;
@@ -68,7 +70,7 @@ export class RoomEnvironment {
     this.boostTimer = Math.max(0, this.boostTimer - dt);
     if (this.moving.length) this.updateMovingShelves(dt);
     if (this.floorIndex === 2) this.updateBelts(dt);
-    if (this.floorIndex === 3) this.updateDrops(dt);
+    if (this.floorIndex === 3 || this.drops.length) this.updateDrops(dt);
     if (this.floorIndex === 4) this.updateLeaks(dt);
     if (this.floorIndex === 5 || this.room.type === "rift") this.updateBeams(dt);
   }
@@ -113,12 +115,14 @@ export class RoomEnvironment {
   }
 
   updateDrops(dt) {
-    this.nextDrop -= dt;
-    if (this.nextDrop <= 0) {
-      const angle = this.random() * Math.PI * 2;
-      const distance = 25 + this.random() * 45;
-      this.queueDrop(this.game.player.x + Math.cos(angle) * distance, this.game.player.y + Math.sin(angle) * distance * 0.6);
-      this.nextDrop = this.room.type === "boss" ? 3.6 : 2.8;
+    if (this.floorIndex === 3) {
+      this.nextDrop -= dt;
+      if (this.nextDrop <= 0) {
+        const angle = this.random() * Math.PI * 2;
+        const distance = 25 + this.random() * 45;
+        this.queueDrop(this.game.player.x + Math.cos(angle) * distance, this.game.player.y + Math.sin(angle) * distance * 0.6);
+        this.nextDrop = this.room.type === "boss" ? 3.6 : 2.8;
+      }
     }
     for (const drop of this.drops) {
       if (!drop.hit) {
@@ -127,10 +131,12 @@ export class RoomEnvironment {
           drop.hit = true;
           drop.impact = 0.28;
           if (Math.hypot(this.game.player.x - drop.x, this.game.player.y - drop.y) <= drop.r + this.game.player.r) {
-            this.game.hurtPlayer(1, "Падение невозвращённой вещи");
+            this.game.hurtPlayer(1, drop.source);
           }
-          for (const enemy of [...this.game.enemies]) {
-            if (Math.hypot(enemy.x - drop.x, enemy.y - drop.y) <= drop.r + enemy.r) this.game.damageEnemy(enemy, 4);
+          if (drop.kind !== "curse") {
+            for (const enemy of [...this.game.enemies]) {
+              if (Math.hypot(enemy.x - drop.x, enemy.y - drop.y) <= drop.r + enemy.r) this.game.damageEnemy(enemy, 4);
+            }
           }
           this.game.emit("slam", { x: drop.x, y: drop.y, environment: true });
         }

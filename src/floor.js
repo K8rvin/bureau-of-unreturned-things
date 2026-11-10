@@ -7,17 +7,21 @@ const DIRECTIONS = {
   W: { dx: -1, dy: 0, opposite: "E" },
 };
 const DIRECTION_NAMES = Object.keys(DIRECTIONS);
-const SPECIAL_TYPES = ["treasure", "shop", "challenge", "secret"];
+const SPECIAL_TYPES = ["treasure", "shop", "challenge", "workshop", "vault", "secret"];
+const UTILITY_TYPES = new Set(["challenge", "workshop", "vault"]);
 const EXPECTED_TYPES = {
   start: 1,
   combat: 3,
   treasure: 1,
   shop: 1,
-  challenge: 1,
   boss: 1,
   secret: 1,
 };
 const MIN_BOSS_DISTANCE = 4;
+
+export function utilityTypeForFloor(index) {
+  return index % 3 === 1 ? "workshop" : index % 3 === 2 ? "vault" : "challenge";
+}
 
 const TEMPLATES = [
   {
@@ -134,7 +138,7 @@ export function generateFloor(seed, floorIndex) {
   const secretSlot = choose(random, template.secretSlots);
   const branchTypes = new Array(4);
   branchTypes[secretSlot] = "secret";
-  const remainingTypes = shuffle(random, ["treasure", "shop", "challenge"]);
+  const remainingTypes = shuffle(random, ["treasure", "shop", utilityTypeForFloor(index)]);
   for (let slot = 0; slot < 4; slot++) {
     if (slot !== secretSlot) branchTypes[slot] = remainingTypes.pop();
   }
@@ -158,7 +162,7 @@ export function generateFloor(seed, floorIndex) {
       doors: { N: undefined, S: undefined, E: undefined, W: undefined },
       hidden: [],
       visited: type === "start",
-      cleared: type === "start" || type === "shop" || type === "secret" || type === "treasure",
+      cleared: ["start", "shop", "secret", "treasure", "workshop", "vault"].includes(type),
       rewardClaimed: false,
       secretFound: false,
       loreFound: false,
@@ -225,13 +229,16 @@ export function validateFloor(floor) {
     if (byId.has(room.id)) errors.push(`room ${room.id}: duplicate id`);
     byId.set(room.id, room);
     counts[room.type] = (counts[room.type] || 0) + 1;
-    if (!Object.hasOwn(EXPECTED_TYPES, room.type)) errors.push(`room ${room.id}: unknown type ${room.type}`);
+    if (!Object.hasOwn(EXPECTED_TYPES, room.type) && !UTILITY_TYPES.has(room.type)) errors.push(`room ${room.id}: unknown type ${room.type}`);
     if (!Number.isFinite(room.x) || !Number.isFinite(room.y)) errors.push(`room ${room.id}: invalid coordinates`);
     if (!Number.isFinite(room.encounterSeed)) errors.push(`room ${room.id}: invalid encounterSeed`);
   }
   for (const [type, expected] of Object.entries(EXPECTED_TYPES)) {
     if (counts[type] !== expected) errors.push(`types: expected ${expected} ${type}, got ${counts[type] || 0}`);
   }
+  const utilityRooms = rooms.filter((room) => UTILITY_TYPES.has(room.type));
+  if (utilityRooms.length !== 1) errors.push(`types: expected one utility room, got ${utilityRooms.length}`);
+  else if (utilityRooms[0].type !== utilityTypeForFloor(floor.index)) errors.push(`types: unexpected utility ${utilityRooms[0].type} for floor ${floor.index}`);
 
   for (const [key, type] of [["startId", "start"], ["bossId", "boss"], ["secretId", "secret"]]) {
     const id = floor[key];

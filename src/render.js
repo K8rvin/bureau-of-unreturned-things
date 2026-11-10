@@ -26,7 +26,7 @@ export class Renderer {
     this.mapHidden = false;
     this.showTelegraphs = false;
     this.icons = {};
-    for (const name of ["keyring", "umbrella", "key", "unlit-bomb", "heart-battery", "paper-clip", "big-gear", "mirror-mirror", "fire", "pencil", "magnet", "echo-ripples", "ink-swirl", "sewing-needle", "laser-blast"]) {
+    for (const name of ["keyring", "umbrella", "key", "unlit-bomb", "heart-battery", "paper-clip", "big-gear", "mirror-mirror", "fire", "pencil", "magnet", "echo-ripples", "ink-swirl", "sewing-needle", "laser-blast", "locked-chest", "open-chest"]) {
       const image = new Image();
       image.src = `assets/icons/${name}.svg`;
       this.icons[name] = image;
@@ -61,12 +61,12 @@ export class Renderer {
     this.fx.drawLayer(ctx, "front", true);
     this.drawTelegraphs(game);
     this.drawPickups(game);
-    this.drawBombs(game);
     this.drawNpc(game);
     this.drawEvent(game);
     this.drawPackLinks(game);
     this.drawEnemies(game);
     this.drawPlayer(game);
+    this.drawBombs(game);
     this.drawFamiliars(game);
     this.drawArcs(game);
     this.drawProjectiles(game);
@@ -197,14 +197,14 @@ export class Renderer {
         ctx.beginPath(); ctx.arc(drop.x, drop.y, drop.r + 4, 0, TAU); ctx.fill();
       } else {
         const progress = Math.max(0, Math.min(1, 1 - drop.time / drop.duration));
-        ctx.fillStyle = `rgba(216,84,68,${0.07 + progress * 0.14})`;
-        ctx.strokeStyle = `rgba(244,164,115,${0.55 + progress * 0.45})`;
+        ctx.fillStyle = drop.kind === "curse" ? `rgba(128,72,151,${0.1 + progress * 0.18})` : `rgba(216,84,68,${0.07 + progress * 0.14})`;
+        ctx.strokeStyle = drop.kind === "curse" ? `rgba(216,164,232,${0.55 + progress * 0.45})` : `rgba(244,164,115,${0.55 + progress * 0.45})`;
         ctx.lineWidth = 1 + progress;
         ctx.setLineDash([3, 3]);
         ctx.beginPath(); ctx.arc(drop.x, drop.y, drop.r, 0, TAU); ctx.fill(); ctx.stroke();
         ctx.setLineDash([]);
         ctx.beginPath(); ctx.arc(drop.x, drop.y, drop.r * (1 - progress), 0, TAU); ctx.stroke();
-        this.drawIcon("mirror-mirror", drop.x - 6, drop.y - 34 + progress * 22, 12, "#f2c99b");
+        this.drawIcon(drop.kind === "curse" ? "echo-ripples" : "mirror-mirror", drop.x - 6, drop.y - 34 + progress * 22, 12, "#f2c99b");
       }
       ctx.restore();
     }
@@ -239,6 +239,12 @@ export class Renderer {
         if (!open) for (let y = 125; y < 157; y += 7) {
           ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 6, y); ctx.stroke();
         }
+      }
+      if (["treasure", "vault"].includes(target?.type)) {
+        const point = direction === "N" ? { x: 240, y: ARENA.top } : direction === "S" ? { x: 240, y: ARENA.bottom } : direction === "W" ? { x: ARENA.left, y: 140 } : { x: ARENA.right, y: 140 };
+        const locked = target.type === "vault" ? !target.rewardClaimed : game.floorIndex >= 1 && !target.unlocked && !target.rewardClaimed;
+        this.drawIcon(locked ? "locked-chest" : "open-chest", point.x - 7, point.y - 7, 14);
+        if (target.type === "treasure" && locked) this.drawIcon("key", point.x + 4, point.y - 2, 8);
       }
     }
   }
@@ -288,7 +294,7 @@ export class Renderer {
       ctx.fillStyle = "#d94c5933";
       ctx.lineWidth = 1 + progress * 2;
       ctx.setLineDash([4, 3]);
-      if (enemy.attackType === "riftStep" && enemy.riftTarget) {
+      if (["riftStep", "curseBlink"].includes(enemy.attackType) && enemy.riftTarget) {
         ctx.strokeStyle = "#c8a1ed";
         ctx.lineWidth = 2;
         ctx.beginPath(); ctx.arc(enemy.riftTarget.x, enemy.riftTarget.y, enemy.r + 10 - progress * 6, 0, TAU); ctx.fill(); ctx.stroke();
@@ -364,14 +370,29 @@ export class Renderer {
       ctx.beginPath(); ctx.arc(bomb.x, bomb.y, 5, 0, TAU); ctx.fill();
       ctx.fillStyle = flash ? "#fff1ba" : "#b84d52";
       ctx.beginPath(); ctx.arc(bomb.x, bomb.y, 3, 0, TAU); ctx.fill();
+      ctx.strokeStyle = bomb.timer < 0.35 ? "#fff0a8" : "#a78b6b";
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(bomb.x, bomb.y, 7, -Math.PI / 2, -Math.PI / 2 + TAU * (1 - bomb.timer / (bomb.fuse || 1.5))); ctx.stroke();
       ctx.strokeStyle = "#f4b65e";
       ctx.beginPath(); ctx.moveTo(bomb.x + 2, bomb.y - 4); ctx.lineTo(bomb.x + 6, bomb.y - 9); ctx.stroke();
     }
   }
 
   drawNpc(game) {
-    if (game.room()?.type !== "shop") return;
     const ctx = this.context;
+    if (game.room()?.type === "workshop") {
+      this.sprites.draw(ctx, "workshopMonk", { x: 240, y: 140, time: game.time, moving: false });
+      ctx.fillStyle = "#4c3834";
+      ctx.fillRect(218, 139, 44, 9);
+      ctx.fillStyle = "#9a7656";
+      ctx.fillRect(218, 139, 44, 2);
+      ctx.fillStyle = "#d4bc8b";
+      ctx.font = '8px "Archive Pixel", monospace';
+      ctx.textAlign = "center";
+      ctx.fillText("РАЗБОРЩИК", 240, 158);
+      return;
+    }
+    if (game.room()?.type !== "shop") return;
     this.sprites.draw(ctx, "npc", { x: 240, y: 140, time: game.time, moving: false, scale: 1 });
     ctx.fillStyle = "#4c3834";
     ctx.fillRect(218, 139, 44, 9);
@@ -420,6 +441,14 @@ export class Renderer {
       ctx.strokeStyle = "#d1b66a";
       ctx.beginPath(); ctx.arc(240, 140, 13, 0, TAU); ctx.stroke();
       this.drawIcon("big-gear", 231, 127, 18, "#edc37b");
+    }
+    if (room.type === "vault" && !room.rewardClaimed) {
+      this.drawIcon(room.vaultHandled && room.cleared ? "open-chest" : "locked-chest", 232, 132, 16, "#edc37b");
+    }
+    if (room.type === "boss" && room.cleared && game.floor.exitAvailable) {
+      ctx.strokeStyle = "#d1b66a";
+      ctx.beginPath(); ctx.arc(240, 140, 13, 0, TAU); ctx.stroke();
+      this.drawIcon("keyring", 233, 133, 14, "#edc37b");
     }
     if (room.event === "riftTerminal" || (room.type === "rift" && room.cleared)) {
       ctx.strokeStyle = "#b99ddd";
@@ -470,12 +499,12 @@ export class Renderer {
       const top = this.sprites.draw(ctx, spriteKey, {
         x: enemy.x, y: bottom, time: game.time + enemy.id * 0.13, moving,
         flip: game.player.x < enemy.x, scale,
-        alpha: spawning ? 0.25 + Math.sin(game.time * 18) * 0.12 : enemy.disguise ? 0.55 : 1,
+        alpha: enemy.phased ? 0.3 : spawning ? 0.25 + Math.sin(game.time * 18) * 0.12 : enemy.disguise ? 0.55 : 1,
         flash: enemy.flash > 0 && !this.fx.reduced,
         hit: enemy.flash > 0,
         attacking: enemy.attackAnimation > 0,
         actionTime: enemy.attackAnimation > 0 ? Math.max(0, enemy.telegraphDuration + 0.25 - enemy.attackAnimation) : null,
-        action: enemy.type === "skeleton" && enemy.shieldTimer > 0 ? "shield" : enemy.type === "rat" && enemy.contactTimer > 0.55 ? "gesture" : null,
+        action: enemy.type === "skeleton" && enemy.shieldTimer > 0 ? "shield" : enemy.type === "curseCaster" && enemy.attackType === "curseFan" ? "attack2" : enemy.type === "rat" && enemy.contactTimer > 0.55 ? "gesture" : null,
         filter: ENEMY_TYPES[enemy.type].filter || null,
       });
       if (ENEMY_TYPES[enemy.type].boss) {
@@ -483,6 +512,7 @@ export class Renderer {
         const icon = this.icons[iconName];
         if (icon?.complete && icon.naturalWidth) this.drawIcon(iconName, enemy.x - 4, bottom - 31, 23, "#f3d99a");
       }
+      if (enemy.stampTimer > 0) this.drawIcon("echo-ripples", enemy.x - 4, top - 10, 8, "#edc37b");
       if (enemy.poisonTimer > 0) {
         ctx.strokeStyle = "#91c96b";
         ctx.lineWidth = 1;
@@ -571,6 +601,10 @@ export class Renderer {
     const ctx = this.context;
     for (const projectile of game.projectiles) {
       if (projectile.dead) continue;
+      if (projectile.source === "ghostOrb") {
+        this.sprites.draw(ctx, "ghostOrb", { x: projectile.x, y: projectile.y, time: game.time, moving: true });
+        continue;
+      }
       ctx.save();
       ctx.translate(projectile.x, projectile.y);
       if (projectile.owner === "player") {
@@ -602,6 +636,11 @@ export class Renderer {
     ctx.strokeStyle = "#8ee9e2";
     ctx.lineWidth = 1;
     for (const arc of game.arcs) {
+      if (arc.kind === "ring") {
+        ctx.globalAlpha = Math.min(1, arc.life * 10);
+        ctx.beginPath(); ctx.arc(arc.x1, arc.y1, arc.x2 * (1 - arc.life / 0.2), 0, TAU); ctx.stroke();
+        continue;
+      }
       const dx = arc.x2 - arc.x1;
       const dy = arc.y2 - arc.y1;
       const d = Math.hypot(dx, dy) || 1;

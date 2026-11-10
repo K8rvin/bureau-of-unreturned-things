@@ -14,7 +14,7 @@
       <div class="brand">БЮРО <span>этап B</span></div>
       <div id="hud" class="hud" aria-live="polite">
         <div id="health" class="hud-group" title="Печати здоровья"></div>
-        <div class="hud-group" title="Петарды [R]"><img class="icon" src="assets/icons/unlit-bomb.svg" alt=""><span id="bombs">2</span></div>
+        <div class="hud-group" title="Петарды [R] · фитиль 1,5 с"><img class="icon" src="assets/icons/unlit-bomb.svg" alt=""><span id="bombs">2</span></div>
         <div class="hud-group" title="Жетоны"><img class="icon" src="assets/icons/crystal-ball.svg" alt=""><span id="coins">0</span></div>
         <div class="hud-group" title="Ключи"><img class="icon" src="assets/icons/key.svg" alt=""><span id="keys">0</span></div>
         <div id="wave" class="hud-group">Смена не начата</div>
@@ -47,11 +47,12 @@
           <div class="title-actions">
             <button id="startButton" class="primary" type="button">Новая смена</button>
             <button id="continueButton" type="button" hidden>Продолжить забег</button>
+            <button id="challengeButton" type="button">Испытания</button>
+            <button id="trainingButton" type="button">Тренировка боссов</button>
             <button id="catalogButton" type="button">Каталог находок</button>
           </div>
           <details id="fieldManual" class="field-manual" open>
-            <summary>Управление и тренировка боссов</summary>
-            <div id="bossTraining" class="training-links" aria-label="Тренировка боссов"></div>
+            <summary>Управление</summary>
             <div class="controls">
               <span><kbd>WASD</kbd> движение</span>
               <span><kbd>Мышь + ЛКМ</kbd> прицел и огонь</span>
@@ -64,6 +65,22 @@
             </div>
           </details>
           <p class="hint">Исследуйте комнаты, находите тайники и спускайтесь ниже. После боя награда открывается через 3 секунды.</p>
+        </section>
+
+        <section id="trainingPanel" class="panel event-panel" hidden>
+          <div class="eyebrow">ОТДЕЛЬНЫЙ РЕЖИМ</div>
+          <h2>Тренировка боссов</h2>
+          <p class="lead">Выбранный герой сохраняется. Отделы, победы и открытия здесь не засчитываются.</p>
+          <div id="bossTraining" class="training-links" aria-label="Тренировка боссов"></div>
+          <button id="closeTrainingButton" class="quiet" type="button">Вернуться в меню</button>
+        </section>
+
+        <section id="challengePanel" class="panel event-panel" hidden>
+          <div class="eyebrow">ОСОБЫЕ ПРАВИЛА СМЕНЫ</div>
+          <h2>Испытания</h2>
+          <p class="lead">Выполните цель выбранным героем, чтобы новая вещь вошла в обычный пул наград.</p>
+          <div id="challengeCards" class="event-choices"></div>
+          <button id="closeChallengesButton" class="quiet" type="button">Вернуться в меню</button>
         </section>
 
         <section id="choicePanel" class="panel choice-panel" hidden>
@@ -98,11 +115,31 @@
           <button id="closeRiftButton" class="quiet" type="button">Остаться</button>
         </section>
 
+        <section id="workshopPanel" class="panel event-panel" hidden>
+          <div class="eyebrow">ДРУЖЕСТВЕННАЯ МАСТЕРСКАЯ</div>
+          <h2>Разборщик вещей</h2>
+          <p id="workshopDescription" class="lead">Выберите одну вещь для замены. Отмена ничего не отбирает.</p>
+          <div id="workshopChoices" class="event-choices workshop-choices"></div>
+          <button id="closeWorkshopButton" class="quiet" type="button">Оставить вещи как есть</button>
+        </section>
+
+        <section id="vaultPanel" class="panel event-panel" hidden>
+          <div class="eyebrow">ЗАПЕЧАТАННОЕ ХРАНИЛИЩЕ</div>
+          <h2>Ключ или охрана?</h2>
+          <p id="vaultDescription" class="lead">Одна награда независимо от способа. Можно уйти без потерь.</p>
+          <div class="event-choices">
+            <button id="vaultKeyButton" class="event-choice" type="button"></button>
+            <button id="vaultFightButton" class="event-choice" type="button">Вызвать охрану<small>Сразиться за награду без ключа</small></button>
+          </div>
+          <button id="closeVaultButton" class="quiet" type="button">Вернуться позже</button>
+        </section>
+
         <section id="floorPanel" class="panel" hidden>
           <div class="eyebrow">ОТДЕЛ ЗАЧИЩЕН</div>
-          <h2>Найден служебный лифт</h2>
-          <p id="floorDescription" class="lead">Пальто с подкладкой снова готово защитить от первого удара.</p>
+          <h2>Можно продолжить исследование</h2>
+          <p id="floorDescription" class="lead">Останьтесь на отделе или вернитесь к лифту, когда будете готовы спуститься.</p>
           <button id="nextFloorButton" class="primary" type="button">Спуститься в следующий отдел</button>
+          <button id="exploreButton" type="button">Остаться на этом отделе</button>
         </section>
 
         <section id="catalogPanel" class="panel catalog-panel" hidden>
@@ -145,7 +182,7 @@
             <button id="copySeedButton" type="button">Скопировать ссылку на seed</button>
             <button id="endMenuButton" class="quiet" type="button">В главное меню</button>
           </div>
-          <p class="hint">В ссылке только seed и герой. Вещи и прогресс забега не переносятся.</p>
+          <p class="hint">В ссылке seed, герой и выбранное испытание, если оно активно. Вещи и checkpoint не переносятся.</p>
         </section>
       </div>
     </main>

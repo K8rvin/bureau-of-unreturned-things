@@ -1,4 +1,4 @@
-import { ARENA, BOSS_ATTACKS, ENEMY_TYPES, FLOOR_COUNT, FLOOR_ENCOUNTERS, ITEMS, ITEM_BY_ID, SYNERGIES } from "./content.js";
+import { ARENA, BOMB_FUSE, BOSS_ATTACKS, ENEMY_TYPES, FLOOR_COUNT, FLOOR_ENCOUNTERS, ITEMS, ITEM_BY_ID, SYNERGIES } from "./content.js";
 import { generateFloor } from "./floor.js";
 import { getRoomLayout } from "./layouts.js";
 import { getHero } from "./heroes.js";
@@ -6,6 +6,8 @@ import { createEnvironment } from "./environment.js";
 import { getFinalMemoryAttacks, updateFinalBoss, updateSorterBoss, updateChemistBoss, updateCalibratorBoss, updateRiftWarden } from "./bosses.js";
 import { firePlayerLaser, getProjectileRadius, getVolleyAngles, getWeaponStats } from "./weapon.js";
 import { createRiftRoom, getChainHint, riftDestinations } from "./secrets.js";
+import { getChallenge } from "./progression.js";
+import { performSpecialEnemyAttack, updateSpecialEnemy } from "./enemies.js";
 
 const TAU = Math.PI * 2;
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -41,8 +43,9 @@ export function mulberry32(seed) {
 }
 
 export class Game {
-  constructor(onEvent) {
+  constructor(onEvent, { itemUnlocked = () => true } = {}) {
     this.onEvent = onEvent;
+    this.itemUnlocked = itemUnlocked;
     this.reset(1);
   }
 
@@ -57,6 +60,8 @@ export class Game {
     };
     this.state = "title";
     this.mode = "run";
+    this.challenge = null;
+    this.challengeId = null;
     this.heroId = "keeper";
     this.hero = getHero(this.heroId);
     this.time = 0;
@@ -88,6 +93,7 @@ export class Game {
     this.shotCounter = 0;
     this.hitCounter = 0;
     this.webCounter = 0;
+    this.stampCounter = 0;
     this.coatUsed = false;
     this.repeatReward = null;
     this.chain = { sigil: false, npc: false, terminal: false, wardenDefeated: false };
@@ -113,13 +119,15 @@ export class Game {
     return this.rooms.find((room) => room.id === this.currentRoomId);
   }
 
-  start(seed = this.seed, { bossOnly = false, floorIndex = 0, heroId = "keeper" } = {}) {
+  start(seed = this.seed, { bossOnly = false, floorIndex = 0, heroId = "keeper", challengeId = null } = {}) {
     this.reset(seed);
-    this.mode = bossOnly ? "boss" : "run";
+    this.challenge = bossOnly ? null : getChallenge(challengeId);
+    this.challengeId = this.challenge?.id || null;
+    this.mode = bossOnly ? "boss" : this.challenge ? "challenge" : "run";
     this.heroId = getHero(heroId).id;
     this.hero = getHero(this.heroId);
-    this.player.hp = this.hero.hp;
-    this.player.maxHp = this.hero.hp;
+    this.player.hp = this.challenge?.maxHp ?? this.hero.hp;
+    this.player.maxHp = this.player.hp;
     if (this.hero.itemId) this.addItem(this.hero.itemId);
     this.floorIndex = floorIndex;
     this.floor = generateFloor(this.seed, this.floorIndex);
@@ -129,9 +137,17 @@ export class Game {
     this.startRoom(bossOnly ? this.floor.bossId : this.floor.startId);
   }
 
+  runFloorCount() {
+    return this.challenge?.floors || FLOOR_COUNT;
+  }
+
+  choiceLimit() {
+    return this.challenge?.choiceLimit || 3;
+  }
+
   nextFloor() {
     if (this.state !== "floorComplete") return false;
-    if (this.floorIndex >= FLOOR_COUNT - 1) {
+    if (this.floorIndex >= this.runFloorCount() - 1) {
       this.state = "victory";
       this.emit("victory", this.stats());
       return true;
@@ -148,11 +164,28 @@ export class Game {
     return true;
   }
 
+  continueExploring() {
+    if (this.state !== "floorComplete" || !this.floor.exitAvailable) return false;
+    this.state = "room";
+    this.emit("roomResumed", { room: this.room() });
+    this.checkpoint();
+    return true;
+  }
+
+  openFloorExit() {
+    if (this.state !== "room" || this.room().type !== "boss" || !this.floor.exitAvailable) return false;
+    this.state = "floorComplete";
+    this.emit("floorComplete", this.stats());
+    this.checkpoint();
+    return true;
+  }
+
   startRoom(id, { entry = null, restoreSnapshot = null } = {}) {
     this.currentRoomId = id;
     const room = this.room();
     room.visited = true;
     this.floor.riftId = this.rooms.find((entry) => entry.type === "rift")?.id || null;
+    this.floor.exitAvailable = Boolean(this.rooms.find((entry) => entry.id === this.floor.bossId)?.rewardClaimed);
     const layout = getRoomLayout(room);
     this.obstacles = layout.obstacles.map((obstacle) => room.event === "movingShelves" ? { ...obstacle } : obstacle);
     room.layoutName = layout.name;
@@ -203,6 +236,10 @@ export class Game {
       this.openShop();
     } else if (restoredState === "contract") {
       this.openContract();
+    } else if (restoredState === "workshop") {
+      this.openWorkshop();
+    } else if (restoredState === "vault") {
+      this.openVault();
     } else if (restoredState === "riftMenu") {
       this.openRiftMenu();
     } else if (restoredState === "floorComplete") {
@@ -225,7 +262,7 @@ export class Game {
   }
 
   makeChoices() {
-    const available = ITEMS.filter((item) => item.pool !== false && !this.hasItem(item.id));
+    const available = ITEMS.filter((item) => item.pool !== false && !this.hasItem(item.id) && this.itemUnlocked(item.id));
     const pool = [...available];
     for (let i = pool.length - 1; i > 0; i--) {
       const j = Math.floor(this.random() * (i + 1));
@@ -235,7 +272,7 @@ export class Game {
     const partner = available.find((item) => item.partner && this.hasItem(item.partner));
     if (partner) result.push(partner);
     for (const item of pool) {
-      if (result.length >= 3) break;
+      if (result.length >= this.choiceLimit()) break;
       if (!result.includes(item)) result.push(item);
     }
     return result;
@@ -267,6 +304,7 @@ export class Game {
     if (!this.addItem(id)) return false;
     this.choices = [];
     this.room().rewardClaimed = true;
+    if (this.room().type === "boss") this.floor.exitAvailable = true;
     if (this.afterChoice === "floorComplete") {
       this.state = "floorComplete";
       this.emit("floorComplete", this.stats());
@@ -335,6 +373,7 @@ export class Game {
     if (this.state !== "room") return false;
     const room = this.room();
     const near = (x, y, radius) => Math.hypot(this.player.x - x, this.player.y - y) <= radius;
+    if (room.type === "boss" && room.cleared && this.floor.exitAvailable && near(240, 140, 44)) return this.openFloorExit();
     if (room.type === "rift" && room.cleared && near(240, 140, 44)) {
       this.startRoom(room.returnTo);
       this.emit("riftReturn", { room: this.room() });
@@ -365,6 +404,8 @@ export class Game {
       this.openContract();
       return true;
     }
+    if (room.type === "workshop" && near(240, 132, 52)) return this.openWorkshop();
+    if (room.type === "vault" && near(240, 140, 44)) return this.openVault();
     if (room.type !== "shop" || !near(240, 132, 52)) return false;
     if (this.chain.sigil && !this.chain.npc) {
       this.chain.npc = true;
@@ -423,6 +464,104 @@ export class Game {
     this.checkpoint();
   }
 
+  openWorkshop() {
+    const room = this.room();
+    if (this.state !== "room" || room.type !== "workshop" || !room.cleared || room.workshopHandled) return false;
+    room.workshopOffers ??= {};
+    room.workshopPending ??= null;
+    this.state = "workshop";
+    this.emit("workshop", { room, pending: room.workshopPending });
+    this.checkpoint();
+    return true;
+  }
+
+  selectWorkshopItem(id) {
+    const room = this.room();
+    const item = ITEM_BY_ID.get(id);
+    if (this.state !== "workshop" || room.workshopHandled || room.workshopPending || !item || item.pool === false || !this.hasItem(id)) return false;
+    room.workshopOffers ??= {};
+    if (!room.workshopOffers[id]) room.workshopOffers[id] = this.makeChoices().slice(0, 2).map((offer) => offer.id);
+    if (!room.workshopOffers[id].length) {
+      this.emit("locked", { message: "Нет доступных замен" });
+      return false;
+    }
+    room.workshopPending = { sacrificeId: id, choices: [...room.workshopOffers[id]] };
+    this.emit("workshop", { room, pending: room.workshopPending });
+    this.checkpoint();
+    return true;
+  }
+
+  confirmWorkshop(id) {
+    const room = this.room();
+    const pending = room.workshopPending;
+    if (this.state !== "workshop" || room.workshopHandled || !pending?.choices.includes(id) || this.hasItem(id) || !this.itemUnlocked(id)) return false;
+    const index = this.items.indexOf(pending.sacrificeId);
+    if (index < 0) return false;
+    const [sacrificeId] = this.items.splice(index, 1);
+    if (!this.addItem(id)) {
+      this.items.splice(index, 0, sacrificeId);
+      return false;
+    }
+    room.workshopHandled = true;
+    room.workshopPending = null;
+    room.rewardClaimed = true;
+    this.state = "room";
+    this.emit("workshopComplete", { sacrifice: ITEM_BY_ID.get(sacrificeId), item: ITEM_BY_ID.get(id) });
+    this.checkpoint();
+    return true;
+  }
+
+  closeWorkshop() {
+    if (this.state !== "workshop") return;
+    this.room().workshopPending = null;
+    this.state = "room";
+    this.emit("roomResumed", { room: this.room() });
+    this.checkpoint();
+  }
+
+  openVault() {
+    const room = this.room();
+    if (this.state !== "room" || room.type !== "vault" || !room.cleared || room.vaultHandled || room.rewardClaimed) return false;
+    this.state = "vault";
+    this.emit("vault", { room });
+    this.checkpoint();
+    return true;
+  }
+
+  chooseVault(kind) {
+    const room = this.room();
+    if (this.state !== "vault" || room.vaultHandled || room.rewardClaimed) return false;
+    if (kind === "key") {
+      if (this.player.keys <= 0) {
+        this.emit("locked", { message: "Нужен один ключ" });
+        return false;
+      }
+      this.player.keys--;
+      room.vaultHandled = true;
+      room.vaultMethod = "key";
+      this.emit("unlocked", { room });
+      this.openItemChoice("room");
+      return true;
+    }
+    if (kind !== "fight") return false;
+    room.vaultHandled = true;
+    room.vaultMethod = "fight";
+    room.cleared = false;
+    this.state = "wave";
+    this.waveIntro = 0.75;
+    this.spawnEncounter(room);
+    this.emit("vaultFight", { room });
+    this.checkpoint();
+    return true;
+  }
+
+  closeVault() {
+    if (this.state !== "vault") return;
+    this.state = "room";
+    this.emit("roomResumed", { room: this.room() });
+    this.checkpoint();
+  }
+
   openRift() {
     const source = this.room();
     if (this.state !== "room" || source?.event !== "riftTerminal" || !source.cleared || !this.chain.sigil || !this.chain.npc || this.chain.terminal || this.chain.wardenDefeated) return false;
@@ -435,6 +574,10 @@ export class Game {
   }
 
   openRiftMenu() {
+    if (this.challenge && !this.challenge.allowRift) {
+      this.emit("locked", { message: "В этом испытании сервисные переходы запрещены" });
+      return false;
+    }
     if (!this.hasItem("riftPass")) {
       this.emit("locked", { message: "Сначала найдите Сервисный пропуск" });
       return false;
@@ -476,10 +619,13 @@ export class Game {
     if (this.state !== "room") return null;
     const room = this.room();
     const near = (x, y, radius) => Math.hypot(this.player.x - x, this.player.y - y) <= radius;
+    if (room.type === "boss" && room.cleared && this.floor.exitAvailable && near(240, 140, 44)) return "служебный лифт";
     if (room.type === "rift" && room.cleared && near(240, 140, 44)) return "вернуться";
     if (room.event === "sigil" && !this.chain.sigil && near(240, 120, 42)) return "взять отпечаток трещины";
     if (room.event === "contract" && !room.contractHandled && near(240, 140, 42)) return "калибровка";
     if (room.event === "riftTerminal" && near(240, 140, 42)) return "сервисный терминал";
+    if (room.type === "workshop" && near(240, 132, 52)) return "обменять вещь у Разборщика";
+    if (room.type === "vault" && near(240, 140, 44)) return "открыть хранилище";
     if (room.type === "shop" && near(240, 132, 52)) return "поговорить с Оценщиком";
     return null;
   }
@@ -522,6 +668,7 @@ export class Game {
       seed: this.seed,
       heroId: this.heroId,
       mode: this.mode,
+      challengeId: this.challengeId,
       floorIndex: this.floorIndex,
       currentRoomId: this.currentRoomId,
       state: this.state,
@@ -541,6 +688,7 @@ export class Game {
       shotCounter: this.shotCounter,
       hitCounter: this.hitCounter,
       webCounter: this.webCounter,
+      stampCounter: this.stampCounter,
       pickups: this.pickups,
       time: this.time,
       kills: this.kills,
@@ -554,7 +702,9 @@ export class Game {
     this.restoring = true;
     this.heroId = getHero(data.heroId).id;
     this.hero = getHero(this.heroId);
-    this.mode = data.mode || "run";
+    this.challenge = data.mode === "challenge" ? getChallenge(data.challengeId) : null;
+    this.challengeId = this.challenge?.id || null;
+    this.mode = data.mode === "boss" ? "boss" : this.challenge ? "challenge" : "run";
     this.chain = { sigil: false, npc: false, terminal: false, wardenDefeated: false, ...(data.chain || {}) };
     this.riftUsedFloor = Boolean(data.riftUsedFloor);
     this.floorIndex = data.floorIndex;
@@ -573,6 +723,7 @@ export class Game {
     this.shotCounter = data.shotCounter;
     this.hitCounter = data.hitCounter;
     this.webCounter = data.webCounter;
+    this.stampCounter = data.stampCounter || 0;
     this.kills = data.kills;
     for (let i = 0; i < data.rngCalls; i++) this.random();
     this.startRoom(data.currentRoomId, { restoreSnapshot: data });
@@ -592,6 +743,16 @@ export class Game {
       this.spawnEnemy(this.floor.bossType, 0.5, 0.16);
       return;
     }
+    if (room.type === "vault") {
+      const encounter = FLOOR_ENCOUNTERS[this.floorIndex] || FLOOR_ENCOUNTERS[0];
+      const required = encounter.normal[2];
+      const points = [[0.3, 0.24], [0.7, 0.24], [0.35, 0.56], [0.65, 0.56], [0.2, 0.42], [0.8, 0.42], [0.5, 0.2], [0.5, 0.6]];
+      for (let index = 0; index < 4 + this.floorIndex; index++) {
+        const [x, y] = points[index % points.length];
+        this.spawnEnemy(required[index % required.length], x, y, { elite: index < 2 });
+      }
+      return;
+    }
     const points = this.floorIndex < 2
       ? [[0.2, 0.24], [0.8, 0.24], [0.5, 0.2], [0.2, 0.62], [0.8, 0.62], [0.36, 0.42], [0.64, 0.42], [0.5, 0.62]]
       : [0.18, 0.37, 0.56, 0.75].flatMap((y) => [0.16, 0.38, 0.62, 0.84].map((x) => [x, y]));
@@ -604,14 +765,24 @@ export class Game {
     const encounter = FLOOR_ENCOUNTERS[this.floorIndex] || FLOOR_ENCOUNTERS[0];
     const required = room.type === "challenge" ? encounter.challenge : encounter.normal[encounterIndex % encounter.normal.length];
     const count = room.type === "challenge" ? 8 + this.floorIndex * 2 : Math.min(12, 6 + this.floorIndex + encounterIndex);
-    const types = Array.from({ length: count }, (_, index) => required[index % required.length]);
+    const caps = { wraith: 3, curseCaster: 1 };
+    const counts = {};
+    const types = [];
+    for (let index = 0; index < count; index++) {
+      let type = required[index % required.length];
+      if (counts[type] >= caps[type]) type = required.find((candidate) => (counts[candidate] || 0) < (caps[candidate] ?? Infinity)) || "lost";
+      counts[type] = (counts[type] || 0) + 1;
+      types.push(type);
+    }
     types.forEach((type, index) => {
       const [x, y] = points[index % points.length];
       this.spawnEnemy(type, x, y);
     });
     if (room.eliteContract) {
-      this.spawnEnemy(required[0], 0.35, 0.32, { elite: true });
-      this.spawnEnemy(required[0], 0.65, 0.32, { elite: true });
+      for (const x of [0.35, 0.65]) {
+        const type = required.find((candidate) => this.enemies.filter((enemy) => enemy.type === candidate && !enemy.dead).length < (caps[candidate] ?? Infinity)) || "lost";
+        this.spawnEnemy(type, x, 0.32, { elite: true });
+      }
     }
   }
 
@@ -681,6 +852,7 @@ export class Game {
       spawnTime: boss ? 1.1 : 0.65, flash: 0, slowTimer: 0, freezeTimer: 0,
       contactTimer: 0, charging: 0, eatTimer: 0, growth: 0,
       phase: 1, attackIndex: 0, dead: false, small: false,
+      phased: false, phaseTimer: 0, blinkCooldown: 0, stampTimer: 0,
       burn: 0, burnTick: 0, burnDepth: 0, cold: 0, webTimer: 0,
       poisonTimer: 0, poisonTick: 0.5, bleedTimer: 0, bleedTick: 0.5,
       shieldedBy: null, protectTarget: null, disguise: type === "mimic",
@@ -762,11 +934,11 @@ export class Game {
         this.state = "victory";
         this.emit("victory", this.stats());
       } else {
-        this.openItemChoice(this.floorIndex >= FLOOR_COUNT - 1 ? "victory" : "floorComplete");
+        this.openItemChoice("floorComplete");
       }
       return;
     }
-    if (room.type === "challenge") {
+    if (["challenge", "vault"].includes(room.type)) {
       this.openItemChoice("room");
       return;
     }
@@ -782,7 +954,7 @@ export class Game {
   }
 
   grantRoomReward(room) {
-    const types = ["coin", "coin", "key", "bomb", "heart"];
+    const types = ["coin", "coin", "key", "bomb", "heart"].filter((type) => this.challenge?.heartDrops !== false || type !== "heart");
     const type = types[Math.floor(this.random() * types.length)];
     this.spawnPickup(type, 240, 140, { amount: type === "coin" ? 2 : 1 });
     if (this.repeatReward) {
@@ -856,11 +1028,17 @@ export class Game {
       this.firePlayer();
       p.fireTimer = getWeaponStats(this).fireInterval;
     }
-    if (input.bombPressed && p.bombs > 0 && p.bombCooldown <= 0) {
-      p.bombs--;
-      p.bombCooldown = 0.4;
-      this.bombs.push({ id: this.nextId++, x: p.x, y: p.y, timer: 0.9, dead: false });
-      this.emit("bomb", { x: p.x, y: p.y });
+    if (input.bombPressed && p.bombCooldown <= 0) {
+      const active = this.hasItem("detonator") && this.bombs.find((bomb) => !bomb.dead && bomb.timer > 0.15);
+      if (active) {
+        active.timer = 0.15;
+        p.bombCooldown = 0.4;
+        this.emit("detonate", { x: active.x, y: active.y });
+      } else if (p.bombs > 0) {
+        p.bombs--;
+        p.bombCooldown = 0.4;
+        this.placeBomb();
+      }
     }
   }
 
@@ -890,7 +1068,25 @@ export class Game {
       if (laser) firePlayerLaser(this, p.aimAngle + Math.PI, 0.6);
       else this.spawnPlayerShot(p.aimAngle + Math.PI, "shot", 0.6);
     }
+    if (this.hasItem("coil") && this.shotCounter % 4 === 0) this.fireCoil();
     this.emit("shot", { x: p.x, y: p.y });
+  }
+
+  fireCoil() {
+    const p = this.player;
+    this.arcs.push({ kind: "ring", x1: p.x, y1: p.y, x2: 34, y2: 34, life: 0.2 });
+    this.emit("coilPulse", { x: p.x, y: p.y });
+    for (const projectile of this.projectiles) {
+      if (projectile.owner === "enemy" && !projectile.dead && distance(projectile, p) <= 34) projectile.dead = true;
+    }
+    const targets = this.enemies.filter((enemy) => !enemy.dead && !enemy.phased && distance(enemy, p) <= 34 + enemy.r);
+    for (const enemy of targets) this.damageEnemy(enemy, 1.5, { source: "coil" });
+    if (!this.hasItem("thread")) return;
+    const linked = this.enemies.filter((enemy) => !enemy.dead && !enemy.phased && distance(enemy, p) <= 90).sort((a, b) => distance(p, a) - distance(p, b)).slice(0, 2);
+    for (const enemy of linked) {
+      this.arcs.push({ x1: p.x, y1: p.y, x2: enemy.x, y2: enemy.y, life: 0.18 });
+      this.damageEnemy(enemy, 0.4, { source: "coilLink" });
+    }
   }
 
   spawnPlayerShot(angle, source, scale = 1, origin = this.player) {
@@ -898,6 +1094,7 @@ export class Game {
     const spring = this.hasItem("spring") && source === "shot" && p.springTime >= 0.7;
     const stats = getWeaponStats(this, source, scale);
     const speed = (stats.projectileSpeed ?? 185) * (this.hasItem("magnet") && source === "shot" ? 0.9 : 1);
+    const boomerang = this.hasItem("returning") && source === "shot" && this.shotCounter % 3 === 0;
     this.createProjectile({
       owner: "player", source, x: origin.x + Math.cos(angle) * 9, y: origin.y + Math.sin(angle) * 9,
       vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
@@ -905,6 +1102,8 @@ export class Game {
       pierce: stats.pierce,
       bounces: stats.bounces,
       spring,
+      boomerang,
+      returnBounces: 0,
     });
     if (spring) p.springTime = 0;
   }
@@ -936,8 +1135,8 @@ export class Game {
   fireEnemy(enemy, angle, speed = 100, options = {}) {
     this.createProjectile({
       owner: "enemy", source: "enemy", x: enemy.x + Math.cos(angle) * (enemy.r + 3),
-      y: enemy.y + Math.sin(angle) * (enemy.r + 3), vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed, r: 3, damage: 1, life: 6, ...options,
+      y: enemy.y + Math.sin(angle) * (enemy.r + 3), vx: Math.cos(angle) * speed * (this.challenge?.bulletSpeed || 1),
+      vy: Math.sin(angle) * speed * (this.challenge?.bulletSpeed || 1), r: 3, damage: 1, life: 6, ...options,
     });
   }
 
@@ -947,6 +1146,7 @@ export class Game {
       if (enemy.dead) continue;
       enemy.flash = Math.max(0, enemy.flash - dt);
       enemy.slowTimer = Math.max(0, enemy.slowTimer - dt);
+      enemy.stampTimer = Math.max(0, enemy.stampTimer - dt);
       const wasFrozen = enemy.freezeTimer > 0;
       enemy.freezeTimer = Math.max(0, enemy.freezeTimer - dt);
       if (wasFrozen && enemy.freezeTimer <= 0 && this.memory.thermosAwakened) this.coldBurst(enemy);
@@ -991,7 +1191,7 @@ export class Game {
       else if (enemy.type === "calibratorBoss") updateCalibratorBoss(this, enemy, dt);
       else if (enemy.type === "riftWarden") updateRiftWarden(this, enemy, dt);
       else this.updateEnemy(enemy, dt);
-      if (!enemy.dead && !enemy.disguise && distance(enemy, this.player) < enemy.r + this.player.r && enemy.contactTimer <= 0) {
+      if (!enemy.dead && !enemy.phased && !enemy.disguise && distance(enemy, this.player) < enemy.r + this.player.r && enemy.contactTimer <= 0) {
         this.hurtPlayer(1, enemy.name);
         enemy.contactTimer = 0.8;
       }
@@ -1014,6 +1214,7 @@ export class Game {
       if (this.moveBody(enemy, enemy.vx * dt, enemy.vy * dt)) enemy.charging = 0;
       return;
     }
+    if (updateSpecialEnemy(this, enemy, dt)) return;
     if (enemy.telegraph > 0) {
       enemy.telegraph -= dt;
       if (enemy.telegraph <= 0) this.performEnemyAttack(enemy);
@@ -1107,11 +1308,12 @@ export class Game {
     enemy.telegraphDuration = duration;
     enemy.attackAnimation = duration + 0.25;
     enemy.aimAngle = Math.atan2(this.player.y - enemy.y, this.player.x - enemy.x);
-    if (ENEMY_TYPES[enemy.type]?.boss || ["sniper", "spawner"].includes(enemy.type)) this.emit("telegraph", { enemy, attackType });
+    if (ENEMY_TYPES[enemy.type]?.boss || ["sniper", "spawner", "wraith", "curseCaster"].includes(enemy.type)) this.emit("telegraph", { enemy, attackType });
   }
 
   performEnemyAttack(enemy) {
     if (enemy.dead) return;
+    if (performSpecialEnemyAttack(this, enemy)) return;
     if (enemy.attackType === "shooter") {
       for (const offset of [-0.16, 0, 0.16]) this.fireEnemy(enemy, enemy.aimAngle + offset, 110);
       enemy.attackTimer = 2.1 + this.encounterRandom() * 0.5;
@@ -1261,12 +1463,25 @@ export class Game {
   updateProjectiles(dt) {
     for (const projectile of this.projectiles) {
       if (projectile.dead) continue;
+      const clockBomb = projectile.owner === "enemy" && this.hasItem("clock")
+        ? this.bombs.find((bomb) => !bomb.dead && bomb.timer > 0 && distance(projectile, bomb) < 80)
+        : null;
+      const step = clockBomb ? dt * 0.45 : dt;
       if (projectile.owner === "player" && this.hasItem("magnet") && projectile.source === "shot") this.homeProjectile(projectile, dt);
-      if (projectile.owner === "enemy" && projectile.homingTime > 0) this.homeEnemyProjectile(projectile, dt);
+      if (projectile.owner === "enemy" && projectile.homingTime > 0) this.homeEnemyProjectile(projectile, step);
+      if (clockBomb && this.hasItem("compass")) {
+        const speed = Math.hypot(projectile.vx, projectile.vy);
+        const desired = Math.atan2(clockBomb.y - projectile.y, clockBomb.x - projectile.x);
+        const current = Math.atan2(projectile.vy, projectile.vx);
+        const difference = Math.atan2(Math.sin(desired - current), Math.cos(desired - current));
+        const angle = current + clamp(difference, -step * 1.5, step * 1.5);
+        projectile.vx = Math.cos(angle) * speed;
+        projectile.vy = Math.sin(angle) * speed;
+      }
       const previousX = projectile.x;
       const previousY = projectile.y;
-      projectile.x += projectile.vx * dt;
-      projectile.y += projectile.vy * dt;
+      projectile.x += projectile.vx * step;
+      projectile.y += projectile.vy * step;
       projectile.traveled += Math.hypot(projectile.x - previousX, projectile.y - previousY);
       projectile.life -= dt;
       if (projectile.life <= 0) {
@@ -1278,14 +1493,29 @@ export class Game {
         projectile.damage = projectile.baseDamage * (1 + growth);
         projectile.r = getProjectileRadius(projectile.damage);
       }
+      if (projectile.boomerang && !projectile.returning && projectile.traveled >= 90) this.returnProjectile(projectile);
       if (projectile.owner === "player" && this.tryMothEat(projectile)) continue;
       if (this.projectileHitsWorld(projectile)) {
-        if (projectile.owner === "player" && projectile.bounces > 0 && this.bounceProjectile(projectile, previousX, previousY)) continue;
+        if (projectile.owner === "player" && projectile.boomerang) {
+          if (!projectile.returning) {
+            this.returnProjectile(projectile, previousX, previousY);
+            continue;
+          }
+          if (this.hasItem("chalk") && projectile.returnBounces < 1) {
+            this.bounceReturningProjectile(projectile, previousX, previousY);
+            continue;
+          }
+        }
+        if (projectile.owner === "player" && !projectile.boomerang && projectile.bounces > 0 && this.bounceProjectile(projectile, previousX, previousY)) continue;
         if (projectile.owner === "enemy" && projectile.bounces > 0 && this.bounceEnemyProjectile(projectile, previousX, previousY)) continue;
         if (projectile.owner === "player" && this.hasItem("needle") && projectile.source === "shot") this.spawnShards(projectile);
         if (projectile.puddle) this.spawnPuddle(projectile.x, projectile.y, false, projectile.burning, projectile.acid);
         projectile.dead = true;
         this.emit("wallHit", { x: previousX, y: previousY });
+        continue;
+      }
+      if (projectile.boomerang && projectile.returning && distance(projectile, this.player) < projectile.r + this.player.r + 2) {
+        projectile.dead = true;
         continue;
       }
 
@@ -1303,7 +1533,7 @@ export class Game {
         }
         if (blocked) continue;
         for (const enemy of this.enemies) {
-          if (enemy.dead || enemy.spawnTime > 0 || this.waveIntro > 0 || projectile.hitIds.has(enemy.id)) continue;
+          if (enemy.dead || enemy.phased || enemy.spawnTime > 0 || this.waveIntro > 0 || projectile.hitIds.has(enemy.id)) continue;
           if (distance(projectile, enemy) > projectile.r + enemy.r) continue;
           projectile.hitIds.add(enemy.id);
           this.damageEnemy(enemy, projectile.damage, projectile);
@@ -1339,6 +1569,33 @@ export class Game {
         }
       }
     }
+  }
+
+  returnProjectile(projectile, x = projectile.x, y = projectile.y) {
+    const speed = Math.hypot(projectile.vx, projectile.vy);
+    const angle = Math.atan2(this.player.y - y, this.player.x - x);
+    projectile.x = x;
+    projectile.y = y;
+    projectile.returning = true;
+    projectile.baseDamage *= 0.6;
+    projectile.damage = projectile.baseDamage;
+    projectile.r = getProjectileRadius(projectile.damage);
+    projectile.baseRadius = projectile.r;
+    projectile.vx = Math.cos(angle) * speed;
+    projectile.vy = Math.sin(angle) * speed;
+    projectile.hitIds = new Set();
+    this.emit("bounce", { x, y, mercury: this.hasItem("mercury") });
+  }
+
+  bounceReturningProjectile(projectile, previousX, previousY) {
+    projectile.x = previousX;
+    projectile.y = previousY;
+    const speed = Math.hypot(projectile.vx, projectile.vy);
+    const angle = Math.atan2(this.player.y - previousY, this.player.x - previousX);
+    projectile.vx = Math.cos(angle) * speed;
+    projectile.vy = Math.sin(angle) * speed;
+    projectile.returnBounces++;
+    this.emit("bounce", { x: previousX, y: previousY, mercury: this.hasItem("mercury") });
   }
 
   homeProjectile(projectile, dt) {
@@ -1377,6 +1634,10 @@ export class Game {
   }
 
   projectileEffects(enemy, projectile) {
+    if (this.hasItem("stamp") && enemy.stampTimer <= 0) {
+      this.stampCounter++;
+      if (this.stampCounter % 5 === 0) enemy.stampTimer = 4;
+    }
     if (this.hasItem("ink") && ["shot", "laser"].includes(projectile.source)) this.spawnPuddle(enemy.x, enemy.y, true);
     if (this.hasItem("poison")) {
       enemy.poisonTimer = 4;
@@ -1552,13 +1813,34 @@ export class Game {
     this.puddles = this.puddles.filter((puddle) => puddle.life > 0);
   }
 
+  placeBomb() {
+    const p = this.player;
+    const target = this.enemies.filter((enemy) => !enemy.dead && !enemy.disguise && enemy.spawnTime <= 0).sort((a, b) => distance(p, a) - distance(p, b))[0];
+    this.bombs.push({
+      id: this.nextId++, x: p.x, y: p.y, r: 4,
+      timer: BOMB_FUSE, fuse: BOMB_FUSE, dead: false,
+      targetId: this.hasItem("compass") ? target?.id || null : null,
+    });
+    this.emit("bomb", { x: p.x, y: p.y });
+  }
+
   updateBombs(dt) {
     for (const bomb of this.bombs) {
       if (bomb.dead) continue;
       bomb.timer -= dt;
-      if (bomb.timer > 0) continue;
+      if (bomb.timer > 0) {
+        if (bomb.targetId) {
+          const target = this.enemies.find((enemy) => enemy.id === bomb.targetId && !enemy.dead);
+          const targetDistance = target ? distance(bomb, target) : 0;
+          if (target && targetDistance > target.r + 10) {
+            const angle = Math.atan2(target.y - bomb.y, target.x - bomb.x);
+            this.moveBody(bomb, Math.cos(angle) * 45 * dt, Math.sin(angle) * 45 * dt);
+          }
+        }
+        continue;
+      }
       bomb.dead = true;
-      for (const enemy of this.enemies) if (!enemy.dead && enemy.spawnTime <= 0 && distance(bomb, enemy) < 48 + enemy.r) this.damageEnemy(enemy, 14, bomb);
+      for (const enemy of this.enemies) if (!enemy.dead && enemy.spawnTime <= 0 && distance(bomb, enemy) < 48 + enemy.r) this.damageEnemy(enemy, 14, { source: "bomb" });
       for (const projectile of this.projectiles) if (projectile.owner === "enemy" && distance(bomb, projectile) < 55) projectile.dead = true;
       const d = distance(bomb, this.player);
       if (d < 48 + this.player.r) {
@@ -1669,8 +1951,17 @@ export class Game {
     return collided;
   }
 
-  damageEnemy(enemy, amount) {
-    if (!enemy || enemy.dead || enemy.spawnTime > 0 || this.waveIntro > 0) return false;
+  damageEnemy(enemy, amount, effect = {}) {
+    if (!enemy || enemy.dead || enemy.phased || enemy.spawnTime > 0 || this.waveIntro > 0) return false;
+    if (effect.source === "bomb" && enemy.stampTimer > 0) {
+      enemy.stampTimer = 0;
+      amount += 6;
+      if (this.hasItem("fire")) {
+        const targets = this.enemies.filter((other) => !other.dead && !other.phased && other.id !== enemy.id && distance(enemy, other) < 60).sort((a, b) => distance(enemy, a) - distance(enemy, b)).slice(0, 2);
+        for (const target of targets) this.ignite(target, 2, 2);
+      }
+      this.emit("stampBurst", { x: enemy.x, y: enemy.y });
+    }
     if (enemy.disguise) enemy.disguise = false;
     if (enemy.type === "skeleton" && enemy.shieldTimer > 0) {
       amount *= 0.2;
@@ -1757,6 +2048,8 @@ export class Game {
   stats() {
     return {
       seed: this.seed,
+      heroId: this.heroId,
+      challengeId: this.challengeId,
       kills: this.kills,
       time: this.time,
       floor: this.floorIndex + 1,
@@ -1771,6 +2064,7 @@ export class Game {
       for (const enemy of [...this.enemies]) {
         if (!enemy.dead) {
           enemy.spawnTime = 0;
+          enemy.phased = false;
           this.waveIntro = 0;
           this.damageEnemy(enemy, 9999);
         }

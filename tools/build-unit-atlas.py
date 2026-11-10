@@ -93,6 +93,51 @@ def luiz(key, monster, target_height, *, offset_y=0):
     add_sprite(key, strips, reference_height=reference_height, target_height=target_height, rates={"idle": 6, "run": 10, "attack": 12, "hit": 14, "shield": 8, "death": 8}, offset_y=offset_y)
 
 
+def sheet_frames(path, cell_width, cell_height, count, *, baseline):
+    with Image.open(path) as source:
+        expected_size = (cell_width * count, cell_height)
+        if source.size != expected_size:
+            raise ValueError(f"Unexpected sheet size: {path}; expected {expected_size}, found {source.size}")
+        image = source.convert("RGBA")
+    boxes = []
+    for frame in range(count):
+        cell = image.crop((frame * cell_width, 0, (frame + 1) * cell_width, cell_height))
+        bbox = cell.getchannel("A").getbbox()
+        if not bbox:
+            raise ValueError(f"Empty frame {frame + 1}: {path}")
+        boxes.append(bbox)
+    entries = []
+    for frame, (left, top, right, bottom) in enumerate(boxes):
+        crop = (frame * cell_width + left, top, frame * cell_width + right, bottom)
+        anchor = (cell_width / 2 - left, baseline - top)
+        entries.append((path, crop, anchor))
+    reference_height = max(bottom - top for left, top, right, bottom in boxes)
+    return entries, reference_height
+
+
+def curse_caster():
+    root = PACKS / "evil-wizard-2"
+    states = [("idle", "Idle", 8), ("run", "Run", 8), ("attack", "Attack1", 8), ("attack2", "Attack2", 8), ("hit", "Take hit", 3), ("death", "Death", 7)]
+    strips = []
+    reference_height = None
+    for name, source_name, count in states:
+        entries, height = sheet_frames(root / f"{source_name}.png", 250, 250, count, baseline=167)
+        if name == "idle":
+            reference_height = height
+        strips.append((name, entries))
+    add_sprite("curseCaster", strips, reference_height=reference_height, target_height=42, rates={"idle": 6, "run": 8, "attack": 10, "attack2": 10, "hit": 12, "death": 8})
+
+
+def debts_depths():
+    root = PACKS / "debts-depths"
+    ghost, ghost_height = sheet_frames(root / "sprGhost1.png", 19, 28, 4, baseline=20)
+    add_sprite("wraith", [("idle", ghost), ("run", ghost)], reference_height=ghost_height, target_height=32, rates={"idle": 6, "run": 8})
+    orb, orb_height = sheet_frames(root / "sprGhostOrb.png", 18, 12, 8, baseline=10)
+    add_sprite("ghostOrb", [("idle", orb)], reference_height=orb_height, target_height=12, rates={"idle": 8}, offset_y=orb_height / 2)
+    monk, monk_height = sheet_frames(root / "sprLizardMonk1.png", 21, 20, 4, baseline=19)
+    add_sprite("workshopMonk", [("idle", monk), ("run", monk)], reference_height=monk_height, target_height=28, rates={"idle": 4, "run": 4})
+
+
 def intern(key="intern", filename="prototype_character.png"):
     source = PACKS / "snoblin" / "assets" / "sprites" / filename
     strips = []
@@ -138,6 +183,8 @@ luiz("mushroom", "mushroom", 26)
 luiz("goblin", "goblin", 25)
 luiz("flyingEye", "flying eye", 26, offset_y=-3)
 small_animals()
+curse_caster()
+debts_depths()
 (ROOT / "src" / "sprite-manifest.js").write_text("export const GENERATED_SPRITES = " + json.dumps(manifest, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
 print(f"Built {len(manifest)} sprite atlases from original pack frames.")
 for key, sprite in manifest.items():

@@ -1,0 +1,16 @@
+Debts in the Depths Asset Pack
+Author: Reaktori
+Official page: https://reaktori.itch.io/debts-in-the-depths-asset-pack
+Source archive: DebtsInTheDepthsAssets.zip (supplied by the user)
+
+The supplied archive contains no license file. The following license text is
+from the official page above, not from the archive:
+
+License:
+
+Creative Commons Zero (CC0) - You can use, adapt, copy, modify and distribute the assets, even for commercial purposes, all without asking permission.
+
+No credit is needed, but I'd love to see any projects using the assets!
+
+CC0 1.0 Universal legal text:
+https://creativecommons.org/publicdomain/zero/1.0/
