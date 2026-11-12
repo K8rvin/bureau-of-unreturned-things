@@ -1,0 +1,241 @@
+{
+  "assets": [
+    {
+      "id": "hunter",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE huntsman from a dark Grimm fairy tale. Strict equal grid, transparent background. Same man in every cell: worn forest-green cloak, brown boots, short hunting bow, weathered face, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, aiming the bow, hurt. Keep all limbs and equipment inside each cell with at least 15% empty margin on every side. No text, no scenery, no other people, no blood, no gradients, no vector smoothing."
+    },
+    {
+      "id": "robber",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE robber from the Brothers Grimm Bremen Town Musicians. Strict equal grid, transparent background. Same man in every cell: patched brown coat, dark red scarf, heavy boots, wooden cudgel held low, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, cudgel attack, hurt. Keep the entire body and cudgel inside each cell with at least 15% empty margin on every side. No text, no scenery, no other people, no blood, no gradients, no vector smoothing."
+    },
+    {
+      "id": "donkey",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-wolf-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE tired gray donkey from the Brothers Grimm Bremen Town Musicians. Strict equal grid, transparent background. Same animal in every cell: long ears, scruffy smoky-gray fur, dark muzzle, expressive eyes, full body and tail, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, braying, hurt. Keep all legs, ears and tail inside each cell with at least 15% empty margin on every side. No harness, no people, no scenery, no text, no other animals, no gradients, no vector smoothing."
+    },
+    {
+      "id": "dog",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-wolf-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE shaggy tawny dog from the Brothers Grimm Bremen Town Musicians. Strict equal grid, transparent background. Same dog in every cell: dark ears, attentive eyes, shaggy coat, full body and tail, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, pouncing attack, hurt. Keep all legs, ears and tail inside each cell with at least 15% empty margin on every side. No collar, no people, no scenery, no text, no other animals, no gradients, no vector smoothing."
+    }
+    ,
+    {
+      "id": "cat",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-wolf-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE small black cat from the Brothers Grimm Bremen Town Musicians. Strict equal grid, transparent background. Same cat in every cell: scruffy black fur, amber eyes, long tail, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, hissing attack, hurt. Keep all paws, ears and tail inside each cell with at least 15% empty margin on every side. No collar, no people, no scenery, no text, no other animals, no gradients, no vector smoothing."
+    },
+    {
+      "id": "rooster",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-wolf-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE proud russet rooster from the Brothers Grimm Bremen Town Musicians. Strict equal grid, transparent background. Same bird in every cell: red comb, dark green tail feathers, amber beak, full body and tail, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, crowing, hurt. Keep all wings, claws and tail feathers inside each cell with at least 15% empty margin on every side. No people, no scenery, no text, no other birds, no gradients, no vector smoothing."
+    },
+    {
+      "id": "gingerbread",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE little biscuit creature for a fairy-tale game. Strict equal grid, transparent background. Same creature in every cell: round golden-brown cookie body, icing eyes and two icing buttons, short cookie arms and legs, dark ink outline, muted old-book colors. Poses: idle, waddling to the right, hopping forward, startled. Keep the entire creature inside each cell with at least 15% empty margin on every side. No people, no house, no scenery, no text, no extra cookies, no gradients, no vector smoothing."
+    },
+    {
+      "id": "sugarBat",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-wolf-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE small sugar-glazed bat from a Grimm gingerbread house. Strict equal grid, transparent background. Same bat in every cell: pale caramel fur, icing-white wing edges, tiny fangs, dark ink outline, muted old-book colors. Poses: idle in flight, flying to the right, diving attack, hurt. Keep all wings, ears and feet inside each cell with at least 15% empty margin on every side. No people, no house, no scenery, no text, no extra bats, no gradients, no vector smoothing."
+    }
+    ,
+    {
+      "id": "candyWitch",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 4×2 pixel-art sprite sheet of ONE old gingerbread witch from Hansel and Gretel. Strict equal grid, transparent background. Same woman in every cell: crooked nose, patched brown dress, candy-striped shawl, crooked cane held low, full body, dark ink outline, muted old-book colors. Poses: idle, walk 1, walk 2, cane attack, candy spell, summon gingerbread, hurt, dissolve into black ink. Keep all limbs and cane inside each cell with at least 15% empty margin on every side. No children, no house, no scenery, no text, no blood, no gradients, no vector smoothing."
+    },
+    {
+      "id": "stepsister",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE proud stepsister from the original Grimm Cinderella. Strict equal grid, transparent background. Same young woman in every cell: dark hair bun, high collar, burgundy dress, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, slap attack, hurt. Keep all limbs and dress inside each cell with at least 15% empty margin on every side. No other people, no scenery, no text, no Disney costume, no gradients, no vector smoothing."
+    },
+    {
+      "id": "pigeon",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-wolf-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE gray-white pigeon from a Grimm fairy tale. Strict equal grid, transparent background. Same bird in every cell: pearl-gray feathers, white neck, dark wingtips, small ruby eye, full body and tail, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, flying to the right, swooping attack, hurt. Keep all wings, claws and tail inside each cell with at least 15% empty margin on every side. No people, no scenery, no text, no other birds, no gradients, no vector smoothing."
+    },
+    {
+      "id": "lackey",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create ONE pixel-art sheet with EXACTLY FOUR frames in a 2×2 grid: two columns, two rows, no other frames. One tired royal servant, the same man in all four frames: navy jacket, brass buttons, white stockings, a silver tray ALWAYS held in his hands. Full body, dark ink outline, muted old-book colors, transparent background. Frame 1: standing and holding the tray; frame 2: walking right with the tray; frame 3: blocking with the tray; frame 4: hurt while holding the tray. No front/side/back pose sets, no extra animation, no royalty, no palace, no scenery, no text. Keep the whole servant and tray inside each cell with 15% empty margins. No gradients or vector smoothing."
+    }
+    ,
+    {
+      "id": "cinderella",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 4×2 pixel-art sprite sheet of ONE Cinderella from the original Brothers Grimm tale. Strict equal grid, transparent background. Same young woman in every cell: ash-brown hair tied back, worn gray dress with silver accents, glass slippers, full body, dark ink outline, muted old-book colors. Poses: idle, walk 1, walk 2, cast a silver shard, dance spin, midnight bell, hurt, dissolve into book pages. Keep all limbs and dress inside each cell with at least 15% empty margin on every side. No blue Disney gown, no people, no pumpkin, no scenery, no text, no gradients, no vector smoothing."
+    },
+    {
+      "id": "dwarf",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE elderly dwarf miner from the original Grimm Snow White. Strict equal grid, transparent background. Same dwarf in every cell: long gray beard, earth-brown hood, leather gloves, small pickaxe, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, pickaxe swing, hurt. Keep all limbs, beard and pickaxe inside each cell with at least 15% empty margin on every side. No named Disney dwarfs, no people, no mine, no scenery, no text, no gradients, no vector smoothing."
+    },
+    {
+      "id": "snowWhite",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 4×2 pixel-art sprite sheet of ONE Snow White from the original Brothers Grimm tale. Strict equal grid, transparent background. Same princess in every cell: pale face, ebony braided hair, simple white-gray dress with red thread at the collar, red apple held low, full body, dark ink outline, muted old-book colors. Poses: idle, walk 1, walk 2, mirror shard attack, mirror spell, summon dwarfs, hurt, dissolve into black ink. Keep all limbs and dress inside each cell with at least 15% empty margin on every side. No yellow bow, no blue-and-yellow Disney dress, no dwarfs, no scenery, no text, no gradients, no vector smoothing."
+    },
+    {
+      "id": "queen",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Pixel-art game sprite sheet. Eight full-body poses of the same elderly queen in a long purple gown and small gold crown, arranged in four columns and two rows on a plain white background. She holds a silver hand mirror. Vary only her stance and the position of the mirror. Simple vintage colors and dark outlines. Keep every figure inside its own cell with wide empty margins. No words or scenery."
+    }
+    ,
+    {
+      "id": "messenger",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE anxious royal messenger from Rumpelstiltskin. Strict equal grid, transparent background. Same messenger in every cell: dusty blue coat, feather cap, satchel of letters, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, casting a glowing name, hurt. Keep all limbs and satchel inside each cell with at least 15% empty margin on every side. No readable letters, no people, no palace, no scenery, no text, no gradients, no vector smoothing."
+    },
+    {
+      "id": "strawMan",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE living figure woven from straw. Strict equal grid, transparent background. Same construct in every cell: straw limbs, hollow dark eyes, ragged cuffs, old golden thread, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, shambling to the right, thread lash, hurt. Keep all straw and thread inside each cell with at least 15% empty margin on every side. No people, no mill, no scenery, no text, no extra constructs, no gradients, no vector smoothing."
+    },
+    {
+      "id": "rumple",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Uncaptioned pixel-art game sprite sheet, eight equal cells in four columns and two rows, square 1:1 canvas. One small crooked old fairy-tale man, identical in every cell: pointed hat, earth-brown coat, striped stockings, golden spindle. Full body, dark ink outline, muted vintage colors, plain white background. Top row: standing; stepping forward; another step; throwing golden thread. Bottom row: spinning golden thread; offering a blank parchment; recoiling; turning into straw and ink. Leave 15% empty space around each pose. Absolutely no captions, letters, numbers, labels, logos or watermark anywhere. No baby, no other people, no scenery, no gradients, no vector smoothing."
+    },
+    {
+      "id": "librarian",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE elderly keeper of a magical library. Strict equal grid, transparent background. Same keeper in every cell: round spectacles, long dark-green cardigan, brass lantern, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, raising the lantern, hurt. Keep all limbs and lantern inside each cell with at least 15% empty margin on every side. No bookshelves, no people, no scenery, no text, no gradients, no vector smoothing."
+    },
+    {
+      "id": "redHood",
+      "rows": 2,
+      "columns": 2,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "prompt": "Create one 2×2 pixel-art sprite sheet of ONE Little Red Riding Hood from the original Brothers Grimm tale. Strict equal grid, transparent background. Same girl in every cell: simple red hooded cloak, cream blouse, small basket, full body, consistent proportions, dark ink outline, muted old-book colors. Poses: idle, walking to the right, pointing a warning, hurt. Keep all limbs, hood and basket inside each cell with at least 15% empty margin on every side. No wolf, no grandmother, no forest, no scenery, no text, no gradients, no vector smoothing."
+    }
+    ,
+    {
+      "id": "bremen",
+      "kind": "room",
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-red-hood-room-v1.png", "role": "style only" }],
+      "prompt": "Create one orthographic top-down 16:9 pixel-art gameplay room for the Brothers Grimm Bremen Town Musicians. No characters. A rectangular clearing beside a small bandit cottage, medium-value readable floor, dark trees and a stone border, four open paths at the midpoints of the four sides. Warm lantern light at the cottage edge, dark ink outlines, muted old-book colors. Keep the center and all exits clear for combat. No people, no animals, no robbers, no UI, no text, no frame, no gradients, no vector smoothing."
+    },
+    {
+      "id": "hansel",
+      "kind": "room",
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-red-hood-room-v1.png", "role": "style only" }],
+      "prompt": "Create one orthographic top-down 16:9 pixel-art gameplay room for Hansel and Gretel. No characters. A rectangular forest clearing with a breadcrumb trail leading toward a colorful gingerbread cottage on the upper edge, medium-value readable floor, candy-cane fence and dark trees at the borders, four open paths at the midpoints of the four sides. Dark ink outlines, muted old-book colors. Keep the center and all exits clear for combat. No witch, no children, no UI, no text, no frame, no gradients, no vector smoothing."
+    },
+    {
+      "id": "cinderella-room",
+      "kind": "room",
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-red-hood-room-v1.png", "role": "style only" }],
+      "prompt": "Create one orthographic top-down 16:9 pixel-art gameplay room for the original Grimm Cinderella. No characters. A moonlit kitchen transforming into a ballroom: a small ash hearth at one edge, smooth silver-gray ballroom floor in the center, four open doorways at the midpoints of the four sides. Dark ink outlines, muted old-book colors, a few subtle clock motifs at the edges. Keep the center and all exits clear for combat. No princess, no guests, no pumpkin, no UI, no text, no frame, no gradients, no vector smoothing."
+    },
+    {
+      "id": "snow-white",
+      "kind": "room",
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-red-hood-room-v1.png", "role": "style only" }],
+      "prompt": "Create one orthographic top-down 16:9 pixel-art gameplay room for the original Grimm Snow White. No characters. A rectangular mine-edge clearing with wooden supports and a small dwarf cottage at the border, medium-value readable floor, rocks and a few muted crystals at the edges, four open tunnels at the midpoints of the four sides. Dark ink outlines, muted old-book colors. Keep the center and all exits clear for combat. No dwarfs, no princess, no queen, no UI, no text, no frame, no gradients, no vector smoothing."
+    },
+    {
+      "id": "rumple-room",
+      "kind": "room",
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-red-hood-room-v1.png", "role": "style only" }],
+      "prompt": "Create one orthographic top-down 16:9 pixel-art gameplay room for Rumpelstiltskin. No characters. An old mill interior with a spinning wheel silhouette at the border, straw piles in the corners, medium-value golden-brown floor, four open doorways at the midpoints of the four sides. Dark ink outlines, muted old-book colors, readable open space for combat. No people, no baby, no readable letters, no UI, no text, no frame, no gradients, no vector smoothing."
+    }
+    ,
+    {
+      "id": "icons-1",
+      "kind": "icons",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "slots": ["paper-clip", "sewing-string", "pencil", "crystal-ball", "sewing-needle", "ink-swirl", "umbrella", "rubber-boot"],
+      "prompt": "Create one 4×2 pixel-art icon sheet in a muted old-book style with dark ink outlines and transparent background. Exactly eight objects, one centered per cell, generous empty margins: two overlapping book pages; spool of straw thread; tailor chalk; small mercury droplet; glass sewing needle; ink bottle; red hooded cloak; large coat button. No text, no people, no scenery, no gradients, no vector smoothing."
+    },
+    {
+      "id": "icons-2",
+      "kind": "icons",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "slots": ["echo-ripples", "magnet", "ticket", "fire", "thermometer-cold", "spider-web", "big-gear", "spring"],
+      "prompt": "Create one 4×2 pixel-art icon sheet in a muted old-book style with dark ink outlines and transparent background. Exactly eight objects, one centered per cell, generous empty margins: page with echo ripples; three breadcrumbs; torn half of a page; small fireplace ember; snow rose; spiderweb; wooden spindle; boot with a spring. No text, no people, no scenery, no gradients, no vector smoothing."
+    },
+    {
+      "id": "icons-3",
+      "kind": "icons",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "slots": ["alarm-clock", "cycle", "boots", "footprint", "lab-coat", "mirror-mirror", "magnifying-glass", "sword-slice"],
+      "prompt": "Eight isolated pixel-art game icons in a strict four-column, two-row grid on a plain white background. Muted old-book colors and dark ink outlines. Top row: clock with hands at midnight and tick marks instead of numerals; page with a circular repeat arrow; seven-league boots; worn boot sole. Bottom row: old hooded cloak; silver mirror fragment; magnifying glass with a brass rim; round golden coat button with four sewing holes. One centered object per cell with wide empty margins. Only the eight objects, absolutely no captions, names, labels, letters or watermark. No people, no scenery, no gradients, no vector smoothing."
+    },
+    {
+      "id": "icons-4",
+      "kind": "icons",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "slots": ["speedometer", "anvil", "poison-bottle", "blood", "arrow-cluster", "laser-blast", "return-arrow", "stopwatch"],
+      "prompt": "Create one 4×2 pixel-art icon sheet in a muted old-book style with dark ink outlines and transparent background. Exactly eight objects, one centered per cell, generous empty margins: rooster with a crowing note; golden spindle; red apple with dark spots; wolf fang; three music notes; narrow beam of light; page with a return arrow; tiny key beside a stopwatch. No text, no people, no scenery, no gradients, no vector smoothing."
+    },
+    {
+      "id": "icons-5",
+      "kind": "icons",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "slots": ["electric", "clockwork", "compass", "keyring", "butterfly", "unlit-bomb", "key", "heart-battery"],
+      "prompt": "Create one 4×2 pixel-art icon sheet in a muted old-book style with dark ink outlines and transparent background. Exactly eight objects, one centered per cell, generous empty margins: golden thread coil; clockwork mechanism; brass compass; golden bookmark; small fairy moth; folded paper firecracker; brass key; glowing heart-shaped lantern. No text, no people, no scenery, no gradients, no vector smoothing."
+    },
+    {
+      "id": "icons-6",
+      "kind": "icons",
+      "rows": 2,
+      "columns": 4,
+      "references": [{ "path": "C:/Projects/YandexGames/assets/library-child-v1.png", "role": "style only" }],
+      "slots": ["quartet", "seal", "gem", "book", "chest", "crown", "candle", "feather"],
+      "prompt": "Create one 4×2 pixel-art icon sheet in a muted old-book style with dark ink outlines and transparent background. Exactly eight objects, one centered per cell, generous empty margins: four music notes; wax name seal; letter-shaped golden coin; closed old book; closed treasure chest; small old crown; brass candle lantern; hunter's feather. No text, no people, no scenery, no gradients, no vector smoothing."
+    }
+  ]
+}

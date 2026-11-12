@@ -1,28 +1,8 @@
 import { GENERATED_SPRITES } from "./sprite-manifest.js";
+import { FLOOR_DEFINITIONS } from "./content.js";
 
-const row = (x, y, w, h) => Array.from({ length: 4 }, (_, frame) => ({ x: x + frame * w, y, w, h }));
-
-const SPRITES = {
-  player: { idle: row(128, 100, 16, 28), run: row(192, 100, 16, 28), hit: [{ x: 256, y: 100, w: 16, h: 28 }] },
-  lost: { idle: row(368, 40, 16, 16), run: row(432, 40, 16, 16) },
-  shooter: { idle: row(368, 64, 16, 16), run: row(432, 64, 16, 16) },
-  inker: { idle: row(368, 225, 16, 23) },
-  hanger: { idle: row(368, 153, 16, 23), run: row(432, 153, 16, 23) },
-  dust: { idle: row(432, 112, 16, 16) },
-  dustSmall: { idle: row(368, 112, 16, 16) },
-  moth: { idle: row(368, 304, 16, 16), run: row(432, 304, 16, 16) },
-  guardian: { idle: row(16, 380, 32, 36), run: row(144, 380, 32, 36) },
-  packer: { idle: row(368, 201, 16, 23), run: row(432, 201, 16, 23) },
-  mimic: { idle: row(368, 321, 16, 23), run: row(432, 321, 16, 23) },
-  thief: { idle: row(368, 273, 16, 23), run: row(432, 273, 16, 23) },
-  sniper: { idle: row(128, 164, 16, 28), run: row(192, 164, 16, 28), hit: [{ x: 256, y: 164, w: 16, h: 28 }] },
-  spawner: { idle: [{ x: 288, y: 408, w: 16, h: 24 }], run: [{ x: 288, y: 408, w: 16, h: 24 }] },
-  npc: { idle: row(368, 345, 16, 23), run: row(432, 345, 16, 23) },
-  boss: { idle: row(16, 428, 32, 36), run: row(144, 428, 32, 36) },
-  umbrellaBoss: { idle: row(16, 332, 32, 36), run: row(144, 332, 32, 36) },
-};
-
-for (const [key, sprite] of Object.entries(GENERATED_SPRITES)) SPRITES[key] = sprite;
+const SPRITES = { ...GENERATED_SPRITES };
+if (SPRITES.dust) SPRITES.dustSmall = { ...SPRITES.dust, targetHeight: 32 };
 
 export class SpriteLibrary {
   constructor() {
@@ -31,15 +11,36 @@ export class SpriteLibrary {
   }
 
   async load() {
-    const paths = new Set(["assets/units/dungeon-tileset-ii-v1.7.png"]);
+    const roomPaths = new Set(FLOOR_DEFINITIONS.map((floor) => floor.image).filter(Boolean));
+    const paths = new Set(roomPaths);
     for (const sprite of Object.values(SPRITES)) if (sprite.image) paths.add(sprite.image);
     await Promise.all([...paths].map(async (path) => {
-      const image = new Image();
-      image.src = path;
-      await image.decode();
-      this.images.set(path, image);
+      try {
+        if (roomPaths.has(path)) {
+          const response = await fetch(path, { method: "HEAD" });
+          if (!response.ok) {
+            console.warn(`Room background is not ready: ${path}`);
+            return;
+          }
+        }
+        const image = new Image();
+        image.src = path;
+        await image.decode();
+        this.images.set(path, image);
+      } catch (error) {
+        if (!roomPaths.has(path)) throw error;
+        console.warn(`Room background is not ready: ${path}`);
+      }
     }));
     this.loaded = true;
+  }
+
+  roomImage(floorIndex) {
+    return this.images.get(FLOOR_DEFINITIONS[floorIndex]?.image);
+  }
+
+  has(key) {
+    return Boolean(SPRITES[key]);
   }
 
   draw(context, key, { x, y, time, moving = false, flip = false, scale = 1, alpha = 1, flash = false, hit = false, attacking = false, action = null, actionTime = null, aimAngle = null, filter = null }) {
@@ -56,10 +57,12 @@ export class SpriteLibrary {
     const animationTime = actionTime ?? time;
     const index = sprite.once?.includes(state) ? Math.min(frames.length - 1, Math.floor(animationTime * rate)) : Math.floor(animationTime * rate) % frames.length;
     const frame = frames[index];
-    const image = this.images.get(sprite.image || "assets/units/dungeon-tileset-ii-v1.7.png");
+    const image = this.images.get(sprite.image);
     if (!image) return y;
     const factor = (sprite.targetHeight ? sprite.targetHeight / (sprite.referenceHeight || frame.h) : 1) * scale;
-    const bob = moving && !sprite.run && state === "idle" ? Math.round(Math.sin(time * 10) * 1.2) : 0;
+    const bob = sprite.proceduralMotion
+      ? Math.round(Math.sin(time * (moving ? 12 : 4)) * (moving ? 1.2 : 0.6))
+      : moving && !sprite.run && state === "idle" ? Math.round(Math.sin(time * 10) * 1.2) : 0;
     const offsetX = (sprite.offsetX || 0) * scale;
     const offsetY = (sprite.offsetY || 0) * scale;
 
@@ -89,7 +92,7 @@ export class SpriteLibrary {
     canvas.height = 72;
     const context = canvas.getContext("2d");
     context.imageSmoothingEnabled = false;
-    this.draw(context, key, { x: 48, y: 68, time: 0, scale: 2, aimAngle: Math.PI / 2 });
+    this.draw(context, key, { x: 48, y: 68, time: 0, scale: SPRITES[key]?.portraitScale || 64 / this.height(key), aimAngle: Math.PI / 2 });
     return canvas;
   }
 }

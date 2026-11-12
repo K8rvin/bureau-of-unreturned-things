@@ -2,7 +2,7 @@ export const LAYOUTS = [
   { id: "open", name: "Открытая арена", obstacles: [] },
   {
     id: "shelves",
-    name: "Четыре полки",
+    name: "Четыре завала",
     obstacles: [
       { x: 92, y: 79, w: 48, h: 17 },
       { x: 340, y: 79, w: 48, h: 17 },

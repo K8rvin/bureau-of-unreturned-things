@@ -1,0 +1,43 @@
+{
+  "dataset": "https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m",
+  "generator": "Krea 2 Turbo + pixel art LoRA",
+  "sourceType": "Static AI-generated sprites; no verified animation set",
+  "heroes": {
+    "archivist": {
+      "id": 557736,
+      "caption": "apprentice mage with round spectacles in flat colors",
+      "file": "archivist.png",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "student": {
+      "id": 449462,
+      "caption": "front-view student with a blazer",
+      "file": "student.png",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "witch": {
+      "id": 438176,
+      "caption": "mischievous chibi witch with a cat-ear hood in earthy colors",
+      "file": "witch.png",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "scout": {
+      "id": 446450,
+      "caption": "proud chibi archer with a quiver",
+      "file": "scout.png",
+      "size": [
+        16,
+        16
+      ]
+    }
+  }
+}

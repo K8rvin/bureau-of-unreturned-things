@@ -51,10 +51,10 @@ export function performSorterAttack(game, enemy) {
     for (const offset of [-0.18, 0, 0.18]) game.fireEnemy(enemy, enemy.aimAngle + offset, 105);
     game.emit("sweep", { enemy });
   } else if (attack === "summonPackers") {
-    const minions = game.enemies.filter((other) => !other.dead && other.type === "packer").length;
+    const minions = game.enemies.filter((other) => !other.dead && other.type === "dust").length;
     if (enemy.summonCount < 3 && minions < 3) {
-      game.spawnEnemy("packer", 0.1, 0.25);
-      game.spawnEnemy("packer", 0.9, 0.25);
+      game.spawnEnemy("dust", 0.1, 0.25);
+      game.spawnEnemy("dust", 0.9, 0.25);
       enemy.summonCount++;
     } else {
       for (let i = 0; i < 8; i++) game.fireEnemy(enemy, i / 8 * TAU + 0.2, 86);
@@ -70,8 +70,8 @@ export function performSorterAttack(game, enemy) {
 export function updateFinalBoss(game, enemy, dt) {
   if (enemy.phase === 2 && !enemy.phase2Summoned) {
     enemy.phase2Summoned = true;
-    game.spawnEnemy("skeleton", 0.12, 0.28);
-    game.spawnEnemy("skeleton", 0.88, 0.28);
+    game.spawnEnemy("flyingEye", 0.12, 0.28);
+    game.spawnEnemy("flyingEye", 0.88, 0.28);
     game.emit("summon", { enemy });
   }
   if (enemy.telegraph > 0) {
@@ -143,10 +143,10 @@ export function performChemistAttack(game, enemy) {
     const angles = enemy.phase === 2 ? [-0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3] : [-0.24, -0.12, 0, 0.12, 0.24];
     for (const offset of angles) game.fireEnemy(enemy, enemy.aimAngle + offset, 96, { puddle: true, acid: true, r: 3.5 });
   } else if (attack === "summonMoths") {
-    const moths = game.enemies.filter((other) => !other.dead && other.type === "moth").length;
+    const moths = game.enemies.filter((other) => !other.dead && other.type === "goblin").length;
     if (enemy.summonCount < 3 && moths < 4) {
-      game.spawnEnemy("moth", 0.12, 0.25);
-      game.spawnEnemy("moth", 0.88, 0.25);
+      game.spawnEnemy("goblin", 0.12, 0.25);
+      game.spawnEnemy("goblin", 0.88, 0.25);
       enemy.summonCount++;
     } else {
       for (let i = 0; i < 8; i++) game.fireEnemy(enemy, i / 8 * TAU, 82, { puddle: true, acid: true });
@@ -215,7 +215,7 @@ export function performRiftAttack(game, enemy) {
   const attack = enemy.attackType;
   if (attack === "riftBeam") {
     const offsets = enemy.phase === 2 ? [-0.18, 0, 0.18] : [-0.1, 0.1];
-    for (const offset of offsets) fireEnemyLaser(game, enemy, enemy.aimAngle + offset, { width: 3, damage: 1, source: "Луч Смотрителя Разреза" });
+    for (const offset of offsets) fireEnemyLaser(game, enemy, enemy.aimAngle + offset, { width: 3, damage: 1, source: enemy.name });
   } else if (attack === "riftStep") {
     if (enemy.riftTarget) {
       Object.assign(enemy, enemy.riftTarget);

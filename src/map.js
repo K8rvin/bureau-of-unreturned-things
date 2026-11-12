@@ -211,8 +211,8 @@ export function drawMap(context, floor, currentRoomId, { expanded = false, hasLe
     context.textAlign = "center";
     context.textBaseline = "middle";
     context.fillStyle = "#c5bcab";
-    context.fillText("S старт   T склад   $ лавка   ! испытание", WIDTH / 2, 209);
-    context.fillText("W мастерская   V хранилище   B босс   ? тайник   R разрез", WIDTH / 2, 221);
+    context.fillText("S обложка   T страница   $ Хранитель   ! испытание", WIDTH / 2, 209);
+    context.fillText("W мастерская   V запечатано   B босс   ? тайник   R закладка", WIDTH / 2, 221);
     context.fillStyle = "#8f8580";
     context.fillText("светлая рамка — вы здесь", WIDTH / 2, 232);
     context.fillText("черта снизу — очищено", WIDTH / 2, 243);

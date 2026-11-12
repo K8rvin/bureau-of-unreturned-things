@@ -1,4 +1,4 @@
-const KEY = "bureau.catalog.v1";
+const KEY = "library.catalog.v1";
 const EMPTY = { items: [], bosses: [], synergies: [], secrets: [] };
 
 export class Catalog {

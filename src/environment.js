@@ -47,7 +47,7 @@ export class RoomEnvironment {
     this.boostTimer = Math.max(this.boostTimer, duration);
   }
 
-  queueDrop(x, y, { delay = 0.9, radius = 20, kind = "fall", force = false, source = "Падение невозвращённой вещи" } = {}) {
+  queueDrop(x, y, { delay = 0.9, radius = 20, kind = "fall", force = false, source = "Падающая страница" } = {}) {
     if (!this.enabled || (!force && this.floorIndex < 2)) return null;
     if (this.drops.length >= 12) this.drops.shift();
     const drop = {
@@ -179,7 +179,7 @@ export class RoomEnvironment {
       if (leak.tick <= 0) {
         leak.tick = 0.75;
         if (!this.game.hasItem("sole") && Math.hypot(this.game.player.x - leak.x, this.game.player.y - leak.y) <= leak.r + this.game.player.r) {
-          this.game.hurtPlayer(1, "Кислота лаборатории");
+          this.game.hurtPlayer(1, "Яд отравленного яблока");
         }
         for (const enemy of [...this.game.enemies]) {
           if (Math.hypot(enemy.x - leak.x, enemy.y - leak.y) <= leak.r + enemy.r) this.game.damageEnemy(enemy, 1);
@@ -220,7 +220,7 @@ export class RoomEnvironment {
       if (!beam.hit) {
         beam.hit = true;
         const playerDistance = beam.axis === "vertical" ? Math.abs(this.game.player.x - beam.x1) : Math.abs(this.game.player.y - beam.y1);
-        if (playerDistance <= this.game.player.r + 3) this.game.hurtPlayer(1, "Лазерная решётка");
+        if (playerDistance <= this.game.player.r + 3) this.game.hurtPlayer(1, "Золотая нить контракта");
         for (const enemy of [...this.game.enemies]) {
           const enemyDistance = beam.axis === "vertical" ? Math.abs(enemy.x - beam.x1) : Math.abs(enemy.y - beam.y1);
           if (enemyDistance <= enemy.r + 3) this.game.damageEnemy(enemy, 4);

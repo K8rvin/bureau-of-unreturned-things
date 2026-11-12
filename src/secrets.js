@@ -1,7 +1,7 @@
 export function createRiftRoom(game, source) {
   const existing = game.rooms.find((room) => room.type === "rift");
   if (existing) return existing;
-  if (!source || source.type !== "combat") return null;
+  if (!source || !["combat", "secret"].includes(source.type)) return null;
   const room = {
     id: "rRift",
     x: source.x + 0.45,
@@ -29,9 +29,13 @@ export function riftDestinations(game) {
 }
 
 export function getChainHint(chain) {
-  if (!chain.sigil) return "Сначала найдите трещину во второй боевой комнате Приёмного отдела.";
-  if (!chain.npc) return "Покажите трещину Оценщику в магазине.";
-  if (!chain.terminal) return "Третья боевая комната Сортировочного узла: подойдите к сервисному терминалу и нажмите E.";
-  if (!chain.wardenDefeated) return "Смотритель Разреза ждёт за сервисным терминалом.";
-  return "Разрез стабилен. F — сервисный проход по уже зачищенным комнатам.";
+  const hints = {
+    redHood: "Красная лента повторяет форму тропы. Обрывок страницы показывает скрытый поворот.",
+    bremen: "Четыре голоса звучат по очереди. Тихая нота между ними указывает на лишнюю комнату.",
+    hansel: "Не всякая хлебная крошка ведёт к дому ведьмы. Прочитайте обрывок и проверьте карту.",
+    cinderella: "После полуночи направление танца меняется. Часы подсказывают, где искать страницу.",
+    snowWhite: "Отражение показывает неправильную дверь. Сравните её с картой и посмотрите в зеркало.",
+    rumple: "Имя собирается по частям в комнатах книги и у гонцов. Внешняя энциклопедия не нужна.",
+  };
+  return hints[chain.bookId] || "Найдите обрывок во второй боевой комнате книги. Он укажет скрытую страницу.";
 }

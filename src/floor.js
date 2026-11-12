@@ -172,9 +172,8 @@ export function generateFloor(seed, floorIndex) {
   });
 
   const combatRooms = rooms.filter((room) => room.type === "combat");
-  if (index === 0) combatRooms[1].event = "sigil";
+  combatRooms[1].event = "chapterClue";
   if (index === 1) combatRooms[0].event = "contract";
-  if (index === 2) combatRooms[2].event = "riftTerminal";
   if (index >= 2) combatRooms[0].event = "movingShelves";
 
   for (let i = 0; i < 4; i++) {
@@ -199,6 +198,7 @@ export function generateFloor(seed, floorIndex) {
 
   return {
     index,
+    bookId: definition.bookId,
     name: definition.name,
     bossType: definition.bossType,
     startId: "r0",

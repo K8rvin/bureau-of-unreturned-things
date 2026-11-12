@@ -26,7 +26,7 @@ export function getWeaponStats(game, source = "shot", scale = 1) {
   const needle = !laser && source === "shot" && game.hasItem("needle");
   const mercury = !laser && source === "shot" && game.hasItem("mercury");
   return {
-    weapon: laser ? "Лазер" : "Очередь",
+    weapon: laser ? "Луч света" : "Очередь",
     laser,
     damage,
     maxDamage,
@@ -115,7 +115,7 @@ export function firePlayerLaser(game, angle, scale = 1, origin = game.player, al
   return beam;
 }
 
-export function fireEnemyLaser(game, enemy, angle, { width = 3, damage = 1, source = "Луч Калибратора" } = {}) {
+export function fireEnemyLaser(game, enemy, angle, { width = 3, damage = 1, source = enemy.name } = {}) {
   const beam = castRay(game, enemy.x + Math.cos(angle) * (enemy.r + 3), enemy.y + Math.sin(angle) * (enemy.r + 3), angle);
   if (segmentDistance(game.player.x, game.player.y, beam.x1, beam.y1, beam.x2, beam.y2) <= game.player.r + width / 2) game.hurtPlayer(damage, source);
   if (game.lasers.length >= 40) game.lasers.shift();

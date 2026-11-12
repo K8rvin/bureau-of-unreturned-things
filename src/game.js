@@ -8,6 +8,7 @@ import { firePlayerLaser, getProjectileRadius, getVolleyAngles, getWeaponStats }
 import { createRiftRoom, getChainHint, riftDestinations } from "./secrets.js";
 import { getChallenge } from "./progression.js";
 import { performSpecialEnemyAttack, updateSpecialEnemy } from "./enemies.js";
+import { dwarfVariantFor, updateDwarfVariant } from "./dwarf.js";
 
 const TAU = Math.PI * 2;
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -62,7 +63,7 @@ export class Game {
     this.mode = "run";
     this.challenge = null;
     this.challengeId = null;
-    this.heroId = "keeper";
+    this.heroId = "child";
     this.hero = getHero(this.heroId);
     this.time = 0;
     this.kills = 0;
@@ -100,8 +101,9 @@ export class Game {
     this.riftUsedFloor = false;
     this.memory = { umbrellaAwakened: false, mothAwakened: false, thermosAwakened: false, mirrorAwakened: false };
     this.memoryProgress = { umbrella: 0, moth: 0, thermos: 0, mirror: 0 };
+    this.nameFragments = new Set();
     this.familiar = { x: 240, y: 220, cooldown: 0, gearCooldown: 0, gearHitTimer: 0, angle: 0 };
-    this.lastDamage = "Архив";
+    this.lastDamage = "Сказка";
     this.player = {
       x: 240, y: 220, knockX: 0, knockY: 0, slideX: 0, slideY: 0,
       r: 6, hp: 6, maxHp: 6, speed: 80, coins: 0, keys: 0,
@@ -115,11 +117,23 @@ export class Game {
     this.onEvent?.({ type, ...data });
   }
 
+  collectNameFragment() {
+    const parts = ["РУМ", "ПЕЛЬ", "ШТИЛЬ", "ЦХЕН"];
+    if (this.nameFragments.size >= parts.length) return;
+    const index = this.nameFragments.size;
+    this.nameFragments.add(parts[index]);
+    this.emit("nameFragment", { part: parts[index], index: index + 1, total: parts.length });
+    if (this.nameFragments.size === parts.length && this.mode !== "boss") {
+      this.player.hp = Math.min(this.player.maxHp, this.player.hp + 1);
+      this.emit("secret", { id: "trueName", name: "Имя Румпельштильцхена" });
+    }
+  }
+
   room() {
     return this.rooms.find((room) => room.id === this.currentRoomId);
   }
 
-  start(seed = this.seed, { bossOnly = false, floorIndex = 0, heroId = "keeper", challengeId = null } = {}) {
+  start(seed = this.seed, { bossOnly = false, floorIndex = 0, heroId = "child", challengeId = null } = {}) {
     this.reset(seed);
     this.challenge = bossOnly ? null : getChallenge(challengeId);
     this.challengeId = this.challenge?.id || null;
@@ -152,6 +166,7 @@ export class Game {
       this.emit("victory", this.stats());
       return true;
     }
+    if (this.mode === "run") this.player.hp = Math.min(this.player.maxHp, this.player.hp + 1);
     this.floorIndex++;
     this.coatUsed = false;
     this.riftUsedFloor = false;
@@ -379,9 +394,22 @@ export class Game {
       this.emit("riftReturn", { room: this.room() });
       return true;
     }
-    if (room.event === "sigil" && !this.chain.sigil && near(240, 120, 42)) {
+    if (room.event === "chapterClue" && !room.loreFound && near(240, 120, 42)) {
+      room.loreFound = true;
+      this.floor.bookClue = true;
       this.chain.sigil = true;
-      this.emit("chain", { step: "sigil" });
+      if (this.floor.bookId === "rumple") this.collectNameFragment();
+      for (const candidate of this.rooms) {
+        if (!candidate.hidden.length) continue;
+        candidate.secretFound = true;
+        for (const direction of candidate.hidden) {
+          const target = this.rooms.find((entry) => entry.id === candidate.doors[direction]);
+          if (target) target.secretFound = true;
+        }
+      }
+      if (!this.hasItem("riftPass")) this.addItem("riftPass");
+      this.emit("secret", { id: "chapterClue", name: "Строка из книги" });
+      this.emit("chapterClue", { book: this.floor.bookId });
       this.checkpoint();
       return true;
     }
@@ -404,12 +432,18 @@ export class Game {
       this.openContract();
       return true;
     }
+    if (room.type === "start" && this.floorIndex === 0 && !room.npcHint && near(280, 145, 50)) {
+      room.npcHint = true;
+      this.emit("chapterHint", { book: "redHood" });
+      this.checkpoint();
+      return true;
+    }
     if (room.type === "workshop" && near(240, 132, 52)) return this.openWorkshop();
     if (room.type === "vault" && near(240, 140, 44)) return this.openVault();
     if (room.type !== "shop" || !near(240, 132, 52)) return false;
-    if (this.chain.sigil && !this.chain.npc) {
-      this.chain.npc = true;
-      this.emit("chain", { step: "npc" });
+    if (this.floor.bookClue && !room.librarianHint) {
+      room.librarianHint = true;
+      this.emit("chapterHint", { book: this.floor.bookId });
     }
     this.openShop();
     return true;
@@ -575,21 +609,21 @@ export class Game {
 
   openRiftMenu() {
     if (this.challenge && !this.challenge.allowRift) {
-      this.emit("locked", { message: "В этом испытании сервисные переходы запрещены" });
+      this.emit("locked", { message: "В этом испытании закладки запрещены" });
       return false;
     }
     if (!this.hasItem("riftPass")) {
-      this.emit("locked", { message: "Сначала найдите Сервисный пропуск" });
+      this.emit("locked", { message: "Сначала найдите золотую закладку" });
       return false;
     }
     if (this.riftUsedFloor) {
-      this.emit("locked", { message: "Пропуск уже использован в этом отделе" });
+      this.emit("locked", { message: "Закладка уже использована в этой книге" });
       return false;
     }
     if (this.state !== "room") return false;
     const rooms = riftDestinations(this);
     if (!rooms.length) {
-      this.emit("locked", { message: "Нужна ещё одна зачищенная комната" });
+      this.emit("locked", { message: "Нужна ещё одна прочитанная комната" });
       return false;
     }
     this.state = "riftMenu";
@@ -619,14 +653,15 @@ export class Game {
     if (this.state !== "room") return null;
     const room = this.room();
     const near = (x, y, radius) => Math.hypot(this.player.x - x, this.player.y - y) <= radius;
-    if (room.type === "boss" && room.cleared && this.floor.exitAvailable && near(240, 140, 44)) return "служебный лифт";
+    if (room.type === "start" && this.floorIndex === 0 && !room.npcHint && near(280, 145, 50)) return "спросить Красную Шапочку";
+    if (room.type === "boss" && room.cleared && this.floor.exitAvailable && near(240, 140, 44)) return "закрыть книгу";
     if (room.type === "rift" && room.cleared && near(240, 140, 44)) return "вернуться";
-    if (room.event === "sigil" && !this.chain.sigil && near(240, 120, 42)) return "взять отпечаток трещины";
-    if (room.event === "contract" && !room.contractHandled && near(240, 140, 42)) return "калибровка";
-    if (room.event === "riftTerminal" && near(240, 140, 42)) return "сервисный терминал";
-    if (room.type === "workshop" && near(240, 132, 52)) return "обменять вещь у Разборщика";
-    if (room.type === "vault" && near(240, 140, 44)) return "открыть хранилище";
-    if (room.type === "shop" && near(240, 132, 52)) return "поговорить с Оценщиком";
+    if (room.event === "chapterClue" && !room.loreFound && near(240, 120, 42)) return "прочитать обрывок";
+  if (room.event === "riftTerminal" && !this.chain.wardenDefeated && near(240, 140, 42)) return "исследовать рваную страницу";
+    if (room.event === "contract" && !room.contractHandled && near(240, 140, 42)) return "цена сказки";
+    if (room.type === "workshop" && near(240, 132, 52)) return "обменять вещь у Хранителя";
+    if (room.type === "vault" && near(240, 140, 44)) return "открыть запечатанную страницу";
+    if (room.type === "shop" && near(240, 132, 52)) return "поговорить с Хранителем";
     return null;
   }
 
@@ -678,6 +713,7 @@ export class Game {
       player: this.player,
       items: this.items,
       chain: this.chain,
+      nameFragments: [...this.nameFragments],
       riftUsedFloor: this.riftUsedFloor,
       questItems: this.questItems,
       memory: this.memory,
@@ -706,6 +742,7 @@ export class Game {
     this.challengeId = this.challenge?.id || null;
     this.mode = data.mode === "boss" ? "boss" : this.challenge ? "challenge" : "run";
     this.chain = { sigil: false, npc: false, terminal: false, wardenDefeated: false, ...(data.chain || {}) };
+    this.nameFragments = new Set(data.nameFragments || []);
     this.riftUsedFloor = Boolean(data.riftUsedFloor);
     this.floorIndex = data.floorIndex;
     this.floor = generateFloor(this.seed, this.floorIndex);
@@ -787,6 +824,7 @@ export class Game {
   }
 
   spawnEnemy(type, nx, ny, extra = {}) {
+    if (type === "goblin" && extra.variant === undefined) extra.variant = dwarfVariantFor(this);
     const width = ARENA.right - ARENA.left;
     const height = ARENA.bottom - ARENA.top;
     let x = ARENA.left + nx * width;
@@ -873,6 +911,13 @@ export class Game {
       enemy.maxHp = enemy.hp;
       enemy.speed *= 1.1;
     }
+    if (enemy.variant === 1) enemy.speed *= 0.85;
+    else if (enemy.variant === 2) enemy.speed *= 1.2;
+    else if (enemy.variant === 6) {
+      enemy.hp = Math.round(enemy.hp * 1.4);
+      enemy.maxHp = enemy.hp;
+      enemy.speed *= 0.85;
+    }
     this.enemies.push(enemy);
     this.emit("spawn", { enemy });
     return enemy;
@@ -917,7 +962,7 @@ export class Game {
         if (target?.type === "secret" && !target.secretFound) {
           room.secretFound = true;
           target.secretFound = true;
-          this.emit("secret", { id: "surveyorReveal", name: "Картограф: чистый бой" });
+          this.emit("secret", { id: "surveyorReveal", name: "Следопыт: чистый бой" });
         }
       }
     }
@@ -925,11 +970,17 @@ export class Game {
     this.projectiles = this.projectiles.filter((projectile) => projectile.owner === "player");
     if (room.type === "rift") {
       this.chain.wardenDefeated = true;
-      this.emit("secret", { id: "rift", name: "Сервисный разрез" });
-      this.openItemChoice("room");
+      room.rewardClaimed = true;
+      this.state = "room";
+      this.emit("secret", { id: "rift", name: "Рваная страница восстановлена" });
+      this.emit("roomResumed", { room });
+      this.checkpoint();
       return;
     }
     if (room.type === "boss") {
+      if (this.floor.bookId === "rumple") {
+        while (this.nameFragments.size < 4) this.collectNameFragment();
+      }
       if (this.mode === "boss") {
         this.state = "victory";
         this.emit("victory", this.stats());
@@ -980,8 +1031,14 @@ export class Game {
       else if (pickup.type === "bomb") this.player.bombs = Math.min(5, this.player.bombs + pickup.amount);
       else if (pickup.type === "heart") this.player.hp = Math.min(this.player.maxHp, this.player.hp + pickup.amount);
       else if (pickup.type === "lore") {
-        this.room().loreFound = true;
-        this.emit("secret", { id: "tag0", name: "Номерок 0" });
+        const room = this.room();
+        room.loreFound = true;
+        if (room.type === "secret" && !this.chain.wardenDefeated) {
+          room.event = "riftTerminal";
+          this.chain.npc = true;
+        }
+        if (this.floor.bookId === "rumple") this.collectNameFragment();
+        this.emit("secret", { id: "tag0", name: "Рваная страница" });
       }
       this.emit("resource", { pickup });
       this.checkpoint();
@@ -1209,6 +1266,7 @@ export class Game {
       if (d < 55) this.beginTelegraph(enemy, "reveal", 0.6);
       else return;
     }
+    if (updateDwarfVariant(this, enemy)) return;
     if (enemy.charging > 0) {
       enemy.charging -= dt;
       if (this.moveBody(enemy, enemy.vx * dt, enemy.vy * dt)) enemy.charging = 0;
@@ -1339,8 +1397,9 @@ export class Game {
       enemy.attackTimer = 2.5;
       this.emit("charge", { enemy });
     } else if (enemy.attackType === "goblin") {
-      this.fireEnemy(enemy, enemy.aimAngle, 95, { r: 4 });
-      enemy.attackTimer = 2.2;
+      const offsets = enemy.variant === 4 ? [-0.28, 0, 0.28] : [0];
+      for (const offset of offsets) this.fireEnemy(enemy, enemy.aimAngle + offset, 95, { r: 4 });
+      enemy.attackTimer = enemy.variant === 1 ? 1.5 : 2.2;
       this.emit("enemyShot", { enemy });
     } else if (enemy.attackType === "flyingEye") {
       this.fireEnemy(enemy, enemy.aimAngle, 120, { r: 3 });
@@ -1361,8 +1420,8 @@ export class Game {
       this.emit("spawn", { enemy });
     } else if (enemy.attackType === "laser") {
       const angle = Math.atan2(this.player.y - enemy.y, this.player.x - enemy.x);
-      if (angleDifference(angle, enemy.aimAngle) < 0.13) this.hurtPlayer(1, "Луч Ревизора");
-      this.lasers.push({ x1: enemy.x, y1: enemy.y, x2: enemy.x + Math.cos(enemy.aimAngle) * 280, y2: enemy.y + Math.sin(enemy.aimAngle) * 280, life: 0.18 });
+      if (angleDifference(angle, enemy.aimAngle) < 0.13) this.hurtPlayer(1, enemy.name);
+      this.lasers.push({ owner: "enemy", x1: enemy.x, y1: enemy.y, x2: enemy.x + Math.cos(enemy.aimAngle) * 280, y2: enemy.y + Math.sin(enemy.aimAngle) * 280, life: 0.18 });
       enemy.attackTimer = 2.5;
       this.emit("enemyShot", { enemy });
     } else if (enemy.attackType === "summon") {
@@ -1403,14 +1462,14 @@ export class Game {
       for (let i = -4; i <= 4; i++) this.fireEnemy(enemy, enemy.aimAngle + i * 0.16, 112);
       this.emit("enemyShot", { enemy });
     } else if (attack === "summon") {
-      this.spawnEnemy("hanger", 0.06, 0.48);
-      this.spawnEnemy("hanger", 0.94, 0.48);
+      this.spawnEnemy("lost", 0.06, 0.48);
+      this.spawnEnemy("lost", 0.94, 0.48);
       this.emit("summon", { enemy });
     } else if (attack === "sweep") {
       for (let i = 0; i < 16; i++) this.fireEnemy(enemy, i / 16 * TAU + this.time * 0.2, 84);
       this.emit("sweep", { enemy });
     } else if (attack === "slam") {
-      if (distance(enemy, this.player) < 70) this.hurtPlayer(1, "Удар Швейцара");
+      if (distance(enemy, this.player) < 70) this.hurtPlayer(1, "Рывок Волка");
       for (let i = 0; i < 10; i++) this.fireEnemy(enemy, i / 10 * TAU + 0.15, 72);
       this.emit("slam", { x: enemy.x, y: enemy.y });
     }
@@ -1661,7 +1720,7 @@ export class Game {
           this.memoryProgress.thermos++;
           if (this.memoryProgress.thermos >= 8 && !this.memory.thermosAwakened) {
             this.memory.thermosAwakened = true;
-            this.emit("memory", { id: "thermos", name: "Термос вспомнил ледяной шум" });
+            this.emit("memory", { id: "thermos", name: "Снежная роза вспомнила зиму" });
           }
         }
       }
@@ -1758,7 +1817,7 @@ export class Game {
     this.memoryProgress.umbrella++;
     if (this.memoryProgress.umbrella >= 3 && !this.memory.umbrellaAwakened) {
       this.memory.umbrellaAwakened = true;
-      this.emit("memory", { id: "umbrella", name: "Зонт вспомнил дождь" });
+      this.emit("memory", { id: "umbrella", name: "Капюшон вспомнил свет" });
     }
     const count = this.memory.umbrellaAwakened ? 8 : 6;
     for (let i = 0; i < count; i++) {
@@ -1805,8 +1864,8 @@ export class Game {
       if (puddle.friendly) {
         for (const enemy of this.enemies) if (!enemy.dead && distance(puddle, enemy) < puddle.r + enemy.r) enemy.slowTimer = 0.2;
       } else if (!this.hasItem("sole") && distance(puddle, this.player) < puddle.r + this.player.r) {
-        if (puddle.acid) this.hurtPlayer(1, "Кислота лаборатории");
-        else if (puddle.burning) this.hurtPlayer(1, "Вечный огонь Первого невозврата");
+        if (puddle.acid) this.hurtPlayer(1, "Яд отравленного яблока");
+        else if (puddle.burning) this.hurtPlayer(1, "Огонь сказочной печи");
         else this.player.slowTimer = 0.2;
       }
     }
@@ -1848,7 +1907,7 @@ export class Game {
         const force = this.hasItem("button") ? 165 : 95;
         this.player.knockX += Math.cos(angle) * force;
         this.player.knockY += Math.sin(angle) * force;
-        if (!this.hasItem("button")) this.hurtPlayer(1, "Своя петарда");
+        if (!this.hasItem("button")) this.hurtPlayer(1, "Хлопок страницы");
         else this.emit("rubber", { x: this.player.x, y: this.player.y });
       }
       this.checkSecretExplosion(bomb);
@@ -1986,6 +2045,7 @@ export class Game {
     if (enemy.dead) return;
     enemy.dead = true;
     this.kills++;
+    if (this.floor.bookId === "rumple" && enemy.type === "curseCaster") this.collectNameFragment();
     this.emit("kill", { enemy });
     if (this.hasItem("poison") && this.hasItem("bleed") && enemy.poisonTimer > 0 && enemy.bleedTimer > 0 && !enemy.synergySpread) {
       const targets = this.enemies.filter((other) => !other.dead && !other.synergySpread && other.id !== enemy.id && distance(enemy, other) < 60).sort((a, b) => distance(enemy, a) - distance(enemy, b)).slice(0, 2);
@@ -2025,7 +2085,7 @@ export class Game {
     this.emit("hurt", { amount, source, hp: p.hp, x: p.x, y: p.y });
     if (p.hp <= 0) {
       this.state = "dead";
-      this.emit("dead", this.stats());
+      this.emit("dead", { ...this.stats(), x: p.x, y: p.y });
     }
     return true;
   }

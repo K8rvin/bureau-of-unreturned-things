@@ -77,7 +77,7 @@ export function performSpecialEnemyAttack(game, enemy) {
     return true;
   }
   if (enemy.attackType === "curseZone") {
-    game.environment?.queueDrop(game.player.x, game.player.y, { delay: 0.85, radius: 22, kind: "curse", force: true, source: "Печать Куратора" });
+    game.environment?.queueDrop(game.player.x, game.player.y, { delay: 0.85, radius: 22, kind: "curse", force: true, source: "Печать имени" });
     enemy.attackTimer = 2.2;
     game.emit("enemyShot", { enemy });
     return true;

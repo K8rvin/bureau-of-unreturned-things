@@ -1,12 +1,12 @@
 import { ITEM_BY_ID } from "./content.js";
-import { getHero, HEROES } from "./heroes.js";
+import { getHero, HEROES, HERO_ALIASES } from "./heroes.js";
 
-const KEY = "bureau.progress.v1";
+const KEY = "library.progress.v1";
 
 export const CHALLENGES = [
   {
     id: "threeSeals",
-    name: "Три печати",
+    name: "Три закладки",
     floors: 3,
     maxHp: 4,
     heartDrops: false,
@@ -14,11 +14,11 @@ export const CHALLENGES = [
     choiceLimit: 3,
     allowRift: true,
     reward: "returning",
-    description: "Пройдите 3 отдела. Максимум 4 HP, сердца не выпадают, вражеские снаряды на 12% быстрее.",
+    description: "Прочитайте 3 книги. Максимум 4 HP, сердца не выпадают, вражеские снаряды на 12% быстрее.",
   },
   {
     id: "limitedOffer",
-    name: "Урезанная опись",
+    name: "Почти без страниц",
     floors: 6,
     maxHp: null,
     heartDrops: true,
@@ -26,19 +26,19 @@ export const CHALLENGES = [
     choiceLimit: 2,
     allowRift: false,
     reward: "coil",
-    description: "Пройдите всю смену. Только 2 варианта вместо 3 при выборе вещи; сервисные переходы запрещены.",
+    description: "Пройдите всю библиотеку. Только 2 варианта вместо 3 при выборе вещи; переходы по закладке запрещены.",
   },
 ];
 
 const CHALLENGE_BY_ID = new Map(CHALLENGES.map((challenge) => [challenge.id, challenge]));
 
 export const ITEM_UNLOCKS = {
-  laser: { kind: "floor", hero: "intern", floor: 3, text: "Стажёр: зачистить 3 отдела" },
-  heavy: { kind: "win", hero: "keeper", floor: 6, text: "Кладовщик: завершить полную смену" },
-  quad: { kind: "win", floor: 6, text: "Завершить полную смену любым героем" },
-  stamp: { kind: "floor", hero: "fireKnight", floor: 4, text: "Огненный рыцарь: зачистить 4 отдела" },
-  returning: { kind: "challenge", challenge: "threeSeals", text: "Выполнить испытание «Три печати»" },
-  coil: { kind: "challenge", challenge: "limitedOffer", text: "Выполнить испытание «Урезанная опись»" },
+  laser: { kind: "floor", hero: "child", floor: 3, text: "Прочитать 3 книги" },
+  heavy: { kind: "win", hero: "child", floor: 6, text: "Вернуть все шесть концовок" },
+  quad: { kind: "win", floor: 6, text: "Вернуть все шесть концовок" },
+  stamp: { kind: "floor", hero: "child", floor: 4, text: "Восстановить 4 концовки" },
+  returning: { kind: "challenge", challenge: "threeSeals", text: "Выполнить испытание «Три закладки»" },
+  coil: { kind: "challenge", challenge: "limitedOffer", text: "Выполнить испытание «Почти без страниц»" },
 };
 
 function emptyProgress() {
@@ -53,6 +53,7 @@ export class Progression {
   constructor(storage = typeof window !== "undefined" ? window.localStorage : null) {
     this.storage = storage;
     this.data = this.read();
+    this.save();
   }
 
   read() {
@@ -64,8 +65,10 @@ export class Progression {
         ? [...new Set(saved.unlocked.filter((id) => Object.hasOwn(ITEM_UNLOCKS, id) && ITEM_BY_ID.has(id)))]
         : [];
       for (const hero of HEROES) {
-        const floor = Math.max(0, Math.min(6, Math.trunc(saved.heroFloors?.[hero.id]) || 0));
-        const wins = Math.max(0, Math.trunc(saved.heroWins?.[hero.id]) || 0);
+        const legacyIds = Object.entries(HERO_ALIASES).filter(([, id]) => id === hero.id).map(([id]) => id);
+        const ids = [hero.id, ...legacyIds];
+        const floor = Math.min(6, Math.max(0, ...ids.map((id) => Math.trunc(saved.heroFloors?.[id]) || 0)));
+        const wins = ids.reduce((sum, id) => sum + Math.max(0, Math.trunc(saved.heroWins?.[id]) || 0), 0);
         if (floor) result.heroFloors[hero.id] = floor;
         if (wins) result.heroWins[hero.id] = wins;
       }
@@ -73,6 +76,8 @@ export class Progression {
         const wins = Math.max(0, Math.trunc(saved.challengeWins?.[challenge.id]) || 0);
         if (wins) result.challengeWins[challenge.id] = wins;
       }
+      this.data = result;
+      this.evaluateUnlocks();
     } catch {
       return emptyProgress();
     }

@@ -9,18 +9,18 @@
 :root {
   color-scheme: dark;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #0c0e13;
+  background: #12150f;
   color: #eee7d5;
   --paper: #eee7d5;
-  --muted: #a49d91;
-  --copper: #d08a52;
+  --muted: #b1a58e;
+  --copper: #c9a86a;
   --red: #e15a68;
-  --panel: #191b24;
-  --line: #45404a;
+  --panel: #201e18;
+  --line: #655541;
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 50% 15%, #24202b 0, #0c0e13 62%); }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 50% 15%, #323323 0, #10120e 62%); }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { font: inherit; }
 button:focus-visible, canvas:focus-visible, a:focus-visible { outline: 2px solid #f2c879; outline-offset: 3px; }
@@ -70,7 +70,7 @@ kbd { display: inline-block; border: 1px solid #66565a; border-bottom-width: 2px
 .title-panel .lead { font-size: 13px; margin: 8px 0 12px; }
 .title-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .title-panel .title-actions button { width: auto; margin: 0; padding: 9px 14px; }
-.hero-cards { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 9px; }
+.hero-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
 .hero-card { min-width: 0; padding: 6px 5px 8px; display: flex; flex-direction: column; align-items: center; gap: 3px; background: #191b24; border-color: #45404a; }
 .hero-card[aria-checked="true"] { border-color: #f2c879; background: #39303a; box-shadow: inset 0 0 0 1px #d08a52; }
 .hero-card canvas { display: block; width: 84px; height: 63px; image-rendering: pixelated; }
@@ -204,16 +204,17 @@ kbd { display: inline-block; border: 1px solid #66565a; border-bottom-width: 2px
 .choice-cards > .item-card:only-child { grid-column: 2; }
 
 @media (max-width: 800px) {
-  #app { padding: 6px; }
-  .topbar { gap: 7px; }
+  #app { padding: 6px; height: 100dvh; display: flex; flex-direction: column; }
+  .topbar { gap: 7px; flex-shrink: 0; }
   .brand { font-size: 12px; }
   .hud { order: 3; flex-basis: 100%; min-width: 0; gap: 4px 9px; flex-wrap: wrap; }
   .hud #wave { order: 6; flex-basis: 100%; justify-content: center; font-size: 11px; }
   .hud .seed { font-size: 9px; }
   .settings { margin-left: auto; }
-  .game-shell { min-height: 310px; aspect-ratio: auto; }
-  .game-shell.has-panel { height: min(600px, calc(100vh - 155px)) !important; min-height: 270px; }
+  .game-shell { min-height: 0; aspect-ratio: auto; flex: 1 1 auto; }
+  .game-shell.has-panel { height: auto !important; min-height: 0; }
   .game-shell.has-panel > canvas { top: 50%; transform: translateY(-50%); }
+  .bottom-bar { flex-shrink: 0; }
   .bottom-bar .inventory { flex: 1; min-width: 0; flex-wrap: nowrap; overflow-x: auto; min-height: 30px; }
   .bottom-bar .inventory-item { flex-shrink: 0; }
   .bottom-bar a { flex-shrink: 0; }
@@ -248,7 +249,7 @@ kbd { display: inline-block; border: 1px solid #66565a; border-bottom-width: 2px
   .title-panel { padding: 8px; }
   .title-panel > .eyebrow, .title-panel > .lead, .title-panel > .hint { display: none; }
   .title-panel h1 { font-size: 17px; margin: 3px 0 9px; }
-  .hero-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .hero-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
   .hero-card { padding: 3px 2px; gap: 2px; }
   .hero-card canvas { width: 36px; height: 27px; }
   .hero-card strong { font-size: 9px; min-height: 18px; }
@@ -279,3 +280,16 @@ kbd { display: inline-block; border: 1px solid #66565a; border-bottom-width: 2px
   width: 0;
   height: 0;
 }
+
+.panel { border-color: #756345; background: linear-gradient(145deg, #29281df7, #171c15f7); }
+.panel h1, .panel h2, .panel h3 { font-family: Georgia, "Times New Roman", serif; letter-spacing: .01em; }
+.title-panel { border-left: 4px solid #a18351; box-shadow: 10px 14px 50px #000b, inset 8px 0 20px #b0944d0a; }
+.title-panel h1 { color: #ead7a4; text-shadow: 0 2px 0 #0008; }
+.hero-cards:has(.hero-card:only-child) { grid-template-columns: minmax(0, 220px); justify-content: center; }
+.hero-card { background: #25271d; border-color: #655b3f; }
+.hero-card[aria-checked="true"] { border-color: #e0c77d; background: #3a3625; box-shadow: inset 0 0 0 1px #a28b51; }
+.hero-card strong { color: #ead49b; font-family: Georgia, "Times New Roman", serif; font-size: 14px; }
+.hero-card canvas { border-radius: 3px; background: radial-gradient(ellipse at center, #3b3c2a 0, #25271d 72%); }
+button.primary { background: #95544d; border-color: #c48b67; }
+button.primary:hover { background: #af6455; }
+.bottom-bar a { color: #c9b789; }

@@ -1,4615 +1,3955 @@
 export const GENERATED_SPRITES = {
-  "priestess": {
-    "image": "assets/units/generated/priestess.png",
-    "referenceHeight": 64,
-    "targetHeight": 40,
-    "rates": {
-      "idle": 8,
-      "run": 12,
-      "attack": 28,
-      "hit": 12,
-      "death": 16
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\chierit-water\\Water Priestess_Attack1_1.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Attack1_2.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Attack1_3.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Attack1_4.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Attack1_5.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Attack1_6.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Attack1_7.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_1.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_10.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_11.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_12.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_13.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_14.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_15.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_16.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_2.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_3.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_4.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_5.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_6.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_7.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_8.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Death_9.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Idle_1.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Idle_2.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Idle_3.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Idle_4.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Idle_5.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Idle_6.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Idle_7.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Idle_8.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Take Hit_1.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Take Hit_2.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Take Hit_3.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Take Hit_4.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Take Hit_5.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Take Hit_6.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Take Hit_7.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_1.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_10.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_2.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_3.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_4.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_5.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_6.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_7.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_8.png",
-      "assets\\packs\\chierit-water\\Water Priestess_Walk_9.png"
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 288,
-        "y": 0,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 576,
-        "y": 0,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 864,
-        "y": 0,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1152,
-        "y": 0,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1440,
-        "y": 0,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1728,
-        "y": 0,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 2016,
-        "y": 0,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 288,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 576,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 864,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1152,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1440,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1728,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 2016,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 2304,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 2592,
-        "y": 64,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      }
-    ],
-    "attack": [
-      {
-        "x": 0,
-        "y": 128,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 288,
-        "y": 128,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 576,
-        "y": 128,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 864,
-        "y": 128,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1152,
-        "y": 128,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1440,
-        "y": 128,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1728,
-        "y": 128,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 192,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 288,
-        "y": 192,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 576,
-        "y": 192,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 864,
-        "y": 192,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1152,
-        "y": 192,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1440,
-        "y": 192,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1728,
-        "y": 192,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 288,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 576,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 864,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1152,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1440,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 1728,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 2016,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 2304,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 2592,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 2880,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 3168,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 3456,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 3744,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 4032,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      },
-      {
-        "x": 4320,
-        "y": 256,
-        "w": 288,
-        "h": 64,
-        "ax": 144,
-        "ay": 64
-      }
-    ]
-  },
-  "fireKnight": {
-    "image": "assets/units/generated/fireKnight.png",
-    "referenceHeight": 64,
-    "targetHeight": 40,
-    "rates": {
-      "idle": 8,
-      "run": 12,
-      "attack": 28,
-      "hit": 12,
-      "death": 16
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_1.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_10.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_11.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_2.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_3.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_4.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_5.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_6.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_7.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_8.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Attack1_9.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_1.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_10.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_11.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_12.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_13.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_2.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_3.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_4.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_5.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_6.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_7.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_8.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Death_9.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Idle_1.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Idle_2.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Idle_3.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Idle_4.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Idle_5.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Idle_6.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Idle_7.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Idle_8.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Run_1.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Run_2.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Run_3.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Run_4.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Run_5.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Run_6.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Run_7.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Run_8.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Take Hit_1.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Take Hit_2.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Take Hit_3.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Take Hit_4.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Take Hit_5.png",
-      "assets\\packs\\chierit-fire\\Fire Knight_Take Hit_6.png"
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 288,
-        "y": 0,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 576,
-        "y": 0,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 864,
-        "y": 0,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1152,
-        "y": 0,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1440,
-        "y": 0,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1728,
-        "y": 0,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2016,
-        "y": 0,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 84,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 288,
-        "y": 84,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 576,
-        "y": 84,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 864,
-        "y": 84,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1152,
-        "y": 84,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1440,
-        "y": 84,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1728,
-        "y": 84,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2016,
-        "y": 84,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      }
-    ],
-    "attack": [
-      {
-        "x": 0,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 288,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 576,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 864,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1152,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1440,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1728,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2016,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2304,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2592,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2880,
-        "y": 168,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 252,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 288,
-        "y": 252,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 576,
-        "y": 252,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 864,
-        "y": 252,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1152,
-        "y": 252,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1440,
-        "y": 252,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 288,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 576,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 864,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1152,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1440,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 1728,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2016,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2304,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2592,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 2880,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 3168,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      },
-      {
-        "x": 3456,
-        "y": 336,
-        "w": 288,
-        "h": 84,
-        "ax": 144,
-        "ay": 84
-      }
-    ]
-  },
-  "intern": {
-    "image": "assets/units/generated/intern.png",
-    "referenceHeight": 26,
-    "targetHeight": 36,
-    "rates": {
-      "idle": 3,
-      "idleDown": 3,
-      "idleSide": 3,
-      "idleUp": 3,
-      "run": 8,
-      "runDown": 8,
-      "runSide": 8,
-      "runUp": 8,
-      "hit": 8,
-      "death": 6
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\snoblin\\assets\\sprites\\prototype_character.png"
-    ],
-    "directional": true,
-    "idleDown": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "idleSide": [
-      {
-        "x": 0,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "idleUp": [
-      {
-        "x": 0,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "runDown": [
-      {
-        "x": 0,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "runSide": [
-      {
-        "x": 0,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "runUp": [
-      {
-        "x": 0,
-        "y": 130,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 130,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 130,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 130,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "hitDown": [
-      {
-        "x": 0,
-        "y": 156,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 156,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "hitSide": [
-      {
-        "x": 0,
-        "y": 182,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 182,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "hitUp": [
-      {
-        "x": 0,
-        "y": 208,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 208,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "deathDown": [
-      {
-        "x": 0,
-        "y": 234,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 234,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 234,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "deathSide": [
-      {
-        "x": 0,
-        "y": 260,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 260,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 260,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "deathUp": [
-      {
-        "x": 0,
-        "y": 286,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 286,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 286,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 312,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 312,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 338,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 338,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 338,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 338,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 364,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 364,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 390,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 390,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 390,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ]
-  },
-  "surveyor": {
-    "image": "assets/units/generated/surveyor.png",
-    "referenceHeight": 26,
-    "targetHeight": 36,
-    "rates": {
-      "idle": 3,
-      "idleDown": 3,
-      "idleSide": 3,
-      "idleUp": 3,
-      "run": 8,
-      "runDown": 8,
-      "runSide": 8,
-      "runUp": 8,
-      "hit": 8,
-      "death": 6
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\snoblin\\assets\\sprites\\prototype_character_blue.png"
-    ],
-    "directional": true,
-    "idleDown": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "idleSide": [
-      {
-        "x": 0,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "idleUp": [
-      {
-        "x": 0,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "runDown": [
-      {
-        "x": 0,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "runSide": [
-      {
-        "x": 0,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "runUp": [
-      {
-        "x": 0,
-        "y": 130,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 130,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 130,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 130,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "hitDown": [
-      {
-        "x": 0,
-        "y": 156,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 156,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "hitSide": [
-      {
-        "x": 0,
-        "y": 182,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 182,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "hitUp": [
-      {
-        "x": 0,
-        "y": 208,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 208,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "deathDown": [
-      {
-        "x": 0,
-        "y": 234,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 234,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 234,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "deathSide": [
-      {
-        "x": 0,
-        "y": 260,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 260,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 260,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "deathUp": [
-      {
-        "x": 0,
-        "y": 286,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 286,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 286,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 312,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 312,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 338,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 338,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 338,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 338,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 364,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 364,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 390,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 390,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 390,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ]
-  },
-  "courier": {
-    "image": "assets/units/generated/courier.png",
-    "referenceHeight": 64,
-    "targetHeight": 40,
-    "rates": {
-      "run": 14,
-      "runDown": 14,
-      "runSide": 14,
-      "runUp": 14
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\chrome-district\\relay-cass_ortho_sheet.png"
-    ],
-    "directional": true,
-    "idleDown": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      }
-    ],
-    "idleSide": [
-      {
-        "x": 0,
-        "y": 64,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      }
-    ],
-    "idleUp": [
-      {
-        "x": 0,
-        "y": 128,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      }
-    ],
-    "runDown": [
-      {
-        "x": 0,
-        "y": 192,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 40,
-        "y": 192,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 80,
-        "y": 192,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 120,
-        "y": 192,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 160,
-        "y": 192,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 200,
-        "y": 192,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      }
-    ],
-    "runSide": [
-      {
-        "x": 0,
-        "y": 256,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 40,
-        "y": 256,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 80,
-        "y": 256,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 120,
-        "y": 256,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 160,
-        "y": 256,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 200,
-        "y": 256,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      }
-    ],
-    "runUp": [
-      {
-        "x": 0,
-        "y": 320,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 40,
-        "y": 320,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 80,
-        "y": 320,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 120,
-        "y": 320,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 160,
-        "y": 320,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 200,
-        "y": 320,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      }
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 384,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 448,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 40,
-        "y": 448,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 80,
-        "y": 448,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 120,
-        "y": 448,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 160,
-        "y": 448,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      },
-      {
-        "x": 200,
-        "y": 448,
-        "w": 40,
-        "h": 64,
-        "ax": 20,
-        "ay": 64
-      }
-    ]
-  },
-  "skeleton": {
-    "image": "assets/units/generated/skeleton.png",
-    "referenceHeight": 51,
-    "targetHeight": 32,
-    "rates": {
-      "idle": 6,
-      "run": 10,
-      "attack": 12,
-      "hit": 14,
-      "shield": 8,
-      "death": 8
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\luizmelo\\monsters\\skeleton attack 01.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton attack 02.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton attack 03.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton attack 04.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton attack 05.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton attack 06.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton attack 07.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton attack 08.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton death 01.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton death 02.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton death 03.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton death 04.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton idle 01.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton idle 02.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton idle 03.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton idle 04.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton shield 01.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton shield 02.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton shield 03.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton shield 04.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton take hit 01.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton take hit 02.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton take hit 03.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton take hit 04.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton walk 01.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton walk 02.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton walk 03.png",
-      "assets\\packs\\luizmelo\\monsters\\skeleton walk 04.png"
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 45,
-        "h": 51,
-        "ax": 22.5,
-        "ay": 51
-      },
-      {
-        "x": 45,
-        "y": 0,
-        "w": 45,
-        "h": 51,
-        "ax": 22.5,
-        "ay": 51
-      },
-      {
-        "x": 90,
-        "y": 0,
-        "w": 45,
-        "h": 51,
-        "ax": 22.5,
-        "ay": 51
-      },
-      {
-        "x": 135,
-        "y": 0,
-        "w": 45,
-        "h": 51,
-        "ax": 22.5,
-        "ay": 51
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 51,
-        "w": 45,
-        "h": 51,
-        "ax": 22.5,
-        "ay": 51
-      },
-      {
-        "x": 45,
-        "y": 51,
-        "w": 45,
-        "h": 51,
-        "ax": 22.5,
-        "ay": 51
-      },
-      {
-        "x": 90,
-        "y": 51,
-        "w": 45,
-        "h": 51,
-        "ax": 22.5,
-        "ay": 51
-      },
-      {
-        "x": 135,
-        "y": 51,
-        "w": 45,
-        "h": 51,
-        "ax": 22.5,
-        "ay": 51
-      }
-    ],
-    "attack": [
-      {
-        "x": 0,
-        "y": 102,
-        "w": 95,
-        "h": 57,
-        "ax": 47.5,
-        "ay": 57
-      },
-      {
-        "x": 95,
-        "y": 102,
-        "w": 95,
-        "h": 57,
-        "ax": 47.5,
-        "ay": 57
-      },
-      {
-        "x": 190,
-        "y": 102,
-        "w": 95,
-        "h": 57,
-        "ax": 47.5,
-        "ay": 57
-      },
-      {
-        "x": 285,
-        "y": 102,
-        "w": 95,
-        "h": 57,
-        "ax": 47.5,
-        "ay": 57
-      },
-      {
-        "x": 380,
-        "y": 102,
-        "w": 95,
-        "h": 57,
-        "ax": 47.5,
-        "ay": 57
-      },
-      {
-        "x": 475,
-        "y": 102,
-        "w": 95,
-        "h": 57,
-        "ax": 47.5,
-        "ay": 57
-      },
-      {
-        "x": 570,
-        "y": 102,
-        "w": 95,
-        "h": 57,
-        "ax": 47.5,
-        "ay": 57
-      },
-      {
-        "x": 665,
-        "y": 102,
-        "w": 95,
-        "h": 57,
-        "ax": 47.5,
-        "ay": 57
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 159,
-        "w": 55,
-        "h": 53,
-        "ax": 27.5,
-        "ay": 53
-      },
-      {
-        "x": 55,
-        "y": 159,
-        "w": 55,
-        "h": 53,
-        "ax": 27.5,
-        "ay": 53
-      },
-      {
-        "x": 110,
-        "y": 159,
-        "w": 55,
-        "h": 53,
-        "ax": 27.5,
-        "ay": 53
-      },
-      {
-        "x": 165,
-        "y": 159,
-        "w": 55,
-        "h": 53,
-        "ax": 27.5,
-        "ay": 53
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 212,
-        "w": 56,
-        "h": 53,
-        "ax": 28.0,
-        "ay": 53
-      },
-      {
-        "x": 56,
-        "y": 212,
-        "w": 56,
-        "h": 53,
-        "ax": 28.0,
-        "ay": 53
-      },
-      {
-        "x": 112,
-        "y": 212,
-        "w": 56,
-        "h": 53,
-        "ax": 28.0,
-        "ay": 53
-      },
-      {
-        "x": 168,
-        "y": 212,
-        "w": 56,
-        "h": 53,
-        "ax": 28.0,
-        "ay": 53
-      }
-    ],
-    "shield": [
-      {
-        "x": 0,
-        "y": 265,
-        "w": 40,
-        "h": 46,
-        "ax": 20.0,
-        "ay": 46
-      },
-      {
-        "x": 40,
-        "y": 265,
-        "w": 40,
-        "h": 46,
-        "ax": 20.0,
-        "ay": 46
-      },
-      {
-        "x": 80,
-        "y": 265,
-        "w": 40,
-        "h": 46,
-        "ax": 20.0,
-        "ay": 46
-      },
-      {
-        "x": 120,
-        "y": 265,
-        "w": 40,
-        "h": 46,
-        "ax": 20.0,
-        "ay": 46
-      }
-    ]
-  },
-  "mushroom": {
-    "image": "assets/units/generated/mushroom.png",
-    "referenceHeight": 37,
-    "targetHeight": 26,
-    "rates": {
-      "idle": 6,
-      "run": 10,
-      "attack": 12,
-      "hit": 14,
-      "shield": 8,
-      "death": 8
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\luizmelo\\monsters\\mushroom attack 01.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom attack 02.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom attack 03.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom attack 04.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom attack 05.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom attack 06.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom attack 07.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom attack 08.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom death 01.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom death 02.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom death 03.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom death 04.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom idle 01.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom idle 02.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom idle 03.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom idle 04.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom run 01.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom run 02.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom run 03.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom run 04.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom run 05.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom run 06.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom run 07.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom run 08.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom take hit 01.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom take hit 02.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom take hit 03.png",
-      "assets\\packs\\luizmelo\\monsters\\mushroom take hit 04.png"
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 37,
-        "ax": 11.5,
-        "ay": 37
-      },
-      {
-        "x": 23,
-        "y": 0,
-        "w": 23,
-        "h": 37,
-        "ax": 11.5,
-        "ay": 37
-      },
-      {
-        "x": 46,
-        "y": 0,
-        "w": 23,
-        "h": 37,
-        "ax": 11.5,
-        "ay": 37
-      },
-      {
-        "x": 69,
-        "y": 0,
-        "w": 23,
-        "h": 37,
-        "ax": 11.5,
-        "ay": 37
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 37,
-        "w": 26,
-        "h": 39,
-        "ax": 13.0,
-        "ay": 39
-      },
-      {
-        "x": 26,
-        "y": 37,
-        "w": 26,
-        "h": 39,
-        "ax": 13.0,
-        "ay": 39
-      },
-      {
-        "x": 52,
-        "y": 37,
-        "w": 26,
-        "h": 39,
-        "ax": 13.0,
-        "ay": 39
-      },
-      {
-        "x": 78,
-        "y": 37,
-        "w": 26,
-        "h": 39,
-        "ax": 13.0,
-        "ay": 39
-      },
-      {
-        "x": 104,
-        "y": 37,
-        "w": 26,
-        "h": 39,
-        "ax": 13.0,
-        "ay": 39
-      },
-      {
-        "x": 130,
-        "y": 37,
-        "w": 26,
-        "h": 39,
-        "ax": 13.0,
-        "ay": 39
-      },
-      {
-        "x": 156,
-        "y": 37,
-        "w": 26,
-        "h": 39,
-        "ax": 13.0,
-        "ay": 39
-      },
-      {
-        "x": 182,
-        "y": 37,
-        "w": 26,
-        "h": 39,
-        "ax": 13.0,
-        "ay": 39
-      }
-    ],
-    "attack": [
-      {
-        "x": 0,
-        "y": 76,
-        "w": 64,
-        "h": 45,
-        "ax": 32.0,
-        "ay": 45
-      },
-      {
-        "x": 64,
-        "y": 76,
-        "w": 64,
-        "h": 45,
-        "ax": 32.0,
-        "ay": 45
-      },
-      {
-        "x": 128,
-        "y": 76,
-        "w": 64,
-        "h": 45,
-        "ax": 32.0,
-        "ay": 45
-      },
-      {
-        "x": 192,
-        "y": 76,
-        "w": 64,
-        "h": 45,
-        "ax": 32.0,
-        "ay": 45
-      },
-      {
-        "x": 256,
-        "y": 76,
-        "w": 64,
-        "h": 45,
-        "ax": 32.0,
-        "ay": 45
-      },
-      {
-        "x": 320,
-        "y": 76,
-        "w": 64,
-        "h": 45,
-        "ax": 32.0,
-        "ay": 45
-      },
-      {
-        "x": 384,
-        "y": 76,
-        "w": 64,
-        "h": 45,
-        "ax": 32.0,
-        "ay": 45
-      },
-      {
-        "x": 448,
-        "y": 76,
-        "w": 64,
-        "h": 45,
-        "ax": 32.0,
-        "ay": 45
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 121,
-        "w": 43,
-        "h": 43,
-        "ax": 21.5,
-        "ay": 43
-      },
-      {
-        "x": 43,
-        "y": 121,
-        "w": 43,
-        "h": 43,
-        "ax": 21.5,
-        "ay": 43
-      },
-      {
-        "x": 86,
-        "y": 121,
-        "w": 43,
-        "h": 43,
-        "ax": 21.5,
-        "ay": 43
-      },
-      {
-        "x": 129,
-        "y": 121,
-        "w": 43,
-        "h": 43,
-        "ax": 21.5,
-        "ay": 43
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 164,
-        "w": 28,
-        "h": 37,
-        "ax": 14.0,
-        "ay": 37
-      },
-      {
-        "x": 28,
-        "y": 164,
-        "w": 28,
-        "h": 37,
-        "ax": 14.0,
-        "ay": 37
-      },
-      {
-        "x": 56,
-        "y": 164,
-        "w": 28,
-        "h": 37,
-        "ax": 14.0,
-        "ay": 37
-      },
-      {
-        "x": 84,
-        "y": 164,
-        "w": 28,
-        "h": 37,
-        "ax": 14.0,
-        "ay": 37
-      }
-    ]
-  },
-  "goblin": {
-    "image": "assets/units/generated/goblin.png",
-    "referenceHeight": 36,
-    "targetHeight": 25,
-    "rates": {
-      "idle": 6,
-      "run": 10,
-      "attack": 12,
-      "hit": 14,
-      "shield": 8,
-      "death": 8
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\luizmelo\\monsters\\goblin attack 01.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin attack 02.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin attack 03.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin attack 04.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin attack 05.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin attack 06.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin attack 07.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin attack 08.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin death 01.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin death 02.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin death 03.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin death 04.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin idle 01.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin idle 02.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin idle 03.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin idle 04.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin run 01.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin run 02.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin run 03.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin run 04.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin run 05.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin run 06.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin run 07.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin run 08.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin take hit 01.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin take hit 02.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin take hit 03.png",
-      "assets\\packs\\luizmelo\\monsters\\goblin take hit 04.png"
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 33,
-        "h": 36,
-        "ax": 16.5,
-        "ay": 36
-      },
-      {
-        "x": 33,
-        "y": 0,
-        "w": 33,
-        "h": 36,
-        "ax": 16.5,
-        "ay": 36
-      },
-      {
-        "x": 66,
-        "y": 0,
-        "w": 33,
-        "h": 36,
-        "ax": 16.5,
-        "ay": 36
-      },
-      {
-        "x": 99,
-        "y": 0,
-        "w": 33,
-        "h": 36,
-        "ax": 16.5,
-        "ay": 36
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 36,
-        "w": 38,
-        "h": 38,
-        "ax": 19.0,
-        "ay": 38
-      },
-      {
-        "x": 38,
-        "y": 36,
-        "w": 38,
-        "h": 38,
-        "ax": 19.0,
-        "ay": 38
-      },
-      {
-        "x": 76,
-        "y": 36,
-        "w": 38,
-        "h": 38,
-        "ax": 19.0,
-        "ay": 38
-      },
-      {
-        "x": 114,
-        "y": 36,
-        "w": 38,
-        "h": 38,
-        "ax": 19.0,
-        "ay": 38
-      },
-      {
-        "x": 152,
-        "y": 36,
-        "w": 38,
-        "h": 38,
-        "ax": 19.0,
-        "ay": 38
-      },
-      {
-        "x": 190,
-        "y": 36,
-        "w": 38,
-        "h": 38,
-        "ax": 19.0,
-        "ay": 38
-      },
-      {
-        "x": 228,
-        "y": 36,
-        "w": 38,
-        "h": 38,
-        "ax": 19.0,
-        "ay": 38
-      },
-      {
-        "x": 266,
-        "y": 36,
-        "w": 38,
-        "h": 38,
-        "ax": 19.0,
-        "ay": 38
-      }
-    ],
-    "attack": [
-      {
-        "x": 0,
-        "y": 74,
-        "w": 88,
-        "h": 46,
-        "ax": 44.0,
-        "ay": 46
-      },
-      {
-        "x": 88,
-        "y": 74,
-        "w": 88,
-        "h": 46,
-        "ax": 44.0,
-        "ay": 46
-      },
-      {
-        "x": 176,
-        "y": 74,
-        "w": 88,
-        "h": 46,
-        "ax": 44.0,
-        "ay": 46
-      },
-      {
-        "x": 264,
-        "y": 74,
-        "w": 88,
-        "h": 46,
-        "ax": 44.0,
-        "ay": 46
-      },
-      {
-        "x": 352,
-        "y": 74,
-        "w": 88,
-        "h": 46,
-        "ax": 44.0,
-        "ay": 46
-      },
-      {
-        "x": 440,
-        "y": 74,
-        "w": 88,
-        "h": 46,
-        "ax": 44.0,
-        "ay": 46
-      },
-      {
-        "x": 528,
-        "y": 74,
-        "w": 88,
-        "h": 46,
-        "ax": 44.0,
-        "ay": 46
-      },
-      {
-        "x": 616,
-        "y": 74,
-        "w": 88,
-        "h": 46,
-        "ax": 44.0,
-        "ay": 46
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 120,
-        "w": 42,
-        "h": 37,
-        "ax": 21.0,
-        "ay": 37
-      },
-      {
-        "x": 42,
-        "y": 120,
-        "w": 42,
-        "h": 37,
-        "ax": 21.0,
-        "ay": 37
-      },
-      {
-        "x": 84,
-        "y": 120,
-        "w": 42,
-        "h": 37,
-        "ax": 21.0,
-        "ay": 37
-      },
-      {
-        "x": 126,
-        "y": 120,
-        "w": 42,
-        "h": 37,
-        "ax": 21.0,
-        "ay": 37
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 157,
-        "w": 52,
-        "h": 39,
-        "ax": 26.0,
-        "ay": 39
-      },
-      {
-        "x": 52,
-        "y": 157,
-        "w": 52,
-        "h": 39,
-        "ax": 26.0,
-        "ay": 39
-      },
-      {
-        "x": 104,
-        "y": 157,
-        "w": 52,
-        "h": 39,
-        "ax": 26.0,
-        "ay": 39
-      },
-      {
-        "x": 156,
-        "y": 157,
-        "w": 52,
-        "h": 39,
-        "ax": 26.0,
-        "ay": 39
-      }
-    ]
-  },
-  "flyingEye": {
-    "image": "assets/units/generated/flyingEye.png",
-    "referenceHeight": 33,
-    "targetHeight": 26,
-    "rates": {
-      "idle": 6,
-      "run": 10,
-      "attack": 12,
-      "hit": 14,
-      "shield": 8,
-      "death": 8
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": -3,
-    "sources": [
-      "assets\\packs\\luizmelo\\monsters\\flying eye attack 01.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye attack 02.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye attack 03.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye attack 04.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye attack 05.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye attack 06.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye attack 07.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye attack 08.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye death 01.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye death 02.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye death 03.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye death 04.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye flight 01.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye flight 02.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye flight 03.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye flight 04.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye flight 05.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye flight 06.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye flight 07.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye flight 08.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye take hit 01.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye take hit 02.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye take hit 03.png",
-      "assets\\packs\\luizmelo\\monsters\\flying eye take hit 04.png"
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 42,
-        "y": 0,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 84,
-        "y": 0,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 126,
-        "y": 0,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 168,
-        "y": 0,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 210,
-        "y": 0,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 252,
-        "y": 0,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 294,
-        "y": 0,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 33,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 42,
-        "y": 33,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 84,
-        "y": 33,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 126,
-        "y": 33,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 168,
-        "y": 33,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 210,
-        "y": 33,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 252,
-        "y": 33,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      },
-      {
-        "x": 294,
-        "y": 33,
-        "w": 42,
-        "h": 33,
-        "ax": 21.0,
-        "ay": 33
-      }
-    ],
-    "attack": [
-      {
-        "x": 0,
-        "y": 66,
-        "w": 45,
-        "h": 31,
-        "ax": 22.5,
-        "ay": 31
-      },
-      {
-        "x": 45,
-        "y": 66,
-        "w": 45,
-        "h": 31,
-        "ax": 22.5,
-        "ay": 31
-      },
-      {
-        "x": 90,
-        "y": 66,
-        "w": 45,
-        "h": 31,
-        "ax": 22.5,
-        "ay": 31
-      },
-      {
-        "x": 135,
-        "y": 66,
-        "w": 45,
-        "h": 31,
-        "ax": 22.5,
-        "ay": 31
-      },
-      {
-        "x": 180,
-        "y": 66,
-        "w": 45,
-        "h": 31,
-        "ax": 22.5,
-        "ay": 31
-      },
-      {
-        "x": 225,
-        "y": 66,
-        "w": 45,
-        "h": 31,
-        "ax": 22.5,
-        "ay": 31
-      },
-      {
-        "x": 270,
-        "y": 66,
-        "w": 45,
-        "h": 31,
-        "ax": 22.5,
-        "ay": 31
-      },
-      {
-        "x": 315,
-        "y": 66,
-        "w": 45,
-        "h": 31,
-        "ax": 22.5,
-        "ay": 31
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 97,
-        "w": 41,
-        "h": 33,
-        "ax": 20.5,
-        "ay": 33
-      },
-      {
-        "x": 41,
-        "y": 97,
-        "w": 41,
-        "h": 33,
-        "ax": 20.5,
-        "ay": 33
-      },
-      {
-        "x": 82,
-        "y": 97,
-        "w": 41,
-        "h": 33,
-        "ax": 20.5,
-        "ay": 33
-      },
-      {
-        "x": 123,
-        "y": 97,
-        "w": 41,
-        "h": 33,
-        "ax": 20.5,
-        "ay": 33
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 130,
-        "w": 56,
-        "h": 40,
-        "ax": 28.0,
-        "ay": 40
-      },
-      {
-        "x": 56,
-        "y": 130,
-        "w": 56,
-        "h": 40,
-        "ax": 28.0,
-        "ay": 40
-      },
-      {
-        "x": 112,
-        "y": 130,
-        "w": 56,
-        "h": 40,
-        "ax": 28.0,
-        "ay": 40
-      },
-      {
-        "x": 168,
-        "y": 130,
-        "w": 56,
-        "h": 40,
-        "ax": 28.0,
-        "ay": 40
-      }
-    ]
-  },
-  "rat": {
-    "image": "assets/units/generated/rat.png",
-    "referenceHeight": 12,
-    "targetHeight": 12,
-    "rates": {
-      "idle": 8,
-      "gesture": 12,
-      "run": 14,
-      "attack": 14,
-      "death": 12
-    },
-    "once": [
-      "death"
-    ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\calciumtrice\\rat-and-bat.png"
-    ],
-    "idle": [
-      {
-        "x": 0,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 32,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 64,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 96,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 128,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 160,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 192,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 224,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 256,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 288,
-        "y": 0,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      }
-    ],
-    "gesture": [
-      {
-        "x": 0,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 32,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 64,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 96,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 128,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 160,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 192,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 224,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 256,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 288,
-        "y": 12,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      }
-    ],
-    "run": [
-      {
-        "x": 0,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 32,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 64,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 96,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 128,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 160,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 192,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 224,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 256,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 288,
-        "y": 24,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      }
-    ],
-    "attack": [
-      {
-        "x": 0,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 32,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 64,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 96,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 128,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 160,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 192,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 224,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 256,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 288,
-        "y": 36,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      }
-    ],
-    "death": [
-      {
-        "x": 0,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 32,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 64,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 96,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 128,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 160,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 192,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 224,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 256,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      },
-      {
-        "x": 288,
-        "y": 48,
-        "w": 32,
-        "h": 12,
-        "ax": 16,
-        "ay": 12
-      }
-    ]
-  },
   "bat": {
-    "image": "assets/units/generated/bat.png",
-    "referenceHeight": 26,
-    "targetHeight": 26,
-    "rates": {
-      "idle": 8,
-      "gesture": 12,
-      "run": 14,
-      "attack": 14,
-      "death": 12
-    },
-    "once": [
-      "death"
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
     ],
-    "offsetY": -2,
-    "sources": [
-      "assets\\packs\\calciumtrice\\rat-and-bat.png"
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
     ],
     "idle": [
       {
+        "ax": 24,
+        "ay": 42,
+        "h": 48,
+        "w": 48,
         "x": 0,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 128,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 160,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 192,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 224,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 256,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 288,
-        "y": 0,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
+        "y": 0
       }
     ],
-    "gesture": [
-      {
-        "x": 0,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 128,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 160,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 192,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 224,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 256,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 288,
-        "y": 26,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      }
-    ],
+    "image": "assets/library/units/pigeon.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
     "run": [
       {
-        "x": 0,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 128,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 160,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 192,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 224,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 256,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 288,
-        "y": 52,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
       }
     ],
+    "sources": [
+      ".cache/library-generation/pigeon/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "boss": {
     "attack": [
       {
-        "x": 0,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 128,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 160,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 192,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 224,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 256,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 288,
-        "y": 78,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
+        "ax": 32.0,
+        "ay": 50,
+        "h": 64,
+        "w": 64,
+        "x": 468,
+        "y": 64
       }
     ],
     "death": [
       {
-        "x": 0,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 32,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 64,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 96,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 128,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 160,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 192,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 224,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 256,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
-      },
-      {
-        "x": 288,
-        "y": 104,
-        "w": 32,
-        "h": 26,
-        "ax": 16,
-        "ay": 26
+        "ax": 32.0,
+        "ay": 58,
+        "h": 64,
+        "w": 64,
+        "x": 736,
+        "y": 128
       }
-    ]
-  },
-  "curseCaster": {
-    "image": "assets/units/generated/curseCaster.png",
-    "referenceHeight": 104,
-    "targetHeight": 42,
-    "rates": {
-      "idle": 6,
-      "run": 8,
-      "attack": 10,
-      "attack2": 10,
-      "hit": 12,
-      "death": 8
-    },
-    "once": [
-      "death"
     ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\evil-wizard-2\\Attack1.png",
-      "assets\\packs\\evil-wizard-2\\Attack2.png",
-      "assets\\packs\\evil-wizard-2\\Death.png",
-      "assets\\packs\\evil-wizard-2\\Idle.png",
-      "assets\\packs\\evil-wizard-2\\Run.png",
-      "assets\\packs\\evil-wizard-2\\Take hit.png"
+    "front": [
+      {
+        "ax": 32.0,
+        "ay": 56,
+        "h": 64,
+        "w": 64,
+        "x": 672,
+        "y": 128
+      }
+    ],
+    "hit": [
+      {
+        "ax": 32.0,
+        "ay": 53,
+        "h": 64,
+        "w": 64,
+        "x": 608,
+        "y": 128
+      }
+    ],
+    "howl": [
+      {
+        "ax": 38.0,
+        "ay": 56,
+        "h": 64,
+        "w": 76,
+        "x": 532,
+        "y": 128
+      }
     ],
     "idle": [
       {
+        "ax": 32.0,
+        "ay": 50,
+        "h": 64,
+        "w": 64,
         "x": 0,
-        "y": 0,
-        "w": 57,
-        "h": 95,
-        "ax": 17.0,
-        "ay": 95
-      },
-      {
-        "x": 57,
-        "y": 0,
-        "w": 56,
-        "h": 100,
-        "ax": 17.0,
-        "ay": 100
-      },
-      {
-        "x": 113,
-        "y": 0,
-        "w": 56,
-        "h": 103,
-        "ax": 17.0,
-        "ay": 103
-      },
-      {
-        "x": 169,
-        "y": 0,
-        "w": 56,
-        "h": 103,
-        "ax": 17.0,
-        "ay": 103
-      },
-      {
-        "x": 225,
-        "y": 0,
-        "w": 57,
-        "h": 100,
-        "ax": 17.0,
-        "ay": 100
-      },
-      {
-        "x": 282,
-        "y": 0,
-        "w": 55,
-        "h": 104,
-        "ax": 17.0,
-        "ay": 104
-      },
-      {
-        "x": 337,
-        "y": 0,
-        "w": 54,
-        "h": 97,
-        "ax": 17.0,
-        "ay": 97
-      },
-      {
-        "x": 391,
-        "y": 0,
-        "w": 56,
-        "h": 97,
-        "ax": 17.0,
-        "ay": 97
+        "y": 0
       }
     ],
+    "image": "assets/library/units/wolf.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "pounce": [
+      {
+        "ax": 32.0,
+        "ay": 43,
+        "h": 64,
+        "w": 64,
+        "x": 404,
+        "y": 64
+      }
+    ],
+    "rates": {
+      "attack": 8,
+      "death": 1,
+      "front": 1,
+      "hit": 1,
+      "howl": 4,
+      "idle": 4,
+      "pounce": 8,
+      "run": 8,
+      "sniff": 4
+    },
+    "referenceHeight": 64,
     "run": [
       {
-        "x": 0,
-        "y": 104,
-        "w": 65,
-        "h": 61,
-        "ax": 31.0,
-        "ay": 61
-      },
-      {
-        "x": 65,
-        "y": 104,
-        "w": 67,
-        "h": 62,
-        "ax": 33.0,
-        "ay": 62
-      },
-      {
-        "x": 132,
-        "y": 104,
-        "w": 67,
-        "h": 65,
-        "ax": 33.0,
-        "ay": 65
-      },
-      {
-        "x": 199,
-        "y": 104,
-        "w": 70,
-        "h": 68,
-        "ax": 36.0,
-        "ay": 68
-      },
-      {
-        "x": 269,
-        "y": 104,
-        "w": 67,
-        "h": 61,
-        "ax": 33.0,
-        "ay": 61
-      },
-      {
-        "x": 336,
-        "y": 104,
-        "w": 66,
-        "h": 67,
         "ax": 32.0,
-        "ay": 67
-      },
-      {
-        "x": 402,
-        "y": 104,
-        "w": 65,
-        "h": 65,
-        "ax": 31.0,
-        "ay": 65
-      },
-      {
-        "x": 467,
-        "y": 104,
-        "w": 63,
+        "ay": 50,
         "h": 64,
-        "ax": 29.0,
-        "ay": 67
+        "w": 64,
+        "x": 192,
+        "y": 0
+      },
+      {
+        "ax": 42.0,
+        "ay": 49,
+        "h": 64,
+        "w": 84,
+        "x": 256,
+        "y": 64
+      },
+      {
+        "ax": 32.0,
+        "ay": 49,
+        "h": 64,
+        "w": 64,
+        "x": 340,
+        "y": 64
       }
     ],
+    "sniff": [
+      {
+        "ax": 32.0,
+        "ay": 50,
+        "h": 64,
+        "w": 64,
+        "x": 64,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".test-output/library/wolf-final-atlas.json",
+      ".test-output/library/wolf-final-atlas.png",
+      "C:/Projects/YandexGames/assets/library-wolf-repair-v1.png",
+      "C:/Projects/YandexGames/assets/library-wolf-v1.png"
+    ],
+    "targetHeight": 64
+  },
+  "bremenQuartet": {
     "attack": [
       {
+        "ax": 48,
+        "ay": 48,
+        "h": 96,
+        "w": 96,
         "x": 0,
-        "y": 172,
-        "w": 58,
-        "h": 60,
-        "ax": 51.0,
-        "ay": 60
-      },
+        "y": 96
+      }
+    ],
+    "hit": [
       {
-        "x": 58,
-        "y": 172,
-        "w": 55,
-        "h": 69,
-        "ax": 47.0,
-        "ay": 69
-      },
+        "ax": 48,
+        "ay": 96,
+        "h": 96,
+        "w": 96,
+        "x": 96,
+        "y": 96
+      }
+    ],
+    "idle": [
       {
-        "x": 113,
-        "y": 172,
-        "w": 52,
-        "h": 76,
-        "ax": 41.0,
-        "ay": 76
-      },
+        "ax": 48,
+        "ay": 47,
+        "h": 96,
+        "w": 96,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/bremenQuartet.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 96,
+    "run": [
       {
-        "x": 165,
-        "y": 172,
-        "w": 120,
-        "h": 79,
-        "ax": 16.0,
-        "ay": 79
-      },
+        "ax": 48,
+        "ay": 46,
+        "h": 96,
+        "w": 96,
+        "x": 96,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/cat/original.jfif",
+      ".cache/library-generation/dog/original.jfif",
+      ".cache/library-generation/donkey/original.jfif",
+      ".cache/library-generation/rooster/original.jfif"
+    ],
+    "targetHeight": 80
+  },
+  "calibratorBoss": {
+    "attack": [
       {
-        "x": 285,
-        "y": 172,
-        "w": 127,
-        "h": 115,
-        "ax": 16.0,
-        "ay": 115
-      },
-      {
-        "x": 412,
-        "y": 172,
-        "w": 127,
-        "h": 120,
-        "ax": 16.0,
-        "ay": 120
-      },
-      {
-        "x": 539,
-        "y": 172,
-        "w": 127,
-        "h": 141,
-        "ax": 16.0,
-        "ay": 141
-      },
-      {
-        "x": 666,
-        "y": 172,
-        "w": 79,
-        "h": 120,
-        "ax": 16.0,
-        "ay": 120
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
       }
     ],
     "attack2": [
       {
-        "x": 0,
-        "y": 313,
-        "w": 72,
-        "h": 109,
-        "ax": 16.0,
-        "ay": 109
-      },
-      {
-        "x": 72,
-        "y": 313,
-        "w": 72,
-        "h": 107,
-        "ax": 41.0,
-        "ay": 107
-      },
-      {
-        "x": 144,
-        "y": 313,
-        "w": 75,
-        "h": 114,
-        "ax": 44.0,
-        "ay": 114
-      },
-      {
-        "x": 219,
-        "y": 313,
-        "w": 75,
-        "h": 122,
-        "ax": 43.0,
-        "ay": 122
-      },
-      {
-        "x": 294,
-        "y": 313,
-        "w": 160,
-        "h": 129,
-        "ax": 42.0,
-        "ay": 128
-      },
-      {
-        "x": 454,
-        "y": 313,
-        "w": 148,
-        "h": 139,
-        "ax": 37.0,
-        "ay": 132
-      },
-      {
-        "x": 602,
-        "y": 313,
-        "w": 141,
-        "h": 149,
-        "ax": 33.0,
-        "ay": 136
-      },
-      {
-        "x": 743,
-        "y": 313,
-        "w": 66,
-        "h": 87,
-        "ax": 16.0,
-        "ay": 86
-      }
-    ],
-    "hit": [
-      {
-        "x": 0,
-        "y": 462,
-        "w": 45,
-        "h": 87,
-        "ax": 19.0,
-        "ay": 87
-      },
-      {
-        "x": 45,
-        "y": 462,
-        "w": 34,
-        "h": 86,
-        "ax": 17.0,
-        "ay": 86
-      },
-      {
-        "x": 79,
-        "y": 462,
-        "w": 35,
+        "ax": 40,
+        "ay": 76,
         "h": 80,
-        "ax": 17.0,
-        "ay": 80
+        "w": 80,
+        "x": 0,
+        "y": 80
       }
     ],
     "death": [
       {
-        "x": 0,
-        "y": 549,
-        "w": 45,
-        "h": 83,
-        "ax": 17.0,
-        "ay": 83
-      },
-      {
-        "x": 45,
-        "y": 549,
-        "w": 52,
-        "h": 93,
-        "ax": 17.0,
-        "ay": 93
-      },
-      {
-        "x": 97,
-        "y": 549,
-        "w": 66,
-        "h": 95,
-        "ax": 17.0,
-        "ay": 95
-      },
-      {
-        "x": 163,
-        "y": 549,
-        "w": 96,
-        "h": 103,
-        "ax": 17.0,
-        "ay": 103
-      },
-      {
-        "x": 259,
-        "y": 549,
-        "w": 105,
-        "h": 110,
-        "ax": 17.0,
-        "ay": 110
-      },
-      {
-        "x": 364,
-        "y": 549,
-        "w": 96,
-        "h": 122,
-        "ax": 17.0,
-        "ay": 122
-      },
-      {
-        "x": 460,
-        "y": 549,
-        "w": 105,
-        "h": 13,
-        "ax": 17.0,
-        "ay": 13
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
       }
-    ]
-  },
-  "wraith": {
-    "image": "assets/units/generated/wraith.png",
-    "referenceHeight": 14,
-    "targetHeight": 32,
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/rumple.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
     "rates": {
-      "idle": 6,
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/rumple/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "candyWitch": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/candyWitch.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 69,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/candyWitch/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "cat": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/cat.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
       "run": 8
     },
-    "once": [
-      "death"
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
     ],
-    "offsetY": 0,
     "sources": [
-      "assets\\packs\\debts-depths\\sprGhost1.png"
+      ".cache/library-generation/cat/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "chemistBoss": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 66,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
     ],
     "idle": [
       {
+        "ax": 40,
+        "ay": 67,
+        "h": 80,
+        "w": 80,
         "x": 0,
-        "y": 0,
-        "w": 10,
-        "h": 14,
-        "ax": 3.5,
-        "ay": 15
-      },
-      {
-        "x": 10,
-        "y": 0,
-        "w": 10,
-        "h": 14,
-        "ax": 3.5,
-        "ay": 14
-      },
-      {
-        "x": 20,
-        "y": 0,
-        "w": 10,
-        "h": 14,
-        "ax": 3.5,
-        "ay": 15
-      },
-      {
-        "x": 30,
-        "y": 0,
-        "w": 10,
-        "h": 14,
-        "ax": 3.5,
-        "ay": 16
+        "y": 0
       }
     ],
+    "image": "assets/library/units/snowWhite.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
     "run": [
       {
+        "ax": 40,
+        "ay": 67,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 67,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/snowWhite/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "child": {
+    "attack": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 0
+      }
+    ],
+    "attackDown": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 0
+      }
+    ],
+    "attackSide": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 36
+      }
+    ],
+    "attackUp": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 72
+      }
+    ],
+    "death": [
+      {
+        "ax": 18,
+        "ay": 33,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 108
+      }
+    ],
+    "directional": true,
+    "hit": [
+      {
+        "ax": 18,
+        "ay": 31,
+        "h": 36,
+        "w": 36,
         "x": 0,
-        "y": 14,
-        "w": 10,
-        "h": 14,
-        "ax": 3.5,
-        "ay": 15
+        "y": 108
+      }
+    ],
+    "hitDown": [
+      {
+        "ax": 18,
+        "ay": 31,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 108
+      }
+    ],
+    "hitSide": [
+      {
+        "ax": 18,
+        "ay": 31,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 108
+      }
+    ],
+    "idle": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "idleDown": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "idleSide": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 36
+      }
+    ],
+    "idleUp": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 72
+      }
+    ],
+    "image": "assets/library/units/child.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "portraitScale": 2.064516,
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attackDown": 8,
+      "attackSide": 8,
+      "attackUp": 8,
+      "death": 1,
+      "hit": 1,
+      "hitDown": 1,
+      "hitSide": 1,
+      "idle": 4,
+      "idleDown": 4,
+      "idleSide": 4,
+      "idleUp": 4,
+      "run": 8,
+      "runDown": 8,
+      "runSide": 8,
+      "runUp": 8,
+      "victory": 1
+    },
+    "referenceHeight": 36,
+    "run": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 0
       },
       {
-        "x": 10,
-        "y": 14,
-        "w": 10,
-        "h": 14,
-        "ax": 3.5,
-        "ay": 14
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 0
+      }
+    ],
+    "runDown": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 0
       },
       {
-        "x": 20,
-        "y": 14,
-        "w": 10,
-        "h": 14,
-        "ax": 3.5,
-        "ay": 15
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 0
+      }
+    ],
+    "runSide": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 36
       },
       {
-        "x": 30,
-        "y": 14,
-        "w": 10,
-        "h": 14,
-        "ax": 3.5,
-        "ay": 16
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 36
+      }
+    ],
+    "runUp": [
+      {
+        "ax": 18,
+        "ay": 31,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 72
+      },
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 72
+      }
+    ],
+    "sources": [
+      ".test-output/library/child-nearest-atlas.png",
+      "C:/Projects/YandexGames/assets/library-child-v1.png"
+    ],
+    "targetHeight": 36,
+    "victory": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 108
       }
     ]
   },
-  "ghostOrb": {
-    "image": "assets/units/generated/ghostOrb.png",
-    "referenceHeight": 8,
-    "targetHeight": 12,
-    "rates": {
-      "idle": 8
-    },
-    "once": [
-      "death"
+  "cinderella": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
     ],
-    "offsetY": 4.0,
-    "sources": [
-      "assets\\packs\\debts-depths\\sprGhostOrb.png"
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
     ],
     "idle": [
       {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
         "x": 0,
-        "y": 0,
-        "w": 13,
-        "h": 8,
-        "ax": 5.0,
-        "ay": 8
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/cinderella.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
       },
       {
-        "x": 13,
-        "y": 0,
-        "w": 14,
-        "h": 8,
-        "ax": 6.0,
-        "ay": 8
+        "ax": 40,
+        "ay": 72,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/cinderella/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "curseCaster": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 42,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/messenger.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/messenger/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "dog": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 37,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 37,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/dog.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 36,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/dog/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "donkey": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 46,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/donkey.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/donkey/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "dust": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 39,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/gingerbread.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 39,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/gingerbread/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "dwarf": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/dwarf.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/dwarf/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "finalBoss": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/cinderella.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
       },
       {
-        "x": 27,
-        "y": 0,
-        "w": 13,
-        "h": 8,
-        "ax": 5.0,
-        "ay": 8
+        "ax": 40,
+        "ay": 72,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/cinderella/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "flyingEye": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 42,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/pigeon.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/pigeon/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "gingerbread": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 39,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/gingerbread.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 39,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/gingerbread/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "goblin": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/dwarf.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/dwarf/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "guardian": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/lackey.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/lackey/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "hanger": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 46,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/strawMan.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/strawMan/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "hunter": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 42,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/hunter.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/hunter/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "inker": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 42,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/pigeon.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/pigeon/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "lackey": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/lackey.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/lackey/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "librarian": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/librarian.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/librarian/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "lost": {
+    "attack": [
+      {
+        "ax": 32.0,
+        "ay": 50,
+        "h": 64,
+        "w": 64,
+        "x": 468,
+        "y": 64
+      }
+    ],
+    "death": [
+      {
+        "ax": 32.0,
+        "ay": 58,
+        "h": 64,
+        "w": 64,
+        "x": 736,
+        "y": 128
+      }
+    ],
+    "front": [
+      {
+        "ax": 32.0,
+        "ay": 56,
+        "h": 64,
+        "w": 64,
+        "x": 672,
+        "y": 128
+      }
+    ],
+    "hit": [
+      {
+        "ax": 32.0,
+        "ay": 53,
+        "h": 64,
+        "w": 64,
+        "x": 608,
+        "y": 128
+      }
+    ],
+    "howl": [
+      {
+        "ax": 38.0,
+        "ay": 56,
+        "h": 64,
+        "w": 76,
+        "x": 532,
+        "y": 128
+      }
+    ],
+    "idle": [
+      {
+        "ax": 32.0,
+        "ay": 50,
+        "h": 64,
+        "w": 64,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/wolf.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "pounce": [
+      {
+        "ax": 32.0,
+        "ay": 43,
+        "h": 64,
+        "w": 64,
+        "x": 404,
+        "y": 64
+      }
+    ],
+    "rates": {
+      "attack": 8,
+      "death": 1,
+      "front": 1,
+      "hit": 1,
+      "howl": 4,
+      "idle": 4,
+      "pounce": 8,
+      "run": 8,
+      "sniff": 4
+    },
+    "referenceHeight": 64,
+    "run": [
+      {
+        "ax": 32.0,
+        "ay": 50,
+        "h": 64,
+        "w": 64,
+        "x": 192,
+        "y": 0
       },
       {
-        "x": 40,
-        "y": 0,
-        "w": 14,
-        "h": 8,
-        "ax": 6.0,
-        "ay": 8
+        "ax": 42.0,
+        "ay": 49,
+        "h": 64,
+        "w": 84,
+        "x": 256,
+        "y": 64
       },
       {
-        "x": 54,
-        "y": 0,
-        "w": 13,
-        "h": 8,
-        "ax": 5.0,
-        "ay": 8
+        "ax": 32.0,
+        "ay": 49,
+        "h": 64,
+        "w": 64,
+        "x": 340,
+        "y": 64
+      }
+    ],
+    "sniff": [
+      {
+        "ax": 32.0,
+        "ay": 50,
+        "h": 64,
+        "w": 64,
+        "x": 64,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".test-output/library/wolf-final-atlas.json",
+      ".test-output/library/wolf-final-atlas.png",
+      "C:/Projects/YandexGames/assets/library-wolf-repair-v1.png",
+      "C:/Projects/YandexGames/assets/library-wolf-v1.png"
+    ],
+    "targetHeight": 64
+  },
+  "messenger": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 42,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/messenger.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/messenger/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "mimic": {
+    "attack": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 0
+      }
+    ],
+    "attackDown": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 0
+      }
+    ],
+    "attackSide": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 36
+      }
+    ],
+    "attackUp": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 72
+      }
+    ],
+    "death": [
+      {
+        "ax": 18,
+        "ay": 33,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 108
+      }
+    ],
+    "directional": true,
+    "hit": [
+      {
+        "ax": 18,
+        "ay": 31,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 108
+      }
+    ],
+    "hitDown": [
+      {
+        "ax": 18,
+        "ay": 31,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 108
+      }
+    ],
+    "hitSide": [
+      {
+        "ax": 18,
+        "ay": 31,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 108
+      }
+    ],
+    "idle": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "idleDown": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "idleSide": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 36
+      }
+    ],
+    "idleUp": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 0,
+        "y": 72
+      }
+    ],
+    "image": "assets/library/units/child.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "portraitScale": 2.064516,
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attackDown": 8,
+      "attackSide": 8,
+      "attackUp": 8,
+      "death": 1,
+      "hit": 1,
+      "hitDown": 1,
+      "hitSide": 1,
+      "idle": 4,
+      "idleDown": 4,
+      "idleSide": 4,
+      "idleUp": 4,
+      "run": 8,
+      "runDown": 8,
+      "runSide": 8,
+      "runUp": 8,
+      "victory": 1
+    },
+    "referenceHeight": 36,
+    "run": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 0
       },
       {
-        "x": 67,
-        "y": 0,
-        "w": 14,
-        "h": 8,
-        "ax": 6.0,
-        "ay": 8
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 0
+      }
+    ],
+    "runDown": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 0
       },
       {
-        "x": 81,
-        "y": 0,
-        "w": 13,
-        "h": 8,
-        "ax": 5.0,
-        "ay": 8
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 0
+      }
+    ],
+    "runSide": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 36
       },
       {
-        "x": 94,
-        "y": 0,
-        "w": 14,
-        "h": 8,
-        "ax": 6.0,
-        "ay": 8
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 36
+      }
+    ],
+    "runUp": [
+      {
+        "ax": 18,
+        "ay": 31,
+        "h": 36,
+        "w": 36,
+        "x": 36,
+        "y": 72
+      },
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 72,
+        "y": 72
+      }
+    ],
+    "sources": [
+      ".test-output/library/child-nearest-atlas.png",
+      "C:/Projects/YandexGames/assets/library-child-v1.png"
+    ],
+    "targetHeight": 36,
+    "victory": [
+      {
+        "ax": 18,
+        "ay": 32,
+        "h": 36,
+        "w": 36,
+        "x": 108,
+        "y": 108
       }
     ]
+  },
+  "moth": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 31,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 38,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 36,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/sugarBat.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 34,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/sugarBat/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "mushroom": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 39,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/gingerbread.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 39,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/gingerbread/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "npc": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/librarian.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/librarian/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "packer": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/robber.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/robber/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "pigeon": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 41,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 42,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/pigeon.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 40,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/pigeon/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "queen": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/queen.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/queen/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "rat": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 46,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/stepsister.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/stepsister/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "redHood": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/redHood.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/redHood/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "riftWarden": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/rumple.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/rumple/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "robber": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/robber.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/robber/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "rooster": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 47,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 47,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 47,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/rooster.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 46,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/rooster/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "rumple": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/rumple.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 75,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/rumple/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 76,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "shooter": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/robber.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/robber/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "skeleton": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/lackey.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/lackey/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "sniper": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 42,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/hunter.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 43,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/hunter/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "snowWhite": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 66,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 67,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/snowWhite.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 67,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 67,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/snowWhite/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "sorterBoss": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/candyWitch.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 69,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/candyWitch/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "spawner": {
+    "attack": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 0
+      }
+    ],
+    "attack2": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 80
+      }
+    ],
+    "death": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 240,
+        "y": 80
+      }
+    ],
+    "hit": [
+      {
+        "ax": 40,
+        "ay": 73,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 80
+      }
+    ],
+    "idle": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/candyWitch.png",
+    "offsetY": 0,
+    "once": [
+      "death"
+    ],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "attack2": 8,
+      "death": 1,
+      "hit": 1,
+      "idle": 4,
+      "run": 8,
+      "special": 6
+    },
+    "referenceHeight": 80,
+    "run": [
+      {
+        "ax": 40,
+        "ay": 71,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 0
+      },
+      {
+        "ax": 40,
+        "ay": 69,
+        "h": 80,
+        "w": 80,
+        "x": 160,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/candyWitch/original.jfif"
+    ],
+    "special": [
+      {
+        "ax": 40,
+        "ay": 74,
+        "h": 80,
+        "w": 80,
+        "x": 80,
+        "y": 80
+      }
+    ],
+    "targetHeight": 80
+  },
+  "stepsister": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 46,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/stepsister.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/stepsister/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "strawMan": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 46,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/strawMan.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/strawMan/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "sugarBat": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 31,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 38,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 36,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/sugarBat.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 34,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/sugarBat/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "thief": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 46,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/stepsister.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/stepsister/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "umbrellaBoss": {
+    "attack": [
+      {
+        "ax": 48,
+        "ay": 48,
+        "h": 96,
+        "w": 96,
+        "x": 0,
+        "y": 96
+      }
+    ],
+    "hit": [
+      {
+        "ax": 48,
+        "ay": 96,
+        "h": 96,
+        "w": 96,
+        "x": 96,
+        "y": 96
+      }
+    ],
+    "idle": [
+      {
+        "ax": 48,
+        "ay": 47,
+        "h": 96,
+        "w": 96,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/bremenQuartet.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 96,
+    "run": [
+      {
+        "ax": 48,
+        "ay": 46,
+        "h": 96,
+        "w": 96,
+        "x": 96,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/cat/original.jfif",
+      ".cache/library-generation/dog/original.jfif",
+      ".cache/library-generation/donkey/original.jfif",
+      ".cache/library-generation/rooster/original.jfif"
+    ],
+    "targetHeight": 80
   },
   "workshopMonk": {
-    "image": "assets/units/generated/workshopMonk.png",
-    "referenceHeight": 15,
-    "targetHeight": 28,
-    "rates": {
-      "idle": 4,
-      "run": 4
-    },
-    "once": [
-      "death"
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
     ],
-    "offsetY": 0,
-    "sources": [
-      "assets\\packs\\debts-depths\\sprLizardMonk1.png"
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
     ],
     "idle": [
       {
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
         "x": 0,
-        "y": 0,
-        "w": 14,
-        "h": 14,
-        "ax": 7.5,
-        "ay": 14
-      },
-      {
-        "x": 14,
-        "y": 0,
-        "w": 14,
-        "h": 15,
-        "ax": 7.5,
-        "ay": 15
-      },
-      {
-        "x": 28,
-        "y": 0,
-        "w": 16,
-        "h": 15,
-        "ax": 8.5,
-        "ay": 15
-      },
-      {
-        "x": 44,
-        "y": 0,
-        "w": 16,
-        "h": 14,
-        "ax": 8.5,
-        "ay": 14
+        "y": 0
       }
     ],
+    "image": "assets/library/units/librarian.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
     "run": [
       {
-        "x": 0,
-        "y": 15,
-        "w": 14,
-        "h": 14,
-        "ax": 7.5,
-        "ay": 14
-      },
-      {
-        "x": 14,
-        "y": 15,
-        "w": 14,
-        "h": 15,
-        "ax": 7.5,
-        "ay": 15
-      },
-      {
-        "x": 28,
-        "y": 15,
-        "w": 16,
-        "h": 15,
-        "ax": 8.5,
-        "ay": 15
-      },
-      {
-        "x": 44,
-        "y": 15,
-        "w": 16,
-        "h": 14,
-        "ax": 8.5,
-        "ay": 14
+        "ax": 24,
+        "ay": 44,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
       }
-    ]
+    ],
+    "sources": [
+      ".cache/library-generation/librarian/original.jfif"
+    ],
+    "targetHeight": 48
+  },
+  "wraith": {
+    "attack": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 48
+      }
+    ],
+    "hit": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 48
+      }
+    ],
+    "idle": [
+      {
+        "ax": 24,
+        "ay": 46,
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "image": "assets/library/units/strawMan.png",
+    "offsetY": 0,
+    "once": [],
+    "proceduralMotion": true,
+    "rates": {
+      "attack": 8,
+      "hit": 1,
+      "idle": 4,
+      "run": 8
+    },
+    "referenceHeight": 48,
+    "run": [
+      {
+        "ax": 24,
+        "ay": 45,
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      }
+    ],
+    "sources": [
+      ".cache/library-generation/strawMan/original.jfif"
+    ],
+    "targetHeight": 48
   }
 };

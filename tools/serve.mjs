@@ -68,7 +68,7 @@ server.on("error", (error) => {
 
 server.listen(PORT, "127.0.0.1", () => {
   const url = `http://127.0.0.1:${PORT}/`;
-  console.log(`Бюро открыто: ${url}`);
+  console.log(`Библиотека открыта: ${url}`);
   console.log("Ctrl+C — остановить сервер.");
   if (process.argv.includes("--open")) openBrowser(url);
 });

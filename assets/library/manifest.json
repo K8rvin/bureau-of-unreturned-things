@@ -1,0 +1,6762 @@
+{
+  "aliases": {
+    "bat": "pigeon",
+    "boss": "lost",
+    "calibratorBoss": "rumple",
+    "chemistBoss": "snowWhite",
+    "curseCaster": "messenger",
+    "dust": "gingerbread",
+    "finalBoss": "cinderella",
+    "flyingEye": "pigeon",
+    "goblin": "dwarf",
+    "guardian": "lackey",
+    "hanger": "strawMan",
+    "inker": "pigeon",
+    "mimic": "child",
+    "moth": "sugarBat",
+    "mushroom": "gingerbread",
+    "npc": "librarian",
+    "packer": "robber",
+    "queen": "queen",
+    "rat": "stepsister",
+    "redHood": "redHood",
+    "riftWarden": "rumple",
+    "shooter": "robber",
+    "skeleton": "lackey",
+    "sniper": "hunter",
+    "sorterBoss": "candyWitch",
+    "spawner": "candyWitch",
+    "thief": "stepsister",
+    "umbrellaBoss": "bremenQuartet",
+    "workshopMonk": "librarian",
+    "wraith": "strawMan"
+  },
+  "rooms": {
+    "bremen": {
+      "dimensions": {
+        "height": 270,
+        "mode": "RGB",
+        "width": 480
+      },
+      "frameGrid": null,
+      "image": "assets/library/rooms/bremen.png",
+      "kind": "room",
+      "original": {
+        "format": "JPEG",
+        "metadata": ".cache/library-generation/bremen/metadata.json",
+        "mode": "RGB",
+        "size": [
+          2752,
+          1536
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 64,
+        "appliedByBuilder": true,
+        "colors": 64,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/bremen/metadata.json",
+        "original": ".cache/library-generation/bremen/original.jfif"
+      },
+      "transformations": [
+        {
+          "from": [
+            2752,
+            1536
+          ],
+          "method": "LANCZOS",
+          "operation": "resize",
+          "to": [
+            480,
+            270
+          ]
+        },
+        {
+          "colors": 64,
+          "dither": "none",
+          "operation": "palette",
+          "outputMode": "RGB"
+        }
+      ]
+    },
+    "cinderella-room": {
+      "dimensions": {
+        "height": 270,
+        "mode": "RGB",
+        "width": 480
+      },
+      "frameGrid": null,
+      "image": "assets/library/rooms/cinderella-room.png",
+      "kind": "room",
+      "original": {
+        "format": "JPEG",
+        "metadata": ".cache/library-generation/cinderella-room/metadata.json",
+        "mode": "RGB",
+        "size": [
+          2752,
+          1536
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 64,
+        "appliedByBuilder": true,
+        "colors": 64,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/cinderella-room/metadata.json",
+        "original": ".cache/library-generation/cinderella-room/original.jfif"
+      },
+      "transformations": [
+        {
+          "from": [
+            2752,
+            1536
+          ],
+          "method": "LANCZOS",
+          "operation": "resize",
+          "to": [
+            480,
+            270
+          ]
+        },
+        {
+          "colors": 64,
+          "dither": "none",
+          "operation": "palette",
+          "outputMode": "RGB"
+        }
+      ]
+    },
+    "hansel": {
+      "dimensions": {
+        "height": 270,
+        "mode": "RGB",
+        "width": 480
+      },
+      "frameGrid": null,
+      "image": "assets/library/rooms/hansel.png",
+      "kind": "room",
+      "original": {
+        "format": "JPEG",
+        "metadata": ".cache/library-generation/hansel/metadata.json",
+        "mode": "RGB",
+        "size": [
+          2752,
+          1536
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 64,
+        "appliedByBuilder": true,
+        "colors": 64,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/hansel/metadata.json",
+        "original": ".cache/library-generation/hansel/original.jfif"
+      },
+      "transformations": [
+        {
+          "from": [
+            2752,
+            1536
+          ],
+          "method": "LANCZOS",
+          "operation": "resize",
+          "to": [
+            480,
+            270
+          ]
+        },
+        {
+          "colors": 64,
+          "dither": "none",
+          "operation": "palette",
+          "outputMode": "RGB"
+        }
+      ]
+    },
+    "red-hood": {
+      "dimensions": {
+        "height": 270,
+        "mode": "RGB",
+        "width": 480
+      },
+      "frameGrid": null,
+      "image": "assets/library/rooms/red-hood.png",
+      "kind": "room",
+      "original": {
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1672,
+          941
+        ]
+      },
+      "palette": {
+        "actualColors": 64,
+        "appliedByBuilder": true,
+        "colors": 64,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "original": "C:/Projects/YandexGames/assets/library-red-hood-room-v1.png"
+      },
+      "transformations": [
+        {
+          "from": [
+            1672,
+            941
+          ],
+          "method": "LANCZOS",
+          "operation": "resize",
+          "to": [
+            480,
+            270
+          ]
+        },
+        {
+          "colors": 64,
+          "dither": "none",
+          "operation": "palette",
+          "outputMode": "RGB"
+        }
+      ]
+    },
+    "rumple-room": {
+      "dimensions": {
+        "height": 270,
+        "mode": "RGB",
+        "width": 480
+      },
+      "frameGrid": null,
+      "image": "assets/library/rooms/rumple-room.png",
+      "kind": "room",
+      "original": {
+        "format": "JPEG",
+        "metadata": ".cache/library-generation/rumple-room/metadata.json",
+        "mode": "RGB",
+        "size": [
+          2752,
+          1536
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 64,
+        "appliedByBuilder": true,
+        "colors": 64,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/rumple-room/metadata.json",
+        "original": ".cache/library-generation/rumple-room/original.jfif"
+      },
+      "transformations": [
+        {
+          "from": [
+            2752,
+            1536
+          ],
+          "method": "LANCZOS",
+          "operation": "resize",
+          "to": [
+            480,
+            270
+          ]
+        },
+        {
+          "colors": 64,
+          "dither": "none",
+          "operation": "palette",
+          "outputMode": "RGB"
+        }
+      ]
+    },
+    "snow-white": {
+      "dimensions": {
+        "height": 270,
+        "mode": "RGB",
+        "width": 480
+      },
+      "frameGrid": null,
+      "image": "assets/library/rooms/snow-white.png",
+      "kind": "room",
+      "original": {
+        "format": "JPEG",
+        "metadata": ".cache/library-generation/snow-white/metadata.json",
+        "mode": "RGB",
+        "size": [
+          2752,
+          1536
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 64,
+        "appliedByBuilder": true,
+        "colors": 64,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/snow-white/metadata.json",
+        "original": ".cache/library-generation/snow-white/original.jfif"
+      },
+      "transformations": [
+        {
+          "from": [
+            2752,
+            1536
+          ],
+          "method": "LANCZOS",
+          "operation": "resize",
+          "to": [
+            480,
+            270
+          ]
+        },
+        {
+          "colors": 64,
+          "dither": "none",
+          "operation": "palette",
+          "outputMode": "RGB"
+        }
+      ]
+    }
+  },
+  "skipped": [],
+  "sprites": {
+    "bremenQuartet": {
+      "dimensions": {
+        "height": 192,
+        "mode": "RGBA",
+        "width": 192
+      },
+      "frameGrid": {
+        "cellHeight": 96,
+        "cellWidth": 96,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "ax": 48,
+          "ay": 47,
+          "h": 96,
+          "w": 96,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "ax": 48,
+          "ay": 46,
+          "h": 96,
+          "w": 96,
+          "x": 96,
+          "y": 0
+        },
+        {
+          "ax": 48,
+          "ay": 48,
+          "h": 96,
+          "w": 96,
+          "x": 0,
+          "y": 96
+        },
+        {
+          "ax": 48,
+          "ay": 96,
+          "h": 96,
+          "w": 96,
+          "x": 96,
+          "y": 96
+        }
+      ],
+      "image": "assets/library/units/bremenQuartet.png",
+      "kind": "boss",
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "compositeParts": [
+          "donkey",
+          "dog",
+          "cat",
+          "rooster"
+        ],
+        "originals": [
+          ".cache/library-generation/cat/original.jfif",
+          ".cache/library-generation/dog/original.jfif",
+          ".cache/library-generation/donkey/original.jfif",
+          ".cache/library-generation/rooster/original.jfif"
+        ]
+      },
+      "transformations": [
+        {
+          "layout": "2x2 parts inside each 96x96 state cell",
+          "operation": "compose",
+          "parts": [
+            "donkey",
+            "dog",
+            "cat",
+            "rooster"
+          ]
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "candyWitch": {
+      "dimensions": {
+        "height": 160,
+        "mode": "RGBA",
+        "width": 320
+      },
+      "frameGrid": {
+        "cellHeight": 80,
+        "cellWidth": 80,
+        "columns": 4,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 71,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 71,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            688,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 132032,
+            "bbox": [
+              194,
+              119,
+              551,
+              683
+            ],
+            "removedComponentsBelowArea": 132,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 71,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 71,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            688,
+            0,
+            1376,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 127288,
+            "bbox": [
+              155,
+              113,
+              511,
+              683
+            ],
+            "removedComponentsBelowArea": 127,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 69,
+          "column": 2,
+          "index": 2,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 69,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1376,
+            0,
+            2064,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 131185,
+            "bbox": [
+              84,
+              113,
+              529,
+              671
+            ],
+            "removedComponentsBelowArea": 131,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 71,
+          "column": 3,
+          "index": 3,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 71,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            2064,
+            0,
+            2752,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 142220,
+            "bbox": [
+              81,
+              130,
+              637,
+              683
+            ],
+            "removedComponentsBelowArea": 142,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 74,
+          "column": 0,
+          "index": 4,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 74,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            768,
+            688,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 139598,
+            "bbox": [
+              137,
+              149,
+              591,
+              718
+            ],
+            "removedComponentsBelowArea": 139,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 74,
+          "column": 1,
+          "index": 5,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 74,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            688,
+            768,
+            1376,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 132777,
+            "bbox": [
+              119,
+              154,
+              563,
+              718
+            ],
+            "removedComponentsBelowArea": 132,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 73,
+          "column": 2,
+          "index": 6,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 73,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            1376,
+            768,
+            2064,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 138159,
+            "bbox": [
+              140,
+              154,
+              603,
+              707
+            ],
+            "removedComponentsBelowArea": 138,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 73,
+          "column": 3,
+          "index": 7,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 73,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            2064,
+            768,
+            2752,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 158062,
+            "bbox": [
+              92,
+              138,
+              596,
+              701
+            ],
+            "removedComponentsBelowArea": 158,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/candyWitch.png",
+      "kind": "boss",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2752,
+          1536
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/candyWitch/metadata.json",
+        "original": ".cache/library-generation/candyWitch/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3096849,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "0a859abf2429001bdda3eb5922bfecb44049464f8089e1925ed971ee92893048",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "cat": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 41,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 41,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 256012,
+            "bbox": [
+              48,
+              212,
+              940,
+              888
+            ],
+            "removedComponentsBelowArea": 256,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 41,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 41,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 257012,
+            "bbox": [
+              31,
+              276,
+              973,
+              889
+            ],
+            "removedComponentsBelowArea": 257,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 43,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 342843,
+            "bbox": [
+              68,
+              91,
+              980,
+              936
+            ],
+            "removedComponentsBelowArea": 342,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 43,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 290516,
+            "bbox": [
+              36,
+              305,
+              960,
+              925
+            ],
+            "removedComponentsBelowArea": 290,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/cat.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/cat/metadata.json",
+        "original": ".cache/library-generation/cat/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 2,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3047040,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "b123e8a47547e4458d847469fa756b1a9a5f85e7ae602e460d2e17b42f2b351b",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "child": {
+      "dimensions": {
+        "height": 144,
+        "mode": "RGBA",
+        "width": 144
+      },
+      "frameGrid": {
+        "cellHeight": 36,
+        "cellWidth": 36,
+        "columns": 4,
+        "rows": 4
+      },
+      "frames": [
+        {
+          "column": 0,
+          "index": 0,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 0,
+            "y": 0
+          },
+          "outputVisibleComponent": {
+            "area": 311,
+            "bbox": [
+              11,
+              1,
+              26,
+              32
+            ]
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            314,
+            314
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 24456,
+            "bbox": [
+              97,
+              12,
+              227,
+              280
+            ]
+          }
+        },
+        {
+          "column": 1,
+          "index": 1,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 36,
+            "y": 0
+          },
+          "outputVisibleComponent": {
+            "area": 311,
+            "bbox": [
+              11,
+              1,
+              29,
+              32
+            ]
+          },
+          "row": 0,
+          "sourceCell": [
+            314,
+            0,
+            627,
+            314
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 24907,
+            "bbox": [
+              94,
+              13,
+              252,
+              283
+            ]
+          }
+        },
+        {
+          "column": 2,
+          "index": 2,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 72,
+            "y": 0
+          },
+          "outputVisibleComponent": {
+            "area": 329,
+            "bbox": [
+              10,
+              1,
+              29,
+              32
+            ]
+          },
+          "row": 0,
+          "sourceCell": [
+            627,
+            0,
+            940,
+            314
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 26068,
+            "bbox": [
+              88,
+              12,
+              252,
+              284
+            ]
+          }
+        },
+        {
+          "column": 3,
+          "index": 3,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 108,
+            "y": 0
+          },
+          "outputVisibleComponent": {
+            "area": 385,
+            "bbox": [
+              9,
+              1,
+              33,
+              32
+            ]
+          },
+          "row": 0,
+          "sourceCell": [
+            940,
+            0,
+            1254,
+            314
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 32563,
+            "bbox": [
+              76,
+              13,
+              286,
+              280
+            ]
+          }
+        },
+        {
+          "column": 0,
+          "index": 4,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 0,
+            "y": 36
+          },
+          "outputVisibleComponent": {
+            "area": 296,
+            "bbox": [
+              12,
+              1,
+              26,
+              32
+            ]
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            314,
+            314,
+            627
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 22947,
+            "bbox": [
+              101,
+              11,
+              227,
+              281
+            ]
+          }
+        },
+        {
+          "column": 1,
+          "index": 5,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 36,
+            "y": 36
+          },
+          "outputVisibleComponent": {
+            "area": 306,
+            "bbox": [
+              10,
+              1,
+              26,
+              32
+            ]
+          },
+          "row": 1,
+          "sourceCell": [
+            314,
+            314,
+            627,
+            627
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 24317,
+            "bbox": [
+              88,
+              11,
+              230,
+              281
+            ]
+          }
+        },
+        {
+          "column": 2,
+          "index": 6,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 72,
+            "y": 36
+          },
+          "outputVisibleComponent": {
+            "area": 327,
+            "bbox": [
+              8,
+              1,
+              29,
+              32
+            ]
+          },
+          "row": 1,
+          "sourceCell": [
+            627,
+            314,
+            940,
+            627
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 26036,
+            "bbox": [
+              70,
+              12,
+              252,
+              281
+            ]
+          }
+        },
+        {
+          "column": 3,
+          "index": 7,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 108,
+            "y": 36
+          },
+          "outputVisibleComponent": {
+            "area": 372,
+            "bbox": [
+              8,
+              1,
+              33,
+              32
+            ]
+          },
+          "row": 1,
+          "sourceCell": [
+            940,
+            314,
+            1254,
+            627
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 32117,
+            "bbox": [
+              72,
+              11,
+              285,
+              282
+            ]
+          }
+        },
+        {
+          "column": 0,
+          "index": 8,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 0,
+            "y": 72
+          },
+          "outputVisibleComponent": {
+            "area": 308,
+            "bbox": [
+              11,
+              1,
+              26,
+              32
+            ]
+          },
+          "row": 2,
+          "sourceCell": [
+            0,
+            627,
+            314,
+            940
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 24099,
+            "bbox": [
+              97,
+              10,
+              226,
+              279
+            ]
+          }
+        },
+        {
+          "column": 1,
+          "index": 9,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 31,
+            "h": 36,
+            "w": 36,
+            "x": 36,
+            "y": 72
+          },
+          "outputVisibleComponent": {
+            "area": 297,
+            "bbox": [
+              10,
+              2,
+              29,
+              32
+            ]
+          },
+          "row": 2,
+          "sourceCell": [
+            314,
+            627,
+            627,
+            940
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 23197,
+            "bbox": [
+              89,
+              14,
+              252,
+              278
+            ]
+          }
+        },
+        {
+          "column": 2,
+          "index": 10,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 72,
+            "y": 72
+          },
+          "outputVisibleComponent": {
+            "area": 295,
+            "bbox": [
+              10,
+              2,
+              27,
+              32
+            ]
+          },
+          "row": 2,
+          "sourceCell": [
+            627,
+            627,
+            940,
+            940
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 23510,
+            "bbox": [
+              90,
+              14,
+              237,
+              282
+            ]
+          }
+        },
+        {
+          "column": 3,
+          "index": 11,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 108,
+            "y": 72
+          },
+          "outputVisibleComponent": {
+            "area": 370,
+            "bbox": [
+              9,
+              2,
+              34,
+              32
+            ]
+          },
+          "row": 2,
+          "sourceCell": [
+            940,
+            627,
+            1254,
+            940
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 31829,
+            "bbox": [
+              81,
+              14,
+              297,
+              279
+            ]
+          }
+        },
+        {
+          "column": 0,
+          "index": 12,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 31,
+            "h": 36,
+            "w": 36,
+            "x": 0,
+            "y": 108
+          },
+          "outputVisibleComponent": {
+            "area": 323,
+            "bbox": [
+              11,
+              2,
+              27,
+              31
+            ]
+          },
+          "row": 3,
+          "sourceCell": [
+            0,
+            940,
+            314,
+            1254
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 26007,
+            "bbox": [
+              95,
+              17,
+              237,
+              275
+            ]
+          }
+        },
+        {
+          "column": 1,
+          "index": 13,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 31,
+            "h": 36,
+            "w": 36,
+            "x": 36,
+            "y": 108
+          },
+          "outputVisibleComponent": {
+            "area": 294,
+            "bbox": [
+              12,
+              2,
+              28,
+              31
+            ]
+          },
+          "row": 3,
+          "sourceCell": [
+            314,
+            940,
+            627,
+            1254
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 23453,
+            "bbox": [
+              96,
+              17,
+              236,
+              272
+            ]
+          }
+        },
+        {
+          "column": 2,
+          "index": 14,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 33,
+            "h": 36,
+            "w": 36,
+            "x": 72,
+            "y": 108
+          },
+          "outputVisibleComponent": {
+            "area": 383,
+            "bbox": [
+              5,
+              4,
+              33,
+              33
+            ]
+          },
+          "row": 3,
+          "sourceCell": [
+            627,
+            940,
+            940,
+            1254
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 32518,
+            "bbox": [
+              47,
+              12,
+              291,
+              288
+            ]
+          }
+        },
+        {
+          "column": 3,
+          "index": 15,
+          "outputFrame": {
+            "ax": 18,
+            "ay": 32,
+            "h": 36,
+            "w": 36,
+            "x": 108,
+            "y": 108
+          },
+          "outputVisibleComponent": {
+            "area": 335,
+            "bbox": [
+              9,
+              2,
+              27,
+              32
+            ]
+          },
+          "row": 3,
+          "sourceCell": [
+            940,
+            940,
+            1254,
+            1254
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 27099,
+            "bbox": [
+              77,
+              17,
+              235,
+              280
+            ]
+          }
+        }
+      ],
+      "image": "assets/library/units/child.png",
+      "kind": "unit",
+      "medianVisibleCharacterHeight": 31.0,
+      "original": {
+        "format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": false,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "approvedAtlas": ".test-output/library/child-nearest-atlas.png",
+        "originalForAnchors": "C:/Projects/YandexGames/assets/library-child-v1.png"
+      },
+      "transformations": [
+        {
+          "operation": "copy-approved-atlas",
+          "paletteReduction": false,
+          "resize": false
+        },
+        {
+          "alphaThreshold": 16,
+          "anchorX": 18,
+          "anchorY": "floor(componentBottom * 36 / sourceCellHeight)",
+          "connectivity": 8,
+          "operation": "measure-original-main-alpha-component"
+        }
+      ]
+    },
+    "cinderella": {
+      "dimensions": {
+        "height": 160,
+        "mode": "RGBA",
+        "width": 320
+      },
+      "frameGrid": {
+        "cellHeight": 80,
+        "cellWidth": 80,
+        "columns": 4,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 74,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 74,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            688,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 129281,
+            "bbox": [
+              207,
+              61,
+              468,
+              713
+            ],
+            "removedComponentsBelowArea": 129,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 74,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 74,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            688,
+            0,
+            1376,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 135123,
+            "bbox": [
+              184,
+              61,
+              501,
+              713
+            ],
+            "removedComponentsBelowArea": 135,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 72,
+          "column": 2,
+          "index": 2,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 72,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1376,
+            0,
+            2064,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 133604,
+            "bbox": [
+              175,
+              61,
+              492,
+              699
+            ],
+            "removedComponentsBelowArea": 133,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 74,
+          "column": 3,
+          "index": 3,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 74,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            2064,
+            0,
+            2752,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 141107,
+            "bbox": [
+              136,
+              61,
+              504,
+              713
+            ],
+            "removedComponentsBelowArea": 141,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 0,
+          "index": 4,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            768,
+            688,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 157172,
+            "bbox": [
+              128,
+              60,
+              588,
+              722
+            ],
+            "removedComponentsBelowArea": 157,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 1,
+          "index": 5,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            688,
+            768,
+            1376,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 131898,
+            "bbox": [
+              185,
+              69,
+              509,
+              722
+            ],
+            "removedComponentsBelowArea": 131,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 2,
+          "index": 6,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            1376,
+            768,
+            2064,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 127494,
+            "bbox": [
+              174,
+              103,
+              506,
+              722
+            ],
+            "removedComponentsBelowArea": 127,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 74,
+          "column": 3,
+          "index": 7,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 74,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            2064,
+            768,
+            2752,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 111649,
+            "bbox": [
+              200,
+              124,
+              504,
+              718
+            ],
+            "removedComponentsBelowArea": 111,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/cinderella.png",
+      "kind": "boss",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2752,
+          1536
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/cinderella/metadata.json",
+        "original": ".cache/library-generation/cinderella/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 3,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3087042,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "ca17beb0885ded14abe7ea22a4bd0199fe22e51b2cfad2950e7bcb4e14d1a1dd",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "dog": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 37,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 37,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 300802,
+            "bbox": [
+              40,
+              60,
+              965,
+              792
+            ],
+            "removedComponentsBelowArea": 300,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 36,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 36,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 278862,
+            "bbox": [
+              28,
+              151,
+              985,
+              776
+            ],
+            "removedComponentsBelowArea": 278,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 37,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 37,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 297614,
+            "bbox": [
+              56,
+              48,
+              996,
+              793
+            ],
+            "removedComponentsBelowArea": 297,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 295917,
+            "bbox": [
+              41,
+              288,
+              964,
+              954
+            ],
+            "removedComponentsBelowArea": 295,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/dog.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/dog/metadata.json",
+        "original": ".cache/library-generation/dog/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3020095,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "bab4a6bdad334bce21bc996ddf9232bd4f4f0e3704f69d04888048fed2ff6aa1",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "donkey": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 45,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 359504,
+            "bbox": [
+              56,
+              51,
+              973,
+              964
+            ],
+            "removedComponentsBelowArea": 359,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 352418,
+            "bbox": [
+              24,
+              111,
+              973,
+              951
+            ],
+            "removedComponentsBelowArea": 352,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 46,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 46,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 354055,
+            "bbox": [
+              45,
+              68,
+              997,
+              1000
+            ],
+            "removedComponentsBelowArea": 354,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 353682,
+            "bbox": [
+              48,
+              110,
+              953,
+              973
+            ],
+            "removedComponentsBelowArea": 353,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/donkey.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/donkey/metadata.json",
+        "original": ".cache/library-generation/donkey/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 2773382,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "c4841ac92370c42b9b7159999ac4e52726d10d8a07d227747b1b22c8fa590e59",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "dwarf": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 43,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 241076,
+            "bbox": [
+              250,
+              170,
+              744,
+              922
+            ],
+            "removedComponentsBelowArea": 241,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 43,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 236014,
+            "bbox": [
+              267,
+              170,
+              761,
+              928
+            ],
+            "removedComponentsBelowArea": 236,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 43,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 261238,
+            "bbox": [
+              153,
+              178,
+              781,
+              933
+            ],
+            "removedComponentsBelowArea": 261,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 43,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 259178,
+            "bbox": [
+              219,
+              200,
+              883,
+              932
+            ],
+            "removedComponentsBelowArea": 259,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/dwarf.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/dwarf/metadata.json",
+        "original": ".cache/library-generation/dwarf/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3192602,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "2c20426f4c4e985ed8047f01f02e5fb26f945bbb55631073ae187a8fa3174336",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "gingerbread": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 39,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 39,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 270314,
+            "bbox": [
+              221,
+              196,
+              795,
+              837
+            ],
+            "removedComponentsBelowArea": 270,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 39,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 39,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 257158,
+            "bbox": [
+              204,
+              196,
+              820,
+              846
+            ],
+            "removedComponentsBelowArea": 257,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 40,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 40,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 291106,
+            "bbox": [
+              136,
+              187,
+              888,
+              863
+            ],
+            "removedComponentsBelowArea": 291,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 41,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 41,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 301091,
+            "bbox": [
+              204,
+              204,
+              795,
+              880
+            ],
+            "removedComponentsBelowArea": 301,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/gingerbread.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/gingerbread/metadata.json",
+        "original": ".cache/library-generation/gingerbread/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3067546,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "22dd81a49f2cd278ff685548b979db0c466359bdb6757cc1e5d6d982980862ad",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "hunter": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 42,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 42,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 218428,
+            "bbox": [
+              332,
+              136,
+              769,
+              916
+            ],
+            "removedComponentsBelowArea": 218,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 43,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 219766,
+            "bbox": [
+              247,
+              144,
+              820,
+              922
+            ],
+            "removedComponentsBelowArea": 219,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 254514,
+            "bbox": [
+              273,
+              170,
+              862,
+              957
+            ],
+            "removedComponentsBelowArea": 254,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 226036,
+            "bbox": [
+              265,
+              195,
+              820,
+              957
+            ],
+            "removedComponentsBelowArea": 226,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/hunter.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/hunter/metadata.json",
+        "original": ".cache/library-generation/hunter/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            255.0,
+            255.0,
+            255.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 7,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3274920,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "25da19f0d05940b7c76cb7d2bbfa69bd19734087bd2f3d25a5d75ff894e6c274",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "lackey": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 44,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 190551,
+            "bbox": [
+              334,
+              109,
+              794,
+              949
+            ],
+            "removedComponentsBelowArea": 190,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 194444,
+            "bbox": [
+              324,
+              109,
+              829,
+              942
+            ],
+            "removedComponentsBelowArea": 194,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 241202,
+            "bbox": [
+              290,
+              132,
+              802,
+              951
+            ],
+            "removedComponentsBelowArea": 241,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 223251,
+            "bbox": [
+              309,
+              146,
+              755,
+              951
+            ],
+            "removedComponentsBelowArea": 223,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/lackey.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/lackey/metadata.json",
+        "original": ".cache/library-generation/lackey/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3344416,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "ce205ce5b9aadc90c8c7a67147e8f424ac1e835f8b7de07339a247415822acc4",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "librarian": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 44,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 258586,
+            "bbox": [
+              318,
+              91,
+              712,
+              953
+            ],
+            "removedComponentsBelowArea": 258,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 250568,
+            "bbox": [
+              261,
+              92,
+              763,
+              948
+            ],
+            "removedComponentsBelowArea": 250,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 356114,
+            "bbox": [
+              225,
+              91,
+              994,
+              974
+            ],
+            "removedComponentsBelowArea": 356,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 274694,
+            "bbox": [
+              256,
+              137,
+              724,
+              974
+            ],
+            "removedComponentsBelowArea": 274,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/librarian.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/librarian/metadata.json",
+        "original": ".cache/library-generation/librarian/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 2,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3040296,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "e5b6f3cbb39f9a92698593a772be4771ec7176d8220cdaad142f92b2e154413f",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "lost": {
+      "dimensions": {
+        "height": 192,
+        "mode": "RGBA",
+        "width": 800
+      },
+      "frameGrid": {
+        "framesPerRow": [
+          4,
+          4,
+          4
+        ],
+        "rows": 3,
+        "variableFrameWidths": true
+      },
+      "frames": [
+        {
+          "ax": 32.0,
+          "ay": 50,
+          "h": 64,
+          "index": 0,
+          "source": "library-wolf-v1.png",
+          "state": "idle",
+          "w": 64,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "ax": 32.0,
+          "ay": 50,
+          "h": 64,
+          "index": 1,
+          "source": "library-wolf-v1.png",
+          "state": "sniff",
+          "w": 64,
+          "x": 64,
+          "y": 0
+        },
+        {
+          "ax": 32.0,
+          "ay": 50,
+          "h": 64,
+          "index": 2,
+          "source": "library-wolf-v1.png",
+          "state": "walk1",
+          "w": 64,
+          "x": 128,
+          "y": 0
+        },
+        {
+          "ax": 32.0,
+          "ay": 50,
+          "h": 64,
+          "index": 3,
+          "source": "library-wolf-v1.png",
+          "state": "walk2",
+          "w": 64,
+          "x": 192,
+          "y": 0
+        },
+        {
+          "ax": 42.0,
+          "ay": 49,
+          "h": 64,
+          "index": 4,
+          "source": "library-wolf-repair-v1.png",
+          "state": "run1",
+          "w": 84,
+          "x": 256,
+          "y": 64
+        },
+        {
+          "ax": 32.0,
+          "ay": 49,
+          "h": 64,
+          "index": 5,
+          "source": "library-wolf-v1.png",
+          "state": "run2",
+          "w": 64,
+          "x": 340,
+          "y": 64
+        },
+        {
+          "ax": 32.0,
+          "ay": 43,
+          "h": 64,
+          "index": 6,
+          "source": "library-wolf-v1.png",
+          "state": "pounce",
+          "w": 64,
+          "x": 404,
+          "y": 64
+        },
+        {
+          "ax": 32.0,
+          "ay": 50,
+          "h": 64,
+          "index": 7,
+          "source": "library-wolf-v1.png",
+          "state": "bite",
+          "w": 64,
+          "x": 468,
+          "y": 64
+        },
+        {
+          "ax": 38.0,
+          "ay": 56,
+          "h": 64,
+          "index": 8,
+          "source": "library-wolf-repair-v1.png",
+          "state": "howl",
+          "w": 76,
+          "x": 532,
+          "y": 128
+        },
+        {
+          "ax": 32.0,
+          "ay": 53,
+          "h": 64,
+          "index": 9,
+          "source": "library-wolf-v1.png",
+          "state": "hurt",
+          "w": 64,
+          "x": 608,
+          "y": 128
+        },
+        {
+          "ax": 32.0,
+          "ay": 56,
+          "h": 64,
+          "index": 10,
+          "source": "library-wolf-v1.png",
+          "state": "front",
+          "w": 64,
+          "x": 672,
+          "y": 128
+        },
+        {
+          "ax": 32.0,
+          "ay": 58,
+          "h": 64,
+          "index": 11,
+          "source": "library-wolf-v1.png",
+          "state": "dissolve",
+          "w": 64,
+          "x": 736,
+          "y": 128
+        }
+      ],
+      "image": "assets/library/units/wolf.png",
+      "kind": "unit",
+      "palette": {
+        "actualColors": 32,
+        "appliedByBuilder": false,
+        "colors": null,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "approvedAtlas": ".test-output/library/wolf-final-atlas.png",
+        "approvedFrameMetadata": ".test-output/library/wolf-final-atlas.json",
+        "originals": [
+          "C:/Projects/YandexGames/assets/library-wolf-repair-v1.png",
+          "C:/Projects/YandexGames/assets/library-wolf-v1.png"
+        ]
+      },
+      "transformations": [
+        {
+          "operation": "copy-approved-atlas-and-frame-records",
+          "paletteReduction": false,
+          "resize": false
+        }
+      ]
+    },
+    "messenger": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 40,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 40,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 156906,
+            "bbox": [
+              281,
+              187,
+              692,
+              863
+            ],
+            "removedComponentsBelowArea": 156,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 40,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 40,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 174978,
+            "bbox": [
+              290,
+              170,
+              709,
+              863
+            ],
+            "removedComponentsBelowArea": 174,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 42,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 42,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 206392,
+            "bbox": [
+              162,
+              230,
+              777,
+              897
+            ],
+            "removedComponentsBelowArea": 206,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 43,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 191767,
+            "bbox": [
+              239,
+              221,
+              717,
+              923
+            ],
+            "removedComponentsBelowArea": 191,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/messenger.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/messenger/metadata.json",
+        "original": ".cache/library-generation/messenger/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 1,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3458855,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "2e3bf9c26a6c15e068cd2baaee36e7953c5ed764605a30e01a7c9cccea3d4f01",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "pigeon": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 42,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 42,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 218909,
+            "bbox": [
+              109,
+              176,
+              883,
+              900
+            ],
+            "removedComponentsBelowArea": 218,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 40,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 40,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 303676,
+            "bbox": [
+              128,
+              74,
+              877,
+              864
+            ],
+            "removedComponentsBelowArea": 303,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 41,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 41,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 287804,
+            "bbox": [
+              134,
+              87,
+              875,
+              891
+            ],
+            "removedComponentsBelowArea": 287,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 41,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 41,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 322975,
+            "bbox": [
+              144,
+              81,
+              924,
+              895
+            ],
+            "removedComponentsBelowArea": 322,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/pigeon.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/pigeon/metadata.json",
+        "original": ".cache/library-generation/pigeon/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 3,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3060367,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "119ac5f56540216baeedce347c4ede1e33926705a086cfe19cafe316275e90bc",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "queen": {
+      "dimensions": {
+        "height": 160,
+        "mode": "RGBA",
+        "width": 320
+      },
+      "frameGrid": {
+        "cellHeight": 80,
+        "cellWidth": 80,
+        "columns": 4,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 75,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            688,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 147621,
+            "bbox": [
+              183,
+              40,
+              505,
+              724
+            ],
+            "removedComponentsBelowArea": 147,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            688,
+            0,
+            1376,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 139296,
+            "bbox": [
+              172,
+              46,
+              574,
+              723
+            ],
+            "removedComponentsBelowArea": 139,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 2,
+          "index": 2,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1376,
+            0,
+            2064,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 153180,
+            "bbox": [
+              173,
+              46,
+              568,
+              724
+            ],
+            "removedComponentsBelowArea": 153,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 3,
+          "index": 3,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            2064,
+            0,
+            2752,
+            768
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 145788,
+            "bbox": [
+              165,
+              51,
+              505,
+              724
+            ],
+            "removedComponentsBelowArea": 145,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 0,
+          "index": 4,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            768,
+            688,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 124334,
+            "bbox": [
+              177,
+              40,
+              465,
+              729
+            ],
+            "removedComponentsBelowArea": 124,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 1,
+          "index": 5,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            688,
+            768,
+            1376,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 137120,
+            "bbox": [
+              160,
+              40,
+              528,
+              729
+            ],
+            "removedComponentsBelowArea": 137,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 2,
+          "index": 6,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            1376,
+            768,
+            2064,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 142609,
+            "bbox": [
+              160,
+              41,
+              522,
+              729
+            ],
+            "removedComponentsBelowArea": 142,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 3,
+          "index": 7,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            2064,
+            768,
+            2752,
+            1536
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 167359,
+            "bbox": [
+              143,
+              40,
+              568,
+              729
+            ],
+            "removedComponentsBelowArea": 167,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/queen.png",
+      "kind": "boss",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2752,
+          1536
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/queen/metadata.json",
+        "original": ".cache/library-generation/queen/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3069233,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "b238bef71a1bd9ad284d98baab6886e981afe1ccaaed91644145c477fa0a86c0",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "redHood": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 43,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 232047,
+            "bbox": [
+              306,
+              110,
+              709,
+              922
+            ],
+            "removedComponentsBelowArea": 232,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 43,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 43,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 216828,
+            "bbox": [
+              315,
+              136,
+              717,
+              931
+            ],
+            "removedComponentsBelowArea": 216,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 251332,
+            "bbox": [
+              272,
+              128,
+              837,
+              948
+            ],
+            "removedComponentsBelowArea": 251,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 239044,
+            "bbox": [
+              273,
+              145,
+              726,
+              948
+            ],
+            "removedComponentsBelowArea": 239,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/redHood.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/redHood/metadata.json",
+        "original": ".cache/library-generation/redHood/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3254761,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "f9d7a2d0cc66ae2bcad13aee29022936a8940b56681996de1c7731359abcbdb0",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "robber": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 45,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 288090,
+            "bbox": [
+              172,
+              84,
+              725,
+              970
+            ],
+            "removedComponentsBelowArea": 288,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 247047,
+            "bbox": [
+              297,
+              110,
+              743,
+              970
+            ],
+            "removedComponentsBelowArea": 247,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 295597,
+            "bbox": [
+              228,
+              115,
+              955,
+              973
+            ],
+            "removedComponentsBelowArea": 295,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 287465,
+            "bbox": [
+              230,
+              128,
+              765,
+              973
+            ],
+            "removedComponentsBelowArea": 287,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/robber.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/robber/metadata.json",
+        "original": ".cache/library-generation/robber/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 2,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3075455,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "4826ac0a819a2f12e1cb439849d1881fd92e714db82827fe71bc8caa4652d5e4",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "rooster": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 47,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 47,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 351271,
+            "bbox": [
+              81,
+              39,
+              888,
+              1007
+            ],
+            "removedComponentsBelowArea": 351,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 46,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 46,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 346214,
+            "bbox": [
+              75,
+              77,
+              921,
+              1002
+            ],
+            "removedComponentsBelowArea": 346,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 47,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 47,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 367633,
+            "bbox": [
+              82,
+              23,
+              924,
+              1021
+            ],
+            "removedComponentsBelowArea": 367,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 47,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 47,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 402297,
+            "bbox": [
+              19,
+              133,
+              964,
+              1013
+            ],
+            "removedComponentsBelowArea": 402,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/rooster.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/rooster/metadata.json",
+        "original": ".cache/library-generation/rooster/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 1,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 2725381,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "0788dd7358b39945902eb68732393f0f9ccfd35a662caccece79e39b69b47e67",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "rumple": {
+      "dimensions": {
+        "height": 160,
+        "mode": "RGBA",
+        "width": 320
+      },
+      "frameGrid": {
+        "cellHeight": 80,
+        "cellWidth": 80,
+        "columns": 4,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 76,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 76,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            600,
+            597
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 87904,
+            "bbox": [
+              165,
+              55,
+              450,
+              574
+            ],
+            "removedComponentsBelowArea": 87,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 76,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 76,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            600,
+            0,
+            1200,
+            597
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 91252,
+            "bbox": [
+              150,
+              63,
+              472,
+              574
+            ],
+            "removedComponentsBelowArea": 91,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 75,
+          "column": 2,
+          "index": 2,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 75,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1200,
+            0,
+            1800,
+            597
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 91240,
+            "bbox": [
+              134,
+              55,
+              471,
+              566
+            ],
+            "removedComponentsBelowArea": 91,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 76,
+          "column": 3,
+          "index": 3,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 76,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1800,
+            0,
+            2400,
+            597
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 98563,
+            "bbox": [
+              27,
+              55,
+              495,
+              574
+            ],
+            "removedComponentsBelowArea": 98,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 76,
+          "column": 0,
+          "index": 4,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 76,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            597,
+            600,
+            1195
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 96652,
+            "bbox": [
+              142,
+              66,
+              510,
+              570
+            ],
+            "removedComponentsBelowArea": 96,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 76,
+          "column": 1,
+          "index": 5,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 76,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            1800,
+            597,
+            2400,
+            1195
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 96474,
+            "bbox": [
+              149,
+              51,
+              525,
+              570
+            ],
+            "removedComponentsBelowArea": 96,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 76,
+          "column": 2,
+          "index": 6,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 76,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            1200,
+            1195,
+            1800,
+            1792
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 102490,
+            "bbox": [
+              112,
+              38,
+              503,
+              572
+            ],
+            "removedComponentsBelowArea": 102,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 76,
+          "column": 3,
+          "index": 7,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 76,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            1800,
+            1195,
+            2400,
+            1792
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 99079,
+            "bbox": [
+              104,
+              46,
+              510,
+              572
+            ],
+            "removedComponentsBelowArea": 99,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/rumple.png",
+      "kind": "boss",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2400,
+          1792
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/rumple/metadata.json",
+        "original": ".cache/library-generation/rumple/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            255.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 4,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3107487,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "5fd25f233b33ac7e9d90829c30a8c3039504ee6057495f53611a399ff3824645",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "snowWhite": {
+      "dimensions": {
+        "height": 160,
+        "mode": "RGBA",
+        "width": 320
+      },
+      "frameGrid": {
+        "cellHeight": 80,
+        "cellWidth": 80,
+        "columns": 4,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 67,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 67,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            600,
+            896
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 123308,
+            "bbox": [
+              168,
+              103,
+              426,
+              753
+            ],
+            "removedComponentsBelowArea": 123,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 67,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 67,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            600,
+            0,
+            1200,
+            896
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 130198,
+            "bbox": [
+              147,
+              109,
+              463,
+              753
+            ],
+            "removedComponentsBelowArea": 130,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 67,
+          "column": 2,
+          "index": 2,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 67,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1200,
+            0,
+            1800,
+            896
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 124867,
+            "bbox": [
+              131,
+              109,
+              445,
+              759
+            ],
+            "removedComponentsBelowArea": 124,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 66,
+          "column": 3,
+          "index": 3,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 66,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1800,
+            0,
+            2400,
+            896
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 142665,
+            "bbox": [
+              71,
+              115,
+              559,
+              747
+            ],
+            "removedComponentsBelowArea": 142,
+            "removedLightInteriors": [
+              {
+                "area": 1782,
+                "bbox": [
+                  414,
+                  393,
+                  528,
+                  488
+                ],
+                "meanRGB": [
+                  184.34,
+                  195.45,
+                  211.79
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "anchorY": 73,
+          "column": 0,
+          "index": 4,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 73,
+            "h": 80,
+            "w": 80,
+            "x": 0,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            896,
+            600,
+            1792
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 121897,
+            "bbox": [
+              161,
+              173,
+              486,
+              824
+            ],
+            "removedComponentsBelowArea": 121,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 73,
+          "column": 1,
+          "index": 5,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 73,
+            "h": 80,
+            "w": 80,
+            "x": 80,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            600,
+            896,
+            1200,
+            1792
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 135594,
+            "bbox": [
+              147,
+              179,
+              505,
+              824
+            ],
+            "removedComponentsBelowArea": 135,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 73,
+          "column": 2,
+          "index": 6,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 73,
+            "h": 80,
+            "w": 80,
+            "x": 160,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            1200,
+            896,
+            1800,
+            1792
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 124607,
+            "bbox": [
+              95,
+              203,
+              507,
+              823
+            ],
+            "removedComponentsBelowArea": 124,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 73,
+          "column": 3,
+          "index": 7,
+          "outputCellSize": [
+            80,
+            80
+          ],
+          "outputFrame": {
+            "ax": 40,
+            "ay": 73,
+            "h": 80,
+            "w": 80,
+            "x": 240,
+            "y": 80
+          },
+          "row": 1,
+          "sourceCell": [
+            1800,
+            896,
+            2400,
+            1792
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 123803,
+            "bbox": [
+              121,
+              180,
+              446,
+              823
+            ],
+            "removedComponentsBelowArea": 123,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/snowWhite.png",
+      "kind": "boss",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2400,
+          1792
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/snowWhite/metadata.json",
+        "original": ".cache/library-generation/snowWhite/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3257612,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "fd140978cd9a8dff8ea37cec4e9593f6af646b8ee48cb303188a27d240f676ab",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "stepsister": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 46,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 46,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 281821,
+            "bbox": [
+              286,
+              66,
+              754,
+              983
+            ],
+            "removedComponentsBelowArea": 281,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 270932,
+            "bbox": [
+              241,
+              72,
+              758,
+              974
+            ],
+            "removedComponentsBelowArea": 270,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 44,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 44,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 289814,
+            "bbox": [
+              184,
+              82,
+              853,
+              959
+            ],
+            "removedComponentsBelowArea": 289,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 260530,
+            "bbox": [
+              235,
+              107,
+              779,
+              963
+            ],
+            "removedComponentsBelowArea": 260,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/stepsister.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/stepsister/metadata.json",
+        "original": ".cache/library-generation/stepsister/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 3,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3090768,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "fdad55c1d6b2afb3e3541655533469c4542db0f9dec45f1a45eff571ffd71cc8",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "strawMan": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 46,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 46,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 222861,
+            "bbox": [
+              277,
+              91,
+              732,
+              989
+            ],
+            "removedComponentsBelowArea": 222,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 229258,
+            "bbox": [
+              185,
+              113,
+              819,
+              975
+            ],
+            "removedComponentsBelowArea": 229,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 251330,
+            "bbox": [
+              213,
+              92,
+              982,
+              961
+            ],
+            "removedComponentsBelowArea": 251,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 45,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 45,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 256680,
+            "bbox": [
+              163,
+              92,
+              889,
+              975
+            ],
+            "removedComponentsBelowArea": 256,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/strawMan.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/strawMan/metadata.json",
+        "original": ".cache/library-generation/strawMan/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": [
+            [
+              136.0,
+              136.0,
+              136.0
+            ],
+            [
+              178.0,
+              179.0,
+              178.0
+            ]
+          ],
+          "backgroundRGB": [
+            165.0,
+            166.0,
+            166.0
+          ],
+          "backgroundType": "neutral-checkerboard",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 3,
+          "neutralChromaBelow": 18,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3225566,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "945150d0279187a11431167139ca8bb61718a00ffc98e36dd9f91abcae1f59f6",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    },
+    "sugarBat": {
+      "dimensions": {
+        "height": 96,
+        "mode": "RGBA",
+        "width": 96
+      },
+      "frameGrid": {
+        "cellHeight": 48,
+        "cellWidth": 48,
+        "columns": 2,
+        "rows": 2
+      },
+      "frames": [
+        {
+          "anchorY": 36,
+          "column": 0,
+          "index": 0,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 36,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 229285,
+            "bbox": [
+              112,
+              267,
+              942,
+              781
+            ],
+            "removedComponentsBelowArea": 229,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 34,
+          "column": 1,
+          "index": 1,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 34,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 0
+          },
+          "row": 0,
+          "sourceCell": [
+            1024,
+            0,
+            2048,
+            1024
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 201441,
+            "bbox": [
+              20,
+              251,
+              994,
+              728
+            ],
+            "removedComponentsBelowArea": 201,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 31,
+          "column": 0,
+          "index": 2,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 31,
+            "h": 48,
+            "w": 48,
+            "x": 0,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            0,
+            1024,
+            1024,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 222693,
+            "bbox": [
+              122,
+              112,
+              860,
+              677
+            ],
+            "removedComponentsBelowArea": 222,
+            "removedLightInteriors": []
+          }
+        },
+        {
+          "anchorY": 38,
+          "column": 1,
+          "index": 3,
+          "outputCellSize": [
+            48,
+            48
+          ],
+          "outputFrame": {
+            "ax": 24,
+            "ay": 38,
+            "h": 48,
+            "w": 48,
+            "x": 48,
+            "y": 48
+          },
+          "row": 1,
+          "sourceCell": [
+            1024,
+            1024,
+            2048,
+            2048
+          ],
+          "sourceMainComponent": {
+            "alphaThreshold": 16,
+            "area": 234243,
+            "bbox": [
+              173,
+              250,
+              866,
+              819
+            ],
+            "removedComponentsBelowArea": 234,
+            "removedLightInteriors": []
+          }
+        }
+      ],
+      "image": "assets/library/units/sugarBat.png",
+      "kind": "unit",
+      "original": {
+        "format": "JPEG",
+        "mode": "RGB",
+        "size": [
+          2048,
+          2048
+        ],
+        "visualReview": "accepted"
+      },
+      "palette": {
+        "actualColors": 24,
+        "appliedByBuilder": true,
+        "colors": 24,
+        "dither": "none",
+        "shared": true
+      },
+      "sources": {
+        "metadata": ".cache/library-generation/sugarBat/metadata.json",
+        "original": ".cache/library-generation/sugarBat/original.jfif"
+      },
+      "transformations": [
+        {
+          "backgroundPalette": null,
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundType": "light",
+          "candidateDistanceBelow": 100,
+          "connectivity": 4,
+          "largeWhiteHolesRemoved": 0,
+          "neutralChromaBelow": null,
+          "operation": "edge-connected-background-removal",
+          "removedPixels": 3303451,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "sourceHash": "ba78631177882f0455fe9fb91e41581774c782e95d93b507c0ec0a083c45393c",
+          "version": 3,
+          "whiteInteriorsPreserved": true
+        },
+        {
+          "alphaThreshold": 16,
+          "mainComponent": "largest 8-connected component",
+          "operation": "alpha-cleanup",
+          "smallComponentLimit": "max(4, mainArea // 1000)"
+        },
+        {
+          "method": "LANCZOS",
+          "modeSequence": [
+            "RGBA",
+            "RGBa",
+            "RGBA"
+          ],
+          "operation": "premultiplied-alpha-resize"
+        },
+        {
+          "alphaPreserved": true,
+          "colors": 24,
+          "dither": "none",
+          "operation": "shared-palette"
+        }
+      ]
+    }
+  },
+  "validation": {
+    "bureauPlaceholders": false,
+    "roomPngMode": "RGB",
+    "status": "passed",
+    "unitPngMode": "RGBA"
+  },
+  "version": 1
+}

@@ -2,6 +2,7 @@ import { AudioBus } from "./audio.js";
 import { Catalog } from "./catalog.js";
 import { ENEMY_TYPES, FLOOR_DEFINITIONS, HEIGHT, ITEM_BY_ID, ITEMS, SYNERGIES, WIDTH } from "./content.js";
 import { FxManager } from "./fx.js";
+import { iconPath } from "./icon-paths.js";
 import { Game } from "./game.js";
 import { DEFAULT_HERO, getHero, HEROES } from "./heroes.js";
 import { Renderer } from "./render.js";
@@ -67,9 +68,9 @@ function saveSetting(key, value) {
   }
 }
 
-audio.setEnabled(readSetting("bureau.audio", true));
-fx.setReduced(readSetting("bureau.reducedFx", false));
-renderer.showTelegraphs = readSetting("bureau.telegraphs", false);
+audio.setEnabled(readSetting("library.audio", true));
+fx.setReduced(readSetting("library.reducedFx", false));
+renderer.showTelegraphs = readSetting("library.telegraphs", false);
 
 function updateSettingLabels() {
   $("audioButton").textContent = `Звук: ${audio.enabled ? "вкл" : "выкл"}`;
@@ -137,7 +138,7 @@ function updateUrl() {
 
 let selectedHeroId = (() => {
   try {
-    return getHero(params.get("hero") || localStorage.getItem("bureau.hero") || DEFAULT_HERO).id;
+    return getHero(params.get("hero") || localStorage.getItem("library.hero") || DEFAULT_HERO).id;
   } catch {
     return getHero(params.get("hero")).id;
   }
@@ -239,7 +240,7 @@ function updateHeroSelection() {
 function selectHero(id) {
   selectedHeroId = getHero(id).id;
   try {
-    localStorage.setItem("bureau.hero", selectedHeroId);
+    localStorage.setItem("library.hero", selectedHeroId);
   } catch {
   }
   updateHeroSelection();
@@ -307,7 +308,7 @@ function buildChoices(choices) {
     number.className = "number";
     number.textContent = `0${index + 1}`;
     const image = document.createElement("img");
-    image.src = `assets/icons/${item.icon}`;
+    image.src = iconPath(item.icon);
     image.alt = "";
     const title = document.createElement("strong");
     title.textContent = item.name;
@@ -346,17 +347,17 @@ function buildShop() {
     const card = document.createElement("article");
     card.className = "shop-item";
     const image = document.createElement("img");
-    image.src = `assets/icons/${item?.icon || "echo-ripples.svg"}`;
+    image.src = iconPath(item?.icon || "echo-ripples.svg");
     image.alt = "";
     const body = document.createElement("div");
     const title = document.createElement("strong");
-    title.textContent = item?.name || "Сломанная игрушка";
+    title.textContent = item?.name || "Потерянная страница";
     const description = document.createElement("p");
-    description.textContent = item?.description || "Оценщик не знает её истории. Сохраните до следующего отдела.";
+    description.textContent = item?.description || "Её текст пока не читается. Сохраните до следующей книги.";
     body.append(title, description);
     const button = document.createElement("button");
     button.type = "button";
-    button.textContent = offer.sold ? "Продано" : `${offer.price} жет.`;
+    button.textContent = offer.sold ? "Продано" : `${offer.price} букв`;
     button.disabled = offer.sold || game.player.coins < offer.price || (item && game.hasItem(item.id));
     button.addEventListener("click", () => {
       if (game.buyItem(offer.id)) buildShop();
@@ -365,7 +366,7 @@ function buildShop() {
     root.append(card);
   }
   $("repairButton").hidden = !game.canRepairToy();
-  $("shopHint").textContent = getChainHint(game.chain);
+  $("shopHint").textContent = getChainHint({ ...game.chain, bookId: game.floor.bookId });
 }
 
 function buildContract() {
@@ -424,7 +425,7 @@ function buildWorkshop() {
     button.className = "event-choice";
     button.dataset.item = id;
     const image = document.createElement("img");
-    image.src = `assets/icons/${item.icon}`;
+    image.src = iconPath(item.icon);
     image.alt = "";
     const title = document.createElement("strong");
     title.textContent = item.name;
@@ -456,7 +457,7 @@ function buildVault() {
 }
 
 function buildRiftMenu(rooms) {
-  const names = { start: "Лифт", combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", workshop: "Мастерская", vault: "Хранилище", secret: "Скрытая комната", boss: "Зала босса", rift: "Сервисный разрез" };
+  const names = { start: "Обложка", combat: "Комната истории", treasure: "Страница", shop: "Хранитель", challenge: "Испытание", workshop: "Мастерская", vault: "Запечатано", secret: "Скрытая страница", boss: "Босс", rift: "Закладка" };
   const root = $("riftChoices");
   root.replaceChildren();
   for (const room of rooms) {
@@ -517,29 +518,29 @@ async function copySeedLink() {
 }
 
 const SYNERGY_DETAILS = {
-  "Связанная опись": "Скрепка + нить: до трёх дуг между снарядами. Дуга наносит 0,4 урона каждые 0,2 с.",
-  "Длинная разметка": "Мел + ртуть: рикошет сохраняет пройденный путь. Ртуть наращивает урон и размер до ×2,5.",
-  "Призматическая разметка": "Лазер + мел: луч, дошедший до стены арены, один раз отражается к ближайшему видимому врагу с ×0,65 урона. Полки не отражают луч.",
-  "Реагентная рана": "Яд + кровотечение: гибель врага с обоими эффектами передаёт их на 2 секунды максимум двум соседям в радиусе 60 px. Дальше эффект не распространяется.",
-  "Тяжёлая четверть": "Тяжёлый калибр + четыре снаряда: каждый четвёртый залп добавляет центральный снаряд или луч с ×2 обычного урона.",
-  "Рабочий режим": "Регулятор + резистор: после секунды неподвижности урон ×1,5. Размер снаряда или луча тоже увеличивается.",
-  "Возвратная разметка": "Лоток + мел: на обратном пути снаряд один раз отскакивает от стены к герою. Повторный отскок запрещён.",
-  "Огненная опись": "Штамп + огонь: снятие метки петардой поджигает максимум двух соседей на 2 секунды. Дальше эффект не распространяется.",
-  "Контурная нить": "Катушка + нить: импульс связывает героя максимум с двумя целями до 90 px и наносит каждой 0,4 урона без on-hit цепочек.",
-  "Минута на разборку": "Компас + часы: в радиусе 80 px от петарды вражеские снаряды ограниченно доворачивают к ней. Лазеры не затрагиваются.",
+  "Зашитая страница": "Двойная страница + Соломенная нить: до трёх дуг между снарядами. Дуга наносит 0,4 урона каждые 0,2 с.",
+  "Длинная тропа": "Мел + ртуть: рикошет сохраняет пройденный путь. Ртуть наращивает урон и размер до ×2,5.",
+  "Свет сквозь переплёт": "Луч + мел: луч, дошедший до стены арены, один раз отражается к ближайшему видимому врагу с ×0,65 урона. Препятствия не отражают луч.",
+  "Гнилой пир": "Яблоко + клык: гибель врага с обоими эффектами передаёт их на 2 секунды максимум двум соседям в радиусе 60 px. Дальше эффект не распространяется.",
+  "Золотой квартет": "Веретено + квартет: каждый четвёртый залп добавляет центральный снаряд или луч с ×2 обычного урона.",
+  "Веретено на ходу": "Крик + кнопка: после секунды неподвижности урон ×1,5. Размер снаряда или луча тоже увеличивается.",
+  "Возвращение по крошкам": "Возвратная страница + мел: на обратном пути снаряд один раз отскакивает от стены к ребёнку. Повторный отскок запрещён.",
+  "Печь и яблоко": "Печать + огонь: снятие метки хлопком поджигает максимум двух соседей на 2 секунды. Дальше эффект не распространяется.",
+  "Золотая пряжа": "Катушка + нить: импульс связывает ребёнка максимум с двумя целями до 90 px и наносит каждой 0,4 урона без цепочек попаданий.",
+  "Полуночный удар": "Компас + часы: в радиусе 80 px от хлопка вражеские снаряды ограниченно доворачивают к нему. Лазеры не затрагиваются.",
 };
 
 function buildCatalog() {
   const root = $("catalogContent");
   root.replaceChildren();
-  const bossIds = [...FLOOR_DEFINITIONS.map((floor) => floor.bossType), "riftWarden"];
+  const bossIds = FLOOR_DEFINITIONS.map((floor) => floor.bossType);
   const secrets = [
-    { id: "dustWall", name: "Пыль идёт не туда", description: "Петарда у подозрительной стены открывает проход." },
-    { id: "tag0", name: "Номерок 0", description: "Запись прежнего владельца из скрытой комнаты." },
-    { id: "toyRepair", name: "Не продавать", description: "Сохранённая игрушка получает вторую жизнь в Стеллажах." },
-    { id: "sigil", name: "Живая трещина", description: "Отпечаток из Приёмного отдела можно показать Оценщику. Следующая подсказка появится в его магазине." },
-    { id: "surveyorReveal", name: "Безошибочная съёмка", description: "Картограф открывает тайник после комнаты, в которой не получил ни одного удара, даже поглощённого пальто." },
-    { id: "rift", name: "Сервисный разрез", description: "Тайный путь через Сортировочный узел. Смотритель охраняет пропуск к зачищенным комнатам [F]." },
+    { id: "chapterClue", name: "Обрывок страницы", description: "Во второй боевой комнате каждой книги спрятана строка, указывающая скрытую комнату." },
+    { id: "tag0", name: "Чужая концовка", description: "В скрытой комнате осталась страница чужой истории." },
+    { id: "toyRepair", name: "Возвращённая страница", description: "Сохранённая страница получает новую жизнь у Хранителя книг." },
+    { id: "wolfTracks", name: "След в стороне", description: "Красная лента повторяет тропу, но один след ведёт не к дому бабушки." },
+    { id: "breadTrail", name: "Не все крошки", description: "Не всякая хлебная крошка ведёт к пряничному дому." },
+    { id: "trueName", name: "Имя по частям", description: "Комнаты и гонцы Румпельштильцхена хранят части его имени." },
   ];
   const sections = [
     { kind: "items", title: `Предметы · найдено ${catalog.count("items")}/${ITEMS.length} · открыто ${progression.unlockedCount(ITEMS)}/${ITEMS.length}`, entries: ITEMS.map((item) => ({ id: item.id, name: item.name, description: item.description, icon: item.icon })) },
@@ -561,7 +562,7 @@ function buildCatalog() {
       card.className = `catalog-entry${known ? "" : " unknown"}${locked ? " locked" : ""}`;
       if (entry.icon) {
         const image = document.createElement("img");
-        image.src = `assets/icons/${entry.icon}`;
+        image.src = iconPath(entry.icon);
         image.alt = "";
         card.append(image);
       }
@@ -585,11 +586,11 @@ function formatTime(seconds) {
 
 function showEnd(victory, stats) {
   const challenge = getChallenge(stats.challengeId);
-  $("endEyebrow").textContent = victory ? "СМЕНА ЗАВЕРШЕНА" : "ЗАПИСЬ О СМЕНЕ ЗАКРЫТА";
-  $("endTitle").textContent = victory ? stats.mode === "boss" ? "Тренировка завершена" : stats.mode === "challenge" ? "Испытание выполнено" : "Архив отпускает смену" : "Смена окончена";
+  $("endEyebrow").textContent = victory ? "ПОСЛЕДНЯЯ СТРАНИЦА" : "СТРАНИЦА ОБОРВАЛАСЬ";
+  $("endTitle").textContent = victory ? stats.mode === "boss" ? "Тренировка завершена" : stats.mode === "challenge" ? "Испытание выполнено" : "Концовка восстановлена" : "История прервалась";
   $("endText").textContent = victory
-    ? stats.mode === "boss" ? "Босс повержен. Можно повторить встречу и отработать другую тактику." : stats.mode === "challenge" ? `${challenge?.name || "Испытание"}: цель в ${challenge?.floors || 0} отдела выполнена. Награда сохранена в профиле открытий.` : `${FLOOR_DEFINITIONS.length} отделов остались позади. Каталог сохранил ваши находки и секреты.`
-    : `Последняя причина: ${stats.lastDamage}. Сохранение забега удалено, но записи каталога и открытия остались.`;
+    ? stats.mode === "boss" ? "Персонаж повержен. Можно повторить встречу и отработать другую тактику." : stats.mode === "challenge" ? `${challenge?.name || "Испытание"}: цель: прочитано книг — ${challenge?.floors || 0}. Награда сохранена в профиле открытий.` : `Все ${FLOOR_DEFINITIONS.length} концовок восстановлены. Ребёнок возвращается в библиотеку, а записи сохранены.`
+    : `Последняя причина: ${stats.lastDamage}. Книга закрылась, но найденные записи и открытия сохранены.`;
   if (runUnlocks.length) {
     const names = runUnlocks.map((id) => ITEM_BY_ID.get(id)?.name || id).join(", ");
     $("endText").textContent += ` Новые открытия: ${names}.`;
@@ -624,7 +625,7 @@ function buildPauseDetails() {
     ["Ключи", stats.keys],
     ["Герой", game.hero.name],
   ];
-  if (stats.umbrellaCooldown !== null) rows.push(["Зонт", stats.umbrellaRemaining > 0 ? `ещё ${format(stats.umbrellaRemaining)} с` : `готов · ${stats.umbrellaCooldown} с`]);
+  if (stats.umbrellaCooldown !== null) rows.push(["Капюшон", stats.umbrellaRemaining > 0 ? `ещё ${format(stats.umbrellaRemaining)} с` : `готов · ${stats.umbrellaCooldown} с`]);
   const statsRoot = $("pauseStats");
   statsRoot.replaceChildren();
   for (const [label, value] of rows) {
@@ -651,7 +652,7 @@ function buildPauseDetails() {
     card.className = "pause-item";
     card.dataset.item = id;
     const image = document.createElement("img");
-    image.src = `assets/icons/${item.icon}`;
+    image.src = iconPath(item.icon);
     image.alt = "";
     const body = document.createElement("div");
     const title = document.createElement("strong");
@@ -713,14 +714,14 @@ function handleEvent(event) {
     case "room":
       showPanel(null);
       if (["boss", "rift"].includes(event.room.type) && !event.room.cleared) {
-        const bossType = event.room.type === "rift" ? "riftWarden" : game.floor.bossType;
+        const bossType = game.floor.bossType;
         catalog.record("bosses", bossType);
         $("bossHud").hidden = false;
         $("bossName").textContent = ENEMY_TYPES[bossType].name;
         toast(ENEMY_TYPES[bossType].name, 2100);
       } else if (event.room.type !== "start") {
-        const names = { combat: "Боевая комната", treasure: "Сокровищница", shop: "Магазин Оценщика", challenge: "Сверхурочные", workshop: "Мастерская Разборщика", vault: "Запечатанное хранилище", secret: "Скрытая комната", rift: "Сервисный разрез" };
-        const events = { sigil: "Неучтённая трещина", contract: "Терминал калибровки", riftTerminal: "Сервисный терминал" };
+        const names = { combat: "Комната истории", treasure: "Новая страница", shop: "Хранитель книг", challenge: "Испытание", workshop: "Мастерская историй", vault: "Запечатанная страница", secret: "Скрытая страница", rift: "Золотая закладка" };
+        const events = { chapterClue: "Обрывок страницы", contract: "Цена сказки", movingShelves: "Движение книги" };
         toast(events[event.room.event] || event.room.layoutName || names[event.room.type] || "Новая комната", 900);
       }
       break;
@@ -728,7 +729,7 @@ function handleEvent(event) {
       showPanel(null);
       break;
     case "roomClear":
-      toast("Комната зачищена · двери открыты", 1200);
+      toast("Комната прочитана · двери открыты", 1200);
       break;
     case "choice":
       buildChoices(event.choices);
@@ -754,21 +755,26 @@ function handleEvent(event) {
     case "contractAccepted":
       toast("Контракт принят: следующий бой усилен", 2100);
       break;
-    case "chain": {
-      const messages = { sigil: "Отпечаток получен. Покажите его Оценщику.", npc: "Оценщик узнал трещину. Ищите терминал в Сортировочном узле.", terminal: "Сервисный разрез открыт" };
-      if (event.step === "sigil") catalog.record("secrets", "sigil");
-      toast(messages[event.step] || "Запись цепочки обновлена", 2300);
+    case "chapterClue":
+    case "chapterHint":
+      toast(getChainHint({ bookId: event.book }), 3200);
       break;
-    }
+    case "nameFragment":
+      if (game.mode !== "boss" && event.index >= event.total) catalog.record("secrets", "trueName");
+      toast(event.index >= event.total ? "Имя Румпельштильцхена восстановлено" : `Часть имени: ${event.part} · ${event.index}/${event.total}`, 2400);
+      break;
+    case "chain":
+      toast("История обновлена", 1800);
+      break;
     case "riftMenu":
       buildRiftMenu(event.rooms);
       showPanel("rift");
       break;
     case "riftTravel":
-      toast("Пропуск использован. Следующий проход — в новом отделе.", 1900);
+      toast("Закладка использована. Следующий переход — в новой книге.", 1900);
       break;
     case "riftReturn":
-      toast("Вы вернулись в Сортировочный узел", 1600);
+      toast("Вы вернулись к обрывку", 1600);
       break;
     case "workshop":
       buildWorkshop();
@@ -786,17 +792,17 @@ function handleEvent(event) {
       toast("Охрана хранилища пробуждается", 1800);
       break;
     case "synergySpread":
-      toast("Реагентная рана: яд и кровотечение переданы соседям", 1500);
+      toast("Гнилой пир: яд и кровотечение переданы соседям", 1500);
       break;
     case "floorComplete": {
       notifyUnlocks(progression.recordFloor(event));
-      const nextFloor = FLOOR_DEFINITIONS[game.floorIndex + 1];
+      const nextFloor = game.floorIndex + 1 < game.runFloorCount() ? FLOOR_DEFINITIONS[game.floorIndex + 1] : null;
       if (nextFloor) {
-        $("floorDescription").textContent = `Можно остаться и исследовать отдел. Когда будете готовы, вернитесь к лифту в комнате босса. ${nextFloor.description} Пальто с подкладкой снова защитит от первого удара.`;
-        $("nextFloorButton").textContent = `Спуститься: ${nextFloor.name}`;
+        $("floorDescription").textContent = `Можно остаться и исследовать книгу. Вернитесь к обложке в комнате босса, когда будете готовы. В обычном забеге переход восстановит 1 HP. ${nextFloor.description} Плащ снова защитит от первого удара.`;
+        $("nextFloorButton").textContent = `Следующая: ${nextFloor.name}`;
       } else {
-        $("floorDescription").textContent = "Это последний отдел в текущей цели. Можно завершить оставшиеся комнаты или вернуться к лифту и закончить смену.";
-        $("nextFloorButton").textContent = game.mode === "challenge" ? "Завершить испытание" : "Завершить смену";
+        $("floorDescription").textContent = "Это последняя книга в текущей цели. Можно завершить оставшиеся комнаты или вернуться к обложке и закончить историю.";
+        $("nextFloorButton").textContent = game.mode === "challenge" ? "Завершить испытание" : "Вернуться в библиотеку";
       }
       $("exploreButton").textContent = `Остаться: ${game.floor.name}`;
       showPanel("floor");
@@ -810,10 +816,10 @@ function handleEvent(event) {
       toast(`Секрет: ${event.name}`, 2300);
       break;
     case "memory":
-      toast(`Просьба памяти: ${event.name}`, 2300);
+      toast(`Просьба страницы: ${event.name}`, 2300);
       break;
     case "quest":
-      toast("Игрушка ваша. Не продавайте её.", 2100);
+      toast("Страница сохранена. Не продавайте её.", 2100);
       break;
     case "locked":
       toast(event.message, 1300);
@@ -825,7 +831,7 @@ function handleEvent(event) {
       toast("Фаза II · атаки меняются", 1800);
       break;
     case "shield":
-      if (event.blocked) toast("Зонт раскрылся", 700);
+      if (event.blocked) toast("Свет страницы погасил снаряд", 700);
       break;
     case "victory":
       notifyUnlocks(progression.recordVictory(event));
@@ -837,31 +843,35 @@ function handleEvent(event) {
       showEnd(false, event);
       break;
     case "restore":
-      toast("Забег восстановлен", 1300);
+      toast("Чтение продолжено", 1300);
       break;
   }
-  updateHud(true);
+  updateHud();
 }
 
 function updateHud(force = false) {
   updateChoiceTimer();
   const room = game.room();
-  const signature = [game.heroId, game.player.maxHp, game.player.hp, game.player.bombs, game.player.coins, game.player.keys, game.state, game.floorIndex, game.currentRoomId, game.items.join(","), game.seed].join("|");
+  const signature = [game.heroId, game.player.maxHp, game.player.hp, game.player.bombs, game.player.coins, game.player.keys, game.state, game.floorIndex, game.currentRoomId, game.items.join(","), game.seed, game.interactionHint()].join("|");
   if (force || signature !== hudSignature) {
     hudSignature = signature;
-    $("health").replaceChildren();
-    for (let i = 0; i < game.player.maxHp; i++) {
-      const image = document.createElement("img");
-      image.src = "assets/icons/heart-battery.svg";
-      image.alt = "";
-      if (i >= game.player.hp) image.className = "lost";
-      $("health").append(image);
+    const healthSignature = `${game.player.maxHp}/${game.player.hp}`;
+    if ($("health").dataset.signature !== healthSignature) {
+      $("health").dataset.signature = healthSignature;
+      $("health").replaceChildren();
+      for (let i = 0; i < game.player.maxHp; i++) {
+        const image = document.createElement("img");
+        image.src = iconPath("heart-battery.svg");
+        image.alt = "";
+        if (i >= game.player.hp) image.className = "lost";
+        $("health").append(image);
+      }
     }
     $("bombs").textContent = game.player.bombs;
     $("coins").textContent = game.player.coins;
     $("keys").textContent = game.player.keys;
-    const roomNames = { start: "Лифт", combat: "бой", treasure: "находка", shop: "магазин", challenge: "испытание", workshop: "мастерская", vault: "хранилище", secret: "тайник", boss: "босс", rift: "разрез" };
-    $("wave").textContent = game.state === "title" ? "Смена не начата" : `${game.floor?.name || "Архив"} · ${room ? roomNames[room.type] || "событие" : "исследование"}`;
+    const roomNames = { start: "Обложка", combat: "бой", treasure: "находка", shop: "Хранитель", challenge: "испытание", workshop: "мастерская", vault: "страница", secret: "тайник", boss: "босс", rift: "закладка" };
+    $("wave").textContent = game.state === "title" ? "Книга не открыта" : `${game.floor?.name || "Библиотека"} · ${room ? roomNames[room.type] || "событие" : "исследование"}`;
     $("seed").textContent = `seed ${game.seed}`;
     const inventory = $("inventory");
     inventory.replaceChildren();
@@ -877,7 +887,7 @@ function updateHud(force = false) {
         chip.className = "inventory-item";
         chip.title = item.description;
         const image = document.createElement("img");
-        image.src = `assets/icons/${item.icon}`;
+        image.src = iconPath(item.icon);
         image.alt = "";
         const label = document.createElement("span");
         label.textContent = item.name;
@@ -894,7 +904,10 @@ function updateHud(force = false) {
   }
   const boss = game.enemies.find((enemy) => ENEMY_TYPES[enemy.type]?.boss && !enemy.dead);
   $("bossHud").hidden = game.state !== "boss" || !boss;
-  if (boss) $("bossFill").style.width = `${Math.max(0, boss.hp / boss.maxHp) * 100}%`;
+  if (boss) {
+    $("bossFill").style.width = `${Math.max(0, boss.hp / boss.maxHp) * 100}%`;
+    if (boss.type === "chemistBoss" && boss.phase === 2) $("bossName").textContent = "Королева в зеркале";
+  }
   const interaction = game.interactionHint();
   const hint = $("interactHint");
   hint.hidden = !interaction || paused;
@@ -1041,17 +1054,17 @@ $("exploreButton").addEventListener("click", () => {
 });
 $("audioButton").addEventListener("click", () => {
   audio.setEnabled(!audio.enabled);
-  saveSetting("bureau.audio", audio.enabled);
+  saveSetting("library.audio", audio.enabled);
   updateSettingLabels();
 });
 $("fxButton").addEventListener("click", () => {
   fx.setReduced(!fx.reduced);
-  saveSetting("bureau.reducedFx", fx.reduced);
+  saveSetting("library.reducedFx", fx.reduced);
   updateSettingLabels();
 });
 $("telegraphButton").addEventListener("click", () => {
   renderer.showTelegraphs = !renderer.showTelegraphs;
-  saveSetting("bureau.telegraphs", renderer.showTelegraphs);
+  saveSetting("library.telegraphs", renderer.showTelegraphs);
   updateSettingLabels();
 });
 
@@ -1128,6 +1141,17 @@ window.addEventListener("pointerup", () => {
   pointer.down = false;
 });
 canvas.addEventListener("contextmenu", (event) => event.preventDefault());
+
+for (const image of document.querySelectorAll('img[src^="assets/icons/"]')) {
+  image.src = iconPath(image.getAttribute("src").split("/").at(-1));
+}
+document.addEventListener("error", (event) => {
+  const image = event.target;
+  if (!(image instanceof HTMLImageElement) || !image.src.includes("/assets/library/icons/")) return;
+  const name = image.src.split("/").at(-1).replace(".png", "");
+  const fallback = { quartet: "echo-ripples", seal: "big-gear", chest: "locked-chest" }[name] || name;
+  image.src = `assets/icons/${fallback}.svg`;
+}, true);
 
 updateSettingLabels();
 buildHeroChoices();

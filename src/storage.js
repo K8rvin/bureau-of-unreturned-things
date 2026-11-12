@@ -1,4 +1,4 @@
-const RUN_KEY = "bureau.run.v2";
+const RUN_KEY = "library.run.v1";
 
 export function saveCheckpoint(snapshot) {
   try {

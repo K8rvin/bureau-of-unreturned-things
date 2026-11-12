@@ -9,7 +9,7 @@ OUTPUT.mkdir(parents=True, exist_ok=True)
 manifest = {}
 
 
-def add_sprite(key, strips, *, reference_height, target_height, directional=False, rates=None, offset_y=0):
+def add_sprite(key, strips, *, reference_height, target_height, directional=False, rates=None, offset_y=0, procedural_motion=False):
     images = []
     for name, entries in strips:
         row = []
@@ -18,7 +18,7 @@ def add_sprite(key, strips, *, reference_height, target_height, directional=Fals
                 frame = source.convert("RGBA").crop(crop)
             if not frame.getchannel("A").getbbox():
                 raise ValueError(f"Empty frame: {path}")
-            row.append({"image": frame, "anchor": anchor, "source": str(path.relative_to(ROOT))})
+            row.append({"image": frame, "anchor": anchor, "source": path.relative_to(ROOT).as_posix()})
         images.append((name, row))
 
     width = max(sum(frame["image"].width for frame in row) for _, row in images)
@@ -35,6 +35,8 @@ def add_sprite(key, strips, *, reference_height, target_height, directional=Fals
     }
     if directional:
         sprite["directional"] = True
+    if procedural_motion:
+        sprite["proceduralMotion"] = True
 
     y = 0
     for name, row in images:
@@ -53,23 +55,14 @@ def add_sprite(key, strips, *, reference_height, target_height, directional=Fals
     manifest[key] = sprite
 
 
-def separate_files(key, folder, prefix, states, *, reference_height=64, target_height=40):
-    strips = []
-    minimum_y = 64
-    for _, source_name, count in states:
-        for frame in range(1, count + 1):
-            path = PACKS / folder / f"{prefix}_{source_name}_{frame}.png"
-            with Image.open(path) as image:
-                bbox = image.getchannel("A").getbbox()
-                if bbox:
-                    minimum_y = min(minimum_y, bbox[1])
-    for name, source_name, count in states:
-        entries = []
-        for frame in range(1, count + 1):
-            path = PACKS / folder / f"{prefix}_{source_name}_{frame}.png"
-            entries.append((path, (0, minimum_y, 288, 128), (144, 128 - minimum_y)))
-        strips.append((name, entries))
-    add_sprite(key, strips, reference_height=reference_height, target_height=target_height, rates={"idle": 8, "run": 12, "attack": 28, "hit": 12, "death": 16})
+def atlas_heroes():
+    for key in ["archivist", "student", "witch", "scout"]:
+        source = PACKS / "pixel-art-atlas" / f"{key}.png"
+        with Image.open(source) as image:
+            if image.size != (16, 16):
+                raise ValueError(f"Unexpected Atlas frame size: {source}; expected 16x16")
+        entries = [(source, (0, 0, 16, 16), (8, 16))]
+        add_sprite(key, [("idle", entries), ("run", entries)], reference_height=16, target_height=24, rates={"idle": 1, "run": 1}, procedural_motion=True)
 
 
 def luiz(key, monster, target_height, *, offset_y=0):
@@ -173,11 +166,7 @@ def small_animals():
         add_sprite(key, strips, reference_height=32 - (20 if key == "rat" else 6), target_height=target_height, rates={"idle": 8, "gesture": 12, "run": 14, "attack": 14, "death": 12}, offset_y=-2 if key == "bat" else 0)
 
 
-separate_files("priestess", "chierit-water", "Water Priestess", [("idle", "Idle", 8), ("run", "Walk", 10), ("attack", "Attack1", 7), ("hit", "Take Hit", 7), ("death", "Death", 16)])
-separate_files("fireKnight", "chierit-fire", "Fire Knight", [("idle", "Idle", 8), ("run", "Run", 8), ("attack", "Attack1", 11), ("hit", "Take Hit", 6), ("death", "Death", 13)])
-intern()
-intern("surveyor", "prototype_character_blue.png")
-courier()
+atlas_heroes()
 luiz("skeleton", "skeleton", 32)
 luiz("mushroom", "mushroom", 26)
 luiz("goblin", "goblin", 25)

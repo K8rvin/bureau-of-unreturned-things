@@ -174,6 +174,7 @@ export class FxManager {
         this.spawn("pixelDissolve", 0, 0, { color: "#11131a", essential: true });
         break;
       case "dead":
+        this.spawn("disintegrate", event.x ?? 240, (event.y ?? 220) + 5, { essential: true });
         this.spawn("heartLost", 240, 130, { essential: true });
         break;
     }

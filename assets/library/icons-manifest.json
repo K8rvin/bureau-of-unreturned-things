@@ -1,0 +1,2754 @@
+{
+  "paper-clip": {
+    "source": ".cache/library-generation/icons-1/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-1",
+    "cell": 0,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "version": 3,
+        "operation": "edge-connected-background-removal",
+        "connectivity": 4,
+        "backgroundType": "neutral-checkerboard",
+        "backgroundRGB": [
+          217.0,
+          217.0,
+          217.0
+        ],
+        "backgroundPalette": [
+          [
+            196.0,
+            197.0,
+            196.0
+          ],
+          [
+            238.0,
+            238.0,
+            238.0
+          ]
+        ],
+        "neutralChromaBelow": 18,
+        "candidateDistanceBelow": 100,
+        "softAlphaDistanceRange": [
+          12,
+          80
+        ],
+        "removedPixels": 3376831,
+        "whiteInteriorsPreserved": true,
+        "largeWhiteHolesRemoved": 0
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "sewing-string": {
+    "source": ".cache/library-generation/icons-1/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-1",
+    "cell": 1,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "version": 3,
+          "operation": "edge-connected-background-removal",
+          "connectivity": 4,
+          "backgroundType": "neutral-checkerboard",
+          "backgroundRGB": [
+            217.0,
+            217.0,
+            217.0
+          ],
+          "backgroundPalette": [
+            [
+              196.0,
+              197.0,
+              196.0
+            ],
+            [
+              238.0,
+              238.0,
+              238.0
+            ]
+          ],
+          "neutralChromaBelow": 18,
+          "candidateDistanceBelow": 100,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "removedPixels": 3376831,
+          "whiteInteriorsPreserved": true,
+          "largeWhiteHolesRemoved": 0
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "pencil": {
+    "source": ".cache/library-generation/icons-1/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-1",
+    "cell": 2,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "version": 3,
+            "operation": "edge-connected-background-removal",
+            "connectivity": 4,
+            "backgroundType": "neutral-checkerboard",
+            "backgroundRGB": [
+              217.0,
+              217.0,
+              217.0
+            ],
+            "backgroundPalette": [
+              [
+                196.0,
+                197.0,
+                196.0
+              ],
+              [
+                238.0,
+                238.0,
+                238.0
+              ]
+            ],
+            "neutralChromaBelow": 18,
+            "candidateDistanceBelow": 100,
+            "softAlphaDistanceRange": [
+              12,
+              80
+            ],
+            "removedPixels": 3376831,
+            "whiteInteriorsPreserved": true,
+            "largeWhiteHolesRemoved": 0
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "crystal-ball": {
+    "source": ".cache/library-generation/icons-1/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-1",
+    "cell": 3,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "version": 3,
+              "operation": "edge-connected-background-removal",
+              "connectivity": 4,
+              "backgroundType": "neutral-checkerboard",
+              "backgroundRGB": [
+                217.0,
+                217.0,
+                217.0
+              ],
+              "backgroundPalette": [
+                [
+                  196.0,
+                  197.0,
+                  196.0
+                ],
+                [
+                  238.0,
+                  238.0,
+                  238.0
+                ]
+              ],
+              "neutralChromaBelow": 18,
+              "candidateDistanceBelow": 100,
+              "softAlphaDistanceRange": [
+                12,
+                80
+              ],
+              "removedPixels": 3376831,
+              "whiteInteriorsPreserved": true,
+              "largeWhiteHolesRemoved": 0
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "sewing-needle": {
+    "source": ".cache/library-generation/icons-1/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-1",
+    "cell": 4,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "version": 3,
+                "operation": "edge-connected-background-removal",
+                "connectivity": 4,
+                "backgroundType": "neutral-checkerboard",
+                "backgroundRGB": [
+                  217.0,
+                  217.0,
+                  217.0
+                ],
+                "backgroundPalette": [
+                  [
+                    196.0,
+                    197.0,
+                    196.0
+                  ],
+                  [
+                    238.0,
+                    238.0,
+                    238.0
+                  ]
+                ],
+                "neutralChromaBelow": 18,
+                "candidateDistanceBelow": 100,
+                "softAlphaDistanceRange": [
+                  12,
+                  80
+                ],
+                "removedPixels": 3376831,
+                "whiteInteriorsPreserved": true,
+                "largeWhiteHolesRemoved": 0
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "ink-swirl": {
+    "source": ".cache/library-generation/icons-1/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-1",
+    "cell": 5,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "version": 3,
+                  "operation": "edge-connected-background-removal",
+                  "connectivity": 4,
+                  "backgroundType": "neutral-checkerboard",
+                  "backgroundRGB": [
+                    217.0,
+                    217.0,
+                    217.0
+                  ],
+                  "backgroundPalette": [
+                    [
+                      196.0,
+                      197.0,
+                      196.0
+                    ],
+                    [
+                      238.0,
+                      238.0,
+                      238.0
+                    ]
+                  ],
+                  "neutralChromaBelow": 18,
+                  "candidateDistanceBelow": 100,
+                  "softAlphaDistanceRange": [
+                    12,
+                    80
+                  ],
+                  "removedPixels": 3376831,
+                  "whiteInteriorsPreserved": true,
+                  "largeWhiteHolesRemoved": 0
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "umbrella": {
+    "source": ".cache/library-generation/icons-1/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-1",
+    "cell": 6,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "version": 3,
+                    "operation": "edge-connected-background-removal",
+                    "connectivity": 4,
+                    "backgroundType": "neutral-checkerboard",
+                    "backgroundRGB": [
+                      217.0,
+                      217.0,
+                      217.0
+                    ],
+                    "backgroundPalette": [
+                      [
+                        196.0,
+                        197.0,
+                        196.0
+                      ],
+                      [
+                        238.0,
+                        238.0,
+                        238.0
+                      ]
+                    ],
+                    "neutralChromaBelow": 18,
+                    "candidateDistanceBelow": 100,
+                    "softAlphaDistanceRange": [
+                      12,
+                      80
+                    ],
+                    "removedPixels": 3376831,
+                    "whiteInteriorsPreserved": true,
+                    "largeWhiteHolesRemoved": 0
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "rubber-boot": {
+    "source": ".cache/library-generation/icons-1/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-1",
+    "cell": 7,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "sheet": {
+                      "version": 3,
+                      "operation": "edge-connected-background-removal",
+                      "connectivity": 4,
+                      "backgroundType": "neutral-checkerboard",
+                      "backgroundRGB": [
+                        217.0,
+                        217.0,
+                        217.0
+                      ],
+                      "backgroundPalette": [
+                        [
+                          196.0,
+                          197.0,
+                          196.0
+                        ],
+                        [
+                          238.0,
+                          238.0,
+                          238.0
+                        ]
+                      ],
+                      "neutralChromaBelow": 18,
+                      "candidateDistanceBelow": 100,
+                      "softAlphaDistanceRange": [
+                        12,
+                        80
+                      ],
+                      "removedPixels": 3376831,
+                      "whiteInteriorsPreserved": true,
+                      "largeWhiteHolesRemoved": 0
+                    },
+                    "cell": {
+                      "operation": "preserve-source-alpha"
+                    }
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "echo-ripples": {
+    "source": ".cache/library-generation/icons-2/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-2",
+    "cell": 0,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "version": 3,
+        "operation": "edge-connected-background-removal",
+        "connectivity": 4,
+        "backgroundType": "light",
+        "backgroundRGB": [
+          254.0,
+          254.0,
+          254.0
+        ],
+        "backgroundPalette": null,
+        "neutralChromaBelow": null,
+        "candidateDistanceBelow": 100,
+        "softAlphaDistanceRange": [
+          12,
+          80
+        ],
+        "removedPixels": 3617927,
+        "whiteInteriorsPreserved": true,
+        "largeWhiteHolesRemoved": 0
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "magnet": {
+    "source": ".cache/library-generation/icons-2/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-2",
+    "cell": 1,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "version": 3,
+          "operation": "edge-connected-background-removal",
+          "connectivity": 4,
+          "backgroundType": "light",
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundPalette": null,
+          "neutralChromaBelow": null,
+          "candidateDistanceBelow": 100,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "removedPixels": 3617927,
+          "whiteInteriorsPreserved": true,
+          "largeWhiteHolesRemoved": 0
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "ticket": {
+    "source": ".cache/library-generation/icons-2/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-2",
+    "cell": 2,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "version": 3,
+            "operation": "edge-connected-background-removal",
+            "connectivity": 4,
+            "backgroundType": "light",
+            "backgroundRGB": [
+              254.0,
+              254.0,
+              254.0
+            ],
+            "backgroundPalette": null,
+            "neutralChromaBelow": null,
+            "candidateDistanceBelow": 100,
+            "softAlphaDistanceRange": [
+              12,
+              80
+            ],
+            "removedPixels": 3617927,
+            "whiteInteriorsPreserved": true,
+            "largeWhiteHolesRemoved": 0
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "fire": {
+    "source": ".cache/library-generation/icons-2/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-2",
+    "cell": 3,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "version": 3,
+              "operation": "edge-connected-background-removal",
+              "connectivity": 4,
+              "backgroundType": "light",
+              "backgroundRGB": [
+                254.0,
+                254.0,
+                254.0
+              ],
+              "backgroundPalette": null,
+              "neutralChromaBelow": null,
+              "candidateDistanceBelow": 100,
+              "softAlphaDistanceRange": [
+                12,
+                80
+              ],
+              "removedPixels": 3617927,
+              "whiteInteriorsPreserved": true,
+              "largeWhiteHolesRemoved": 0
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "thermometer-cold": {
+    "source": ".cache/library-generation/icons-2/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-2",
+    "cell": 4,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "version": 3,
+                "operation": "edge-connected-background-removal",
+                "connectivity": 4,
+                "backgroundType": "light",
+                "backgroundRGB": [
+                  254.0,
+                  254.0,
+                  254.0
+                ],
+                "backgroundPalette": null,
+                "neutralChromaBelow": null,
+                "candidateDistanceBelow": 100,
+                "softAlphaDistanceRange": [
+                  12,
+                  80
+                ],
+                "removedPixels": 3617927,
+                "whiteInteriorsPreserved": true,
+                "largeWhiteHolesRemoved": 0
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "spider-web": {
+    "source": ".cache/library-generation/icons-2/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-2",
+    "cell": 5,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "version": 3,
+                  "operation": "edge-connected-background-removal",
+                  "connectivity": 4,
+                  "backgroundType": "light",
+                  "backgroundRGB": [
+                    254.0,
+                    254.0,
+                    254.0
+                  ],
+                  "backgroundPalette": null,
+                  "neutralChromaBelow": null,
+                  "candidateDistanceBelow": 100,
+                  "softAlphaDistanceRange": [
+                    12,
+                    80
+                  ],
+                  "removedPixels": 3617927,
+                  "whiteInteriorsPreserved": true,
+                  "largeWhiteHolesRemoved": 0
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "big-gear": {
+    "source": ".cache/library-generation/icons-2/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-2",
+    "cell": 6,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "version": 3,
+                    "operation": "edge-connected-background-removal",
+                    "connectivity": 4,
+                    "backgroundType": "light",
+                    "backgroundRGB": [
+                      254.0,
+                      254.0,
+                      254.0
+                    ],
+                    "backgroundPalette": null,
+                    "neutralChromaBelow": null,
+                    "candidateDistanceBelow": 100,
+                    "softAlphaDistanceRange": [
+                      12,
+                      80
+                    ],
+                    "removedPixels": 3617927,
+                    "whiteInteriorsPreserved": true,
+                    "largeWhiteHolesRemoved": 0
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "spring": {
+    "source": ".cache/library-generation/icons-2/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-2",
+    "cell": 7,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "sheet": {
+                      "version": 3,
+                      "operation": "edge-connected-background-removal",
+                      "connectivity": 4,
+                      "backgroundType": "light",
+                      "backgroundRGB": [
+                        254.0,
+                        254.0,
+                        254.0
+                      ],
+                      "backgroundPalette": null,
+                      "neutralChromaBelow": null,
+                      "candidateDistanceBelow": 100,
+                      "softAlphaDistanceRange": [
+                        12,
+                        80
+                      ],
+                      "removedPixels": 3617927,
+                      "whiteInteriorsPreserved": true,
+                      "largeWhiteHolesRemoved": 0
+                    },
+                    "cell": {
+                      "operation": "preserve-source-alpha"
+                    }
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "alarm-clock": {
+    "source": ".cache/library-generation/icons-3/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-3",
+    "cell": 0,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "version": 3,
+        "operation": "edge-connected-background-removal",
+        "connectivity": 4,
+        "backgroundType": "light",
+        "backgroundRGB": [
+          254.0,
+          254.0,
+          254.0
+        ],
+        "backgroundPalette": null,
+        "neutralChromaBelow": null,
+        "candidateDistanceBelow": 100,
+        "softAlphaDistanceRange": [
+          12,
+          80
+        ],
+        "removedPixels": 3202232,
+        "whiteInteriorsPreserved": true,
+        "largeWhiteHolesRemoved": 0
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "cycle": {
+    "source": ".cache/library-generation/icons-3/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-3",
+    "cell": 1,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "version": 3,
+          "operation": "edge-connected-background-removal",
+          "connectivity": 4,
+          "backgroundType": "light",
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundPalette": null,
+          "neutralChromaBelow": null,
+          "candidateDistanceBelow": 100,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "removedPixels": 3202232,
+          "whiteInteriorsPreserved": true,
+          "largeWhiteHolesRemoved": 0
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "boots": {
+    "source": ".cache/library-generation/icons-3/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-3",
+    "cell": 2,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "version": 3,
+            "operation": "edge-connected-background-removal",
+            "connectivity": 4,
+            "backgroundType": "light",
+            "backgroundRGB": [
+              254.0,
+              254.0,
+              254.0
+            ],
+            "backgroundPalette": null,
+            "neutralChromaBelow": null,
+            "candidateDistanceBelow": 100,
+            "softAlphaDistanceRange": [
+              12,
+              80
+            ],
+            "removedPixels": 3202232,
+            "whiteInteriorsPreserved": true,
+            "largeWhiteHolesRemoved": 0
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "footprint": {
+    "source": ".cache/library-generation/icons-3/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-3",
+    "cell": 3,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "version": 3,
+              "operation": "edge-connected-background-removal",
+              "connectivity": 4,
+              "backgroundType": "light",
+              "backgroundRGB": [
+                254.0,
+                254.0,
+                254.0
+              ],
+              "backgroundPalette": null,
+              "neutralChromaBelow": null,
+              "candidateDistanceBelow": 100,
+              "softAlphaDistanceRange": [
+                12,
+                80
+              ],
+              "removedPixels": 3202232,
+              "whiteInteriorsPreserved": true,
+              "largeWhiteHolesRemoved": 0
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "lab-coat": {
+    "source": ".cache/library-generation/icons-3/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-3",
+    "cell": 4,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "version": 3,
+                "operation": "edge-connected-background-removal",
+                "connectivity": 4,
+                "backgroundType": "light",
+                "backgroundRGB": [
+                  254.0,
+                  254.0,
+                  254.0
+                ],
+                "backgroundPalette": null,
+                "neutralChromaBelow": null,
+                "candidateDistanceBelow": 100,
+                "softAlphaDistanceRange": [
+                  12,
+                  80
+                ],
+                "removedPixels": 3202232,
+                "whiteInteriorsPreserved": true,
+                "largeWhiteHolesRemoved": 0
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "mirror-mirror": {
+    "source": ".cache/library-generation/icons-3/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-3",
+    "cell": 5,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "version": 3,
+                  "operation": "edge-connected-background-removal",
+                  "connectivity": 4,
+                  "backgroundType": "light",
+                  "backgroundRGB": [
+                    254.0,
+                    254.0,
+                    254.0
+                  ],
+                  "backgroundPalette": null,
+                  "neutralChromaBelow": null,
+                  "candidateDistanceBelow": 100,
+                  "softAlphaDistanceRange": [
+                    12,
+                    80
+                  ],
+                  "removedPixels": 3202232,
+                  "whiteInteriorsPreserved": true,
+                  "largeWhiteHolesRemoved": 0
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "magnifying-glass": {
+    "source": ".cache/library-generation/icons-3/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-3",
+    "cell": 6,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "version": 3,
+                    "operation": "edge-connected-background-removal",
+                    "connectivity": 4,
+                    "backgroundType": "light",
+                    "backgroundRGB": [
+                      254.0,
+                      254.0,
+                      254.0
+                    ],
+                    "backgroundPalette": null,
+                    "neutralChromaBelow": null,
+                    "candidateDistanceBelow": 100,
+                    "softAlphaDistanceRange": [
+                      12,
+                      80
+                    ],
+                    "removedPixels": 3202232,
+                    "whiteInteriorsPreserved": true,
+                    "largeWhiteHolesRemoved": 0
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "sword-slice": {
+    "source": ".cache/library-generation/icons-3/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-3",
+    "cell": 7,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "sheet": {
+                      "version": 3,
+                      "operation": "edge-connected-background-removal",
+                      "connectivity": 4,
+                      "backgroundType": "light",
+                      "backgroundRGB": [
+                        254.0,
+                        254.0,
+                        254.0
+                      ],
+                      "backgroundPalette": null,
+                      "neutralChromaBelow": null,
+                      "candidateDistanceBelow": 100,
+                      "softAlphaDistanceRange": [
+                        12,
+                        80
+                      ],
+                      "removedPixels": 3202232,
+                      "whiteInteriorsPreserved": true,
+                      "largeWhiteHolesRemoved": 0
+                    },
+                    "cell": {
+                      "operation": "preserve-source-alpha"
+                    }
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "speedometer": {
+    "source": ".cache/library-generation/icons-4/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-4",
+    "cell": 0,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "version": 3,
+        "operation": "edge-connected-background-removal",
+        "connectivity": 4,
+        "backgroundType": "light",
+        "backgroundRGB": [
+          254.0,
+          254.0,
+          254.0
+        ],
+        "backgroundPalette": null,
+        "neutralChromaBelow": null,
+        "candidateDistanceBelow": 100,
+        "softAlphaDistanceRange": [
+          12,
+          80
+        ],
+        "removedPixels": 3335393,
+        "whiteInteriorsPreserved": true,
+        "largeWhiteHolesRemoved": 0
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "anvil": {
+    "source": ".cache/library-generation/icons-4/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-4",
+    "cell": 1,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "version": 3,
+          "operation": "edge-connected-background-removal",
+          "connectivity": 4,
+          "backgroundType": "light",
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundPalette": null,
+          "neutralChromaBelow": null,
+          "candidateDistanceBelow": 100,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "removedPixels": 3335393,
+          "whiteInteriorsPreserved": true,
+          "largeWhiteHolesRemoved": 0
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "poison-bottle": {
+    "source": ".cache/library-generation/icons-4/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-4",
+    "cell": 2,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "version": 3,
+            "operation": "edge-connected-background-removal",
+            "connectivity": 4,
+            "backgroundType": "light",
+            "backgroundRGB": [
+              254.0,
+              254.0,
+              254.0
+            ],
+            "backgroundPalette": null,
+            "neutralChromaBelow": null,
+            "candidateDistanceBelow": 100,
+            "softAlphaDistanceRange": [
+              12,
+              80
+            ],
+            "removedPixels": 3335393,
+            "whiteInteriorsPreserved": true,
+            "largeWhiteHolesRemoved": 0
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "blood": {
+    "source": ".cache/library-generation/icons-4/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-4",
+    "cell": 3,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "version": 3,
+              "operation": "edge-connected-background-removal",
+              "connectivity": 4,
+              "backgroundType": "light",
+              "backgroundRGB": [
+                254.0,
+                254.0,
+                254.0
+              ],
+              "backgroundPalette": null,
+              "neutralChromaBelow": null,
+              "candidateDistanceBelow": 100,
+              "softAlphaDistanceRange": [
+                12,
+                80
+              ],
+              "removedPixels": 3335393,
+              "whiteInteriorsPreserved": true,
+              "largeWhiteHolesRemoved": 0
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "arrow-cluster": {
+    "source": ".cache/library-generation/icons-4/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-4",
+    "cell": 4,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "version": 3,
+                "operation": "edge-connected-background-removal",
+                "connectivity": 4,
+                "backgroundType": "light",
+                "backgroundRGB": [
+                  254.0,
+                  254.0,
+                  254.0
+                ],
+                "backgroundPalette": null,
+                "neutralChromaBelow": null,
+                "candidateDistanceBelow": 100,
+                "softAlphaDistanceRange": [
+                  12,
+                  80
+                ],
+                "removedPixels": 3335393,
+                "whiteInteriorsPreserved": true,
+                "largeWhiteHolesRemoved": 0
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "laser-blast": {
+    "source": ".cache/library-generation/icons-4/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-4",
+    "cell": 5,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "version": 3,
+                  "operation": "edge-connected-background-removal",
+                  "connectivity": 4,
+                  "backgroundType": "light",
+                  "backgroundRGB": [
+                    254.0,
+                    254.0,
+                    254.0
+                  ],
+                  "backgroundPalette": null,
+                  "neutralChromaBelow": null,
+                  "candidateDistanceBelow": 100,
+                  "softAlphaDistanceRange": [
+                    12,
+                    80
+                  ],
+                  "removedPixels": 3335393,
+                  "whiteInteriorsPreserved": true,
+                  "largeWhiteHolesRemoved": 0
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "return-arrow": {
+    "source": ".cache/library-generation/icons-4/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-4",
+    "cell": 6,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "version": 3,
+                    "operation": "edge-connected-background-removal",
+                    "connectivity": 4,
+                    "backgroundType": "light",
+                    "backgroundRGB": [
+                      254.0,
+                      254.0,
+                      254.0
+                    ],
+                    "backgroundPalette": null,
+                    "neutralChromaBelow": null,
+                    "candidateDistanceBelow": 100,
+                    "softAlphaDistanceRange": [
+                      12,
+                      80
+                    ],
+                    "removedPixels": 3335393,
+                    "whiteInteriorsPreserved": true,
+                    "largeWhiteHolesRemoved": 0
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "stopwatch": {
+    "source": ".cache/library-generation/icons-4/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-4",
+    "cell": 7,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "sheet": {
+                      "version": 3,
+                      "operation": "edge-connected-background-removal",
+                      "connectivity": 4,
+                      "backgroundType": "light",
+                      "backgroundRGB": [
+                        254.0,
+                        254.0,
+                        254.0
+                      ],
+                      "backgroundPalette": null,
+                      "neutralChromaBelow": null,
+                      "candidateDistanceBelow": 100,
+                      "softAlphaDistanceRange": [
+                        12,
+                        80
+                      ],
+                      "removedPixels": 3335393,
+                      "whiteInteriorsPreserved": true,
+                      "largeWhiteHolesRemoved": 0
+                    },
+                    "cell": {
+                      "operation": "preserve-source-alpha"
+                    }
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "electric": {
+    "source": ".cache/library-generation/icons-5/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-5",
+    "cell": 0,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "version": 3,
+        "operation": "edge-connected-background-removal",
+        "connectivity": 4,
+        "backgroundType": "light",
+        "backgroundRGB": [
+          254.0,
+          254.0,
+          254.0
+        ],
+        "backgroundPalette": null,
+        "neutralChromaBelow": null,
+        "candidateDistanceBelow": 100,
+        "softAlphaDistanceRange": [
+          12,
+          80
+        ],
+        "removedPixels": 3393939,
+        "whiteInteriorsPreserved": true,
+        "largeWhiteHolesRemoved": 0
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "clockwork": {
+    "source": ".cache/library-generation/icons-5/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-5",
+    "cell": 1,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "version": 3,
+          "operation": "edge-connected-background-removal",
+          "connectivity": 4,
+          "backgroundType": "light",
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundPalette": null,
+          "neutralChromaBelow": null,
+          "candidateDistanceBelow": 100,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "removedPixels": 3393939,
+          "whiteInteriorsPreserved": true,
+          "largeWhiteHolesRemoved": 0
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "compass": {
+    "source": ".cache/library-generation/icons-5/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-5",
+    "cell": 2,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "version": 3,
+            "operation": "edge-connected-background-removal",
+            "connectivity": 4,
+            "backgroundType": "light",
+            "backgroundRGB": [
+              254.0,
+              254.0,
+              254.0
+            ],
+            "backgroundPalette": null,
+            "neutralChromaBelow": null,
+            "candidateDistanceBelow": 100,
+            "softAlphaDistanceRange": [
+              12,
+              80
+            ],
+            "removedPixels": 3393939,
+            "whiteInteriorsPreserved": true,
+            "largeWhiteHolesRemoved": 0
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "keyring": {
+    "source": ".cache/library-generation/icons-5/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-5",
+    "cell": 3,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "version": 3,
+              "operation": "edge-connected-background-removal",
+              "connectivity": 4,
+              "backgroundType": "light",
+              "backgroundRGB": [
+                254.0,
+                254.0,
+                254.0
+              ],
+              "backgroundPalette": null,
+              "neutralChromaBelow": null,
+              "candidateDistanceBelow": 100,
+              "softAlphaDistanceRange": [
+                12,
+                80
+              ],
+              "removedPixels": 3393939,
+              "whiteInteriorsPreserved": true,
+              "largeWhiteHolesRemoved": 0
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "butterfly": {
+    "source": ".cache/library-generation/icons-5/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-5",
+    "cell": 4,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "version": 3,
+                "operation": "edge-connected-background-removal",
+                "connectivity": 4,
+                "backgroundType": "light",
+                "backgroundRGB": [
+                  254.0,
+                  254.0,
+                  254.0
+                ],
+                "backgroundPalette": null,
+                "neutralChromaBelow": null,
+                "candidateDistanceBelow": 100,
+                "softAlphaDistanceRange": [
+                  12,
+                  80
+                ],
+                "removedPixels": 3393939,
+                "whiteInteriorsPreserved": true,
+                "largeWhiteHolesRemoved": 0
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "unlit-bomb": {
+    "source": ".cache/library-generation/icons-5/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-5",
+    "cell": 5,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "version": 3,
+                  "operation": "edge-connected-background-removal",
+                  "connectivity": 4,
+                  "backgroundType": "light",
+                  "backgroundRGB": [
+                    254.0,
+                    254.0,
+                    254.0
+                  ],
+                  "backgroundPalette": null,
+                  "neutralChromaBelow": null,
+                  "candidateDistanceBelow": 100,
+                  "softAlphaDistanceRange": [
+                    12,
+                    80
+                  ],
+                  "removedPixels": 3393939,
+                  "whiteInteriorsPreserved": true,
+                  "largeWhiteHolesRemoved": 0
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "key": {
+    "source": ".cache/library-generation/icons-5/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-5",
+    "cell": 6,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "version": 3,
+                    "operation": "edge-connected-background-removal",
+                    "connectivity": 4,
+                    "backgroundType": "light",
+                    "backgroundRGB": [
+                      254.0,
+                      254.0,
+                      254.0
+                    ],
+                    "backgroundPalette": null,
+                    "neutralChromaBelow": null,
+                    "candidateDistanceBelow": 100,
+                    "softAlphaDistanceRange": [
+                      12,
+                      80
+                    ],
+                    "removedPixels": 3393939,
+                    "whiteInteriorsPreserved": true,
+                    "largeWhiteHolesRemoved": 0
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "heart-battery": {
+    "source": ".cache/library-generation/icons-5/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-5",
+    "cell": 7,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "sheet": {
+                      "version": 3,
+                      "operation": "edge-connected-background-removal",
+                      "connectivity": 4,
+                      "backgroundType": "light",
+                      "backgroundRGB": [
+                        254.0,
+                        254.0,
+                        254.0
+                      ],
+                      "backgroundPalette": null,
+                      "neutralChromaBelow": null,
+                      "candidateDistanceBelow": 100,
+                      "softAlphaDistanceRange": [
+                        12,
+                        80
+                      ],
+                      "removedPixels": 3393939,
+                      "whiteInteriorsPreserved": true,
+                      "largeWhiteHolesRemoved": 0
+                    },
+                    "cell": {
+                      "operation": "preserve-source-alpha"
+                    }
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "quartet": {
+    "source": ".cache/library-generation/icons-6/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-6",
+    "cell": 0,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "version": 3,
+        "operation": "edge-connected-background-removal",
+        "connectivity": 4,
+        "backgroundType": "light",
+        "backgroundRGB": [
+          254.0,
+          254.0,
+          254.0
+        ],
+        "backgroundPalette": null,
+        "neutralChromaBelow": null,
+        "candidateDistanceBelow": 100,
+        "softAlphaDistanceRange": [
+          12,
+          80
+        ],
+        "removedPixels": 3360132,
+        "whiteInteriorsPreserved": true,
+        "largeWhiteHolesRemoved": 0
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "seal": {
+    "source": ".cache/library-generation/icons-6/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-6",
+    "cell": 1,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "version": 3,
+          "operation": "edge-connected-background-removal",
+          "connectivity": 4,
+          "backgroundType": "light",
+          "backgroundRGB": [
+            254.0,
+            254.0,
+            254.0
+          ],
+          "backgroundPalette": null,
+          "neutralChromaBelow": null,
+          "candidateDistanceBelow": 100,
+          "softAlphaDistanceRange": [
+            12,
+            80
+          ],
+          "removedPixels": 3360132,
+          "whiteInteriorsPreserved": true,
+          "largeWhiteHolesRemoved": 0
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "gem": {
+    "source": ".cache/library-generation/icons-6/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-6",
+    "cell": 2,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "version": 3,
+            "operation": "edge-connected-background-removal",
+            "connectivity": 4,
+            "backgroundType": "light",
+            "backgroundRGB": [
+              254.0,
+              254.0,
+              254.0
+            ],
+            "backgroundPalette": null,
+            "neutralChromaBelow": null,
+            "candidateDistanceBelow": 100,
+            "softAlphaDistanceRange": [
+              12,
+              80
+            ],
+            "removedPixels": 3360132,
+            "whiteInteriorsPreserved": true,
+            "largeWhiteHolesRemoved": 0
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "book": {
+    "source": ".cache/library-generation/icons-6/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-6",
+    "cell": 3,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "version": 3,
+              "operation": "edge-connected-background-removal",
+              "connectivity": 4,
+              "backgroundType": "light",
+              "backgroundRGB": [
+                254.0,
+                254.0,
+                254.0
+              ],
+              "backgroundPalette": null,
+              "neutralChromaBelow": null,
+              "candidateDistanceBelow": 100,
+              "softAlphaDistanceRange": [
+                12,
+                80
+              ],
+              "removedPixels": 3360132,
+              "whiteInteriorsPreserved": true,
+              "largeWhiteHolesRemoved": 0
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "chest": {
+    "source": ".cache/library-generation/icons-6/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-6",
+    "cell": 4,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "version": 3,
+                "operation": "edge-connected-background-removal",
+                "connectivity": 4,
+                "backgroundType": "light",
+                "backgroundRGB": [
+                  254.0,
+                  254.0,
+                  254.0
+                ],
+                "backgroundPalette": null,
+                "neutralChromaBelow": null,
+                "candidateDistanceBelow": 100,
+                "softAlphaDistanceRange": [
+                  12,
+                  80
+                ],
+                "removedPixels": 3360132,
+                "whiteInteriorsPreserved": true,
+                "largeWhiteHolesRemoved": 0
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "crown": {
+    "source": ".cache/library-generation/icons-6/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-6",
+    "cell": 5,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "version": 3,
+                  "operation": "edge-connected-background-removal",
+                  "connectivity": 4,
+                  "backgroundType": "light",
+                  "backgroundRGB": [
+                    254.0,
+                    254.0,
+                    254.0
+                  ],
+                  "backgroundPalette": null,
+                  "neutralChromaBelow": null,
+                  "candidateDistanceBelow": 100,
+                  "softAlphaDistanceRange": [
+                    12,
+                    80
+                  ],
+                  "removedPixels": 3360132,
+                  "whiteInteriorsPreserved": true,
+                  "largeWhiteHolesRemoved": 0
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "candle": {
+    "source": ".cache/library-generation/icons-6/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-6",
+    "cell": 6,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "version": 3,
+                    "operation": "edge-connected-background-removal",
+                    "connectivity": 4,
+                    "backgroundType": "light",
+                    "backgroundRGB": [
+                      254.0,
+                      254.0,
+                      254.0
+                    ],
+                    "backgroundPalette": null,
+                    "neutralChromaBelow": null,
+                    "candidateDistanceBelow": 100,
+                    "softAlphaDistanceRange": [
+                      12,
+                      80
+                    ],
+                    "removedPixels": 3360132,
+                    "whiteInteriorsPreserved": true,
+                    "largeWhiteHolesRemoved": 0
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  },
+  "feather": {
+    "source": ".cache/library-generation/icons-6/original.jfif",
+    "sourceFormat": "JPEG",
+    "sheet": "icons-6",
+    "cell": 7,
+    "size": [
+      32,
+      32
+    ],
+    "palette": 32,
+    "processing": "3% edge trim, edge-connected background removal, premultiplied-alpha resize, alpha below 8 cleared, no dithering",
+    "background": {
+      "sheet": {
+        "sheet": {
+          "sheet": {
+            "sheet": {
+              "sheet": {
+                "sheet": {
+                  "sheet": {
+                    "sheet": {
+                      "version": 3,
+                      "operation": "edge-connected-background-removal",
+                      "connectivity": 4,
+                      "backgroundType": "light",
+                      "backgroundRGB": [
+                        254.0,
+                        254.0,
+                        254.0
+                      ],
+                      "backgroundPalette": null,
+                      "neutralChromaBelow": null,
+                      "candidateDistanceBelow": 100,
+                      "softAlphaDistanceRange": [
+                        12,
+                        80
+                      ],
+                      "removedPixels": 3360132,
+                      "whiteInteriorsPreserved": true,
+                      "largeWhiteHolesRemoved": 0
+                    },
+                    "cell": {
+                      "operation": "preserve-source-alpha"
+                    }
+                  },
+                  "cell": {
+                    "operation": "preserve-source-alpha"
+                  }
+                },
+                "cell": {
+                  "operation": "preserve-source-alpha"
+                }
+              },
+              "cell": {
+                "operation": "preserve-source-alpha"
+              }
+            },
+            "cell": {
+              "operation": "preserve-source-alpha"
+            }
+          },
+          "cell": {
+            "operation": "preserve-source-alpha"
+          }
+        },
+        "cell": {
+          "operation": "preserve-source-alpha"
+        }
+      },
+      "cell": {
+        "operation": "preserve-source-alpha"
+      }
+    }
+  }
+}

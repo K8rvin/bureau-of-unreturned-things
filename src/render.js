@@ -1,17 +1,39 @@
 import { ARENA, BOSS_ATTACKS, ENEMY_TYPES, HEIGHT, WIDTH } from "./content.js";
 import { drawMap } from "./map.js";
+import { DWARF_FILTERS, DWARF_TOOLS } from "./dwarf.js";
+import { iconPath } from "./icon-paths.js";
 
 const TAU = Math.PI * 2;
 const BIG = new Set(["boss", "umbrellaBoss", "sorterBoss", "finalBoss", "chemistBoss", "calibratorBoss", "riftWarden", "guardian"]);
 const FLOOR_THEMES = [
-  { floor: "#24202a", grid: "#2f2833", center: "#2b2330", accent: "#4b3542", wall: "#60464c", obstacle: "#65473f", top: "#93644c" },
-  { floor: "#1e2529", grid: "#2a383b", center: "#253237", accent: "#47605f", wall: "#466164", obstacle: "#4b5048", top: "#7b8068" },
-  { floor: "#25272b", grid: "#393c40", center: "#30343a", accent: "#77705b", wall: "#7a7765", obstacle: "#4b5048", top: "#9a9677" },
-  { floor: "#191923", grid: "#2e2b3d", center: "#242234", accent: "#65527a", wall: "#675477", obstacle: "#45404e", top: "#82708e" },
-  { floor: "#202927", grid: "#30413a", center: "#293a31", accent: "#53765c", wall: "#577761", obstacle: "#485b4a", top: "#78936b" },
-  { floor: "#20242e", grid: "#333b4c", center: "#293444", accent: "#4e7080", wall: "#527582", obstacle: "#465361", top: "#73939d" },
+  { floor: "#3d422b", grid: "#4d5335", center: "#555b38", accent: "#7a6c42", wall: "#5e5136", obstacle: "#70583d", top: "#a58c5d" },
+  { floor: "#34382b", grid: "#464a34", center: "#4d5135", accent: "#8d774b", wall: "#73623e", obstacle: "#66573d", top: "#ad915c" },
+  { floor: "#483c2c", grid: "#65513a", center: "#69523b", accent: "#ad7a50", wall: "#866042", obstacle: "#795337", top: "#c28d5c" },
+  { floor: "#31323b", grid: "#424452", center: "#4d4f5b", accent: "#8c8c9b", wall: "#686979", obstacle: "#5e5968", top: "#aaa2b5" },
+  { floor: "#30362f", grid: "#454d42", center: "#4e5847", accent: "#8a9172", wall: "#5c674f", obstacle: "#635a44", top: "#a4986d" },
+  { floor: "#49412b", grid: "#655738", center: "#70603a", accent: "#b69b5c", wall: "#817044", obstacle: "#7a623a", top: "#c5a66b" },
 ];
-const MEMORY_ICONS = { memoryUmbrella: "umbrella", memoryFire: "fire", memoryChalk: "pencil", memoryMagnet: "magnet", memoryEcho: "echo-ripples" };
+const MEMORY_ICONS = { memoryUmbrella: "alarm-clock", memoryFire: "fire", memoryChalk: "sewing-needle", memoryMagnet: "echo-ripples", memoryEcho: "alarm-clock" };
+
+function bossAction(enemy) {
+  if (enemy.type === "sorterBoss") {
+    if (enemy.attackType === "summonPackers") return "special";
+    if (enemy.attackType === "sort") return "attack2";
+  }
+  if (enemy.type === "finalBoss") {
+    if (["memoryUmbrella", "memoryEcho"].includes(enemy.attackType)) return "attack2";
+    if (enemy.attackType === "memoryMagnet") return "special";
+  }
+  if (enemy.type === "chemistBoss") {
+    if (enemy.attackType === "cloud") return "attack2";
+    if (enemy.attackType === "summonMoths") return "special";
+  }
+  if (enemy.type === "calibratorBoss") {
+    if (enemy.attackType === "beamSweep") return "attack2";
+    if (enemy.attackType === "beamGrid") return "special";
+  }
+  return null;
+}
 
 export class Renderer {
   constructor(canvas, fx, sprites) {
@@ -26,9 +48,9 @@ export class Renderer {
     this.mapHidden = false;
     this.showTelegraphs = false;
     this.icons = {};
-    for (const name of ["keyring", "umbrella", "key", "unlit-bomb", "heart-battery", "paper-clip", "big-gear", "mirror-mirror", "fire", "pencil", "magnet", "echo-ripples", "ink-swirl", "sewing-needle", "laser-blast", "locked-chest", "open-chest"]) {
+    for (const name of ["keyring", "umbrella", "key", "unlit-bomb", "heart-battery", "paper-clip", "big-gear", "mirror-mirror", "fire", "pencil", "magnet", "echo-ripples", "ink-swirl", "sewing-needle", "laser-blast", "locked-chest", "open-chest", "alarm-clock", "blood", "sewing-string", "poison-bottle", "lab-coat"]) {
       const image = new Image();
-      image.src = `assets/icons/${name}.svg`;
+      image.src = iconPath(`${name}.svg`);
       this.icons[name] = image;
     }
   }
@@ -90,25 +112,30 @@ export class Renderer {
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
     ctx.fillStyle = theme.floor;
     ctx.fillRect(ARENA.left, ARENA.top, ARENA.right - ARENA.left, ARENA.bottom - ARENA.top);
-    ctx.strokeStyle = theme.grid;
-    ctx.lineWidth = 1;
-    for (let x = ARENA.left + 16; x < ARENA.right; x += 16) {
-      ctx.beginPath(); ctx.moveTo(x + 0.5, ARENA.top); ctx.lineTo(x + 0.5, ARENA.bottom); ctx.stroke();
-    }
-    for (let y = ARENA.top + 16; y < ARENA.bottom; y += 16) {
-      ctx.beginPath(); ctx.moveTo(ARENA.left, y + 0.5); ctx.lineTo(ARENA.right, y + 0.5); ctx.stroke();
-    }
-    ctx.fillStyle = theme.center;
-    ctx.strokeStyle = theme.accent;
-    ctx.setLineDash([4, 5]);
-    if (game.floorIndex === 3) {
-      ctx.fillRect(176, 107, 128, 70);
-      ctx.strokeRect(188, 116, 104, 52);
+    const roomImage = this.sprites.roomImage(game.floor?.index ?? game.floorIndex);
+    if (roomImage) {
+      ctx.drawImage(roomImage, 0, 0, WIDTH, HEIGHT);
     } else {
-      ctx.beginPath(); ctx.ellipse(240, 142, 64, 35, 0, 0, TAU); ctx.fill();
-      ctx.beginPath(); ctx.ellipse(240, 142, 48, 25, 0, 0, TAU); ctx.stroke();
+      ctx.strokeStyle = theme.grid;
+      ctx.lineWidth = 1;
+      for (let x = ARENA.left + 16; x < ARENA.right; x += 16) {
+        ctx.beginPath(); ctx.moveTo(x + 0.5, ARENA.top); ctx.lineTo(x + 0.5, ARENA.bottom); ctx.stroke();
+      }
+      for (let y = ARENA.top + 16; y < ARENA.bottom; y += 16) {
+        ctx.beginPath(); ctx.moveTo(ARENA.left, y + 0.5); ctx.lineTo(ARENA.right, y + 0.5); ctx.stroke();
+      }
+      ctx.fillStyle = theme.center;
+      ctx.strokeStyle = theme.accent;
+      ctx.setLineDash([4, 5]);
+      if (game.floorIndex === 3) {
+        ctx.fillRect(176, 107, 128, 70);
+        ctx.strokeRect(188, 116, 104, 52);
+      } else {
+        ctx.beginPath(); ctx.ellipse(240, 142, 64, 35, 0, 0, TAU); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(240, 142, 48, 25, 0, 0, TAU); ctx.stroke();
+      }
+      ctx.setLineDash([]);
     }
-    ctx.setLineDash([]);
     ctx.lineWidth = 5;
     ctx.strokeStyle = theme.wall;
     ctx.strokeRect(ARENA.left - 2, ARENA.top - 2, ARENA.right - ARENA.left + 4, ARENA.bottom - ARENA.top + 4);
@@ -117,19 +144,22 @@ export class Renderer {
     ctx.strokeRect(ARENA.left + 2, ARENA.top + 2, ARENA.right - ARENA.left - 4, ARENA.bottom - ARENA.top - 4);
     for (const obstacle of game.obstacles || []) {
       ctx.fillStyle = "#17131b";
-      ctx.fillRect(obstacle.x - 2, obstacle.y + 3, obstacle.w + 4, obstacle.h + 3);
+      ctx.beginPath(); ctx.roundRect(obstacle.x - 2, obstacle.y + 3, obstacle.w + 4, obstacle.h + 3, 4); ctx.fill();
       ctx.fillStyle = theme.obstacle;
-      ctx.fillRect(obstacle.x, obstacle.y, obstacle.w, obstacle.h);
+      ctx.beginPath(); ctx.roundRect(obstacle.x, obstacle.y, obstacle.w, obstacle.h, 3); ctx.fill();
+      ctx.strokeStyle = theme.top;
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(obstacle.x + 4, obstacle.y + 3); ctx.lineTo(obstacle.x + obstacle.w - 4, obstacle.y + 3); ctx.stroke();
       ctx.fillStyle = theme.top;
-      ctx.fillRect(obstacle.x + 2, obstacle.y + 2, obstacle.w - 4, 3);
-      ctx.fillStyle = "#33252a";
-      for (let x = obstacle.x + 6; x < obstacle.x + obstacle.w - 3; x += 9) ctx.fillRect(x, obstacle.y + 7, 4, 7);
+      for (const x of [obstacle.x + 5, obstacle.x + obstacle.w - 5]) {
+        ctx.beginPath(); ctx.ellipse(x, obstacle.y + obstacle.h / 2, 3, Math.max(2, obstacle.h / 2 - 3), 0, 0, TAU); ctx.fill();
+      }
     }
     if (game.state === "title") {
       ctx.fillStyle = "#817083";
       ctx.font = '8px "Archive Pixel", monospace';
       ctx.textAlign = "center";
-      ctx.fillText("АРХИВ ОЖИДАЕТ СМЕНУ", 240, 145);
+      ctx.fillText("БИБЛИОТЕКА ЖДЁТ ЧИТАТЕЛЯ", 240, 145);
     }
   }
 
@@ -176,15 +206,15 @@ export class Renderer {
     for (const beam of environment.beams) {
       ctx.save();
       if (beam.time > 0) {
-        ctx.strokeStyle = "#8ec9d6bb";
+        ctx.strokeStyle = "#d6bd74bb";
         ctx.lineWidth = 1;
         ctx.setLineDash([6, 4]);
         ctx.beginPath(); ctx.moveTo(beam.x1, beam.y1); ctx.lineTo(beam.x2, beam.y2); ctx.stroke();
       } else {
-        ctx.strokeStyle = "#ff8e7dcc";
+        ctx.strokeStyle = "#f0cf83cc";
         ctx.lineWidth = 6;
         ctx.beginPath(); ctx.moveTo(beam.x1, beam.y1); ctx.lineTo(beam.x2, beam.y2); ctx.stroke();
-        ctx.strokeStyle = "#ffe0c9ee";
+        ctx.strokeStyle = "#fff0bbee";
         ctx.lineWidth = 2;
         ctx.beginPath(); ctx.moveTo(beam.x1, beam.y1); ctx.lineTo(beam.x2, beam.y2); ctx.stroke();
       }
@@ -380,6 +410,14 @@ export class Renderer {
 
   drawNpc(game) {
     const ctx = this.context;
+    if (game.floorIndex === 0 && game.room()?.type === "start" && this.sprites.has("redHood")) {
+      this.sprites.draw(ctx, "redHood", { x: 280, y: 145, time: game.time, moving: false });
+      ctx.fillStyle = "#d4bc8b";
+      ctx.font = '8px "Archive Pixel", monospace';
+      ctx.textAlign = "center";
+      ctx.fillText("КРАСНАЯ ШАПОЧКА", 280, 165);
+      return;
+    }
     if (game.room()?.type === "workshop") {
       this.sprites.draw(ctx, "workshopMonk", { x: 240, y: 140, time: game.time, moving: false });
       ctx.fillStyle = "#4c3834";
@@ -389,7 +427,7 @@ export class Renderer {
       ctx.fillStyle = "#d4bc8b";
       ctx.font = '8px "Archive Pixel", monospace';
       ctx.textAlign = "center";
-      ctx.fillText("РАЗБОРЩИК", 240, 158);
+      ctx.fillText("ХРАНИТЕЛЬ", 240, 158);
       return;
     }
     if (game.room()?.type !== "shop") return;
@@ -401,7 +439,7 @@ export class Renderer {
     ctx.fillStyle = "#d4bc8b";
     ctx.font = '8px "Archive Pixel", monospace';
     ctx.textAlign = "center";
-    ctx.fillText("ОЦЕНЩИК", 240, 158);
+    ctx.fillText("ХРАНИТЕЛЬ", 240, 158);
   }
 
   drawPackLinks(game) {
@@ -430,12 +468,12 @@ export class Renderer {
     const room = game.room();
     if (!room) return;
     const ctx = this.context;
-    if (room.event === "sigil" && !game.chain.sigil) {
-      ctx.strokeStyle = "#b691cf";
-      ctx.setLineDash([3, 3]);
+    if (room.event === "chapterClue" && !room.loreFound) {
+      ctx.strokeStyle = "#c9b47c";
+      ctx.setLineDash([2, 3]);
       ctx.beginPath(); ctx.arc(240, 120, 14 + Math.sin(game.time * 3) * 2, 0, TAU); ctx.stroke();
       ctx.setLineDash([]);
-      this.drawIcon("echo-ripples", 231, 111, 18, "#d1a6e8");
+      this.drawIcon("paper-clip", 231, 111, 18, "#ead49b");
     }
     if (room.event === "contract" && !room.contractHandled) {
       ctx.strokeStyle = "#d1b66a";
@@ -448,7 +486,7 @@ export class Renderer {
     if (room.type === "boss" && room.cleared && game.floor.exitAvailable) {
       ctx.strokeStyle = "#d1b66a";
       ctx.beginPath(); ctx.arc(240, 140, 13, 0, TAU); ctx.stroke();
-      this.drawIcon("keyring", 233, 133, 14, "#edc37b");
+      this.drawIcon("paper-clip", 233, 133, 14, "#edc37b");
     }
     if (room.event === "riftTerminal" || (room.type === "rift" && room.cleared)) {
       ctx.strokeStyle = "#b99ddd";
@@ -469,8 +507,9 @@ export class Renderer {
       if (enemy.dead) continue;
       const spawning = enemy.spawnTime > 0 || game.waveIntro > 0;
       const moving = this.isMoving(enemy, spawning);
-      const spriteKey = enemy.type === "dust" && enemy.small ? "dustSmall" : ENEMY_TYPES[enemy.type].sprite || enemy.type;
-      const scale = ENEMY_TYPES[enemy.type].bossScale || (BIG.has(enemy.type) ? 1.25 : enemy.small ? 0.75 : enemy.type === "moth" ? 1 + enemy.growth * 0.08 : 1);
+      const spriteKey = enemy.type === "dust" && enemy.small ? "dustSmall" : enemy.type === "chemistBoss" && enemy.phase === 2 ? "queen" : ENEMY_TYPES[enemy.type].sprite || enemy.type;
+      let scale = ENEMY_TYPES[enemy.type].bossScale || (BIG.has(enemy.type) ? 1.25 : enemy.small ? 0.75 : enemy.type === "moth" ? 1 + enemy.growth * 0.08 : 1);
+      if (enemy.variant === 6) scale *= 1.18;
       const bottom = enemy.y + enemy.r + 4;
       if (enemy.elite) {
         ctx.strokeStyle = "#edc37b";
@@ -504,9 +543,10 @@ export class Renderer {
         hit: enemy.flash > 0,
         attacking: enemy.attackAnimation > 0,
         actionTime: enemy.attackAnimation > 0 ? Math.max(0, enemy.telegraphDuration + 0.25 - enemy.attackAnimation) : null,
-        action: enemy.type === "skeleton" && enemy.shieldTimer > 0 ? "shield" : enemy.type === "curseCaster" && enemy.attackType === "curseFan" ? "attack2" : enemy.type === "rat" && enemy.contactTimer > 0.55 ? "gesture" : null,
-        filter: ENEMY_TYPES[enemy.type].filter || null,
+        action: enemy.type === "skeleton" && enemy.shieldTimer > 0 ? "shield" : enemy.type === "boss" && ["fan", "summon"].includes(enemy.attackType) ? "howl" : ["boss", "lost"].includes(enemy.type) && ["charge", "slam"].includes(enemy.attackType) ? "pounce" : enemy.type === "curseCaster" && enemy.attackType === "curseFan" ? "attack2" : enemy.type === "rat" && enemy.contactTimer > 0.55 ? "gesture" : bossAction(enemy),
+        filter: enemy.type === "goblin" ? DWARF_FILTERS[enemy.variant ?? 0] : ENEMY_TYPES[enemy.type].filter || null,
       });
+      if (enemy.type === "goblin") this.drawIcon(DWARF_TOOLS[enemy.variant ?? 0], enemy.x + enemy.r - 2, top - 7, 7, "#ead49b");
       if (ENEMY_TYPES[enemy.type].boss) {
         const iconName = (enemy.type === "finalBoss" && enemy.telegraph > 0 ? MEMORY_ICONS[enemy.attackType] : null) || ENEMY_TYPES[enemy.type].icon;
         const icon = this.icons[iconName];
@@ -553,7 +593,7 @@ export class Renderer {
 
   drawPlayer(game) {
     const p = game.player;
-    if (p.invuln > 0 && Math.floor(p.invuln * 20) % 2 === 0) return;
+    if (game.state === "dead" || p.invuln > 0 && Math.floor(p.invuln * 20) % 2 === 0) return;
     const ctx = this.context;
     const moving = this.isMoving({ id: -1, x: p.x, y: p.y }, false);
     ctx.fillStyle = "#08090db0";
@@ -567,14 +607,8 @@ export class Renderer {
       actionTime: p.attackTimer > 0 ? Math.max(0, 0.24 - p.attackTimer) : null,
       aimAngle: p.aimAngle,
     });
-    ctx.strokeStyle = "#f0ca7d";
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(p.x + Math.cos(p.aimAngle) * 5, p.y - 4 + Math.sin(p.aimAngle) * 5);
-    ctx.lineTo(p.x + Math.cos(p.aimAngle) * 12, p.y - 4 + Math.sin(p.aimAngle) * 12);
-    ctx.stroke();
     if (game.hasItem("umbrella") && p.umbrellaTimer <= 0) {
-      this.drawIcon("umbrella", p.x - 8, top - 12, 16, "#a4dcd4");
+      this.drawIcon("lab-coat", p.x - 8, top - 12, 16, "#a4dcd4");
       ctx.strokeStyle = "#a4dcd4"; ctx.lineWidth = 1;
       ctx.beginPath(); ctx.arc(p.x, p.y, 10, 0, TAU); ctx.stroke();
     }
@@ -601,10 +635,6 @@ export class Renderer {
     const ctx = this.context;
     for (const projectile of game.projectiles) {
       if (projectile.dead) continue;
-      if (projectile.source === "ghostOrb") {
-        this.sprites.draw(ctx, "ghostOrb", { x: projectile.x, y: projectile.y, time: game.time, moving: true });
-        continue;
-      }
       ctx.save();
       ctx.translate(projectile.x, projectile.y);
       if (projectile.owner === "player") {
@@ -621,7 +651,7 @@ export class Renderer {
         }
       } else {
         ctx.rotate(Math.PI / 4);
-        ctx.fillStyle = projectile.burning ? "#ff9b58" : projectile.source === "memoryMagnet" ? "#91ddd5" : projectile.source === "memoryChalk" ? "#d7d1ff" : projectile.puddle ? "#b57ac8" : "#f17878";
+        ctx.fillStyle = projectile.source === "ghostOrb" ? "#e8cc80" : projectile.burning ? "#ff9b58" : projectile.source === "memoryMagnet" ? "#91ddd5" : projectile.source === "memoryChalk" ? "#d7d1ff" : projectile.puddle ? "#b57ac8" : "#f17878";
         ctx.strokeStyle = "#2b1420";
         ctx.lineWidth = 2;
         ctx.fillRect(-projectile.r, -projectile.r, projectile.r * 2, projectile.r * 2);
@@ -676,7 +706,7 @@ export class Renderer {
     if (!image?.complete || !image.naturalWidth) return;
     const ctx = this.context;
     ctx.save();
-    if (color) ctx.filter = "invert(90%) sepia(20%) saturate(400%)";
+    if (color && image.src.endsWith(".svg")) ctx.filter = "invert(90%) sepia(20%) saturate(400%)";
     ctx.drawImage(image, x, y, size, size);
     ctx.restore();
   }

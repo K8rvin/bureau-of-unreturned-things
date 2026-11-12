@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#11131a">
-  <title>Бюро невозвратных вещей — этап B</title>
+  <meta name="theme-color" content="#151711">
+  <title>Библиотека незаконченных сказок</title>
   <link rel="icon" href="assets/icons/key.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="app">
     <header class="topbar">
-      <div class="brand">БЮРО <span>этап B</span></div>
+      <div class="brand">СКАЗКИ <span>живая библиотека</span></div>
       <div id="hud" class="hud" aria-live="polite">
-        <div id="health" class="hud-group" title="Печати здоровья"></div>
-        <div class="hud-group" title="Петарды [R] · фитиль 1,5 с"><img class="icon" src="assets/icons/unlit-bomb.svg" alt=""><span id="bombs">2</span></div>
-        <div class="hud-group" title="Жетоны"><img class="icon" src="assets/icons/crystal-ball.svg" alt=""><span id="coins">0</span></div>
+        <div id="health" class="hud-group" title="Здоровье ребёнка"></div>
+        <div class="hud-group" title="Хлопок страницы [R] · фитиль 1,5 с"><img class="icon" src="assets/icons/unlit-bomb.svg" alt=""><span id="bombs">2</span></div>
+        <div class="hud-group" title="Буквы"><img class="icon" src="assets/icons/crystal-ball.svg" alt=""><span id="coins">0</span></div>
         <div class="hud-group" title="Ключи"><img class="icon" src="assets/icons/key.svg" alt=""><span id="keys">0</span></div>
-        <div id="wave" class="hud-group">Смена не начата</div>
+        <div id="wave" class="hud-group">Библиотека ждёт</div>
         <div id="seed" class="seed"></div>
       </div>
       <div class="settings">
@@ -29,102 +29,102 @@
     </header>
 
     <main id="gameShell" class="game-shell">
-      <canvas id="gameCanvas" width="480" height="270" tabindex="0" aria-label="Игровая арена"></canvas>
+      <canvas id="gameCanvas" width="480" height="270" tabindex="0" aria-label="Игровая арена внутри сказки"></canvas>
       <div id="bossHud" class="boss-hud" hidden>
         <div id="bossName"></div>
         <div class="boss-track"><div id="bossFill"></div></div>
       </div>
       <div id="toast" class="toast" role="status" hidden></div>
-      <div id="interactHint" class="interact-hint" hidden><kbd>E</kbd> поговорить с Оценщиком</div>
+      <div id="interactHint" class="interact-hint" hidden><kbd>E</kbd> поговорить с Хранителем</div>
       <div id="mapHint" class="map-hint" hidden><kbd>Tab</kbd> карта · <kbd>M</kbd> мини-карта</div>
 
       <div id="overlay" class="overlay">
         <section id="titlePanel" class="panel title-panel">
-          <div class="eyebrow">ВЕРТИКАЛЬНЫЙ СРЕЗ · ЭТАП B</div>
-          <h1>Бюро невозвратных вещей</h1>
-          <p class="lead">Выберите сотрудника. Стартовая находка меняет вашу тактику.</p>
-          <div id="heroChoices" class="hero-cards" role="radiogroup" aria-label="Выбор героя"></div>
+          <div class="eyebrow">ПРОТОТИП · ШЕСТЬ КНИГ</div>
+          <h1>Библиотека незаконченных сказок</h1>
+          <p class="lead">Ребёнок попал в книги братьев Гримм. Переживите их искажённые истории и верните последние страницы.</p>
+          <div id="heroChoices" class="hero-cards" role="radiogroup" aria-label="Главный герой"></div>
           <div class="title-actions">
-            <button id="startButton" class="primary" type="button">Новая смена</button>
-            <button id="continueButton" type="button" hidden>Продолжить забег</button>
+            <button id="startButton" class="primary" type="button">Открыть первую книгу</button>
+            <button id="continueButton" type="button" hidden>Продолжить чтение</button>
             <button id="challengeButton" type="button">Испытания</button>
-            <button id="trainingButton" type="button">Тренировка боссов</button>
-            <button id="catalogButton" type="button">Каталог находок</button>
+            <button id="trainingButton" type="button">Тренировка персонажей</button>
+            <button id="catalogButton" type="button">Книга находок</button>
           </div>
           <details id="fieldManual" class="field-manual" open>
             <summary>Управление</summary>
             <div class="controls">
               <span><kbd>WASD</kbd> движение</span>
-              <span><kbd>Мышь + ЛКМ</kbd> прицел и огонь</span>
-              <span><kbd>R</kbd> петарда</span>
+              <span><kbd>Мышь + ЛКМ</kbd> прицел и свет</span>
+              <span><kbd>R</kbd> хлопок страницы</span>
               <span><kbd>E</kbd> взаимодействие</span>
-              <span><kbd>F</kbd> сервисный пропуск</span>
+              <span><kbd>F</kbd> закладка</span>
               <span><kbd>Tab</kbd> удерживать карту</span>
               <span><kbd>M</kbd> мини-карта вкл/выкл</span>
               <span><kbd>Esc</kbd> пауза</span>
             </div>
           </details>
-          <p class="hint">Исследуйте комнаты, находите тайники и спускайтесь ниже. После боя награда открывается через 3 секунды.</p>
+          <p class="hint">Исследуйте книги, находите тайники и восстанавливайте концовки. Награда открывается через 3 секунды после боя.</p>
         </section>
 
         <section id="trainingPanel" class="panel event-panel" hidden>
           <div class="eyebrow">ОТДЕЛЬНЫЙ РЕЖИМ</div>
-          <h2>Тренировка боссов</h2>
-          <p class="lead">Выбранный герой сохраняется. Отделы, победы и открытия здесь не засчитываются.</p>
+          <h2>Тренировка персонажей</h2>
+          <p class="lead">Выберите книгу для тренировки. Победы, находки и открытия здесь не засчитываются.</p>
           <div id="bossTraining" class="training-links" aria-label="Тренировка боссов"></div>
-          <button id="closeTrainingButton" class="quiet" type="button">Вернуться в меню</button>
+          <button id="closeTrainingButton" class="quiet" type="button">Вернуться в библиотеку</button>
         </section>
 
         <section id="challengePanel" class="panel event-panel" hidden>
-          <div class="eyebrow">ОСОБЫЕ ПРАВИЛА СМЕНЫ</div>
+          <div class="eyebrow">СЛОЖНЫЕ СТРАНИЦЫ</div>
           <h2>Испытания</h2>
-          <p class="lead">Выполните цель выбранным героем, чтобы новая вещь вошла в обычный пул наград.</p>
+          <p class="lead">Выполните цель, чтобы новая вещь вошла в обычный пул наград.</p>
           <div id="challengeCards" class="event-choices"></div>
-          <button id="closeChallengesButton" class="quiet" type="button">Вернуться в меню</button>
+          <button id="closeChallengesButton" class="quiet" type="button">Вернуться в библиотеку</button>
         </section>
 
         <section id="choicePanel" class="panel choice-panel" hidden>
-          <div class="eyebrow">НАЙДЕНА ВЕЩЬ</div>
+          <div class="eyebrow">НОВАЯ СТРАНИЦА</div>
           <h2>Выберите одну находку</h2>
           <div id="choiceCards" class="choice-cards"></div>
           <p id="choiceHint" class="hint countdown">Переведите дух: 3…</p>
         </section>
 
         <section id="shopPanel" class="panel shop-panel" hidden>
-          <div class="eyebrow">ОЦЕНЩИК · МАГАЗИН</div>
-          <h2>Что принесли на этот раз?</h2>
+          <div class="eyebrow">ХРАНИТЕЛЬ КНИГ · ОБМЕН</div>
+          <h2>Что вы нашли в этой истории?</h2>
           <div id="shopStock" class="shop-stock"></div>
           <p id="shopHint" class="hint"></p>
-          <button id="repairButton" class="repair-button" type="button" hidden>Отдать игрушку на ремонт</button>
-          <button id="closeShopButton" class="quiet" type="button">Вернуться в комнату</button>
+          <button id="repairButton" class="repair-button" type="button" hidden>Вернуть потерянную страницу</button>
+          <button id="closeShopButton" class="quiet" type="button">Вернуться в книгу</button>
         </section>
 
         <section id="contractPanel" class="panel event-panel" hidden>
-          <div class="eyebrow">НЕУЧТЁННАЯ КАЛИБРОВКА</div>
+          <div class="eyebrow">ЦЕНА СКАЗКИ</div>
           <h2>Чем заплатите за находку?</h2>
-          <p class="lead">Контракт необязателен. Можно уйти и вернуться позже.</p>
+          <p class="lead">Условие необязательно. Можно уйти и вернуться позже.</p>
           <div id="contractChoices" class="event-choices"></div>
           <button id="closeContractButton" class="quiet" type="button">Отказаться</button>
         </section>
 
         <section id="riftPanel" class="panel event-panel" hidden>
-          <div class="eyebrow">СЕРВИСНЫЙ ПРОПУСК</div>
-          <h2>Служебный проход</h2>
-          <p class="lead">Один переход в этот отдел. Только посещённые и зачищенные комнаты.</p>
+          <div class="eyebrow">ЗОЛОТАЯ ЗАКЛАДКА</div>
+          <h2>Перейти на страницу</h2>
+          <p class="lead">Один переход в этой книге. Только посещённые и зачищенные комнаты.</p>
           <div id="riftChoices" class="event-choices"></div>
           <button id="closeRiftButton" class="quiet" type="button">Остаться</button>
         </section>
 
         <section id="workshopPanel" class="panel event-panel" hidden>
-          <div class="eyebrow">ДРУЖЕСТВЕННАЯ МАСТЕРСКАЯ</div>
-          <h2>Разборщик вещей</h2>
+          <div class="eyebrow">МАСТЕРСКАЯ ИСТОРИЙ</div>
+          <h2>Хранитель книг</h2>
           <p id="workshopDescription" class="lead">Выберите одну вещь для замены. Отмена ничего не отбирает.</p>
           <div id="workshopChoices" class="event-choices workshop-choices"></div>
           <button id="closeWorkshopButton" class="quiet" type="button">Оставить вещи как есть</button>
         </section>
 
         <section id="vaultPanel" class="panel event-panel" hidden>
-          <div class="eyebrow">ЗАПЕЧАТАННОЕ ХРАНИЛИЩЕ</div>
+          <div class="eyebrow">ЗАПЕЧАТАННАЯ СТРАНИЦА</div>
           <h2>Ключ или охрана?</h2>
           <p id="vaultDescription" class="lead">Одна награда независимо от способа. Можно уйти без потерь.</p>
           <div class="event-choices">
@@ -135,23 +135,23 @@
         </section>
 
         <section id="floorPanel" class="panel" hidden>
-          <div class="eyebrow">ОТДЕЛ ЗАЧИЩЕН</div>
-          <h2>Можно продолжить исследование</h2>
-          <p id="floorDescription" class="lead">Останьтесь на отделе или вернитесь к лифту, когда будете готовы спуститься.</p>
-          <button id="nextFloorButton" class="primary" type="button">Спуститься в следующий отдел</button>
-          <button id="exploreButton" type="button">Остаться на этом отделе</button>
+          <div class="eyebrow">КОНЕЦ ГЛАВЫ</div>
+          <h2>Книга ещё не закрыта</h2>
+          <p id="floorDescription" class="lead">Можно продолжить исследование или открыть следующую книгу, когда будете готовы.</p>
+          <button id="nextFloorButton" class="primary" type="button">Открыть следующую книгу</button>
+          <button id="exploreButton" type="button">Остаться в этой книге</button>
         </section>
 
         <section id="catalogPanel" class="panel catalog-panel" hidden>
-          <div class="eyebrow">ЛИЧНАЯ КАРТОТЕКА</div>
-          <h2>Каталог находок</h2>
+          <div class="eyebrow">СОБРАННЫЕ ИСТОРИИ</div>
+          <h2>Книга находок</h2>
           <div id="catalogContent" class="catalog-content"></div>
-          <button id="closeCatalogButton" class="primary" type="button">Закрыть каталог</button>
+          <button id="closeCatalogButton" class="primary" type="button">Закрыть книгу</button>
         </section>
 
         <section id="pausePanel" class="panel pause-panel" hidden>
-          <div class="eyebrow">СМЕНА ПРИОСТАНОВЛЕНА</div>
-          <h2>Пауза · сборка</h2>
+          <div class="eyebrow">СТРАНИЦА ПРИОСТАНОВЛЕНА</div>
+          <h2>Пауза · вещи ребёнка</h2>
           <div class="build-details">
             <section>
               <h3>Полученные вещи</h3>
@@ -182,13 +182,14 @@
             <button id="copySeedButton" type="button">Скопировать ссылку на seed</button>
             <button id="endMenuButton" class="quiet" type="button">В главное меню</button>
           </div>
-          <p class="hint">В ссылке seed, герой и выбранное испытание, если оно активно. Вещи и checkpoint не переносятся.</p>
+          <p class="hint">В ссылке seed и выбранное испытание, если оно активно. Вещи и checkpoint не переносятся.</p>
         </section>
       </div>
     </main>
 
     <footer class="bottom-bar">
       <div id="inventory" class="inventory"><span class="muted">Находок пока нет</span></div>
+      <a href="bureau.html">Архив Бюро</a>
       <a href="assets/ATTRIBUTION.md" target="_blank" rel="noreferrer">Ассеты и лицензии</a>
     </footer>
   </div>
