@@ -714,7 +714,7 @@ function handleEvent(event) {
     case "room":
       showPanel(null);
       if (["boss", "rift"].includes(event.room.type) && !event.room.cleared) {
-        const bossType = game.floor.bossType;
+        const bossType = event.room.type === "rift" ? "riftWarden" : game.floor.bossType;
         catalog.record("bosses", bossType);
         $("bossHud").hidden = false;
         $("bossName").textContent = ENEMY_TYPES[bossType].name;
@@ -906,7 +906,7 @@ function updateHud(force = false) {
   $("bossHud").hidden = game.state !== "boss" || !boss;
   if (boss) {
     $("bossFill").style.width = `${Math.max(0, boss.hp / boss.maxHp) * 100}%`;
-    if (boss.type === "chemistBoss" && boss.phase === 2) $("bossName").textContent = "Королева в зеркале";
+    $("bossName").textContent = boss.type === "chemistBoss" && boss.phase === 2 ? "Королева в зеркале" : ENEMY_TYPES[boss.type].name;
   }
   const interaction = game.interactionHint();
   const hint = $("interactHint");
