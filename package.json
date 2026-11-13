@@ -6,7 +6,7 @@
   "description": "Local prototype of Library of Unfinished Tales",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "check": "node --check src/main.js && node --check src/icon-paths.js && node --check src/heroes.js && node --check src/secrets.js && node --check src/progression.js && node --check src/game.js && node --check src/content.js && node --check src/render.js && node --check src/sprites.js && node --check src/sprite-manifest.js && node --check src/layouts.js && node --check src/floor.js && node --check src/environment.js && node --check src/enemies.js && node --check src/bosses.js && node --check src/weapon.js && node --check src/map.js && node --check src/storage.js && node --check src/catalog.js && node --check src/fx.js && node --check src/audio.js && node --check tools/serve.mjs && node --check tools/gemini-ui.mjs && node --check src-legacy/main.js"
+    "check": "node --check src/main.js && node --check src/diagnostics.js && node --check src/guide.js && node --check src/icon-paths.js && node --check src/heroes.js && node --check src/secrets.js && node --check src/progression.js && node --check src/game.js && node --check src/content.js && node --check src/render.js && node --check src/sprites.js && node --check src/sprite-manifest.js && node --check src/layouts.js && node --check src/floor.js && node --check src/environment.js && node --check src/enemies.js && node --check src/bosses.js && node --check src/weapon.js && node --check src/map.js && node --check src/storage.js && node --check src/catalog.js && node --check src/fx.js && node --check src/audio.js && node --check tools/serve.mjs && node --check tools/gemini-ui.mjs && node --check src-legacy/main.js"
   },
   "engines": {
     "node": ">=18"

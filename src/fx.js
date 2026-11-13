@@ -120,7 +120,7 @@ export class FxManager {
         this.spawn("hitSpark", event.x, event.y, { height: 3 });
         break;
       case "bounce":
-        this.spawn("hitFlash", event.x, event.y, { essential: true });
+        this.spawn("hitFlash", event.x, event.y, { essential: Boolean(event.enemy) });
         break;
       case "spawn":
         if (!ENEMY_TYPES[enemy?.type]?.boss) this.spawn("poof", enemy.x, enemy.y);
@@ -167,7 +167,7 @@ export class FxManager {
         break;
       case "synergy":
         this.spawn("runeCircle", event.x ?? 240, event.y ?? 220, { ttl: 2, essential: true });
-        this.spawn("lootBeam", event.x ?? 240, (event.y ?? 220) + 5, { ttl: 1.5, essential: true });
+        this.spawn("lootBeam", event.x ?? 240, (event.y ?? 220) + 5, { ttl: 1.5 });
         break;
       case "victory":
         this.spawn("lootBeam", 240, 215, { ttl: 3, essential: true });

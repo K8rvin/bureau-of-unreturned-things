@@ -3,7 +3,7 @@ import { generateFloor } from "./floor.js";
 import { getRoomLayout } from "./layouts.js";
 import { getHero } from "./heroes.js";
 import { createEnvironment } from "./environment.js";
-import { getFinalMemoryAttacks, updateFinalBoss, updateSorterBoss, updateChemistBoss, updateCalibratorBoss, updateRiftWarden } from "./bosses.js";
+import { bossAttackOffset, nextBossAttack, getFinalMemoryAttacks, updateFinalBoss, updateSorterBoss, updateChemistBoss, updateCalibratorBoss, updateRiftWarden } from "./bosses.js";
 import { firePlayerLaser, getProjectileRadius, getVolleyAngles, getWeaponStats } from "./weapon.js";
 import { createRiftRoom, getChainHint, riftDestinations } from "./secrets.js";
 import { getChallenge } from "./progression.js";
@@ -366,6 +366,7 @@ export class Game {
       this.emit("quest", { id: "brokenToy" });
     }
     this.emit("shopUpdate", { stock: this.room().stock, repairAvailable: this.canRepairToy() });
+    this.emit("buy", { price: offer.price, itemId: offer.itemId || null, offerType: offer.type });
     this.checkpoint();
     return true;
   }
@@ -889,7 +890,7 @@ export class Game {
       attackTimer: 0.8 + this.encounterRandom() * 0.8, telegraph: 0, attackType: "", aimAngle: 0,
       spawnTime: boss ? 1.1 : 0.65, flash: 0, slowTimer: 0, freezeTimer: 0,
       contactTimer: 0, charging: 0, eatTimer: 0, growth: 0,
-      phase: 1, attackIndex: 0, dead: false, small: false,
+      phase: 1, attackIndex: boss ? bossAttackOffset(this, { type }) : 0, attackOffset: 0, dead: false, small: false,
       phased: false, phaseTimer: 0, blinkCooldown: 0, stampTimer: 0,
       burn: 0, burnTick: 0, burnDepth: 0, cold: 0, webTimer: 0,
       poisonTimer: 0, poisonTick: 0.5, bleedTimer: 0, bleedTick: 0.5,
@@ -1449,8 +1450,7 @@ export class Game {
     this.moveBody(enemy, (dx / d * direction - dy / d * orbit) * enemy.speed * slow * dt, (dy / d * direction + dx / d * orbit) * enemy.speed * slow * dt);
     if (enemy.attackTimer <= 0) {
       const attacks = enemy.phase === 1 ? ["fan", "summon", "sweep"] : ["slam", "fan", "sweep", "summon"];
-      const attack = attacks[enemy.attackIndex % attacks.length];
-      enemy.attackIndex++;
+      const attack = nextBossAttack(enemy, attacks);
       this.beginTelegraph(enemy, attack, BOSS_ATTACKS[attack].telegraph);
     }
   }
@@ -1493,8 +1493,7 @@ export class Game {
     this.moveBody(enemy, dx / d * direction * enemy.speed * slow * dt, dy / d * direction * enemy.speed * slow * dt);
     if (enemy.attackTimer <= 0) {
       const attacks = enemy.phase === 1 ? ["shield", "rain", "gust"] : ["rain", "shield", "gust", "rain"];
-      const attack = attacks[enemy.attackIndex % attacks.length];
-      enemy.attackIndex++;
+      const attack = nextBossAttack(enemy, attacks);
       this.beginTelegraph(enemy, attack, attack === "gust" ? 0.95 : 0.75);
     }
   }
@@ -2030,7 +2029,7 @@ export class Game {
     if (protector) amount *= 0.5;
     enemy.hp -= amount;
     enemy.flash = 0.08;
-    this.emit("hit", { enemy, amount });
+    this.emit("hit", { enemy, amount, source: effect.source || "unknown" });
     if (enemy.hp <= 0) this.killEnemy(enemy);
     else if (ENEMY_TYPES[enemy.type]?.boss && enemy.phase === 1 && enemy.hp <= enemy.maxHp * 0.6) {
       enemy.phase = 2;

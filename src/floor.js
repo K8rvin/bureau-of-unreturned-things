@@ -19,8 +19,9 @@ const EXPECTED_TYPES = {
 };
 const MIN_BOSS_DISTANCE = 4;
 
-export function utilityTypeForFloor(index) {
-  return index % 3 === 1 ? "workshop" : index % 3 === 2 ? "vault" : "challenge";
+function utilityTypesForRun(seed) {
+  const random = createRandom(mix32(normalizeSeed(seed), 0x7554));
+  return shuffle(random, ["challenge", "workshop", "vault", "challenge", "workshop", "vault"]);
 }
 
 const TEMPLATES = [
@@ -131,6 +132,7 @@ export function generateFloor(seed, floorIndex) {
   const definition = getFloorDefinition(floorIndex);
   const index = definition.index;
   const baseSeed = normalizeSeed(seed);
+  const utilityType = utilityTypesForRun(baseSeed)[index];
   const random = createRandom(mix32(baseSeed, index, 0x46c6));
   const template = choose(random, TEMPLATES);
   const rotation = Math.floor(random() * 4);
@@ -138,7 +140,7 @@ export function generateFloor(seed, floorIndex) {
   const secretSlot = choose(random, template.secretSlots);
   const branchTypes = new Array(4);
   branchTypes[secretSlot] = "secret";
-  const remainingTypes = shuffle(random, ["treasure", "shop", utilityTypeForFloor(index)]);
+  const remainingTypes = shuffle(random, ["treasure", "shop", utilityType]);
   for (let slot = 0; slot < 4; slot++) {
     if (slot !== secretSlot) branchTypes[slot] = remainingTypes.pop();
   }
@@ -201,6 +203,7 @@ export function generateFloor(seed, floorIndex) {
     bookId: definition.bookId,
     name: definition.name,
     bossType: definition.bossType,
+    utilityType,
     startId: "r0",
     bossId: "r4",
     secretId: `r${secretSlot + 5}`,
@@ -237,8 +240,9 @@ export function validateFloor(floor) {
     if (counts[type] !== expected) errors.push(`types: expected ${expected} ${type}, got ${counts[type] || 0}`);
   }
   const utilityRooms = rooms.filter((room) => UTILITY_TYPES.has(room.type));
+  if (!UTILITY_TYPES.has(floor.utilityType)) errors.push(`utilityType: unexpected type ${floor.utilityType}`);
   if (utilityRooms.length !== 1) errors.push(`types: expected one utility room, got ${utilityRooms.length}`);
-  else if (utilityRooms[0].type !== utilityTypeForFloor(floor.index)) errors.push(`types: unexpected utility ${utilityRooms[0].type} for floor ${floor.index}`);
+  else if (utilityRooms[0].type !== floor.utilityType) errors.push(`types: utility ${utilityRooms[0].type} does not match utilityType ${floor.utilityType}`);
 
   for (const [key, type] of [["startId", "start"], ["bossId", "boss"], ["secretId", "secret"]]) {
     const id = floor[key];

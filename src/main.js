@@ -1,9 +1,11 @@
 import { AudioBus } from "./audio.js";
 import { Catalog } from "./catalog.js";
+import { CombatDiagnostics } from "./diagnostics.js";
 import { ENEMY_TYPES, FLOOR_DEFINITIONS, HEIGHT, ITEM_BY_ID, ITEMS, SYNERGIES, WIDTH } from "./content.js";
 import { FxManager } from "./fx.js";
 import { iconPath } from "./icon-paths.js";
 import { Game } from "./game.js";
+import { FirstBookGuide } from "./guide.js";
 import { DEFAULT_HERO, getHero, HEROES } from "./heroes.js";
 import { Renderer } from "./render.js";
 import { getChainHint } from "./secrets.js";
@@ -50,6 +52,8 @@ let hudSignature = "";
 const keys = new Set();
 const pointer = { x: WIDTH / 2, y: HEIGHT / 2, down: false };
 const STEP = 1 / 60;
+const diagnostics = new CombatDiagnostics({ enabled: params.has("debug") || readSetting("library.diagnostics", false) });
+const guide = new FirstBookGuide();
 
 function readSetting(key, fallback) {
   try {
@@ -125,6 +129,9 @@ function prepareRun() {
   pointer.down = false;
   runUnlocks = [];
   fx.clearTransient();
+  diagnostics.finishRoom(game, "new-run");
+  diagnostics.finishSession(game, "new-run");
+  guide.reset();
 }
 
 function updateUrl() {
@@ -704,6 +711,8 @@ function buildPauseDetails() {
 function handleEvent(event) {
   fx.handle(event);
   audio.handle(event);
+  diagnostics.handle(event, game);
+  guide.handle(event, game);
   switch (event.type) {
     case "checkpoint":
       saveCheckpoint(event.snapshot);
@@ -918,6 +927,32 @@ function updateHud(force = false) {
     hint.dataset.action = interaction;
   }
   $("mapHint").hidden = game.state === "title";
+  updateGuide();
+  updateDiagnostics();
+}
+
+function updateGuide() {
+  const text = guide.current(game, paused || Boolean(activePanel));
+  const element = $("guideHint");
+  element.hidden = !text;
+  if (text && element.textContent !== text) element.textContent = text;
+}
+
+function updateDiagnostics() {
+  const panel = $("diagnostics");
+  const data = diagnostics.current(game);
+  const visible = diagnostics.enabled && diagnostics.visible && !paused && !activePanel && game.state !== "title" && data;
+  panel.hidden = !visible;
+  if (!visible) return;
+  const text = [
+    `КНИГА ${data.floor} · ${data.id} · ${data.type}`,
+    `${data.duration.toFixed(1)} с · урон ${data.damage.toFixed(1)} · ${data.dps.toFixed(1)}/с`,
+    `Удары: ${data.hits} · залпы: ${data.volleys} · вещей: ${data.items.length}`,
+    `Монеты +${data.coinsEarned}/−${data.coinsSpent} · ключи +${data.keysEarned}/−${data.keysSpent}`,
+    data.lastDamage ? `Последний удар: ${data.lastDamage}` : null,
+    "F8 — выключить · только локальные данные",
+  ].filter(Boolean).join("\n");
+  if (panel.textContent !== text) panel.textContent = text;
 }
 
 function togglePause(force) {
@@ -1074,6 +1109,15 @@ window.addEventListener("keydown", (event) => {
     renderer.mapExpanded = true;
     return;
   }
+  if (event.code === "F8") {
+    event.preventDefault();
+    if (event.repeat) return;
+    const visible = diagnostics.toggle(game);
+    saveSetting("library.diagnostics", diagnostics.enabled);
+    toast(visible ? "Диагностика включена · данные остаются на устройстве" : "Диагностика выключена", 1800);
+    updateHud();
+    return;
+  }
   if (event.code === "Escape") {
     event.preventDefault();
     if (["shop", "contract", "riftMenu", "workshop", "vault"].includes(game.state)) {
@@ -1165,5 +1209,5 @@ showTitle();
 requestAnimationFrame(frame);
 
 if (params.has("debug")) {
-  window.__bureau = { game, startRun, continueRun, selectItem, togglePause, fx, audio, sprites, catalog, renderer, storage: { loadCheckpoint, clearCheckpoint } };
+  window.__bureau = { game, startRun, continueRun, selectItem, togglePause, fx, audio, sprites, catalog, renderer, diagnostics, storage: { loadCheckpoint, clearCheckpoint } };
 }

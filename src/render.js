@@ -676,11 +676,12 @@ export class Renderer {
       const d = Math.hypot(dx, dy) || 1;
       const nx = -dy / d;
       const ny = dx / d;
-      ctx.globalAlpha = Math.min(1, arc.life * 10);
+      const steps = this.fx.reduced ? 2 : 6;
+      ctx.globalAlpha = Math.min(1, arc.life * 10) * (this.fx.reduced ? 0.55 : 1);
       ctx.beginPath();
-      for (let i = 0; i <= 6; i++) {
-        const t = i / 6;
-        const offset = i === 0 || i === 6 ? 0 : Math.sin(game.time * 90 + i * 4 + arc.x1) * 2;
+      for (let i = 0; i <= steps; i++) {
+        const t = i / steps;
+        const offset = this.fx.reduced || i === 0 || i === steps ? 0 : Math.sin(game.time * 90 + i * 4 + arc.x1) * 2;
         const x = arc.x1 + dx * t + nx * offset;
         const y = arc.y1 + dy * t + ny * offset;
         if (i === 0) ctx.moveTo(x, y);

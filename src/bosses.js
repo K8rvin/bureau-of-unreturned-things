@@ -9,6 +9,23 @@ const MEMORY_ATTACKS = [
   ["magnet", "memoryMagnet"],
 ];
 
+export function bossAttackOffset(game, enemy) {
+  if (game.mode === "boss") return 0;
+  const text = `${enemy.type}:${game.room()?.encounterSeed}`;
+  let hash = 2166136261;
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+export function nextBossAttack(enemy, attacks) {
+  const attack = attacks[(enemy.attackIndex + (enemy.attackOffset || 0)) % attacks.length];
+  enemy.attackIndex++;
+  return attack;
+}
+
 export function getFinalMemoryAttacks(game) {
   const attacks = MEMORY_ATTACKS.filter(([itemId]) => !game.hasItem(itemId)).map(([, attack]) => attack);
   return attacks.length ? attacks : ["memoryEcho"];
@@ -34,7 +51,7 @@ export function updateSorterBoss(game, enemy, dt) {
   moveBoss(game, enemy, dt);
   if (enemy.attackTimer <= 0) {
     const attacks = enemy.phase === 1 ? ["stamp", "sort", "summonPackers"] : ["stamp", "sort", "sweep", "summonPackers"];
-    const attack = attacks[enemy.attackIndex++ % attacks.length];
+    const attack = nextBossAttack(enemy, attacks);
     game.beginTelegraph(enemy, attack, BOSS_ATTACKS[attack].telegraph);
   }
 }
@@ -83,8 +100,9 @@ export function updateFinalBoss(game, enemy, dt) {
   moveBoss(game, enemy, dt);
   if (enemy.attackTimer <= 0) {
     const attacks = enemy.memoryAttacks.length ? enemy.memoryAttacks : ["memoryEcho"];
-    const attack = enemy.phase === 2 && enemy.attackIndex % 4 === 3 ? "memoryEcho" : attacks[enemy.attackIndex % attacks.length];
-    enemy.attackIndex++;
+    const forcedEcho = enemy.phase === 2 && enemy.attackIndex % 4 === 3;
+    const attack = forcedEcho ? "memoryEcho" : nextBossAttack(enemy, attacks);
+    if (forcedEcho) enemy.attackIndex++;
     game.beginTelegraph(enemy, attack, BOSS_ATTACKS[attack].telegraph);
   }
 }
@@ -128,7 +146,7 @@ export function updateChemistBoss(game, enemy, dt) {
   moveBoss(game, enemy, dt);
   if (enemy.attackTimer <= 0) {
     const attacks = enemy.phase === 1 ? ["cloud", "toxicFan", "summonMoths"] : ["toxicFan", "cloud", "toxicRing", "summonMoths"];
-    const attack = attacks[enemy.attackIndex++ % attacks.length];
+    const attack = nextBossAttack(enemy, attacks);
     game.beginTelegraph(enemy, attack, BOSS_ATTACKS[attack].telegraph);
   }
 }
@@ -169,7 +187,7 @@ export function updateCalibratorBoss(game, enemy, dt) {
   moveBoss(game, enemy, dt);
   if (enemy.attackTimer <= 0) {
     const attacks = enemy.phase === 1 ? ["beamSweep", "beamGrid", "overcharge"] : ["beamGrid", "beamSweep", "overcharge", "beamSweep"];
-    const attack = attacks[enemy.attackIndex++ % attacks.length];
+    const attack = nextBossAttack(enemy, attacks);
     game.beginTelegraph(enemy, attack, BOSS_ATTACKS[attack].telegraph);
   }
 }
@@ -200,7 +218,7 @@ export function updateRiftWarden(game, enemy, dt) {
   moveBoss(game, enemy, dt);
   if (enemy.attackTimer <= 0) {
     const attacks = enemy.phase === 1 ? ["riftBeam", "riftStep"] : ["riftGrid", "riftBeam", "riftStep"];
-    const attack = attacks[enemy.attackIndex++ % attacks.length];
+    const attack = nextBossAttack(enemy, attacks);
     if (attack === "riftStep") {
       const x = 90 + enemy.attackIndex * 97 % 300;
       const y = 82 + enemy.attackIndex * 53 % 116;
