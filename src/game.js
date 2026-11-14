@@ -170,6 +170,7 @@ export class Game {
     this.floorIndex++;
     this.coatUsed = false;
     this.riftUsedFloor = false;
+    this.chain = { sigil: false, npc: false, terminal: false, wardenDefeated: false };
     this.floor = generateFloor(this.seed, this.floorIndex);
     this.floorIndex = this.floor.index;
     this.rooms = clone(this.floor.rooms);
@@ -185,6 +186,21 @@ export class Game {
     this.emit("roomResumed", { room: this.room() });
     this.checkpoint();
     return true;
+  }
+
+  explorationGoals() {
+    if (!this.floor) return [];
+    const goals = [];
+    for (const room of this.rooms) {
+      if (room.rewardClaimed) continue;
+      if (room.type === "treasure") goals.push("не открыта сокровищница");
+      else if (room.type === "challenge") goals.push("осталось испытание");
+      else if (room.type === "vault") goals.push("не исследована запечатанная страница");
+    }
+    if (this.rooms.some((room) => room.event === "chapterClue" && !room.loreFound)) goals.push("есть непрочитанный обрывок");
+    const secret = this.rooms.find((room) => room.type === "secret");
+    if (secret && (secret.secretFound || this.chain.sigil) && !this.chain.wardenDefeated) goals.push("есть подсказка к секрету");
+    return goals;
   }
 
   openFloorExit() {
@@ -416,7 +432,7 @@ export class Game {
     }
     if (room.event === "riftTerminal" && near(240, 140, 42)) {
       if (this.chain.wardenDefeated) {
-        this.emit("locked", { message: "Разрез уже стабилен" });
+        this.emit("locked", { message: "Секрет уже найден. Награда получена ранее." });
         return false;
       }
       if (this.chain.terminal) {
@@ -656,7 +672,7 @@ export class Game {
     const near = (x, y, radius) => Math.hypot(this.player.x - x, this.player.y - y) <= radius;
     if (room.type === "start" && this.floorIndex === 0 && !room.npcHint && near(280, 145, 50)) return "спросить Красную Шапочку";
     if (room.type === "boss" && room.cleared && this.floor.exitAvailable && near(240, 140, 44)) return "закрыть книгу";
-    if (room.type === "rift" && room.cleared && near(240, 140, 44)) return "вернуться";
+    if (room.type === "rift" && room.cleared && near(240, 140, 44)) return "вернуться на карту книги";
     if (room.event === "chapterClue" && !room.loreFound && near(240, 120, 42)) return "прочитать обрывок";
   if (room.event === "riftTerminal" && !this.chain.wardenDefeated && near(240, 140, 42)) return "исследовать рваную страницу";
     if (room.event === "contract" && !room.contractHandled && near(240, 140, 42)) return "цена сказки";
@@ -749,6 +765,9 @@ export class Game {
     this.floor = generateFloor(this.seed, this.floorIndex);
     this.floorIndex = this.floor.index;
     this.rooms = clone(data.rooms);
+    for (const room of this.rooms) {
+      if (room.event === "movingShelves") delete room.event;
+    }
     this.floor.rooms = this.rooms;
     Object.assign(this.player, data.player);
     this.items = [...data.items];

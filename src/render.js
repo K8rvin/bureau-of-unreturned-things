@@ -385,7 +385,7 @@ export class Renderer {
         continue;
       }
       const name = pickup.type === "key" ? "key" : pickup.type === "bomb" ? "unlit-bomb" : pickup.type === "heart" ? "heart-battery" : "paper-clip";
-      this.drawIcon(name, pickup.x - 7, pickup.y - 7, 14, pickup.type === "lore" ? "#e5b5ff" : "#f3d99a");
+      this.drawIcon(name, pickup.x - 11, pickup.y - 11, 22, pickup.type === "lore" ? "#e5b5ff" : "#f3d99a");
       if (pickup.type === "lore") {
         ctx.strokeStyle = "#d8a4e799";
         ctx.beginPath(); ctx.arc(pickup.x, pickup.y, 10 + Math.sin(game.time * 5) * 2, 0, TAU); ctx.stroke();
@@ -475,25 +475,25 @@ export class Renderer {
       ctx.setLineDash([2, 3]);
       ctx.beginPath(); ctx.arc(240, 120, 14 + Math.sin(game.time * 3) * 2, 0, TAU); ctx.stroke();
       ctx.setLineDash([]);
-      this.drawIcon("paper-clip", 231, 111, 18, "#ead49b");
+      this.drawIcon("paper-clip", 226, 106, 28, "#ead49b");
     }
     if (room.event === "contract" && !room.contractHandled) {
       ctx.strokeStyle = "#d1b66a";
       ctx.beginPath(); ctx.arc(240, 140, 13, 0, TAU); ctx.stroke();
-      this.drawIcon("big-gear", 231, 127, 18, "#edc37b");
+      this.drawIcon("big-gear", 228, 128, 24, "#edc37b");
     }
     if (room.type === "vault" && !room.rewardClaimed) {
-      this.drawIcon(room.vaultHandled && room.cleared ? "open-chest" : "locked-chest", 232, 132, 16, "#edc37b");
+      this.drawIcon(room.vaultHandled && room.cleared ? "open-chest" : "locked-chest", 228, 128, 24, "#edc37b");
     }
     if (room.type === "boss" && room.cleared && game.floor.exitAvailable) {
       ctx.strokeStyle = "#d1b66a";
       ctx.beginPath(); ctx.arc(240, 140, 13, 0, TAU); ctx.stroke();
-      this.drawIcon("paper-clip", 233, 133, 14, "#edc37b");
+      this.drawIcon("paper-clip", 230, 130, 20, "#edc37b");
     }
     if (room.event === "riftTerminal" || (room.type === "rift" && room.cleared)) {
       ctx.strokeStyle = "#b99ddd";
       ctx.beginPath(); ctx.arc(240, 140, 13, 0, TAU); ctx.stroke();
-      this.drawIcon("keyring", 231, 129, 18, "#c6a2e2");
+      this.drawIcon("keyring", 228, 128, 24, "#c6a2e2");
     }
   }
 

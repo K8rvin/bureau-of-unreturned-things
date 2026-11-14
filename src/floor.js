@@ -176,7 +176,6 @@ export function generateFloor(seed, floorIndex) {
   const combatRooms = rooms.filter((room) => room.type === "combat");
   combatRooms[1].event = "chapterClue";
   if (index === 1) combatRooms[0].event = "contract";
-  if (index >= 2) combatRooms[0].event = "movingShelves";
 
   for (let i = 0; i < 4; i++) {
     connect(rooms, i, i + 1);

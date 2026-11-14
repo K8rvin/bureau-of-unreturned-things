@@ -442,7 +442,7 @@ def approved_wolf() -> SpriteAsset:
     entry = {
         "image": "assets/library/units/wolf.png",
         "referenceHeight": 64,
-        "targetHeight": 64,
+        "targetHeight": 56,
         "rates": {"idle": 4, "sniff": 4, "run": 8, "pounce": 8, "attack": 8, "howl": 4, "hit": 1, "front": 1, "death": 1},
         "once": ["death"],
         "offsetY": 0,

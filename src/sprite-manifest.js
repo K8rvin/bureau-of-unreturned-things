@@ -186,7 +186,7 @@ export const GENERATED_SPRITES = {
       "C:/Projects/YandexGames/assets/library-wolf-repair-v1.png",
       "C:/Projects/YandexGames/assets/library-wolf-v1.png"
     ],
-    "targetHeight": 64
+    "targetHeight": 56
   },
   "bremenQuartet": {
     "attack": [
@@ -1970,7 +1970,7 @@ export const GENERATED_SPRITES = {
       "C:/Projects/YandexGames/assets/library-wolf-repair-v1.png",
       "C:/Projects/YandexGames/assets/library-wolf-v1.png"
     ],
-    "targetHeight": 64
+    "targetHeight": 56
   },
   "messenger": {
     "attack": [

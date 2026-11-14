@@ -473,9 +473,9 @@ function buildRiftMenu(rooms) {
     button.className = "event-choice";
     button.dataset.room = room.id;
     const title = document.createElement("strong");
-    title.textContent = room.event === "movingShelves" ? "Движущиеся полки" : names[room.type] || "Комната";
+    title.textContent = room.type === "rift" ? "Вернуться на карту книги" : room.event === "movingShelves" ? "Движущиеся полки" : names[room.type] || "Комната";
     const description = document.createElement("p");
-    description.textContent = room.type === "rift" ? "Вернуться к уже стабилизированному разрезу." : "Бой не начнётся заново. Вы окажетесь у входа в комнату.";
+    description.textContent = room.type === "rift" ? "Секрет уже найден. Награда получена ранее." : "Бой не начнётся заново. Вы окажетесь у входа в комнату.";
     button.append(title, description);
     button.addEventListener("click", () => {
       if (game.useRift(room.id)) {
@@ -728,6 +728,8 @@ function handleEvent(event) {
         $("bossHud").hidden = false;
         $("bossName").textContent = ENEMY_TYPES[bossType].name;
         toast(ENEMY_TYPES[bossType].name, 2100);
+      } else if ((event.room.type === "rift" && event.room.cleared) || (event.room.type === "secret" && game.chain.wardenDefeated)) {
+        toast("Секрет уже найден. Награда получена ранее.", 2400);
       } else if (event.room.type !== "start") {
         const names = { combat: "Комната истории", treasure: "Новая страница", shop: "Хранитель книг", challenge: "Испытание", workshop: "Мастерская историй", vault: "Запечатанная страница", secret: "Скрытая страница", rift: "Золотая закладка" };
         const events = { chapterClue: "Обрывок страницы", contract: "Цена сказки", movingShelves: "Движение книги" };
@@ -783,7 +785,7 @@ function handleEvent(event) {
       toast("Закладка использована. Следующий переход — в новой книге.", 1900);
       break;
     case "riftReturn":
-      toast("Вы вернулись к обрывку", 1600);
+      toast("Вы вернулись на карту книги. Секрет уже найден. Награда получена ранее.", 2400);
       break;
     case "workshop":
       buildWorkshop();
@@ -805,15 +807,22 @@ function handleEvent(event) {
       break;
     case "floorComplete": {
       notifyUnlocks(progression.recordFloor(event));
+      const goals = game.explorationGoals();
       const nextFloor = game.floorIndex + 1 < game.runFloorCount() ? FLOOR_DEFINITIONS[game.floorIndex + 1] : null;
-      if (nextFloor) {
-        $("floorDescription").textContent = `Можно остаться и исследовать книгу. Вернитесь к обложке в комнате босса, когда будете готовы. В обычном забеге переход восстановит 1 HP. ${nextFloor.description} Плащ снова защитит от первого удара.`;
-        $("nextFloorButton").textContent = `Следующая: ${nextFloor.name}`;
-      } else {
-        $("floorDescription").textContent = "Это последняя книга в текущей цели. Можно завершить оставшиеся комнаты или вернуться к обложке и закончить историю.";
-        $("nextFloorButton").textContent = game.mode === "challenge" ? "Завершить испытание" : "Вернуться в библиотеку";
-      }
+      const goalList = $("floorGoals");
+      goalList.replaceChildren(...goals.map((text) => {
+        const item = document.createElement("li");
+        item.textContent = text;
+        return item;
+      }));
+      goalList.hidden = goals.length === 0;
+      $("exploreButton").hidden = goals.length === 0;
       $("exploreButton").textContent = `Остаться: ${game.floor.name}`;
+      $("exploreButton").title = goals.join(" · ");
+      $("floorDescription").textContent = goals.length
+        ? `Можно завершить книгу сейчас или остаться ради конкретных необязательных целей.${nextFloor ? ` Дальше: ${nextFloor.name}.` : " Это последняя книга."}${game.mode === "run" ? " Переход восстановит 1 HP." : ""}`
+        : `Все необязательные находки в этой книге завершены. Можно завершить книгу без дополнительного обхода.${game.mode === "run" ? " Переход восстановит 1 HP." : ""}`;
+      $("nextFloorButton").textContent = "Завершить книгу";
       showPanel("floor");
       break;
     }
