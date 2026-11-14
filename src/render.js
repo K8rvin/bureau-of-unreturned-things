@@ -53,6 +53,8 @@ export class Renderer {
       image.src = iconPath(`${name}.svg`);
       this.icons[name] = image;
     }
+    this.arrowImage = new Image();
+    this.arrowImage.src = "assets/library/projectiles/hunter-arrow.png";
   }
 
   recordDeath(enemy, time) {
@@ -347,7 +349,7 @@ export class Renderer {
           ctx.lineTo(enemy.x + Math.cos(angle) * 280, enemy.y + Math.sin(angle) * 280);
           ctx.stroke();
         }
-      } else if (["shooter", "inker", "charge", "laser", "goblin", "flyingEye", "bat", "skeletonAttack", "memoryChalk", "sort"].includes(enemy.attackType)) {
+      } else if (["shooter", "inker", "charge", "arrow", "goblin", "flyingEye", "bat", "skeletonAttack", "memoryChalk", "sort"].includes(enemy.attackType)) {
         ctx.lineWidth = ["charge", "skeletonAttack"].includes(enemy.attackType) ? 5 : enemy.attackType === "laser" ? 2 : 1;
         ctx.beginPath(); ctx.moveTo(enemy.x, enemy.y);
         ctx.lineTo(enemy.x + Math.cos(enemy.aimAngle) * 280, enemy.y + Math.sin(enemy.aimAngle) * 280);
@@ -649,6 +651,9 @@ export class Renderer {
         } else {
           ctx.beginPath(); ctx.arc(0, 0, projectile.r, 0, TAU); ctx.fill(); ctx.stroke();
         }
+      } else if (projectile.source === "hunterArrow" && this.arrowImage.complete && this.arrowImage.naturalWidth > 0) {
+        ctx.rotate(Math.atan2(projectile.vy, projectile.vx) + Math.PI / 2);
+        ctx.drawImage(this.arrowImage, -Math.floor(this.arrowImage.width / 2), -Math.floor(this.arrowImage.height / 2));
       } else {
         ctx.rotate(Math.PI / 4);
         ctx.fillStyle = projectile.source === "ghostOrb" ? "#e8cc80" : projectile.burning ? "#ff9b58" : projectile.source === "memoryMagnet" ? "#91ddd5" : projectile.source === "memoryChalk" ? "#d7d1ff" : projectile.puddle ? "#b57ac8" : "#f17878";

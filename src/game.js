@@ -1353,7 +1353,7 @@ export class Game {
       const direction = d > 175 ? 1 : d < 125 ? -1 : 0;
       mx = dx / d * direction;
       my = dy / d * direction;
-      if (enemy.attackTimer <= 0) this.beginTelegraph(enemy, "laser", 1);
+      if (enemy.attackTimer <= 0) this.beginTelegraph(enemy, "arrow", 1);
     } else if (enemy.type === "spawner") {
       if (enemy.attackTimer <= 0 && enemy.summonCount < 3) this.beginTelegraph(enemy, "summon", 0.85);
     }
@@ -1419,10 +1419,8 @@ export class Game {
       enemy.disguise = false;
       enemy.attackTimer = 0.8;
       this.emit("spawn", { enemy });
-    } else if (enemy.attackType === "laser") {
-      const angle = Math.atan2(this.player.y - enemy.y, this.player.x - enemy.x);
-      if (angleDifference(angle, enemy.aimAngle) < 0.13) this.hurtPlayer(1, enemy.name);
-      this.lasers.push({ owner: "enemy", x1: enemy.x, y1: enemy.y, x2: enemy.x + Math.cos(enemy.aimAngle) * 280, y2: enemy.y + Math.sin(enemy.aimAngle) * 280, life: 0.18 });
+    } else if (enemy.attackType === "arrow") {
+      this.fireEnemy(enemy, enemy.aimAngle, 135, { r: 2.5, source: "hunterArrow" });
       enemy.attackTimer = 2.5;
       this.emit("enemyShot", { enemy });
     } else if (enemy.attackType === "summon") {
